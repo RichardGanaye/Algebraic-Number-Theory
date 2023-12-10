@@ -1,0 +1,1055 @@
+
+\chapter{Réciprocité cubique.}
+Les résultats de ce chapitre, ainsi que du chapitre suivant, viennent de [Ireland, Rosen], [Cox2] et [Lemmermeyer].
+Notons ici $A = \Z[\omega]$, où, comme dans le chapitre précédent $\omega^3 = 1, \omega \ne 1$.
+Les nombres premiers de $\Z$ serons nommés ``premiers rationnels'', pour les distinguer des éléments premiers de $A$.
+
+\section{Anneaux quotients de $\Z[\omega]$.}
+
+
+Si $\pi$ est premier dans $A$, alors $A/\pi A$ est un corps (voir le chapitre anneaux).
+
+\begin{prop} \label{prop71}
+Soit $\pi \in A  =  \Z[\omega]$ un élément premier.  Alors $A/\pi A$ est un corps à $\n(\pi)$ éléments :
+$$\n(\pi) = |A/\pi A|.$$
+\end{prop}
+\begin{proof}
+Nous prouvons cette proposition en considérant les différents types d'éléments premiers de $\Z[\omega]$, donnés dans la proposition \ref{prop22} du chapitre ``Entiers de Gauss''.
+\be
+\item[$\bullet$] Supposons que $\pi = q$ est un premier rationnel, où $q \equiv 2 \pmod 3, q>0$. Vérifions que
+$$S = \{a + b \omega\ | \ 0 \leq a < q, \ 0\leq b < q\}$$
+est un système complet de représentants des classes modulo $\pi$.
+
+Si $\alpha = u + \omega v \in A$, alors les divisions euclidiennes de $u$ et $ v$ par $q$ donnent des entiers $a,b,s,t$ tels que $u = qs +a, v = qt +b$, où $0\leq a <q, 0 \leq b < q$. Alors $\alpha \equiv a + b \omega \pmod q$, où $a + b \omega \in S$.
+
+Vérifions que les éléments de $S$ sont dans des classes distinctes. Si $\alpha =a +b \omega \equiv \beta = a' + b' \omega \pmod q$, où $\alpha, \beta \in S$, alors $q \mid (a - a')+(b-b') \omega$, donc $\frac{a-a'}{q} + \omega\frac{b-b'}{q} \in \Z[\omega]$, ce qui implique $q \mid a-a', q \mid b-b'$. Comme $|a-a'| < q$ et $|b-b'|<q$, il s'ensuit que $a=a', b=b'$, donc $\alpha = \beta$. Ainsi $|A/\pi A| = |S| = q^2 = \n(q) = \n(\pi)$.
+
+\item[$\bullet$] Supposons que $\pi = a + b \omega$ vérifie $\n(\pi) = p$, où $p$ est un premier rationnel, $p\equiv 1 \pmod 3$. Vérifions que
+$$T = \{0,1,\cdots,p-1\}$$
+est un système complet de représentants des classes.
+
+Comme $\n(\pi) = p = a^2 -ab +b^2$, il s'ensuit que $p\nmid b$, sinon $p\mid a, p\mid b$, donc $p^2 \mid a^2-ab +b^2 = p$, donc $p\mid 1$ : c'est absurde.
+
+Soit $\alpha = u + \omega v \in A$. Comme $p\nmid b$, il existe un entier $c$ tel que $cb \equiv v \pmod p$, a fortiori modulo $\pi$. Alors $\alpha -c \pi = u -ca + \omega(v -cb)$, donc $\alpha \equiv u -ca \pmod \pi$. Posons $n = u-ca$. Alors $n\in \Z$, et $\alpha \equiv n \pmod \pi$. La division euclidienne de $n$ par $p$ donne $n =ps +r, \ 0\leq r < p$, donc $\alpha \equiv r \pmod \pi$, où $r \in T$.
+
+Les éléments de $T$ sont dans des classes distinctes modulo $\pi$. En effet, si $r,s \in T$, et $r \equiv s \pmod \pi$, alors $\pi \mid r-s$, soit $r-s =\pi \lambda , \lambda \in A$, donc $(r-s)^2 =  \n(\pi) \n(\lambda) = p \n(\lambda)$. Ainsi $p \mid (r-s)^2$, où $p$ est un premier rationnel, donc $p \mid r-s$, où $|r-s|<p$, donc $r= s$.
+
+Par conséquent, $ |A/\pi A| = |T| = p = \n(\pi)$.
+
+\item[$\bullet$] Supposons que $\pi = 1 - \omega$. Vérifions que
+$$U = \{0,1,2\}$$
+est un système complet de représentants des classes modulo $\pi = 1 - \omega$.
+
+Soit $\alpha =a + b \omega \in A$ quelconque. Comme $\omega \equiv 1 \pmod \pi$, $\alpha \equiv a + b \pmod \pi$. Posons $n = a +b$; alors $n\in \Z$ et $\alpha \equiv n \pmod \pi$. La division euclidienne de $n$ par $3$ donne les entiers $q,r$ tels que $n =3q + r, r \in \{0,1,2\}$, donc $n \equiv r \pmod 3$, et puisque $1 - \omega \mid 3$, $\alpha \equiv n \equiv r \pmod \pi$, où $r \in U$.
+
+De plus, $0 \not \equiv 2 \pmod \pi$, sinon $\pi \mid 2$, et $\pi \mid 3$, donc $\pi \mid 1$ : c'est absurde puisque $\pi$ est premier, et n'est donc pas une unité. De même, $0 \equiv 1$, ou $1 \equiv 2$, entraîne $\pi \mid 1$, ce qui contredit l'hypothèse $\pi$ premier.
+
+Ainsi $|A/\pi A| = |U| = 3 = \n(\pi)$.
+\ee
+Si $\lambda$ est un élément premier quelconque de $A$, alors $\lambda$ est associé à un élément $\pi$ appartenant à l'un des trois types considérés, donc vérifiant $\n(\pi) = |A/\pi A|$. Alors $\n(\pi) = \n(\lambda)$, et $\pi A = \lambda A$, donc $\n(\lambda) = |A/\lambda A|$.
+
+\end{proof}
+
+
+\section{Caractère cubique.}
+Ici $A = \Z[\omega]$. Donnons l'analogue du théorème de Fermat dans $A$.
+\begin{prop}\label{prop72}
+Soit $\alpha \in A$, et $\pi$ un premier de $A$ tel que $\pi$ ne divise pas $\alpha$. Alors 
+$$\alpha^{\n(\pi) - 1} \equiv 1 \pmod \pi.$$
+\end{prop}
+\begin{proof}
+Soit $K$ le corps $A/\pi A$. Le cardinal du groupe $K^*$ est $\n(\pi) -1$, donc l'ordre de la classe $[\alpha] \in K^*$ divise $\n(\pi) -1$. Ainsi $[\alpha]^{\n(\pi) - 1} = 1$, donc $\alpha^{\n(\pi) - 1} \equiv 1 \pmod \pi.$
+\end{proof}
+
+\begin{prop}\label{prop73}
+Si $\pi$ est un premier de $A$, et si $\n(\pi) \ne 3$, alors
+$$3 \mid \n(\pi) - 1.$$
+\end{prop}
+\begin{proof}
+Notons que si $\n(\pi) \ne 3$, alors les classes modulo $\pi$ de $1,\omega, \omega^2$ sont distinctes.
+
+En raisonnant par l'absurde, supposons que $1 \equiv \omega \pmod \pi$. Alors $\pi \mid 1 - \omega$, où $1-\omega$ est premier, donc $\pi$ serait associé à $1 - \omega$, mais alors $\n(\pi) = \n(1-\omega) = 3$, contrairement à l'hypothèse. Comme $\omega^2 - 1 = (\omega +1)(\omega - 1) = \omega^2(1-\omega)$, et $\omega - \omega^2 = \omega(1-\omega)$ sont tous deux associés à $1- \omega$, le même raisonnement montre que $1 \not \equiv \omega^2 \pmod \pi$ et $\omega\not \equiv \omega^2 \pmod \pi$.
+
+L'ensemble des classes $\{[1],[\omega],[\omega]^2\}$ est donc un sous-groupe à trois éléments du groupe $(A/\pi A)^*$. Le théorème de Lagrange montre alors que
+$$3 \mid \n(\pi) - 1.$$
+\end{proof}
+A titre de vérification, si $\pi = q$, où $q \equiv 2 \pmod 3$, alors $\n(\pi) = q^2 \equiv 1 \pmod 3$, et si $\pi$ vérifie $\n(\pi) = p$, alors $p\equiv 1 \pmod 3$.
+
+\begin{prop}
+Supposons que $\pi$ est un premier de $A$ tel que $\n(\pi) \ne 3$, et que $\pi \nmid \alpha$. Alors il existe un unique entier $m \in\{0,1,2\}$ tel que
+$$\alpha^{\frac{\n(\pi) - 1}{3}} \equiv \omega^m \pmod \pi.$$
+\end{prop}
+\begin{proof}
+Nous savons que $\pi$ divise $\alpha^{\n(\pi) - 1} - 1$, et comme $\n(\pi) - 1$ est un multiple de 3,
+$$\alpha^{\n(\pi) - 1} - 1 = (\alpha^{\frac{\n(\pi) - 1}{3}} - 1)(\alpha^{\frac{\n(\pi) - 1}{3}} - \omega)(\alpha^{\frac{\n(\pi) - 1}{3}} - \omega^2).$$
+Comme $\pi$ est premier, il divise l'un des trois facteurs. De plus $1,\omega, \omega^2$ sont dans des classes distinctes modulo $\pi$, donc il divise au plus un de ces facteurs. Ainsi $\alpha^{\n(\pi) - 1} \equiv \omega^m \pmod \pi,$ pour un unique $m\in \{0,1,2\}$.
+\end{proof}
+
+Notons que dans le cas où $\pi \mid \alpha$, $\alpha^{\frac{\n(\pi) - 1}{3}} \equiv 0 \pmod \pi$.
+
+Nous savons que les classes de $1,\omega,\omega^2$ dans $A/\pi A$ sont distinctes. De plus, les classes de $0,1,\omega, \omega^2$ sont distinctes, puisque $\omega^k \equiv 0 \pmod \pi$, entraîne $\pi \mid \omega^k$, donc $\pi \mid 1$, ce qui est absurde puisque $\pi$ premier n'est pas une unité. Pour tout $\alpha \in A$, $[\alpha]^{\frac{\n(\pi) - 1}{3}}  \in \{[0],[1],[\omega],[\omega]^2\}$, donc il existe un et un seul $z \in \{0,1,\omega,\omega^2\}$ tel que $\alpha^{\frac{\n(\pi) - 1}{3}} \equiv z \pmod \pi$. Ceci justifie la définition suivante :
+\begin{dfn}
+Soit $\pi$ un premier de $A$ tel que $\n(\pi) \ne 3$. Le caractère cubique de $\alpha \in A$ modulo $\pi$, noté $\legendre{\alpha}{\pi}_{3}$ (ou $(\alpha/\pi)_3$) est le nombre complexe de l'ensemble $\{0,1, \omega, \omega^2\}$ caractérisé par
+ $$\legendre{\alpha}{\pi}_3 \equiv \alpha^{\frac{\n(\pi) - 1}{3}} \pmod \pi.$$ 
+\end{dfn}
+Cette définition implique que $\legendre{\alpha}{\pi}_3 = 0 \iff \pi \mid \alpha$.
+
+\begin{prop}\label{prop75}
+Si $\legendre{\alpha}{\pi}_3 \equiv \zeta \pmod \pi$, où $\zeta \in \{0,1,\omega,\omega^2\}$, alors $\legendre{\alpha}{\pi}_3 = \zeta$.
+\end{prop}
+\begin{proof}
+En effet, $\legendre{\alpha}{\pi}_3$ et $\zeta$ sont des éléments de $\{0,1,\omega,\omega^2\}$, et les classes de ces éléments sont distinctes modulo $\pi$.
+\end{proof}
+
+Donnons les premières propriétés de ce caractère cubique
+\begin{prop} \label{prop76}
+Si $\alpha, \beta \in A$, et si $\pi$ est un premier de $A$ tel que $\n(\pi)\ne 3$, 
+\be 
+\item[(a)] $\legendre{\alpha\beta}{\pi}_3 = \legendre{\alpha}{\pi}_3 \legendre{\beta}{\pi}_3 .$ 
+\item[(b)] Si $\alpha \equiv \beta \pmod \pi$, alors $\legendre{\alpha}{\pi}_3  = \legendre{\beta}{\pi}_3$.
+\ee
+\end{prop}
+\begin{proof}
+\be
+\item[(a)]Par définition
+$$\legendre{\alpha\beta}{\pi}_3  \equiv (\alpha \beta)^{\frac{\n(\pi) - 1}{3}} = \alpha^{\frac{\n(\pi) - 1}{3}} \beta^{\frac{\n(\pi) - 1}{3}} \equiv \legendre{\alpha}{\pi}_3\legendre{\beta}{\pi}_3 \pmod \pi.$$
+
+La proposition \ref{prop75} permet de conclure que
+$$\legendre{\alpha\beta}{\pi}_3  = \legendre{\alpha}{\pi}_3\legendre{\beta}{\pi}_3.$$
+\item[(b)] Si $\alpha \equiv \beta \pmod \pi$, alors $ \alpha^{\frac{\n(\pi) - 1}{3}}  \equiv  \beta^{\frac{\n(\pi) - 1}{3}} \pmod \pi$, donc $\legendre{\alpha}{\pi}_3 \equiv \legendre{\beta}{\pi}_3 \pmod \pi$. La proposition \ref{prop75} montre alors que $\legendre{\alpha}{\pi}_3 = \legendre{\beta}{\pi}_3$.
+\ee
+\end{proof} 
+
+Notons que (b) assure que l'application $\chi$
+$$
+\begin{array}{ccc}
+(A/\pi A)^* & \to & \C^*\\
+{[}\alpha {]}& \mapsto & \legendre{\alpha}{\pi}_3 
+\end{array}
+$$
+est bien définie, et le (a) montre que $\chi$ est un homomorphisme de groupe. Ainsi $\chi$ est un caractère multiplicatif sur $(A/\pi A)^*$, et il est d'ordre 3. 
+
+Le caractère cubique permet de caractériser les cubes de $A$ modulo $\pi$.
+
+\begin{prop}\label{prop77}
+ Soit $\alpha \in  A = \Z[\omega]$, et $\pi$ un premier de $A$ tel que $\n(\pi) \ne 3$ et $\pi \nmid \alpha$. Alors
+$$\legendre{\alpha}{\pi}_3 = 1 \iff \exists x \in A, \ x^3 \equiv \alpha \pmod \pi.$$ 
+\end{prop}
+
+\begin{proof}
+$A/\pi A$ est un corps à $\n(\pi)$ éléments d'après la proposition \ref{prop71}, et $3$ divise $\n(\pi) - 1$ d'après la proposition \ref{prop73}, donc $d = 3 \wedge (\n(\pi) - 1) = 3$. Alors la proposition 1 du chapitre "Sommes de Gauss et sommes de Jacobi" montre que l'équation $[x]^3 = [\alpha]$ a une solution dans $(A/\pi A)^*$ si et seulement si $[\alpha]^{\frac{\n(\pi) - 1}{3}} = 1$, ce qui équivaut à $\legendre{\alpha}{\pi}_3 = 1$.
+\end{proof}
+Nous verrons comment ceci permet de caractériser les cubes de $\F_p^*$.
+
+Notons dans cette section $\chi_{\pi}(\alpha) = \legendre{\alpha}{\pi}_3$, si $\alpha \in A$.
+
+\begin{prop}\label{prop78}
+ Si $\alpha \in A$,
+$$\overline{\chi_\pi(\alpha)} = \chi_{\overline{\pi}}(\overline{\alpha}).$$
+\end{prop}
+\begin{proof}
+La définition de $\chi_\pi$ donne la relation
+$$\alpha^{\frac{\n(\pi) - 1}{3}} \equiv \chi_\pi(\alpha) \pmod \pi.$$
+Le passage au conjugué donne
+$$\overline{\alpha}^{\, \frac{\n(\pi) - 1}{3}} \equiv \overline{\chi_\pi(\alpha)} \pmod {\overline{\pi}}. $$
+Comme $\n(\pi) = \n(\overline{\pi})$,
+\begin{align*}
+\chi_{\overline{\pi}}(\overline{\alpha}) &\equiv  \overline{\alpha}^{\frac{\n(\overline{\pi}) - 1}{3}} \pmod {\overline{\pi}}\\
+&=\overline{\alpha}^{\frac{\n(\pi) - 1}{3}} \\
+& \equiv \overline{\chi_\pi(\alpha)} \pmod {\overline{\pi}}.
+\end{align*}
+La conclusion vient alors de la proposition \ref{prop75}.
+\end{proof}
+
+\begin{prop}\label{prop79}
+Soit $q$ un premier rationnel, $q\equiv 2 \pmod 3, q>0$. Si $n\in \Z$ est premier avec $q$, alors $\chi_q(n) = 1$.
+\end{prop}
+
+\begin{proof}
+L'élément $q$ est premier dans $A$, et par définition de $\chi_q$,
+$$\chi_q(n) \equiv n^{\frac{\n(q) - 1}{3}} = n^{\frac{q^2 - 1}{3}} = (n^{q-1})^{\frac{q+1}{3}} \equiv 1 \pmod q.$$
+\end{proof}
+
+Remarque 1 : l'exemple 2 de la proposition \ref{nbsols} du chapitre ``Sommes de Gauss et sommes de Jacobi'' démontre que dans le cas $q \equiv 2 \pmod 3, q \nmid n$, il existe un entier $x \in \Z$ tel que $x^3 \equiv n \pmod q$. La proposition \ref{prop77} donne alors $\chi_q(n) = 1$, ce qui prouve à nouveau la proposition.
+
+\medskip
+
+Remarque 2: si $q \ne q'$ sont des premiers rationnels tous deux congrus à 2 modulo 3, alors $\chi_q(q')  = \chi_{q'}(q) = 1$, ce qui est un cas particulier de la loi de réciprocité cubique.
+
+
+
+\section{\'Eléments primaires de $\Z[\omega]$}
+
+Introduisons la notion d'élément primaire, qui permet de choisir un élément privilégié parmi les associés d'un élément de $A$.
+
+\begin{dfn} 
+Un élément $\alpha  = a + b \omega \in A = \Z[\omega], (a,b \in \Z)$, qui n'est pas une unité, est dit primaire si $\alpha \equiv -1 \pmod 3$. 
+\end{dfn}
+
+
+
+
+Si $\alpha= a + b \omega$ est premier dans $A$, $\alpha$ est primaire signifie que $a \equiv -1 \pmod 3$ et $b \equiv 0 \pmod 3$. En effet $a + b\omega \equiv -1 \pmod 3$ équivaut à $3 \mid a+1 + b \omega$, soit $\frac{a+1}{3} + \frac{b}{3} \omega \in \Z[\omega]$.
+
+Ce concept d'élément primaire permet de distinguer un élément parmi les 6 conjugués d'un élément de $A$.
+
+
+
+\begin{prop}\label{prop80}
+Soit $\alpha$ un élément de $A = \Z[\omega]$ qui n'est pas une unité et tel que $\lambda = 1 - \omega \nmid \alpha$. Parmi les associés de $\alpha$, exactement un est primaire.
+\end{prop}
+\begin{proof}
+Rappelons que $3 = \n(\lambda) = \lambda \overline{\lambda} = -\omega^2 \lambda^2$, et donc $\lambda \mid 3$ dans $A$.
+
+Les associés de $\alpha= a + b \omega$ sont $\alpha, \omega\alpha, \omega^2 \alpha, -\alpha, -\omega\alpha,-\omega^2 \alpha$, soit
+$$a + b \omega,-b +(a-b)\omega,(b-a) - a\omega,-a - b \omega,b + (b-a)\omega,(a-b) + a \omega.$$
+
+
+Puisque $\lambda \nmid \alpha$, a fortiori $3 \nmid \alpha$, donc $a$ et $b$ ne sont pas tous deux divisibles par 3. Posons $A + B\omega =a + b \omega$ si $3 \nmid a$, et $A+ B \omega = - b + (a-b)\omega$ sinon : dans les deux cas $3\nmid A$. Les éléments $A+ B \omega$ et $-A - B \omega$ sont des conjugués de $\alpha$, et $A \equiv -1 \pmod 3$, ou $-A \equiv -1 \pmod 3$, donc l'un des conjugués $\beta = c + d\omega$ de $\alpha$ vérifie $c \equiv -1 \pmod 3$.
+
+Alors $d \not \equiv 1 \pmod 3$. Sinon $\beta = 3m-1 + (3n+1) \omega$, où $m,n\in \Z$, et alors $\beta= 3(m+n\omega) - (1-\omega)$ est divisible par $1-\omega$, et donc aussi son associé $\alpha$, contrairement à l'hypothèse. Ainsi $d \equiv 0 \pmod 3$ ou $d \equiv -1 \pmod 3$. Dans le premier cas, $\beta$ est primaire, et dans le deuxième cas son associé $-\omega \beta = d + (d-c) \omega \equiv -1 \pmod 3$ est primaire.
+
+Pour montrer l'unicité, notons $a+b \omega$ un des conjugués primaires de $\alpha$, alors $a \equiv -1, b \equiv 0 \pmod 3$. Vérifions alors que les 5 autres conjugués ne sont pas primaires. Comme $b \equiv 0 \pmod 3$, alors $-b+(a-b)\omega$ n'est pas primaire, ni $b + (b-a)\omega$. De même $a \not \equiv 0 \pmod 3$, donc $(b-a) -a\omega$ n'est pas primaire, ni  $(a-b) + a\omega$. Enfin  $-a \equiv 1 \pmod 3$, donc $-a - b \omega$ n'est pas primaire.
+\end{proof}
+
+Précisons la décomposition d'un élément de $A$ en facteurs premiers.
+
+\begin{prop}\label{prop81}
+Soit $S$ l'ensemble contenant $\lambda = 1 - \omega$ et tous les premiers primaires.  $S$ est un système complet de représentants des classes d'association, soit
+\be
+\item[(a)] Tout premier de $A$ est associé à un premier de $S$.
+\item[(b)] Deux éléments arbitraires distincts de $S$ ne sont pas associés. 
+\ee
+\end{prop}
+
+\begin{proof}
+(a) Soit $\pi$ un élément premier de $A$. Si $\n(\pi) = 3$, $\pi$ est associé à $1-\lambda$. Sinon, la proposition \ref{prop80} montre que $\pi$ est associé à exactement un premier primaire.
+
+(b) 
+Soient $\pi,\mu$ deux éléments de $S$ associés. Alors ils ont même norme. Ils s'agit de prouver qu'ils sont égaux.
+
+Si $\n(\pi) = \n(\mu) = 3$, alors $\pi = \mu = \lambda$, puisque $S$ contient un seul élément de norme 3, à savoir $\lambda$.
+
+Si $\n(\pi) = \n(\mu) \ne 3$, alors $\pi, \mu$ sont des premiers primaires par définition de $S$, et la proposition \ref{prop80} montre qu'il n'y a qu'un premier primaire associé $\pi$, donc $\pi = \mu$.
+
+\end{proof}
+
+\begin{prop} \label{prop82}
+Tout élément $\alpha \in A$ se décompose sous la forme
+$$\alpha = (-1)^a\omega^b\lambda^c \pi_1^{a_1}\cdots \pi_t^{a_t},$$
+où les $\pi_i$ sont des premiers primaires, et $a,b,c,a_i$ sont des entiers, $0\leq a \leq 1, 0 \leq b \leq 2, a_i>0$.
+Cette décomposition est unique à l'ordre près des éléments $\pi_1,\ldots,\pi_t$.
+\end{prop}
+\begin{proof}
+Puisque $A = \Z[\omega]$ est principal, donc factoriel, et $S$ étant un système complet de représentant des classes d'association, tout élément $\alpha$ de $A$ s'écrit de façon unique sous la forme
+$$\alpha = u \prod_{\pi \in S} \pi^{e(\pi)},$$
+où $e(\pi) \geq 0$ est nul sauf sur un ensemble fini de valeurs de $\pi\in S$, et où $u$ est une unité, donc $u =(-1)^a \omega^b, 0\leq a \leq 1, 0 \leq b \leq 2$, et $a, b$ sont alors uniquement déterminés. Par définition de $S$,
+$$\alpha =  (-1)^a\omega^b\lambda^c \pi_1^{a_1}\cdots \pi_t^{a_t}.$$
+\end{proof}
+
+Notons que si $\gamma, \rho \in A$ sont primaires, alors $-\gamma \rho$ est primaire. En effet, $\gamma \equiv \rho \equiv -1 \pmod 3$, donc $-\gamma \rho \equiv -1 \pmod 3$. Plus généralement, si $\gamma_1,\cdots, \gamma_t$ sont primaires, alors $(-1)^{t-1} \gamma_1\cdots\gamma_t \equiv -1 \pmod 3$ est primaire.
+
+\begin{prop}\label{prop83}
+Si $\gamma$ est un élément primaire de $A$, alors
+$$\gamma = \pm \gamma_1\cdots \gamma_t,$$
+où $t\geq 1$, et les $\gamma_i$ sont des premiers primaires (pas nécessairement distincts).
+\end{prop}
+
+\begin{proof}
+D'après la proposition 12, 
+$$\gamma = (-1)^a\omega^b\lambda^c \gamma_1 \cdots \gamma_t,$$
+où les $\gamma_i$ sont des premiers primaires, et $a\in \{0,1\}, b \in \{0,1,2\}, c \in \N$. Il faut montrer que $b =c = 0$.
+
+Comme $\gamma, \gamma_1,\ldots \gamma_t$ sont congrus à $-1$ modulo 3, nous obtenons
+$$\omega^b\lambda^c \equiv \pm 1 \pmod 3.$$
+
+Si $c\geq 1$,  comme $\lambda \mid 3$, nous obtenons $\lambda \mid 1$. Puisque $\lambda \nmid 1$, c'est une contradiction, donc $c = 0$.
+
+Alors $\omega^b \equiv \pm 1 \pmod 3$, où $\omega^b \in \{1,\omega, - 1 - \omega\}$. Puisque $\omega \not \equiv \pm 1 \pmod 3$, et $-1 - \omega \not \equiv  \pm 1 \pmod 3$, alors $\omega^b = 1$, avec $0\leq b \leq 2$, donc $b=0$.
+
+En conclusion, tout élément primaire $\gamma \in A$ se décompose sous la forme
+$$\gamma = \pm \gamma_1\cdots \gamma_t,$$
+où les $\gamma_i$ sont des premiers primaires (et le signe $\pm$ est égal à $(-1)^{t-1}$). Ici $t\geq 1$, puisque par définition d'un élément primaire, $\gamma$ n'est pas une unité.
+\end{proof}
+
+\section{Caractères cubiques généralisés.}
+
+De manière analogue à l'extension du symbole de Legendre au symbole de Jacobi, nous allons étendre la définition de  $\chi_{\gamma}$ à des éléments primaires $\gamma$ de $A$, pas nécessairement premiers. 
+
+
+\begin{dfn}
+Soit $\gamma$ un élément primaire de $A$, et $\gamma = \pm \gamma_1\cdots \gamma_t$ la décomposition de $\gamma$ en facteurs premiers primaires. Alors, pour tout $\alpha \in A$,
+$$\chi_\gamma(\alpha) =\chi_{\gamma_1}(\alpha)\cdots\chi_{\gamma_t}(\alpha).$$
+\end{dfn}
+
+Nous noterons aussi
+$$\chi_\gamma(\alpha) = \legendre{\alpha}{\gamma}_3.$$
+
+\begin{prop}\label{prop84}
+Soient $\gamma, \rho$ des éléments primaires de $A$, et $\alpha, \beta \in A$. Alors
+\be
+\item[(a)] 
+$\alpha \equiv \beta \pmod \gamma \Rightarrow \chi_\gamma(\alpha) = \chi_\gamma(\beta).$
+\item[(b)] $\chi_\gamma(\alpha \beta) = \chi_\gamma(\alpha) \chi_\gamma(\beta).$
+\item[(c)] $\chi_\rho(\alpha) \chi_\gamma(\alpha) = \chi_{-\rho \gamma}(\alpha).$
+\ee
+\end{prop}
+
+\begin{proof}
+\be
+\item[(a)] Soit $\gamma = \pm \gamma_1\cdots \gamma_t$ la décomposition de $\gamma$ en facteurs premiers primaires. Alors pour tout $i$, $\alpha \equiv \beta \pmod{\gamma_i}$, donc  $\chi_{\gamma_i}(\alpha) = \chi_{\gamma_i}(\beta)$ (proposition \ref{prop76}(b)). Par conséquent $\chi(\alpha) = \prod_{i=1}^t \chi_{\gamma_i}(\alpha) = \prod_{i=1}^t \chi_{\gamma_i}(\beta) =\chi_{\gamma}(\beta)$.
+
+\item[(b)] La proposition \ref{prop76}(a) montre que
+\begin{align*}
+\chi_\gamma(\alpha \beta) &= \chi_{\gamma_1}(\alpha \beta)\chi_{\gamma_2}(\alpha \beta)\cdots\chi_{\gamma_t}(\alpha \beta)\\
+&= \chi_{\gamma_1}(\alpha)\chi_{\gamma_2}(\alpha)\cdots\chi_{\gamma_t}(\alpha)\chi_{\gamma_1}(\beta)\chi_{\gamma_2}(\beta)\cdots\chi_{\gamma_t}(\beta)\\
+&= \chi_\gamma(\alpha) \chi_{\gamma}(\beta)
+\end{align*}
+\item[(c)] Si $\rho = \pm \rho_1\rho_2\cdots\rho_l$ est primaire, alors $-\rho \gamma$ est primaire, et $-\rho \gamma = \pm \rho_1\rho_2\cdots\rho_l\gamma_1\gamma_2\cdots\gamma_t$, donc
+$$\chi_{-\rho \gamma}(\alpha) = (\chi_{\rho_1} \chi_{\rho_2}\cdots \chi_{\rho_l}\chi_{\gamma_1} \chi_{\gamma_2}\cdots \chi_{\gamma_t} )(\alpha)= \chi_\rho(\alpha)\chi_\gamma(\alpha).$$
+\ee
+\end{proof}
+
+
+\section{Somme de Gauss associée au caractère $\chi_\pi$.}
+
+Soit $\pi$ un premier primaire de norme $N(\pi) = p, p \equiv 1 \pmod 3$.
+
+Nous savons que $A/\pi A$ est un corps à $p$ éléments (proposition \ref{prop71}). Il existe donc un isomorphisme $\varphi$, et un seul, de $\F_p$ sur $A/\pi A$ : cet isomorphisme envoie $[1]_p$ sur $[1]_\pi = 1 + \pi A$, donc $[k]_p$ sur $[k]_\pi = k + \pi A$.
+
+La proposition \ref{prop76} et son commentaire montrent que l'application $\chi$
+$$
+\begin{array}{ccc}
+(A/\pi A)^* & \to & \C^*\\
+{[}\alpha {]}& \mapsto & \legendre{\alpha}{\pi}_3 
+\end{array}
+$$
+est un homomorphisme de groupes, et la restriction $\phi$ de $\varphi$ à $\F_p^*$ aussi, donc la composée $\psi = \chi \circ \phi$ aussi :
+$$ \F_p^* \to (A/\pi A)^* \to \C^*.$$
+
+$\psi$ est donc ainsi un caractère cubique sur $\F_p^*$, auquel on peut appliquer les concepts de sommes de Gauss et de Jacobi. En identifiant $\F_p$ avec $A/\pi A$, et $\psi$ avec $\chi$, nous obtenons donc, pour les caractères  cubiques $\chi$,
+$$g(\chi) = \sum_{t =0}^{p-1} \chi(t) \zeta^t.$$
+
+Les propositions \ref{ordre3} et \ref{congruences} du chapitre ``Sommes de Gauss et sommes de Jacobi'' montrent que, pour tout caractère cubique $\chi$ sur $\F_p$,
+
+\be
+\item[(a)] $g(\chi)^3 = p J(\chi,\chi)$.
+\item[(b)] Si $J(\chi,\chi) = a + b \omega$, alors $a\equiv -1 \pmod 3$ et $b \equiv 0 \pmod 3$.
+\ee
+Puisque $\n(J(\chi,\chi)) = p$, $J(\chi,\chi)$ est premier dans $A$, et l'affirmation (b) montre que $J(\chi,\chi)$ est un premier primaire.
+
+
+
+\bigskip 
+
+$\bullet$ Supposons que $\pi$ est primaire. Montrons que $$J(\chi_\pi,\chi_\pi) = \pi.$$
+
+Posons $J(\chi_\pi,\chi_\pi) = \pi'$. Alors $\pi \overline{\pi} = p = \pi' \overline{\pi'}$, si bien que $\pi \mid \pi'$ ou $\pi \mid \overline{\pi'}$, et puisque tous ces éléments ont pour norme $p$, $\pi \sim \pi'$ ou $\pi \sim \overline{\pi'}$. De plus ces premiers sont primaires, donc $\pi = \pi'$ ou $\pi = \overline{\pi'}$. Il s'agit d'éliminer la seconde possibilité.
+
+Par définition,
+\begin{align*}
+J(\chi_\pi, \chi_\pi) &= \sum_{x =0}^{p-1} \chi_{\pi}(x) \chi_{\pi}(1-x)\\
+&\equiv \sum_{x = 0}^{p-1} x^{\frac{p-1}{3}} (1-x)^{\frac{p-1}{3}} \pmod \pi.
+\end{align*}
+Le polynôme $X^{\frac{p-1}{3}} (1-X)^{\frac{p-1}{3}} = \sum_{k=0}^d a_k X^k$ est de degré $d = \frac{2}{3}(p-1) < p-1$, et son coefficient constant $a_0$ est nul. 
+
+Si $1\leq k \leq d < p-1$,  posons $S_k = 1^k+ 2^k+\cdots+(p-1)^k$. Comme $p-1 \nmid k$, il existe un élément $a \in \F_p^*$ tel que $a^k \ne 1$ (on peut prendre par exemple pour $a$ un générateur de $\F_p^*$). Puisque $i \mapsto j = a i$ est une bijection de $\F_p^*$, le changement d'indice $j = ai$ donne
+$$a^k S_k \equiv  \sum_{i = 0}^{p-1} (ai)^k \equiv  \sum_{j=0}^{p-1}j^k = S_k \pmod p.$$
+Comme $a^k \not \equiv 1 \pmod p$, $S_k \equiv 0 \pmod p$, a fortiori $S_k \equiv 0 \pmod \pi$, donc $J(\chi_\pi,\chi_\pi) = \sum_{k=1}^d a_k S_k \equiv 0 \pmod \pi$. Ainsi
+$$J(\chi_\pi,\chi_\pi) \equiv 0 \pmod \pi.$$
+Donc $\pi \mid \pi'$, et ainsi $\pi = \pi' = J(\chi_\pi,\chi_\pi)$.
+
+En utilisant l'affirmation (a), nous obtenons alors
+$g(\chi_\pi)^3 = p \pi.$
+
+Nous avons prouvé la proposition suivante :
+\begin{prop}\label{prop85}
+Soit $\pi$ un premier primaire de norme $\n(\pi) = p,\ p \equiv 1 \pmod 3$.  Alors 
+$$g(\chi_\pi)^3 = p \pi.$$
+\end{prop}
+
+
+
+\section{Loi de réciprocité cubique.}
+
+Puisque $\overline{\lambda} = 1 -\omega^2 = -\omega^2(1 - \omega) =-\omega^2 \lambda$, les premiers $\lambda, \overline{\lambda}$ sont associés. Alors les éléments $\alpha$ de norme 3 sont premiers, et vérifient $\alpha \overline{\alpha} = 3 =\lambda \overline{\lambda} =-\omega^2 \lambda^2$. Ils sont donc associés à $\lambda$, et ne sont pas primaires. Ainsi un premier primaire $\pi$ vérifie $\n(\pi) \ne 3$.
+
+Nous pouvons maintenant énoncer la loi de réciprocité cubique, en considérant d'abord le cas de deux premiers primaires de normes distinctes, ce qui revient à dire qu'ils sont distincts et non conjugués.
+
+\begin{prop}\label{prop86}
+Soient $\pi_1,\pi_2$ des premiers primaires tels que $\n(\pi_1) \ne \n(\pi_2)$. Alors
+$$\legendre{\pi_2}{\pi_1}_3 = \legendre{\pi_1}{\pi_2}_3.$$
+\end{prop}
+
+
+\begin{proof}
+
+Trois cas sont à considérer. Le premier cas correspond à $\pi_1 = q, \pi_2 = q'$, où $q,q'$ sont des premiers rationnels positifs congrus à $-1$ modulo $3$ : ce cas a déjà été traité dans la remarque 2 suivant la proposition \ref{prop79}. Le deuxième cas consiste à supposer que  $\pi_1 = q$, et  que $\pi_2$ vérifie $\n(\pi) = p$, $p$ premier rationnel congru à 1 modulo 3. Le troisième cas est la cas où $\pi_1,\pi_2$ ont tous deux pour norme un nombre premier.
+
+
+\bigskip 
+$\bullet$ Commençons par le cas 2 : $q \equiv -1 \pmod 3$ est un premier rationnel positif, et $\pi$ un premier de $A$ tel que $\n(\pi) = p \equiv 1 \pmod 3$, $p$ premier. Il s'agit de prouver que ${\legendre{\pi}{q}}_3 = {\legendre{q}{\pi}}_3$.
+
+\medskip
+La proposition \ref{prop85} donne
+$$g(\chi_\pi)^3 = p \pi.$$
+Elevons cette égalité à la puissance $(q^2 - 1)/3$ :
+$$g(\chi_\pi)^{q^2 - 1}  = (p \pi)^{\frac{q^2-1}{3}}.$$
+En réduisant modulo $q$, comme $\n(q) = q^2$,
+$$g(\chi_\pi)^{q^2 - 1}  \equiv \chi_q(p\pi) \pmod q.$$
+Comme $\chi_q(p) = 1$ (proposition \ref{prop79}), ceci donne, en multipliant par $g(\chi_\pi)$,
+\begin{align}\label{eq3.1}
+g(\chi_\pi)^{q^2} \equiv \chi_q(\pi)g(\chi_\pi) \pmod q.
+\end{align}
+Par ailleurs,
+\begin{align*}
+g(\chi_\pi)^{q^2} &= \left(\sum_{t =0}^{p-1} \chi_\pi(t) \zeta^t\right)^{q^2}\\
+& \equiv \sum_{t =0}^{p-1} \chi_\pi(t)^{q^2} \zeta^{q^2t} \pmod q.
+\end{align*}
+Puisque $q^2 \equiv 1 \pmod 3$, et que $\chi_\pi(t)$ est une racine cubique de l'unité, $\chi_\pi(t)^{q^2} = \chi_\pi(t)$, donc 
+$$g(\chi_\pi)^{q^2} \equiv g_{q^2}(\chi_\pi) \pmod q.$$
+La proposition \ref{prop50} du chapitre ``Sommes de Gauss et sommes de Jacobi'' donne $g_{q^2}(\chi_\pi) = \chi_\pi(q^{-2})g(\chi_\pi) = \chi_\pi(q) g(\chi_\pi)$. Ainsi
+\begin{align}\label{eq3.2}
+g(\chi_\pi)^{q^2}  \equiv \chi_\pi(q)g(\chi_\pi) \pmod q
+\end{align}
+En combinant (\ref{eq3.1}) et (\ref{eq3.2}), nous obtenons
+$$\chi_\pi(q)g(\chi_\pi) \equiv \chi_q(\pi) g(\chi_\pi) \pmod q.$$
+Multiplions les deux membres de cette congruence par $\overline{g(\chi_\pi)}$. Puisque $g(\chi_\pi) \overline{g(\chi_\pi)} = p$,
+$$\chi_\pi(q) p \equiv \chi_q(\pi) p \pmod q.$$
+Comme $p\wedge q = 1$,
+$$\chi_\pi(q) \equiv \chi_q(\pi) \pmod q.$$
+Les classes de $1,\omega, \omega^2$ étant distinctes dans $A/qA$,
+$$\chi_\pi(q) = \chi_q(p).$$
+
+\bigskip
+
+$\bullet$ Il reste à traiter le cas où $\pi_1,\pi_2$ sont des premiers tels que $\n(\pi_1) = p_1 \equiv 1 \pmod 3$ et $\n(\pi_2) = p_2 \equiv 1 \pmod 3$.
+
+Notons $\gamma_1 = \overline{\pi_1}$ et $\gamma_2 = \overline{\pi_2}$. Alors $\gamma_1$ et $\gamma_2$ sont des premiers primaires, et $p_1 = \pi_1 \gamma_1, p_2 = \pi_2 \gamma_2$.
+
+Mettons en oeuvre la même méthode que précédemment. Partons de l'égalité $$g(\chi_{\gamma_1})^3 = p_1 \gamma_1$$ prouvée ci dessus pour les premiers primaires. L'élévation à la puissance $\frac{\n(\pi_2) - 1}{3} = \frac{p_2-1}{3}$ donne 
+$$g(\chi_{\gamma_1})^{p_2-1} = (p_1\gamma_1)^{\frac{p_2-1}{3}},$$
+ et la réduction modulo $\pi_2$ donne
+ $$g(\chi_{\gamma_1})^{p_2-1} \equiv \chi_{\pi_2}(p_1\gamma_1) \pmod {\pi_2},$$
+ donc
+\begin{align}\label{eq3.3}
+g(\chi_{\gamma_1})^{p_2} \equiv \chi_{\pi_2}(p_1\gamma_1)g(\chi_{\gamma_1}) \pmod {\pi_2}.
+\end{align}
+De plus, 
+\begin{align*}
+g(\chi_{\gamma_1})^{p_2} &= \left(\sum_{t=0}^{p_2-1} \chi_{\gamma_1}(t) \zeta^t\right)^{p_2}\\
+&\equiv \sum_{t=0}^{p_2-1} \chi_{\gamma_1}(t)^{p_2} \zeta^{p_2t} \pmod {\pi_2}
+\end{align*}
+Comme $p_2 \equiv 1 \pmod 3$, $\chi_{\gamma_1}(t)^{p_2} = \chi_{\gamma_1}(t)$, donc
+\begin{align*}
+g(\chi_{\gamma_1})^{p_2} &\equiv g_{p_2}(\chi_{\gamma_1}) \pmod {\pi_2}
+\end{align*}
+Comme
+\begin{align*}
+g_{p_2}(\chi_{\gamma_1}) & = \chi_{\gamma_1}(p_2^{-1}) g(\chi_{\gamma_1})\\
+&= \chi_{\gamma_1}(p_2^2) g(\chi_{\gamma_1}),
+\end{align*}
+nous en déduisons
+\begin{align}\label{eq3.4}
+g(\chi_{\gamma_1})^{p_2} \equiv \chi_{\gamma_1}(p_2^2) g(\chi_{\gamma_1}) \pmod{\pi_2}.
+\end{align}
+La comparaison des congruences (\ref{eq3.3}) et (\ref{eq3.4}) donne
+$$\chi_{\gamma_1}(p_2^2) g(\chi_{\gamma_1}) \equiv \chi_{\pi_2}(p_1\gamma_1)g(\chi_{\gamma_1}) \pmod {\pi_2} .$$
+En multipliant par $\overline{g(\chi_{\gamma_1})}$, puisque  $g(\chi_{\gamma_1})\overline{g(\chi_{\gamma_1})} = p_1$, nous obtenons
+$$p_1\, \chi_{\gamma_1}(p_2^2) \equiv p_1\,  \chi_{\pi_2}(p_1\gamma_1) \pmod {\pi_2}.$$
+Comme $\n(\pi_1) \ne \n(\pi_2)$ par hypothèse, $p_1 \ne p_2$, donc les entiers $p_1,p_2$ sont premiers entre eux dans $\Z$, donc dans $A$, a fortiori $\pi_2$ est premier avec $p_1$ dans $A$. Par conséquent
+$$\chi_{\gamma_1}(p_2^2) \equiv  \chi_{\pi_2}(p_1\gamma_1) \pmod {\pi_2}.$$
+Les classes de $1,\omega,\omega^2$ étant distinctes dans $A/\pi_2A$, nous pouvons conclure que
+\begin{align}\label{eq3.5}
+\chi_{\gamma_1}(p_2^2)=  \chi_{\pi_2}(p_1\gamma_1) .
+\end{align}
+
+En remplaçant dans les calculs précédents le couple $(\gamma_1, \pi_2)$ par le couple $(\pi_2,\pi_1)$, et donc en échangeant $p_1$ et $p_2$, nous obtenons de même
+\begin{align}\label{eq3.6}
+\chi_{\pi_2}(p_1^2) = \chi_{\pi_1}(p_2 \pi_2).
+\end{align}
+
+
+Rappelons le résultat de la proposition \ref{prop78}, qui  montre que $\overline{\chi_\pi(\alpha)} = \chi_{\overline{\pi}}(\overline{\alpha}).$ Alors
+
+$$\chi_{\gamma_1}(p_2^2) = \chi_{\overline{\pi_1}}(p_2^2) =  \chi_{\overline{\pi_1}}\left(\overline{p_2^2}\right) = \overline{\chi_{\pi_1}(p_2^2)} = \overline{\chi_{\pi_1}(p_2)^2} = \chi_{\pi_1}(p_2),$$
+et ainsi
+\begin{align}\label{eq3.7}
+\chi_{\gamma_1}(p_2^2) = \chi_{\pi_1}(p_2).
+\end{align}
+En utilisant les égalités (\ref{eq3.5}),(\ref{eq3.6}) et (\ref{eq3.7}), nous obtenons
+\begin{align*}
+ \chi_{\pi_1}(\pi_2)\chi_{\pi_2}(p_1\gamma_1) &= \chi_{\pi_1}(\pi_2) \chi_{\gamma_1}(p_2^2)\qquad \text{(égalité (\ref{eq3.5}))}\\
+ &= \chi_{\pi_1}(\pi_2) \chi_{\pi_1}(p_2) \qquad \text{(égalité (\ref{eq3.7}))}\\
+ &= \chi_{\pi_1}(p_2 \pi_2)\\
+ &=\chi_{\pi_2}(p_1^2)\qquad \qquad \quad \ \text{(égalité (\ref{eq3.6}))}\\
+ &=\chi_{\pi_2}(p_1 \pi_1 \gamma_1)\\
+ &=\chi_{\pi_2}(\pi_1) \chi_{\pi_2}(p_1 \gamma_1)
+\end{align*}
+En simplifiant par $\chi_{\pi_2}(p_1 \gamma_1) \ne 0$, nous obtenons bien
+$$\chi_{\pi_1}(\pi_2) = \chi_{\pi_2}(\pi_1) .$$
+\end{proof}
+
+\section{Autre démonstration de la réciprocité cubique.}
+
+{
+A l'aide des sommes de Jacobi généralisées, donnons une nouvelle preuve de la loi de réciprocité cubique (proposition 16).
+
+\medskip
+{\bf Lemme.} {\it Soient $p,q$ deux nombres premiers rationnels distincts, et $\chi$ un caractère sur $\F_p$. Considérons
+$$S = J(\chi,\ldots,\chi)$$
+la somme de Jacobi avec $q$ entrées égales à $\chi$. Alors
+$$J(\chi,\ldots,\chi) \equiv \chi^q(q^{-1}) \pmod q.$$
+}
+\medskip
+
+\begin{proof}
+Considérons la somme de Jacobi $S = J(\chi,\ldots,\chi)$, avec $q$ entrées égales à $\chi$:
+$$S = J(\chi_1,\ldots,\chi_q),\quad \text{où } \chi_1 = \ldots = \chi_q= \chi,$$
+$\chi$ étant un caractère sur $\F_p$.
+
+Alors
+$$S = J(\chi,\ldots,\chi) = \sum_{(x_1,\ldots,x_q)\in X} \chi(x_1)\cdots\chi(x_q),$$
+où
+$$X = \{(x_1,\ldots,x_q) \in (\F_p)^q \mid x_1 + \cdots+x_q = 1\}.$$
+
+Définissons une action à droite de $S_q$ sur $(\F_p)^q$ par
+$$  (x_1,\ldots,x_q)^\sigma = (x_{\sigma(1)}, \ldots,x_{\sigma(q)}),\qquad (x_1,\ldots,x_q) \in \F_p^q, \sigma \in S_q.$$
+ Vérifions qu'il s'agit bien d'une action à droite :
+
+ si $x = (x_1,\ldots,x_q) \in (\F_p)^q$, et $\sigma, \sigma' \in S_n$, alors
+\begin{align*}
+x^e &= x,\\
+(x^\sigma)^{\sigma'} &= ((x_1,\ldots,x_q)^\sigma)^{\sigma'} \\
+&= (x_{\sigma(1)}, \ldots,x_{\sigma(q)})^{\sigma'}\\
+&=(y_1,\ldots,y_q)^{\sigma'} \qquad \qquad \qquad (\text{où } y_i = x_{\sigma(i)})\\
+&= (y_{\sigma'(1)},\ldots,y_{\sigma'(q)})\\
+&= (x_{\sigma(\sigma'(1))}, \ldots, x_{\sigma(\sigma'(q))}) \qquad (\text{puisque } y_{\sigma'(j)} = x_{\sigma(\sigma'(j))})\\
+&= (x_1,\ldots,x_q)^{\sigma \circ \sigma'}\\
+&=x^{\sigma \sigma'}.
+\end{align*}
+
+
+Le cycle  $\tau = (1\,2\,\cdots\, q) \in S_q$ engendre un sous-groupe $H = \langle \tau \rangle $ de $S_q$ d'ordre $q$. Pour tout $x = (x_1,\cdots,x_q) \in (\F_p)^q$,  $(x_1,\cdots,x_q)^\tau = (x_2,\ldots,x_{q}, x_1)$. Par conséquent $\tau$ laisse stable $X$, puisque 
+$$x = (x_1,\cdots,x_q) \in X \Rightarrow x_1+ \cdots+x_q = 1 \Rightarrow x_2+ \ldots + x_q + x_1 = 1 \Rightarrow x^\tau \in X.$$
+
+Ceci prouve
+     $$x \in X \Rightarrow x^\tau \in X.$$
+     
+Par conséquent, si on restreint l'action de $G$ au sous-groupe $H$, $H = \langle \tau \rangle$ opère à droite sur $X$.
+
+Calculons le cardinal de $X$. Puisqu'un $q$-uplet de $X$ est déterminé par ses $q-1$ premiers éléments,
+$$|X| = p^{q-1}.$$
+
+Comme $H = \langle \tau \rangle$ opère sur $X$, la formule orbite-stabilisateur donne, pour tout $x \in X$, en notant ${\cal O}_x = x^H$ l'orbite de $x$ sous l'action de $H$, et $H_x $ le stabilisateur de $x$,
+$$|{\cal O}_x | = (H : H_x ) = |H|/|H_x |.$$
+Par conséquent $|{\cal O}_x |$ divise $|H| = q$. Comme $q$ est premier, le cardinal d'une orbite ${\cal O}_x$ est soit $1$, soit $q$.
+$$\forall  x\in  X, \ |{\cal O}_x | = 1 \text{ ou } |{\cal O}_x | = q.$$
+
+A quelle condition $x \in X$ vérifie-t-il  $|{\cal O}_x | = 1$ ?
+
+Comme $H = \{e,\tau, \cdots, \tau^{q-1}\}$,
+$${\cal O}_x = \{x, x^\tau, \cdots,x^{\tau^{q-1}}\}.$$
+Par conséquent, pour tout $x = (x_1,\ldots,x_q) \in X$,
+\begin{align*}
+|{\cal O}_x | = 1 &\iff x = x^\tau =x^{\tau^2} = \cdots = x^{\tau^{q-1}}\\
+& \iff x^\tau = x\\
+&\iff (x_2,x_3,\ldots,x_q,x_1) = (x_1,x_2,\ldots,x_q)\\
+&\iff x_1 = x_2 = \cdots = x_q.
+\end{align*}
+Définissons
+$$ Y = \{(x_1,\ldots,x_q)\in X \mid x_1 = x_2 = \cdots = x_q\}.$$
+Soit $x =(x_1,\ldots,x_q)\in \F_p^q$. Alors $x \in Y$ si et seulement s'il existe $a \in \F_p$ tel que $x =(a,\ldots,a)$ et $qa = 1$, soit $a = q^{-1}$. Ainsi $|Y| = 1$, le seul élément de $Y$ étant l'élément $y=(a,\ldots,a)$, où $a = q^{-1}$ est l'inverse de $q$ dans $\F_p$.
+
+Nous avons montré que
+$$ Y = \{(x_1,\ldots,x_q)\in X \mid x_1 = x_2 = \cdots = x_p\} = \{x \in X \mid \quad  |{\cal O}_x | = 1\} = \{y\}.$$
+
+Comme les orbites de l'action de $H$ sur $X$ forment une partition de $X$, en notant $S$ un système complet de représentants des orbites,
+$$X = \coprod_{x \in S} {\cal O}_x$$
+(réunion disjointe des orbites).
+
+Si une orbite est réduite à un seul élément, i.e. ${\cal O}_x = \{x\}$, alors son unique représentant ne peut être que $y$, donc $y \in  S$, et ainsi
+$$ X = \{y\} \cup \bigcup_{x \in S \setminus \{y\}} {\cal O}_x.$$
+(Alors $|X| = \sum_{x\in S} |{\cal O}_x| = 1+ \sum_{x \in S \setminus \{y\}} |{\cal O}_x|$. Comme $q \mid |{\cal O}_x|$ pour tout $x \ne y$, nous obtenons $|X| \equiv 1 \pmod q$, ce qui n'est pas surprenant puisque $|X| = p^{q-1} \equiv 1 \pmod q$ !)
+Par conséquent,
+\begin{align*}
+S = J(\chi,\ldots,\chi) &= \sum_{(x_1,\ldots,x_q)\in X} \chi(x_1)\cdots\chi(x_q)\\
+ &=\chi(a)^q + \sum_{x \in S\setminus\{y\}} \sum_{(x_1,\ldots,x_q) \in {\cal O}_x} \chi(x_1)\ldots \chi(x_q)\\
+ &=\chi^q(q^{-1})+ \sum_{x \in S\setminus\{y\}} \sum_{(x_1,\ldots,x_q) \in {\cal O}_x} \chi(x_1)\ldots \chi(x_q).
+\end{align*}
+De plus, si $x \in S \setminus \{y\}$, le produit $\chi(x_1)\cdots \chi(x_p)$ est constant sur l'orbite ${\cal O}_x$, puisque $\chi(x_{\tau(1)})\cdots \chi(x_{\tau(p)}) = \chi(x_1)\cdots \chi(x_p)$. Par conséquent 
+$$ q \mid \sum_{(x_1,\ldots,x_q) \in {\cal O}_x} \chi(x_1) \cdots \chi(x_q), \qquad (x \in S \setminus \{y\}).$$
+Ainsi
+$$S = J(\chi,\ldots,\chi) \equiv \chi^q(q^{-1}) \pmod q.$$
+
+\end{proof}
+
+\begin{proof}(proposition \ref{prop86})
+
+ Trois cas sont à considérer. 
+ \item[$\bullet$] Le premier cas correspond à $\pi_1 = q, \pi_2 = q'$, où $q,q'$ sont des premiers rationnels positifs distincts congrus à $-1$ modulo $3$. 
+ 
+Alors $q \wedge q' =1$. La proposition \ref{prop79} donne $\chi_q(q') = 1 = \chi_{q'}(q)$.
+  
+ 
+\item[$\bullet$]Dans le deuxième cas, $\pi_1 =q$ est un premier rationnel positif congru à $-1$ modulo $3$, et  $\pi_2 = \pi$ vérifie $\n(\pi) = p$, où $p$ est un premier rationnel congru à 1 modulo 3.
+
+Posons $\chi = \chi_\pi$. Appliquons le lemme à $J(\chi,\ldots,\chi)$, avec $q$ entrées égales à $\chi$ :
+
+$$J(\chi,\ldots,\chi) \equiv \chi^q(q^{-1}) \pmod q.$$
+
+Puisqu'ici $q \equiv 2 \pmod 3$, $\chi^q = \chi^2 = \chi^{-1}$, donc
+$$J(\chi,\ldots,\chi) \equiv \chi(q) \pmod q.$$
+
+ Comme $3 \mid q+1$, $\chi^{q+1} =\varepsilon$ est le caractère trivial, et $\chi$ n'est pas trivial. La proposition \ref{jac_gen3} du chapitre ``Sommes de Gauss et sommes de Jacobi'' donne
+$$ g(\chi)^{q+1}  = p J(\chi,\ldots,\chi).$$
+
+D'après la proposition \ref{prop85}, $g(\chi_\pi)^3 = p \pi,$ donc 
+$$g(\chi)^{q+1} = (p\pi)^{\frac{q+1}{3}}.$$
+Par conséquent,
+$$ (p\pi)^{\frac{q+1}{3}} \equiv   p \chi(q) \pmod q,$$
+ou encore
+$$p^\frac{q-2}{3}\pi^\frac{q+1}{3} \equiv \chi(q) \pmod q.$$
+En élevant les deux membres à la puissance $q-1$, sachant que $q-1 \equiv 1 \pmod 3$,
+$$(p^{\frac{q-2}{3}})^{q-1} \pi^\frac{q^2-1}{3}  \equiv \chi(q) \pmod q.$$
+Comme $(p^{\frac{q-2}{3}})^{q-1}  \equiv 1 \pmod q$ d'après le petit théorème de Fermat, et puisque $\pi^\frac{q^2-1}{3} \equiv \chi_q(\pi) \pmod q$ par définition, nous obtenons
+$$\chi_q(\pi) \equiv \chi_\pi(q) \pmod q,$$
+donc
+$$\chi_q(\pi) = \chi_\pi(q).$$
+
+\item[$\bullet$]  Il reste le cas où  $\pi_1,\pi_2$ sont des premiers primaires tels que $p_1 = \n(\pi_1) = \pi_1 \overline{\pi_1}, p_2 = \n(\pi_2) =\pi_2 \overline{\pi_2}$ sont des premiers rationnels congrus à $1$ modulo $3$.
+Ecrivons $\gamma_1 = \overline{\pi_1}, \gamma_2 = \overline{\pi_2}$, si bien que
+$$p_1 = \pi_1 \gamma_1, \qquad p_2 = \pi_2 \gamma_2.$$
+Comme $\chi_{\gamma_1}$ est un caractère d'ordre $3$, et $p_2 \equiv 1 \pmod 3$, $\chi_{\gamma_1}^{p_2} = \chi_{\gamma_1} \ne \varepsilon.$ La proposition  \ref{jac_gen2} du chapitre ``Sommes de Gauss et sommes de Jacobi'' donne alors
+$$g(\chi_{\gamma_1})^{p_2} = J(\chi_{\gamma_1},\ldots,\chi_{\gamma_1}) g(\chi_{\gamma_1}^{p_2}),$$
+où la somme de Jacobi $J(\chi_{\gamma_1},\ldots,\chi_{\gamma_1})$ a $p_2$ entrées égales à $\chi_{\gamma_1}$.
+
+Puisque $\chi_{\gamma_1}^{p_2} = \chi_{\gamma_1}$,
+$$\left[g(\chi_{\gamma_1})^3\right]^{\frac{p_2 - 1}{3}} = J(\chi_{\gamma_1},\ldots,\chi_{\gamma_1}).$$
+La proposition \ref{prop85} montre que $g(\chi_{\gamma_1})^3 = p_1 \gamma_1$, donc
+$$(p_1 \gamma_1)^{\frac{p_2 - 1}{3}} = J(\chi_{\gamma_1},\ldots,\chi_{\gamma_1}).$$
+
+En appliquant une nouvelle fois le lemme, avec ici $p = p_1, q = p_2$, (où $p_1 \ne p_2$) et $\chi = \chi_{\gamma_1}$, nous obtenons
+$$J(\chi_{\gamma_1},\ldots,\chi_{\gamma_1})\equiv \chi_{\gamma_1}^{p_2}(p_2^{-1}) \pmod {p_2}.$$
+Comme $p_2 \equiv 1 \pmod 3$,
+$$J(\chi_{\gamma_1},\ldots,\chi_{\gamma_1}) \equiv \chi_{\gamma_1}(p_2^{-1}) = \chi_{\gamma_1}(p_2^2) \pmod {p_2}.$$
+Par conséquent,
+$$(p_1 \gamma_1)^{\frac{p_2 - 1}{3}} \equiv  \chi_{\gamma_1}(p_2^2) \pmod {\pi_2},$$
+soit encore
+\begin{align}\label{eq3.8}
+\chi_{\pi_2}(p_1 \gamma_1) \equiv \chi_{\gamma_1}(p_2^2) \pmod {\pi_2}.
+\end{align}
+
+En remplaçant dans les calculs précédents le couple $(\gamma_1, \pi_2)$ par le couple $(\pi_2,\pi_1)$, et donc en échangeant $p_1$ et $p_2$, nous obtenons de même
+\begin{align}\label{eq3.9}
+\chi_{\pi_2}(p_1^2) = \chi_{\pi_1}(p_2 \pi_2).
+\end{align}
+
+
+Rappelons le résultat de la proposition \ref{prop78}, qui  montre que $\overline{\chi_\pi(\alpha)} = \chi_{\overline{\pi}}(\overline{\alpha}).$ Alors
+
+$$\chi_{\gamma_1}(p_2^2) = \chi_{\overline{\pi_1}}(p_2^2) =  \chi_{\overline{\pi_1}}\left(\overline{p_2^2}\right) = \overline{\chi_{\pi_1}(p_2^2)} = \overline{\chi_{\pi_1}(p_2)^2} = \chi_{\pi_1}(p_2),$$
+et ainsi
+\begin{align}\label{eq3.10}
+\chi_{\gamma_1}(p_2^2) = \chi_{\pi_1}(p_2).
+\end{align}
+En utilisant les égalités (\ref{eq3.8}),(\ref{eq3.9}) et (\ref{eq3.10}), nous obtenons
+\begin{align*}
+ \chi_{\pi_1}(\pi_2)\chi_{\pi_2}(p_1\gamma_1) &= \chi_{\pi_1}(\pi_2) \chi_{\gamma_1}(p_2^2)\qquad \text{(égalité (\ref{eq3.8}))}\\
+ &= \chi_{\pi_1}(\pi_2) \chi_{\pi_1}(p_2) \qquad \text{(égalité (\ref{eq3.10}))}\\
+ &= \chi_{\pi_1}(p_2 \pi_2)\\
+ &=\chi_{\pi_2}(p_1^2)\qquad \qquad \quad \ \text{(égalité (\ref{eq3.9}))}\\
+ &=\chi_{\pi_2}(p_1 \pi_1 \gamma_1)\\
+ &=\chi_{\pi_2}(\pi_1) \chi_{\pi_2}(p_1 \gamma_1)
+\end{align*}
+En simplifiant par $\chi_{\pi_2}(p_1 \gamma_1) \ne 0$, on obtient bien
+$$\chi_{\pi_1}(\pi_2) = \chi_{\pi_2}(\pi_1) .$$
+
+
+\end{proof}
+
+\section{Réciprocité cubique générale.}
+
+Le cas où $\n(\pi_1) = \n(\pi_2)$ n'est pas traité dans la proposition \ref{prop86}. \'Etendons à ce cas la réciprocité cubique.
+
+\medskip
+{\bf Lemme.} {\it Soit $n\in \Z$ un entier primaire (i.e. $n \equiv -1 \pmod 3$), et soit $\pi$ un premier primaire tel que $\n(\pi) = p \equiv 1 \pmod 3$. Alors 
+$$\legendre{n}{\pi}_3 = \legendre{\pi}{n}_3.$$
+}
+
+\medskip
+
+\begin{proof}
+Si $p \mid n$, alors $\pi \mid n$, donc $\legendre{n}{\pi}_3 =0 = \legendre{\pi}{n}_3.$ Nous pouvons maintenant supposer que $p\wedge n = 1$. 
+
+Comme $n$ est primaire, il se décompose sous la forme
+\begin{align*} n &= \pm p_1 \cdots p_s q_1 \cdots q_r\qquad (p_i \equiv 1 \ [3], q_j \equiv -1 \ [3])\\
+&= \pm \pi_1\overline{\pi_1} \cdots \pi_s \overline{\pi}_s q_1 \cdots q_r,
+\end{align*}
+où $\pi_i, \overline{\pi_i} (1\leq i \leq s)$ et $q_j (1 \leq j \leq r)$ sont des premiers primaires.
+
+Puisque $\n(\pi) = p \ne p_i =\n(\pi_i)$ et $\n(\pi) = p \ne \n(q_j) =q_j^2$, la proposition \ref{prop86} (réciprocité cubique) montre que
+\begin{align*}
+\legendre{n}{\pi}_3 &=\legendre{\pi_1}{\pi}_3\legendre{\overline{\pi_1}}{\pi}_3\cdots \legendre{\pi_s}{\pi}_3\legendre{\overline{\pi_s}}{\pi}_3 \legendre{q_1}{\pi}_3  \cdots \legendre{q_r}{\pi}_3 \\
+&=\legendre{\pi}{\pi_1}_3\legendre{\pi}{\overline{\pi_1}}_3\cdots \legendre{\pi}{\pi_s}_3\legendre{\pi}{\overline{\pi_s}}_3 \legendre{\pi}{q_1}_3  \cdots \legendre{\pi}{q_r}_3 \\
+&= \legendre{\pi}{n}_3.
+\end{align*}
+\end{proof}
+
+Nous pouvons alors supprimer l'hypothèse inutile $\n(\pi_1) \ne \n(\pi_2)$ dans la proposition \ref{prop86}.
+
+\begin{prop}
+Soient $\pi_1,\pi_2$ des premiers primaires. Alors
+$$\legendre{\pi_2}{\pi_1}_3 = \legendre{\pi_1}{\pi_2}_3.$$
+\end{prop}
+
+\begin{proof}
+Il ne reste à examiner que le cas où $\n(\pi_1) = \n(\pi_2)$.
+
+Si $\pi_1 = \pi_2$, alors $\legendre{\pi_2}{\pi_1}_3 = \legendre{\pi_1}{\pi_2}_3 =0$.
+
+Si $\pi_1 \ne \pi_2$, comme $\pi_1$ et $\pi_2$ sont primaires, alors $\pi_1, \pi_2$ sont des premiers tels que $\n(\pi_1) = \n(\pi_2) = p \equiv 1 \pmod 3$, et $\pi_2 = \overline{\pi_1}$. En notant $\pi = \pi_1$, il suffit de prouver que
+$$\legendre{\overline{\pi}}{\pi}_3 =  \legendre{\pi}{\overline{\pi}}_3.$$
+Utilisons la ``ruse d'Evans'' (voir [Lemmermayer]). L'élément $n = -\pi - \overline{\pi}$ est un entier rationnel, qui est primaire. Le lemme donne alors
+\begin{align*}
+\legendre{\overline{\pi}}{\pi}_3 &= \legendre{\pi + \overline{\pi}}{\pi}_3\\
+&= \legendre{-\pi - \overline{\pi}}{\pi}_3\\
+&= \legendre{\pi}{-\pi - \overline{\pi}}_3\\
+&= \legendre{-\overline{\pi}}{-\pi - \overline{\pi}}_3\\
+&=\legendre{\overline{\pi}}{-\pi - \overline{\pi}}_3\\
+&=\legendre{-\pi  -\overline{\pi}}{\overline{\pi}}_3\qquad (\text{lemme})\\
+&=\legendre{-\pi}{\overline{\pi}}_3\\
+&=\legendre{\pi}{\overline{\pi}}_3
+\end{align*}
+\end{proof}
+
+Nous obtenons alors la loi de réciprocité cubique pour les caractères généralisés.
+\begin{prop}\label{prop88}
+Si $\chi, \rho$ sont des éléments primaires de $A$, alors
+$$\chi_\gamma(\rho) = \chi_\rho(\gamma).$$
+\end{prop}
+\begin{proof}
+Décomposons $\rho, \gamma$ en facteurs premiers primaires, sous la forme
+\begin{align*}
+\rho&=\pm\rho_1\rho_2\cdots\rho_l,\\
+\gamma &= \pm \gamma_1 \gamma_2\cdots \gamma_m, 
+\end{align*}
+
+La loi de réciprocité cubique donne alors
+\begin{align*}
+\chi_\gamma(\rho) &= \prod_{j=1}^m \chi_{\gamma_j}(\rho)\\
+& = \prod_{j=1}^m\prod_{i=1}^l \chi_{\gamma_j}(\rho_{i})\\
+& = \prod_{i=1}^l\prod_{j=1}^m \chi_{\gamma_j}(\rho_{i})\\
+& = \prod_{i=1}^l\prod_{j=1}^m \chi_{\rho_i}(\gamma_j)\\
+&=\prod_{i=1}^l \chi_{\rho_i}(\gamma)\\
+&=\chi_{\rho}( \gamma).
+\end{align*}
+
+\end{proof}
+
+
+
+\section{Résidus cubiques entiers.}
+Soit $p$ un premier rationnel. A quelle condition un entier $a \in \Z$, où $p\nmid a$, est-il un résidu cubique, i.e. existe-t-il $x\in \Z$ tel que $x^3 \equiv a \pmod p$ ?
+
+Si $p = 3$, $a^2 \equiv 1 \pmod 3$, donc $a^3 \equiv a \pmod 3$, et donc $a$ est un résidu cubique.
+
+Supposons maintenant que $p \equiv 2 \pmod 3$. Puisque $d = 3 \wedge (p-1) = 1$,  et $a^{p-1} \equiv 1 \pmod p$, la proposition \ref{nbsols} du chapitre ``Sommes de Gauss et sommes de Jacobi'' montre qu'il existe un $x \in \Z$ tel que $x^3 \equiv a \pmod p$, et qu'il n'existe qu'une solution modulo $p$. Autrement dit l'application 
+$$
+\left\{
+\begin{array}{ccc}
+\F_p^* \to \F_p^*\\
+x \mapsto x^3
+\end{array}
+\right.
+$$
+est une bijection. 
+
+Plus intéressant est le cas où $p\equiv 1 \pmod 3$. Alors $p = \n(\pi)$, où $\pi = a + b \omega$ est un premier de $A$.
+
+S'il existe $x \in \Z$ tel que $x^3 \equiv a \pmod p$, a fortiori $x^3 \equiv a \pmod \pi$. Alors la proposition \ref{prop77} montre que $\legendre{a}{\pi}_3 = 1$.
+
+Réciproquement, si $\legendre{a}{\pi}_3 = 1$, la proposition \ref{prop77} montre l'existence de $\alpha \in A$ tel que $\alpha^3 \equiv a \pmod \pi$. De plus nous savons (voir la démonstration de la proposition \ref{prop71}) qu'il existe $x \in T = \{0,1,\cdots,p-1\}$ tel que $\alpha \equiv x \pmod \pi$, donc $x^3 \equiv a \pmod \pi$, où $x \in \Z$.
+
+Alors $\pi \mid x^3 -a$, donc $p = \n(\pi) \mid \n(x^3 -a) = (x^3-a)^2$, et $p$ est un premier rationnel, donc $p \mid x^3 -a$, soit $x^3 \equiv a \pmod p$.
+
+Notons que $0$ est toujours le cube de $0$.
+
+Nous avons donc prouvé la proposition suivante.
+
+\begin{prop}\label{prop89}
+Soit $p$ un nombre premier, et $a \in \Z$.
+\be
+\item[$\bullet$] Si $p = 3$, ou si $p\equiv 2 \pmod 3$, il existe un $x \in \Z$ tel que $x^3 \equiv a \pmod p$.
+\item[$\bullet$] Si $p \equiv 1 \pmod 3$, où $p\nmid a$, alors $p = \n(\pi)$, où $\pi$ est un premier de $A$, et 
+$$\exists x \in \Z,\ x^3 \equiv a \pmod p \iff \legendre{a}{\pi}_3 = 1 \iff \exists \alpha \in A,\  \alpha^3 \equiv a \pmod \pi.$$
+\ee
+\end{prop}
+
+
+
+\section{Le caractère cubique de $2$.}
+Nous étudions ici la question suivante. Quels sont les premiers $\pi$ de $A$ tels que l'équation $x^3 \equiv 2 \pmod \pi$ admet une solution dans $A$?
+
+Notons d'abord que, si $\pi,\pi'$ sont associés, l'équation $x^3 \equiv 2 \pmod \pi$ a des solutions si et seulement si $x^3 \equiv 2 \pmod {\pi'}$ a des solutions. Il suffit donc d'étudier le cas où $\pi$ est un premier primaire.
+
+Si $\pi = q$ est un premier de $\N$, où $q\equiv 2 \pmod 3, q \ne 2$, alors $\chi_q(2) = 1$, donc $2$ est un résidu cubique pour $q$.
+
+Supposons maintenant que $\pi = a + b \omega$ est un premier primaire tel que $\n(\pi) = p$, où $p\equiv 1 \pmod 3$ est premier. Comme $2$ et $\pi$ sont des premiers primaires, la loi de réciprocité cubique donne
+$$\legendre{2}{\pi}_3 = \legendre{\pi}{2}_3.$$ 
+Par définition de $ \legendre{\pi}{2}_3$, comme $\n(2) = 4$,
+$$ \legendre{\pi}{2}_3 \equiv \pi^{\frac{\n(2) - 1}{3}} = \pi \pmod 2.$$
+Ainsi $\legendre{2}{\pi}_3 = 1$ si et seulement si $\pi \equiv 1 \pmod 2$, soit $a \equiv 1 \pmod 2, b \equiv 0 \pmod 2$. En utilisant la proposition \ref{prop89}, nous avons prouvé la proposition suivante.
+\begin{prop}\label{prop90}
+ Si $\pi = a + b \omega$ est un premier primaire de $A$ tel que $\n(\pi) = p \equiv 1 \pmod 3$, alors
+\begin{align*}
+\exists x \in \Z,\ x^3 \equiv 2 \pmod p &\iff \exists \alpha \in A,\ \alpha^3 \equiv 2 \pmod \pi\\
+&\iff 
+\left\{
+\begin{array}{l}
+a \equiv 1 \pmod 2\\
+b \equiv 0 \pmod 2.
+\end{array}
+\right.
+\end{align*}
+\end{prop}
+
+Si nous appliquons ceci au problème de la représentation des nombres premiers par la forme $x^2 +ny^2$, nous obtenons
+\begin{prop}
+Soit $p$ un nombre premier. Alors
+
+$$\exists x \in \Z,\  \exists y \in \Z,\  p = x^2 + 27 y^2 \iff
+\left\{
+\begin{array}{l}
+p\equiv 1 \pmod 3,\\
+\exists t \in \Z,\ t^3 \equiv 2 \pmod p.
+\end{array}
+\right.
+$$
+\end{prop}
+Autrement dit, $p$ se décompose sous la forme $x^2 + 27 y^2$ si et seulement si $p$ est congru à 1 modulo 3 et si 2 est un résidu cubique modulo $p$.
+\begin{proof}
+($\Rightarrow$) Si $p = x^2 + 27y^2,\ x,y \in \Z$, alors $p\ne 3$, et $p\equiv x^2 \pmod 3$, donc $p\equiv 1 \pmod 3$. Puisque $\omega = -\frac{1}{2} + i\frac{ \sqrt{3}}{2}$, $i\sqrt{3} = 1 + 2 \omega$, donc
+\begin{align*}
+p &= (x + 3i\sqrt{3} y)(x - 3 i\sqrt{3}y)\\
+&=\n(x+3i\sqrt{3}y)\\
+&=\n(x+ 3y + 6 y\omega ).
+\end{align*}
+Par conséquent $p = \n(\pi)$, où $\pi = x+ 3y + 6 y\omega $ est un premier de $A$. Posons $a = x+3y, b = 6y$. Alors $b$ est pair, et $a \equiv x + y \equiv x^2 + 27 y^2 = p \equiv 1 \pmod 2$. La proposition \ref{prop90} montre alors que $2$ est un résidu cubique modulo $p$.
+
+\bigskip 
+
+($\Leftarrow$) Réciproquement, supposons que $p\equiv 1 \pmod 3$ et que $2$ est un résidu cubique modulo $p$. 
+
+Puisque $p\equiv 1 \pmod 3$, on peut alors écrire $p = \pi \overline{\pi}$, où $\pi$ est un premier primaire, donc $\pi$ est de la forme $\pi = a + 3b\omega, a \equiv -1 \pmod 3$. Alors
+$$4p = 4 \n(\pi) = 4(a^2 - 3ab + 9b^2) = (2a - 3b)^2 + 27b^2.$$
+
+Sachant que $2$ est un résidu cubique modulo $p$, la proposition \ref{prop90} montre que $b$ est pair. En posant $x = a-3\frac{b}{2} \in \Z, y = \frac{b}{2} \in \Z$, nous obtenons $p = x^2 + 27 y^2$.
+\end{proof}
+
+
+
+\section{Compléments à la loi de réciprocité cubique.}
+
+Donnons maintenant cette proposition, qui complète la proposition \ref{prop79}.
+\begin{prop}\label{prop92}
+Soit $a \equiv-1 \pmod 3$ un entier rationnel ($a \ne -1$), et $n \in \Z$ un entier premier avec $a$. Alors $\chi_a(n) = 1$.
+\end{prop}
+\begin{proof}
+Nous savons déjà que si $q \equiv -1 \pmod 3$ est un premier rationnel tel que $q \wedge n = 1$, alors $\chi_q(n) = 1$ (proposition \ref{prop79}).
+
+Si $p \equiv 1 \pmod 3$ est un premier rationnel tel que $p \wedge n = 1$, alors $p = \pi \overline{\pi}$, où $\pi$ est un premier primaire de $A$, ainsi que $\overline{\pi}$, non associé à $\pi$, et par définition de $\chi_p$, $\chi_{-p}(n) = \chi_\pi(n) \chi_{\overline{\pi}}(n)$.
+
+Comme $\chi_{\overline{\pi}}(n) = \chi_{\overline{\pi}}(\overline{n}) = \overline{\chi_\pi(n)}$ (proposition \ref{prop78}), et donc $\chi_{-p}(n) = |\chi_\pi(n)|^2= 1$.
+
+La décomposition de $a$ en facteurs premiers primaires est de la forme
+$$a = \pm q_1q_2\cdots q_k p_1p_2\cdots p_l = \pm q_1q_2\cdots q_k \pi_1 \overline{\pi_1} \pi_2 \overline{\pi_2}\cdots \pi_l \overline{\pi_l},$$
+où $q_i \equiv -1\pmod 3 , p_j \equiv 1 \pmod 3$, et où les $\pi_k$ sont des premiers primaires. Notons que les diviseurs premiers $q_i, \pi_j, \overline{\pi_j}$ de $a$ sont premiers avec $n$.
+
+La définition des caractères généralisés donne alors
+$$\chi_a(n) = \chi_{q_1}(n)\cdots \chi_{q_k}(n) \chi_{\pi_1}(n)\chi_{\overline{\pi_1}}(n)\cdots \chi_{\pi_l}(n)\chi_{\overline{\pi_l}}(n) = 1.$$
+
+
+\end{proof}
+
+Donnons le caractère cubique des unités, d'abord dans le cas où $\pi$ est un premier de $A$ tel que $\n(\pi) \ne 3$.
+
+Comme $-1 = (-1)^3$, puisque $\chi_\pi(-1) \in \{1,\omega,\omega^2\}$,  $\chi_\pi(-1) = \chi_\pi(-1)^3 =  1$.
+
+Par définition, $\chi_\pi(\omega) \equiv \omega^{\frac{\n(\pi) - 1}{3}} \pmod \pi$. Comme $\chi_\pi(\omega)$ et $\omega^{\frac{\n(\pi) - 1}{3}} $sont tous deux dans l'ensemble $\{1,\omega,\omega^2\}$, et que les classes de $1,\omega,\omega^2$ sont distinctes modulo $\pi$, nous en déduisons que
+$$\chi_\pi(\omega) = \omega^{\frac{\n(\pi) - 1}{3}} .$$
+Comme $3 \mid \n(\pi) - 1$, $\n(\pi)$ est congru à 1,4 ou 7 modulo 9. Ainsi,
+\begin{align*}
+\chi_\pi(\omega) = 1 \iff \n(\pi) \equiv 1 \pmod 9,\\
+\chi_\pi(\omega) = \omega \iff \n(\pi) \equiv 4 \pmod 9,\\
+\chi_\pi(\omega) = \omega^2 \iff \n(\pi) \equiv 7 \pmod 9.\\
+\end{align*}
+Comme $\chi_\pi = \chi_{\pi'}$ si $\pi$ et $\pi'$ sont associés, on peut se limiter au cas où $\pi$ est un premier primaire, de la forme $\pi = 3m-1 + 3n\omega$. Alors
+\begin{align*}
+\n(\pi)-1 &= (3m-1)^2+(3n)^2-3n(3m-1)-1\\
+&=9m^2 - 6m + 9n^2 -9nm + 3n,\\
+\frac{\n(\pi)-1}{3}&= 3m^2-2m+3n^2-3nm+n \equiv n+m \pmod 3.
+\end{align*}
+Ainsi, si $\pi = a+b\omega=3m-1+3n\omega$,
+
+$$\chi_{\pi}(\omega) = \omega^{\frac{\n(\gamma)-1}{3}} = \omega^{n+m}.$$
+Généralisons ce résultat à un élément primaire $\gamma = 3m-1 + 3n \omega$, pas nécessairement premier.
+
+Nous vérifions d'abord que si $\gamma = -\gamma_1 \gamma_2$, avec
+$$
+\begin{array}{lll}
+  \gamma = a+b\omega, & a=3m-1,  & b=3n,  \\
+   \gamma_1 = a_1+b_1\omega,& a_1= 3m_1-1,  &  b_1=3n_1, \\
+  \gamma_2 = a_2+b_2\omega,&  a_2= 3m_2-1, &  b_2=3n_2, 
+\end{array}
+$$
+alors $m \equiv m_1+m_2\pmod 3,\ n \equiv n_1+n_2 \pmod 3$.
+$$-\gamma_1 \gamma_2 = -a_1a_2 + b_1 b_2  + (- a_1b_2-a_2b_1+b_1b_2) \omega=a+b\omega,$$
+donc
+$$3m-1 = a =-a_1a_2 + b_1 b_2 \equiv 3(m_1+m_2) - 1\pmod 9,$$
+et ainsi $m\equiv m_1+m_2\pmod 3.$
+$$3n = b = -a_1b_2-a_2b_1+b_1b_2 \equiv 3 (n_1+n_2)\pmod 9,$$ 
+et donc $n \equiv n_1+n_2 \pmod 3.$
+
+Par récurrence, si $\gamma = \pm \gamma_1 \gamma_2\cdots \gamma_t = (-1)^{t-1} \gamma_1 \gamma_2\cdots \gamma_t$, où $\gamma_i = a_i+b_i\omega,a_i= 3m_i-1,b_i=3n_i$, alors
+$$m \equiv m_1+\cdots+m_t\pmod 3,\quad n \equiv n_1+\cdots + n_t \pmod 3.$$
+
+Par définition de $\chi_\gamma$,
+\begin{align*}
+\chi_\gamma(\omega) &= \chi_{\gamma_1}(\omega)\cdots\chi_{\gamma_t}(\omega)\\
+&=\omega^{m_1+n_1}\cdots \omega^{m_t+n_t}\\
+&=\omega^{(m_1+\cdots+m_t)+(n_1+\cdots+n_t)}\\
+&=\omega^{m+n}.
+\end{align*}
+Nous avons donc prouvé la proposition qui suit.
+\begin{prop}\label{prop93}
+Soit $\gamma \in A $ un élément primaire, de la forme $\gamma = 3m-1 + 3n \omega, \ m,n \in \Z$, alors
+$$\chi_\gamma(\omega) = \omega^{m+n}.$$
+\end{prop}
+
+Pour calculer $\chi_\gamma(\alpha)$ où $\alpha = (-1)^a\omega^b \lambda^c \pi_1\cdots \pi_t$, où les $\pi_i$ sont des premiers primaires, il reste donc à calculer $\chi_\gamma(\lambda)$, ce qui est plus délicat. Ce sera l'objet de la section suivante.
+
+\section{Caractère cubique de $\lambda = 1 - \omega$.}
+Commençons par ce cas particulier, avec une preuve due à Kronecker.
+\begin{prop}
+Soit $q$ un premier rationnel, $q = 3m - 1, \ m\in \N^*$. Alors
+$$\chi_{q}(\lambda) =  \omega^{2m}.$$
+\end{prop}
+\begin{proof}
+Nous savons que $q$ est premier dans $A$.
+
+Comme $\lambda^2 = -3 \omega$, nous avons
+$$\chi_q(\lambda^2) = \chi_q(-3) \chi_q(\omega).$$
+La proposition \ref{prop79} montre que $\chi_q(-3) = 1$. De plus $\chi_q(\omega) = \omega^{\frac{\n(q) - 1}{3}} = \omega^{\frac{q^2-1}{3}}$ et ainsi
+$$\chi_q(\lambda^2) = \omega^{\frac{q^2-1}{3}}.$$
+Elevons cette égalité au carré. Comme $\chi_q(\lambda^2) =\chi_q(\lambda)^2$, étant donné que $x= \chi_q(\lambda) \in \{1,\omega, \omega^2\}$ vérifie $x^4 = x$, nous obtenons
+$$\chi_q(1-\omega) = \omega^{\frac{2}{3}(q^2-1)}.$$
+Puisque $q^2 - 1 = (3m-1)^2 - 1=9m^2 - 6m$, $$\frac{2}{3}(q^2-1) = 6 m^2 -4m \equiv -4m \equiv 2m \pmod 3,$$ donc
+$$\chi_q(1-\omega) = \omega^{2m}.$$
+
+\end{proof}
+
+La preuve de la proposition suivante suit les exercices 9.24 à 9.26 de Ireland et Rosen, reprenant une preuve de Kenneth S.Williams.
+
+\begin{prop}{\bf Supplément à la loi de réciprocité cubique.}
+
+Soit $\pi = 3m-1 + 3n\omega$ un élément primaire de $A$. 
+Alors
+$$\chi_\pi(\lambda) = \omega^{2m}.$$
+\end{prop}
+\begin{proof}
+
+
+ Soit $\pi = a +b \omega$ un élément complexe primaire de $A = \Z[\omega]$, avec $a = 3m-1,b=3n$.
+
+\begin{enumerate}
+
+\item[(a)] Calculons d'abord $\chi_\pi(a)$. 
+
+Supposons d'abord que $a$ n'est pas une unité, ce qui permet de définir $\chi_a$.
+
+Comme $\pi,a$ sont primaires, la proposition \ref{prop88} montre que $\chi_\pi(a) = \chi_a(\pi)$.
+
+Puisque $\pi \equiv b\omega \pmod a$, $\chi_a(\pi) = \chi_a(b) \chi_a(\omega)$.
+
+La proposition \ref{prop93} donne pour $a = 3m - 1$
+$$\chi_a(\omega) = \omega^m.$$
+
+ Vérifions que $a$ est premier avec $b$ dans $\Z$. Si un premier rationnel  $r$ divise $a,b$, alors $r \mid \pi$ dans $A$, donc  $\n(r) = r^2 \mid \pi \overline{\pi} = p$ in $A$, donc $r^2 \mid p$ dans $\Z$, ce qui est absurde.
+
+La proposition \ref{prop92} donne alors $\chi_a(b) = 1$, et $\chi_a(\omega) = \omega^m$, si bien que $$\chi_\pi(a) = \chi_a(\pi) = \chi_a(b) \chi_a(\omega) = \omega^m.$$
+
+Si $a$ est une unité, comme $a \in \Z, a \equiv -1 \pmod 3$, alors $a = -1$ et $m = 0$, donc $\chi_\pi(a) = 1 = \omega^m$.
+
+En conclusion, dans tous les cas
+ $$\chi_\pi(a) = \omega^m.$$
+ 
+ 
+ \item[(b)] Puisque
+ $$a+b = [(a+b) \omega] \omega^{-1},$$
+et 
+$$(a+b) \omega = (a+b\omega) +a\omega -a \equiv a(\omega-1)\pmod \pi,$$ alors
+$$a+b \equiv -\lambda a \omega^{-1} \pmod \pi,$$
+$$\chi_\pi (a+b) = \chi_\pi(\lambda) \chi_\pi(a) \chi_\pi(\omega)^{-1},$$
+$\chi_\pi(a) = \omega^m$ d'après (a), et $\chi_\pi(\omega) = \omega^{m+n}$(proposition \ref{prop93}), ainsi
+
+$$\chi_\pi(a+b) = \omega^{2n} \chi_\pi(\lambda).$$
+
+
+\item[(c)] Supposons maintenant que $a+b$ n'est pas une unité, ce qui permet de considérer $\chi_{a+b}$. 
+
+Comme $\pi = a + b \omega$ et $a \equiv -b \pmod {a+b}$, alors $\pi \equiv -b(1-\omega) \pmod {a+b}$. Ainsi
+$$\chi_{a+b}(\pi) = \chi_{a+b}(b) \chi_{a+b}(1-\omega).$$
+Puisque $a \wedge b = 1$, $(a+b) \wedge b = 1$. La proposition \ref{prop92} donne alors $\chi_{a+b}(b) = 1$, donc
+$$\chi_{a+b}(\pi) =  \chi_{a+b}(\lambda).$$
+
+\item[(d)] Puisque le caractère $\chi_{a+b}$ est d'ordre 3,
+\begin{align*}
+\chi_{a+b}(\lambda) &= (\chi_{a+b}(\lambda^2))^2\\
+&=(\chi_{a+b}(-3\omega))^2\\
+&=[\chi_{a+b}(3) \chi_{a+b}(\omega)]^2
+\end{align*}
+
+$\chi_{a+b}(3) = 1$ car $(a+b) \wedge 3 = (3(m+n)-1) \wedge 3 = 1$.
+
+$\chi_{a+b}(\omega) = \omega^{m+n}$ (proposition \ref{prop93}).
+
+En conclusion, $$\chi_{a+b}(\lambda) = \omega^{2(m+n)}.$$
+
+\item[(e)] Les parties (b), (c) et (d) donnent alors
+\begin{align*}
+\chi_\pi(a+b) &= \omega^{2n} \chi_\pi(\lambda),\\
+\chi_{a+b}(\pi) &= \omega^{2(m+n)}.
+\end{align*}
+Comme $\pi$ et $a+b$ sont des éléments primaires de $A$, la réciprocité cubique (proposition \ref{prop88}) donne alors
+$$\chi_\pi(a+b) = \chi_{a+b}(\pi).$$
+Par conséquent 
+$$\omega^{2n} \chi_\pi(\lambda) = \omega^{2(m+n)},$$
+soit
+$$\chi_\pi(\lambda) = \omega^{2m}.$$
+
+
+\item[(f)] Il reste le cas où $a+b$ est une unité. Alors $a+b = -1$, donc $3m-1 + 3n = -1$, et ainsi $n = -m$. La partie (b) montre que
+$1 = \chi_\pi(-1) = \chi_\pi(a+b) = \omega^{2n} \chi_\pi(\lambda)$, donc
+$$\chi_\pi(\lambda) = \omega^{-2n} = \omega^{2m}.$$
+
+
+Dans chacun des cas, $\chi_\pi(\lambda) = \omega^{2m}$.
+\end{enumerate}
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
