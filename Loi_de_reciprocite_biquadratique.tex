@@ -1,0 +1,1280 @@
+
+\chapter{Réciprocité biquadratique.}
+Nous noterons dans ce chapitre $D = \Z[i]$ l'anneau des entiers de Gauss.
+
+\section{Anneaux quotients de $\Z[i]$.}
+\begin{prop}\label{prop96}
+Soit $\pi$ un élément premier dans $D$. 
+Alors l'anneau quotient $D/\pi D$ est un corps à $\n(\pi)$ éléments.
+\end{prop}
+\begin{proof}
+Nous prouvons cette proposition en considérant les différents types d'éléments premiers de $\Z[i]$, donnés dans la proposition \ref{prop9} du chapitre "Entiers de Gauss".
+\be
+\item[$\bullet$] Supposons que $\pi = q$ est un premier rationnel, où $q \equiv 3 \pmod 4,\ q>0$. Vérifions que
+$$S = \{a + b i\ | \ 0 \leq a < q, \ 0\leq b < q\}$$
+est un système complet de représentants des classes modulo $\pi$.
+
+Si $\alpha = u + i v \in D$, alors les divisions euclidiennes de $u$ et $ v$ par $q$ donnent des entiers $a,b,s,t$ tels que $u = qs +a, v = qt +b$, où $0\leq a < q, 0 \leq b < q$. Alors $\alpha \equiv a + b i \pmod q$, où $a + b i \in S$.
+
+Vérifions que les éléments de $S$ sont dans des classes distinctes. Si $\alpha =a +b i \equiv \beta = a' + b' i \pmod q$, où $\alpha, \beta \in S$, alors $q \mid (a - a')+(b-b') i$, donc $\frac{a-a'}{q} + i\frac{b-b'}{q} \in \Z[i]$, ce qui implique $q \mid a-a', q \mid b-b'$. Comme $|a-a'| < q$ et $|b-b'|<q$, il s'ensuit que $a=a', b=b'$, donc $\alpha = \beta$. Ainsi $|D/\pi D| = |S| = q^2 = \n(q) = \n(\pi)$.
+
+\item[$\bullet$] Supposons que $\pi = a + b i$ vérifie $\n(\pi) = p$, où $p$ est un premier rationnel, $p\equiv 1 \pmod 4$. Vérifions que
+$$T = \{0,1,\cdots,p-1\}$$
+est un système complet de représentants des classes.
+
+Comme $\n(\pi) = p = a^2  +b^2$, il s'ensuit que $p\nmid b$, sinon $p\mid a, p\mid b$, donc $p^2 \mid a^2+b^2 = p$, donc $p\mid 1$ : c'est absurde.
+
+Soit $\alpha = u + i v \in D$. Comme $p\nmid b$, il existe un entier $b$ tel que $cb \equiv v \pmod p$, a fortiori modulo $\pi$. Alors $\alpha -c \pi = u -ca + i(v -cb)$, donc $\alpha \equiv u -ca \pmod \pi$. Posons $n = u-ca$. Alors $n\in \Z$, et $\alpha \equiv n \pmod \pi$. La division euclidienne de $n$ par $p$ donne $n =ps +r, \ 0\leq r < p$, donc $\alpha \equiv r \pmod \pi$, où $r \in T$.
+
+Les éléments de $T$ sont dans des classes distinctes modulo $\pi$. En effet, si $r,s \in T$, et $r \equiv s \pmod \pi$, alors $\pi \mid r-s$, soit $r-s =\pi \lambda , \lambda \in D$, donc $(r-s)^2 =  \n(\pi) \n(\lambda) = p \n(\lambda)$. Ainsi $p \mid (r-s)^2$, où $p$ est un premier rationnel, donc $p \mid r-s$, où $|r-s|<p$, donc $r= s$.
+
+Par conséquent, $ |D/\pi D| = |T| = p = \n(\pi)$.
+
+\item[$\bullet$] Supposons que $\pi = 1 + i$. Vérifions que
+$$U = \{0,1\}$$
+est un système complet de représentant des classes modulo $\pi = 1 + i$.
+
+Soit $\alpha =a + b i \in D$ quelconque. Comme $i \equiv -1 \pmod \pi$, $\alpha \equiv a - b \pmod \pi$. Posons $n = a -b$; alors $n\in \Z$ et $\alpha \equiv n$. La division euclidienne de $n$ par $2$ donne les entiers $q,r$ tels que $n =2q + r, r \in \{0,1\}$, donc $n \equiv r \pmod 2$, et puisque $1 + i \mid 2$, $n \equiv r \pmod \pi$, où $r \in U$.
+
+De plus, $0 \not \equiv 1 \pmod \pi$, sinon $\pi \mid 1$ : c'est absurde puisque $\pi$ est premier, et n'est donc pas une unité. 
+
+Ainsi $|D/\pi D| = |U| = 2 = \n(\pi)$.
+\ee
+Si $\lambda$ est un élément premier quelconque de $D$, alors $\lambda$ est associé à un élément $\pi$ appartenant à l'un des trois types considérés, donc vérifiant $\n(\pi) = |D/\pi D|$. Alors $\n(\pi) = \n(\lambda)$, et $\pi D = \lambda D$, donc $\n(\lambda) = |D/\lambda D|$.
+
+\end{proof}
+
+\section{Caractère biquadratique.}
+Si $\alpha$ est un élément de $D$, nous noterons $[\alpha]$ sa classe dans $D/\pi D$.
+
+L'analogue du théorème de Fermat dans $D$ s'écrit
+\begin{prop}\label{prop97}
+Soit $\alpha \in D$, et $\pi$ un premier de $A$ tel que $\pi$ ne divise pas $\alpha$. Alors
+$$\alpha^{\n(\pi) - 1} \equiv 1 \pmod \pi.$$
+\end{prop}
+\begin{proof}
+Soit $K$ le corps $D/\pi D$. Le cardinal du groupe $K^*$ est $\n(\pi) - 1$, donc l'ordre de la classe $[\alpha] \in K^*$ divise $\n(\pi)-1$. Ainsi $[\alpha]^{\n(\pi)-1} = 1$, donc $\alpha^{\n(\pi)-1} \equiv 1 \pmod \pi$.
+\end{proof}
+
+\begin{prop}\label{prop98}
+Si $\pi$ est un premier de $A$, et si $\n(\pi) \ne 2$, alors
+$$4 \mid \n(\pi) - 1.$$
+\end{prop}
+\begin{proof}
+Montrons que les classes de $1,i,-1,-i$ modulo $\pi$ sont distinctes. En effet, si $i^j \equiv i^k \pmod \pi,\ (0\leq j \leq k < 4)$, alors $\pi \mid i^l - 1$, où $l = k-j$ vérifie  $0 \leq l < 4$. Si $l\ne 0$, alors $\pi$ divise $i-1$, ou $2$, ou $i+1$. Dans les trois cas, $\pi$ divise $2$. Comme $2 = -i(1+i)^2$, tout diviseur premier de $2$ est associé à $1+i$, et vérifie alors $\n(\pi) = 2$, ce qui est exclu.
+
+Par conséquent, le sous-groupe $\{[1],[i],[-1],[-i]\}$ de $(D/\pi D)^*$, engendré par la classe de $i$, est un sous-groupe à 4 éléments. Le théorème de Lagrange montre alors que $4$ divise  $|(D/\pi D)^*| = \n(\pi) -1$.
+\end{proof}
+
+\begin{prop}\label{prop99}
+Supposons que $\pi$ est un premier de $D$ tel que $\n(\pi) \ne 2$. Soit $\alpha \in D$ tel que $\pi \nmid \alpha$. Alors il existe un unique entier $m\in\{0,1,2,3\}$ tel que
+$$\alpha^{\frac{\n(\pi)-1}{4}} \equiv i^m \pmod \pi.$$
+\end{prop}
+\begin{proof}
+Posons $S = \{[1],[i],[i]^2,[i]^3\}$. La démonstration précédente montre que $|S| = 4$, et $S$ est inclus dans l'ensemble des racines du polynôme $x^4 - 1 \in K[x]$, où $K$ est le corps $D/\pi D$. Puisqu'un polynôme de degré 4 sur un corps commutatif ne peut admettre plus de 4 racines, $S$ est donc l'ensemble des racines de ce polynôme. Comme $\gamma = [\alpha]^{\frac{\n(\pi)-1}{4}} \in D/\pi D$ vérifie $\gamma^4 -1=0$, alors $\gamma \in S$, soit
+$ [\alpha]^{\frac{\n(\pi)-1}{4}} = [i]^m,\ 0 \leq m <4$. Par conséquent
+$$\alpha^{\frac{\n(\pi)-1}{4}} \equiv i^m \pmod \pi.$$
+Un tel $m$ est unique puisque les classes $[i]^m,\ m\in\{0,1,2,3\}$ sont distinctes.
+\end{proof}
+
+Remarquons que, dans le cas où $\pi \mid \alpha$, $\alpha^{\frac{\n(\pi)-1}{4}} \equiv 0 \pmod \pi$. Nous savons que les classes de $1,i,i^2,i^3$ sont distinctes dans $D/\pi D$. De plus, les classes de $0,1,i,i^2,i^3$ sont distinctes, sinon $\pi \mid i^k$, et $\pi$ serait une unité. Pour tout $\alpha \in D$, il existe un et un seul $z \in \{0,1,i,i^2,i^3\}$ tel que $\alpha^{\frac{\n(\pi) - 1}{4}} \equiv z \pmod \pi$. Ceci justifie la définition suivante :
+
+\begin{dfn}
+Soit $\pi$ un élément premier de $D = \Z[i]$ tel que $\n(\pi) \ne 2$, et soit $\alpha \in D$. Le caractère biquadratique de $\alpha$, noté $\chi_\pi(\alpha)$, ou $\legendre{\alpha}{\pi}_4$, est l'unique valeur complexe de l'ensemble $\{0,1,i,i^2,i^3\}$ caractérisée par
+$$\chi_{\pi}(\alpha) \equiv \alpha^{\frac{\n(\pi)-1}{4}} \pmod \pi.$$
+\end{dfn}
+Cette définition implique que $\chi_\pi(\alpha) =0 \iff \pi \mid \alpha$.
+
+\begin{prop}\label{prop100}
+Si $\legendre{\alpha}{\pi}_4 \equiv \zeta \pmod \pi$,  où $\zeta \in \{0,1,i,-1,-i\}$, alors $\chi_\pi(\alpha) = \zeta$.
+\end{prop}
+
+\begin{proof}
+En effet, $\chi_\pi(\alpha)$ et $ \zeta$ sont des éléments de $\{0,1,i,i^2,i^3\}$ et les classes de ces éléments sont distinctes modulo $\pi$.
+\end{proof}
+Donnons les premières propriétés de ce caractère biquadratique.
+
+\begin{prop}\label{prop101}
+Si $\alpha, \beta \in D$, et si $\pi$ est un premier de $D$ tel que $\n(\pi) \ne 2$, alors
+\be
+\item[(a)] $\chi_\pi(\alpha \beta) = \chi_\pi(\alpha) \chi_\pi(\beta)$,
+\item[(b)] si $\alpha \equiv \beta \pmod \pi$, alors $\chi_\pi(\alpha) = \chi_\pi(\beta)$.
+\ee
+\end{prop}
+\begin{proof}
+\be
+\item[(a)] Par définition,
+$$\chi_\pi(\alpha \beta) \equiv (\alpha \beta)^{\frac{\n(\pi) - 1}{4}} = \alpha ^{\frac{\n(\pi) - 1}{4}}  \beta^{\frac{\n(\pi) - 1}{4}} \equiv \chi_\pi(\alpha)\chi_\pi(\beta) \pmod \pi.$$
+Comme $\chi_\pi(\alpha)\chi_\pi(\beta) \in \{0,1,i,-1,-i\}$, la proposition \ref{prop100} montre alors que $\chi_\pi(\alpha \beta) = \chi_\pi(\alpha) \chi_\pi(\beta).$
+\item[(b)] Si $\alpha \equiv \beta \pmod \pi$, alors  $\alpha ^{\frac{\n(\pi) - 1}{4}} \equiv  \beta ^{\frac{\n(\pi) - 1}{4}} \pmod \pi$, donc $\chi_\pi(\alpha) \equiv \chi_\pi (\beta) \pmod \pi$. La proposition \ref{prop100} montre alors que $\chi_\pi(\alpha) = \chi_\pi(\beta)$.
+\ee
+\end{proof}
+Notons que le (b) assure que l'application $\chi$
+$$
+\left\{
+\begin{array}{ccc}
+(D/\pi D)^* & \to \C^*\\
+{[}\alpha{]} & \mapsto \chi_\pi(\alpha)
+\end{array}
+\right.
+$$
+est bien définie, et le (a) montre que $\chi$ est un homomorphisme de groupes. Ainsi $\chi$ est un caractère multiplicatif sur $(D /\pi D)^*$.
+
+Le caractère biquadratique permet de caractériser les puissances quatrièmes de $D$ modulo $\pi$
+\begin{prop}\label{prop102}
+Soit $\alpha \in D = \Z[i]$, et $\pi$ un premier de $D$ tel que $\n(\pi) \ne 2$ et $\pi \nmid \alpha$. Alors
+$$\chi_\pi(\alpha) = 1 \iff \exists x \in D,\ x^4 \equiv \alpha \pmod \pi.$$
+\end{prop}
+\begin{proof}
+$D/\pi D$ est un corps à $\n(\pi)$ éléments d'après la proposition \ref{prop96}, et $4$ divise $\n(\pi)- 1$ d'après la proposition \ref{prop98}, donc $d = 4 \wedge(\n(\pi)-1) = 4$. Alors la proposition \ref{nbsols} du chapitre``Sommes de Gauss et sommes de Jacobi'' montre que l'équation $[x]^4 = [\alpha]$ a une solution dans $(D/\pi D)^*$ si et seulement si $[\alpha]^{\frac{\n(\pi)-1}{4}} = 1$, ce qui équivaut à $\chi_\pi(\alpha) = 1$.
+\end{proof}
+
+\begin{prop}\label{prop103}
+ Si $\alpha \in D$, et $\pi$ un premier de $D$,
+$$\overline{\chi_\pi(\alpha)} = \chi_{\overline{\pi}}(\overline{\alpha}).$$
+\end{prop}
+\begin{proof}
+La définition de $\chi_\pi$ donne la relation
+$$\alpha^{\frac{\n(\pi) - 1}{4}} \equiv \chi_\pi(\alpha) \pmod \pi.$$
+Le passage au conjugué donne
+$$\overline{\alpha}^{\, \frac{\n(\pi) - 1}{4}} \equiv \overline{\chi_\pi(\alpha)} \pmod {\overline{\pi}}. $$
+Comme $\n(\pi) = \n(\overline{\pi})$,
+\begin{align*}
+\chi_{\overline{\pi}}(\overline{\alpha}) &\equiv  \overline{\alpha}^{\frac{\n(\overline{\pi}) - 1}{4}} \pmod {\overline{\pi}}\\
+&=\overline{\alpha}^{\frac{\n(\pi) - 1}{4}} \\
+& \equiv \overline{\chi_\pi(\alpha)} \pmod {\overline{\pi}}.
+\end{align*}
+
+\end{proof}
+
+\begin{prop}\label{prop104}
+Soit $q$ un nombre premier rationnel, $q \equiv 3 \pmod 4$, et $n \in \Z$ premier avec $q$. Alors
+$$\chi_q(n) = 1.$$
+\end{prop}
+
+\begin{proof}
+Par définition de $\chi_q$,
+$$\chi_q(n) \equiv n^{\frac{\n(q) - 1}{4}} = n^{\frac{q^2 - 1}{4}} = (n^{q-1})^{\frac{q+1}{4}} \equiv 1 \pmod q,$$
+d'après le petit théorème de Fermat.
+\end{proof}
+
+\section{Eléments primaires de $D$.}
+Introduisons la notion d'élément primaire dans $D  = \Z[i]$.
+\begin{dfn}
+Soit $\alpha$ un élément de $D$ qui n'est pas une unité. Alors $\alpha$ est dit primaire si 
+$$\alpha \equiv 1 \pmod {(1+i)^3}.$$
+\end{dfn}
+
+\begin{prop}\label{prop105}
+Soit $\alpha = a + bi \in D, \n(\alpha)\ne 1$. Alors
+$$\alpha \text{ est primaire} \iff 
+\left\{
+\begin{array}{l}
+a\equiv1 ,\  b \equiv 0 \pmod 4,\\
+\text{    ou}\\
+a\equiv 3,\  b \equiv 2 \pmod 4.
+\end{array}
+\right.
+$$
+\end{prop}
+\begin{proof}
+Puisque $(1+i)^3 = 2i(1+i)$ est associé à $2+2i$, , il s'ensuit que $a+bi$ est primaire si et seulement si
+$$\frac{(a-1) + bi}{2+2i} =\frac{((a-1) + bi)(1-i)}{4} = \frac{a+b-1}{4} + \frac{b-a+1}{4}\, i \in D,$$
+ce qui équivaut au système
+$$
+\left\{
+\begin{array}{ll}
+a+b \equiv 1 &\pmod 4,\\
+a-b \equiv 1 &\pmod 4.
+\end{array}
+\right.
+$$
+Alors $2a \equiv 2 \pmod 4$, donc $a$ est impair, et ainsi $a \equiv 1,3 \pmod 4$. 
+Les seules solutions sont données par $a\equiv 1, b\equiv 0 \pmod 4$, ou $a\equiv 3 ,b \equiv 2 \pmod 4$.
+\end{proof}
+
+En particulier, si $\alpha \ne 1$ vérifie $\alpha \equiv 1 \pmod 4$, alors $\alpha$ est primaire. De plus, si $\alpha$ est primaire, alors $1+i \nmid \alpha$. Si $q$ est un premier rationnel, où $q \equiv 3 \pmod 4,\ q>0$, alors $-q$ est un premier primaire (mais pas les autres associés $q, iq, -iq$).
+
+\begin{prop}\label{prop106}
+Soit $\alpha$ un élément de $D$ qui n'est pas une unité, et tel que $1+i \nmid \alpha$. Alors $\alpha$ a un et un seul associé primaire.
+\end{prop}
+
+\begin{proof}
+Soit $\alpha = a + ib$ tel que $1+i \nmid \alpha$. Comme $\alpha = (a-b) + b(1+i)$, alors $1 + i \nmid a-b$, donc $2 \nmid a-b$. Ainsi $a,b$ sont de parité distinctes.
+Si $a$ est pair et $b$ impair, alors $i\alpha = -b + ia =a' +i b'$, où $a'$ est impair et $b'$ pair. Ainsi il existe une unité $\varepsilon$ ($\varepsilon = 1$ ou $\varepsilon = i$) telle que $\varepsilon \alpha = a' + b'i$ vérifie la propriété $a'$ impair et $b'$ pair.  
+
+Il n'existe alors que quatre cas modulo 4 : $a' \equiv 1,b' \equiv 0$, ou $a' \equiv 3, b' \equiv 2$, ou $a' \equiv 1, b' \equiv 2$, ou $a'  \equiv 3, b' \equiv 0$ (modulo 4).
+
+Dans les deux premiers cas, $a' + b' i$ est primaire.
+
+Si $a' \equiv 1$ et $b' \equiv 2$ modulo 4, alors $  a'' + b''i = -a' -b' i $ vérifie $a'' \equiv 3, b'' \equiv 2 \pmod 4$, et si $a' \equiv 3, b' \equiv  0$, alors $ a'' + b''i$ vérifie $a'' \equiv 1,  b'' \equiv 0$ modulo 4. Dans ces deux cas $a'' + ib''$ est primaire. 
+
+Si $\varepsilon_1 \alpha, \varepsilon_2 \alpha$ sont tous deux primaires, où $\varepsilon_1,\varepsilon_2$ sont des unités, alors $(\varepsilon_1 - \varepsilon_2) \alpha \equiv 0 \pmod {(1+i)^3}$. Comme $1+i$ est premier dans $D$ et ne divise pas $\alpha$, $(1+i)^3 \mid \varepsilon_1 - \varepsilon_2$. Alors $\n((1+i)^3) \mid \n(\varepsilon_1 - \varepsilon_2)$, soit $8 \mid  \n(\varepsilon_1 - \varepsilon_2)$. De plus $|\varepsilon_1 - \varepsilon_2| \leq |\varepsilon_1|+ |\varepsilon_2| = 2$, donc $\n(\varepsilon_1 - \varepsilon_2)\leq 4$. Ceci n'est possible que si $\n(\varepsilon_1 - \varepsilon_2) = 0$, donc $\varepsilon_1 = \varepsilon_2$. Ceci prouve l'unicité de l'associé primaire de $\alpha$.
+\end{proof}
+
+\begin{prop}\label{prop107}
+Soit $S$ l'ensemble contenant $1+i$ et tous les premiers primaires de $D$. $S$ est un système complet de représentants des classes d'association, soit
+\be
+\item[(a)] Tout premier de $D$ est associé à un premier de $S$.
+\item[(b)] Deux éléments arbitraires distincts de $S$ ne sont pas associés.
+\ee
+\end{prop}
+
+\begin{proof}
+\be
+\item[(a)] Soit $\pi$ un élément premier de $D$. Si $\n(\pi) = 2$, $\pi$ est associé à $1+i$. Si $\n(\pi) \ne 2$, alors $1+i \nmid \pi$ (sinon les premiers $1+i$ et $\pi$ seraient associés, donc de même norme égale à 2). La proposition \ref{prop106} montre alors que $\pi$ est associé à un premier primaire de $D$.
+\item[(b)] Soient $\pi,\mu$ deux éléments de $S$ associés. Alors ils ont même norme.
+
+Si $\n(\pi) =\n(\mu) = 2$, alors $\pi = 1+i$, puisque $1+i$ est le seul élément de $S$ de norme 2. De même, $\mu = \lambda$, donc $\pi = \mu$.
+
+Si $\n(\pi) = \n(\mu) \ne 3$, alors $\pi,\mu$ sont des premiers primaires par définition de $S$, et associés. La proposition \ref{prop106} montre qu'ils sont égaux.
+\ee
+\end{proof}
+
+\begin{prop}\label{prop108}
+Tout élément  $\alpha \in D$ de décompose sous la forme
+$$\alpha = i^a (1+i)^b \pi_1^{a_1}\cdots\pi_t^{a_t},$$
+où les $\pi_i$ sont des premiers primaires distincts, $b\geq 0,a_i \geq 0$,  et $0\leq a<4$. Cette décomposition est unique à l'ordre près des éléments $\pi_1,\ldots,\pi_t$.
+\end{prop}
+\begin{proof}
+Puisque $D =\Z[i]$ est principal, donc factoriel, et $S$ étant un système complet de représentants des classes d'association des éléments premiers, tout élément $\alpha$ de $A$ s'écrit de façon unique sous la forme
+$$\alpha = u \prod_{\pi\in S} \pi^{e(\pi)},$$
+où $e(\pi)\geq 0$ est nul sauf sur un ensemble fini de valeurs de $\pi \in S$, et où $u$ est une unité, donc de la forme $u = i^k, \ k\in \{0,1,2,3\}$, où $k$ est alors fixé. Par définition de $S$,
+$$\alpha = i^a (1+i)^b \pi_1^{a_1}\cdots\pi_t^{a_t}.$$
+\end{proof}
+
+\begin{prop}\label{prop109}
+Si $\gamma$ est un élément primaire de $D$, alors $\gamma$ se décompose sous la forme
+$$\gamma = \gamma_1\cdots \gamma_t,$$
+où $t\geq 1$, et les $\gamma_i$ sont des premiers primaires (pas nécessairement distincts).
+\end{prop}
+\begin{proof}
+D'après la proposition \ref{prop108},
+$$\gamma = i^a (1+i)^b \gamma_1\cdots \gamma_t,$$
+où les $\gamma_i$ sont des premiers primaires, et $0 \leq a < 4$.
+
+Comme $\gamma$ est primaire, il n'est pas divisible par $1+i$, donc $b=0$, soit
+$$\gamma =  i^a \gamma_1\cdots \gamma_t,$$
+où pour tout indice $i$, $\gamma_i \equiv 1 \pmod { (1+i)^3}$. Par conséquent
+$$1 \equiv i^a \pmod {(1+i)^3}.$$
+Alors $(1+i)^3 \mid i^a - 1$, donc $8 = \n((1+i)^3) \mid \n(i^a - 1) \leq 4$, donc $\n(i^a - 1) = 0$, $i^a = 1$, avec $0\leq a <4$, et ainsi $a = 0$ :
+$$\gamma = \gamma_1\cdots \gamma_t.$$
+
+\end{proof}
+
+Un premier primaire $\pi$ n'est pas associé à $1+i$ par définition. La classification des premiers de $\Z[i]$ montre alors que, ou bien $\pi$ est associé à un entier rationnel $q \equiv 3 \pmod 4$, auquel cas $\pi = -q$, ou bien  $\pi$ est tel que $\n(\pi) = p \equiv 1 \pmod 4$. Ainsi tout élément primaire de $D$ s'écrit sous la forme
+$$\gamma = (-q_1)\cdots(-q_s)\pi_1\cdots\pi_t,$$
+où les $q_i \equiv 3 \pmod 4$ sont des premiers rationnels positifs, et où les premiers primaires $\pi_j$ vérifient $\n(\pi_j) = p \equiv 1 \pmod 4$.
+
+\section{Caractères biquadratiques généralisés.}
+
+
+Soit $\gamma \in D$ tel que $\gamma$ n'est pas une unité, et $1+i \nmid \gamma$, et soit $\gamma = \lambda_1\cdots \lambda_t$ une décomposition de $\gamma$ en facteurs irréductibles. Pour tout $\beta \in D$, le produit $\prod_{i=1}^t \chi_{\lambda_i}(\beta)$ ne dépend pas de cette décomposition. En effet, toute autre décomposition $\gamma = \mu_1\cdots \mu_{t'}$ en facteurs irréductibles est telle que $t' = t$, et $\mu_i = \varepsilon_i \lambda_{\sigma(i)}$, où $\varepsilon_i$ est une unité, et $\sigma \in S_t$ est une permutation. Puisque $\mu_i$ et $\lambda_{\sigma_i}$ sont associés, la définition du caractère biquadratique donne $\chi_{\mu_i} = \chi_{\lambda_{\sigma_i}}$, donc $\prod_{i=1}^t \chi_{\lambda_i}(\beta) = \prod_{i=1}^t \chi_{\mu_i}(\beta)$. Ceci permet de donner la définition suivante.
+
+\begin{dfn}  Si $\gamma \in D$ est tel que $\gamma$ n'est pas une unité, et $1+i \nmid \gamma$, et si  $\gamma = \lambda_1\cdots \lambda_t$ est une décomposition de $\gamma$ en facteurs irréductibles, alors $\chi_\gamma$ est défini par :
+$$\forall \beta \in D,\ \chi_\gamma(\beta) = \prod_{i=1}^t \chi_{\lambda_i}(\beta).$$
+\end{dfn}
+
+\begin{prop}\label{prop110}
+ Soient $\lambda, \rho$ des éléments de $D$ qui ne sont pas divisibles par $1+i$, et $\alpha,\beta \in D$. Alors
+\be
+\item[(a)] $\alpha \equiv \beta \pmod \gamma \Rightarrow \chi_\gamma(\alpha) = \chi_\gamma(\beta)$.
+\item[(b)] $\chi_\gamma(\alpha \beta) = \chi_\gamma(\alpha) \chi_\gamma(\beta)$.
+\item[(c)] $\chi_\rho(\alpha) \chi_\gamma(\alpha) = \chi_{\rho \gamma}(\alpha)$.
+\ee
+\end{prop}
+
+\begin{proof}
+\be
+\item[(a)] Soit $\gamma = \gamma_1 \cdots \gamma_t$ une décomposition de $\gamma$ en facteurs premiers dans $D$. Alors pour tout $i$, $\alpha \equiv \beta \pmod{\gamma_i}$, donc $\chi_{\gamma_i}(\alpha) =\chi_{\gamma_i}(\beta)$ (proposition \ref{prop101}(b)). Par conséquent 
+$$\chi(\alpha) = \prod_{i=1}^t \chi_{\gamma_i}(\alpha) = \prod_{i=1}^t \chi_{\gamma_i}(\beta) =\chi_\gamma(\beta).$$
+\item[(b)] La proposition \ref{prop101}(a) montre que
+\begin{align*}
+\chi_\gamma(\alpha \beta) &= \chi_{\gamma_1}(\alpha \beta)\cdots\chi_{\gamma_t}(\alpha \beta)\\
+&=\chi_{\gamma_1}(\alpha)\cdots\chi_{\gamma_t}(\alpha)\chi_{\gamma_1}(\beta)\cdots\chi_{\gamma_t}(\beta)\\
+&=\chi_\gamma(\alpha) \chi_\gamma(\beta).
+\end{align*}
+
+\item[(c)] Ecrivons une décomposition de $\rho$ en facteurs premiers sous la forme $\rho = \rho_1\cdots \rho_l$. Comme $1+i$ est premier, $1+i \nmid \rho \gamma$, et $\rho \gamma$ se décompose sous la forme $\rho \gamma = \rho_1\cdots \rho_l \gamma_1 \cdots \gamma_t$, donc
+$$\chi_{\gamma \rho}(\alpha) = (\chi_{\rho_1}\cdots \chi_{\rho_l} \chi_{\gamma_1} \cdots  \chi_{\gamma_t})(\alpha) = \chi_\rho(\alpha) \chi_\gamma(\alpha).$$
+\ee
+\end{proof}
+
+La proposition \ref{prop103} se généralise aussitôt.
+\begin{prop}\label{prop111}
+Si $\alpha \in D$, et $\pi \in D$ tel que $1+ i\nmid \pi$ (en particulier si $\pi$ est primaire), alors
+$$\overline{\chi_\pi(\alpha)}= \chi_{\overline{\pi}}(\overline{\alpha}).$$
+\end{prop}
+
+\begin{proof}
+Décomposons $\pi$ en produit de premiers dans $D$ : $\pi = \pi_1\cdots\pi_t$. Alors, en utilisant la proposition \ref{prop103},
+\begin{align*}
+\overline{\chi_\pi(\alpha)} &=\overline{\chi_{\pi_1}(\alpha)}\cdots\overline{\chi_{\pi_1}(\alpha)}\\
+&= \chi_{\overline{\pi_1}}(\overline{\alpha}) \cdots  \chi_{\overline{\pi_t}}(\overline{\alpha})\\
+&=\chi_{\overline{\pi_1}\cdots \overline{\pi_t}}(\overline{\alpha})\\
+&=\chi_{\overline{\pi}}(\overline{\alpha}).
+\end{align*}
+\end{proof}
+
+\begin{prop}\label{prop112}
+Soit $\pi = a + bi$ un élément primaire de $D$. Alors
+$$\chi_\pi(-1) = (-1)^{\frac{a-1}{2}}.$$
+\end{prop}
+
+\begin{proof}
+Traitons d'abord le cas où $\pi$ est un premier primaire de  $D$. Alors $a$ est impair, $b$ pair et $\n(\pi) = a^2+b^2$.
+Par conséquent, 
+$$\chi_\pi(-1) = (-1)^{\frac{\n(\pi)-1}{4}} = (-1)^{\frac{a^2-1}{4}+ \frac{b^2}{4}} = [(-1)^{\frac{a+1}{2}}]^{\frac{a-1}{2}} (-1)^{\frac{b^2}{4}}.$$
+D'après la proposition \ref{prop105}, $a\equiv 1\pmod 4, b\equiv 0\pmod 4$, ou $a \equiv 3\pmod 4, b\equiv 2 \pmod 4$.
+	\begin{enumerate}
+	\item[$\bullet$] Si $a\equiv 1\pmod 4, b\equiv 0\pmod 4$, alors $(-1)^{\frac{a+1}{2}} = -1, (-1)^{\frac{b^2}{4}}=+1$, donc
+	$$\chi_\pi(-1) =(-1)^{\frac{a-1}{2}}.$$
+	\item[$\bullet$] Si $a \equiv 3 \pmod 4, b\equiv 2 \pmod 4$, alors $(-1)^{\frac{a+1}{2}} = 1, (-1)^{\frac{b^2}{4}}=-1$, donc
+	$$\chi_\pi(-1) =-1 = (-1)^{\frac{a-1}{2}}.$$
+	\end{enumerate}
+	
+Dans tous les cas, si  $\pi = a + bi$ est un premier primaire de $D$, alors
+$$\chi_{\pi}(-1)=(-1)^{(a-1)/2}.$$
+
+\bigskip
+
+Passons au cas général, où $\pi$ est un élément primaire de $D$, pas nécessairement premier. Alors la proposition \ref{prop109} permet de décomposer $\pi$ sous la forme
+$$\pi = \pi_1 \cdots \pi_t,$$
+où les $\pi_k = a_k+ i b_k$ sont des premiers primaires. D'après la première partie de la preuve,
+\begin{align*}
+\chi_\pi(-1) &= \prod_{k=1}^t \chi_{\pi_k}(-1)\\
+&=   \prod_{k=1}^t (-1)^{\frac{a_k-1}{2}}.
+\end{align*}
+
+Montrons que $$(-1)^{\frac{a-1}{2} }= \prod_{k=1}^t (-1)^{\frac{a_k-1}{2}}.$$
+Notons $\Pi$ ce dernier produit. 
+Or, pour tout entier élément primaire $\pi = a + bi$, $ (-1)^{\frac{a-1}{2}} = -1$ équivaut à $\pi \equiv 3 + 2i \pmod 4$, et dans le cas contraire où $\pi \equiv 1 \pmod 4$, alors $(-1)^{\frac{n-1}{2}} = 1$. Donc $\Pi = -1$ si et seulement si le nombre $P$ de facteurs $\pi_i$ congrus à 3 modulo 4 est impair. Comme les autres facteurs sont congrus à 1 modulo 4, et $(3 + 2i)^2 \equiv 1 \pmod 4$, $\pi = \pi_1\cdots \pi_t \equiv 3 + 2i \pmod 4$ si $P$ est impair. Ainsi
+$$\Pi = -1 \iff P \equiv 1 \pmod 2 \iff \pi  \equiv 3 + 2i \pmod 4 \iff (-1)^{\frac{a-1}{2}} = -1.$$
+Comme $\Pi$ et $(-1)^{\frac{a-1}{2} }$ne peuvent prendre que les valeurs $+1,-1$, nous pouvons conclure que $\Pi = (-1)^{\frac{a-1}{2}}$, et donc $\chi_\pi(-1) =(-1)^{(a-1)/2}$.
+
+\end{proof} 
+
+
+
+\begin{prop}\label{prop113}
+Soit $n\in \Z$, et $a \in \Z$ un impair qui n'est pas une unité. Si $a \wedge n = 1$, alors
+$$\chi_a(n) = 1.$$
+\end{prop}
+\begin{proof}
+Comme $\chi_a = \chi_{-a}$, on peut supposer $a>0$. Décomposons $a$ sous la forme $a = \prod_{i\in I} p_i \prod_{j\in J} q_j$, où les $p_i,q_j$ sont des premiers rationnels, $p_i \equiv 1 \pmod 4, q_j \equiv 3 \pmod 4$. La proposition \ref{prop104} montre que $\chi_{q_j}(n) = 1$, puisque $q_j \wedge n = 1$. Il reste à vérifier que $\chi_{p_i}(n) = 1$.  Une décomposition de $p_i$ sous la forme $p_i=\pi \overline{\pi}$, où $\pi$ est premier dans $D$, donne
+$$\chi_{p_i}(n) = \chi_{\pi}(n) \chi_{\overline{\pi}}(n) =  \chi_{\pi}(n) \overline{ \chi_{\pi}(n)} = 1,$$
+puisque $ \chi_{\overline{\pi}}(n)  =  \chi_{\overline{\pi}}(\overline{n}) =\overline{ \chi_{\pi}(n)}$ (proposition \ref{prop104}). 
+\end{proof}
+
+{\bf Lemme.}
+{\it
+Soit $n \in \Z$, $n = s_1\cdots s_t, s_i\equiv 1 \pmod 4$ pour $ i = 1,\ldots,t$. Alors $$\frac{n-1}{4}\equiv \sum_{i=1}^t \frac{s_i-1}{4} \pmod 4.$$
+}
+\begin{proof}
+Si $n = s t , s \equiv1,t\equiv1\pmod 4$, alors $s = 4k+1, t = 4 l +1,\  k,l \in \mathbb{Z}$, si bien que
+$$ n= (4k+1)(4l+1) = 16 kl + 4k+4l+1, \frac{n-1}{4} = 4 kl + k + l \equiv k+l = \frac{s-1}{4}+\frac{l-1}{4} \pmod 4.$$
+En raisonnant par récurrence sur  $t$, supposons que tout produit de $t$ factors $ n= s_1s_2\cdots s_t$, où $s_i\equiv 1 \pmod 4$ vérifie
+$$\frac{n-1}{4} \equiv \sum\limits_{i=1}^t \frac{s_i-1}{4} \pmod 4.$$
+Si $n' = s_1 s_2 \cdots s_t s_{t+1} = n s_{t+1}, s_i \equiv 1\pmod4$, alors $n\equiv1,s_{t+1} \equiv 1 \pmod 4$, donc
+$$\frac{n'-1}{4} \equiv \frac{n-1}{4} + \frac{s_{t+1}-1}{4} \equiv \sum\limits_{i=1}^t \frac{s_i-1}{4} + \frac{s_{t+1}-1}{4} \equiv \sum\limits_{i=1}^{t+1} \frac{s_i-1}{4} \pmod 4.$$
+
+\end{proof}
+
+
+\begin{prop}\label{prop114}
+Si $n \ne 1$ est un entier $n\equiv 1 \pmod 4$, alors
+$$\chi_n(i) = (-1)^\frac{n-1}{4}.$$
+\end{prop}
+
+\begin{proof}
+Ici $n$ peut être négatif. Si $n$ est un premier rationnel $p \equiv 1 \pmod 4$, alors la décomposition $p = \pi \overline{\pi}$ donne
+$$\chi_p(i) = \chi_\pi(i) \chi_{\overline{\pi}}(i) = (i^{\frac{p-1}{4}})^2 = (-1)^{\frac{p-1}{4}}.$$
+Par ailleurs, si $n = -q, q \equiv 3 \pmod 4$, où $q>0$ est un premier rationnel, alors
+$$\chi_{-q}(i)= i^{\frac{q^2-1}{4}}= (i^{q-1})^{\frac{q+1}{4}} = (-1)^{\frac{q+1}{4}} = (-1)^{\frac{-q-1}{4}}.$$
+Dans le cas général, décomposons $n$ sous la forme $n = p_1\cdots p_t(-q_1)\cdots(-q_s)$, où $p_i \equiv 1 \pmod 4, q_j \equiv 3 \pmod 4$. Alors
+$$\chi_n(i) = (-1)^{\frac{p_1-1}{4}} \cdots (-1)^{\frac{p_t-1}{4}} (-1)^{\frac{-q_1-1}{4}}\cdots (-1)^{\frac{-q_s-1}{4}}.$$
+
+En appliquant le lemme,
+$$\chi_n(i)  = (-1)^{\frac{p_1\cdots p_t(-q_1)\cdots(-q_s) - 1}{4}} = (-1)^{\frac{n-1}{4}}.$$
+\end{proof}
+
+
+\section{La loi de réciprocité biquadratique.}
+
+Cette loi nécessitera plusieurs lemmes (propositions \ref{prop115} à \ref{prop124}). Elle s'exprime, pour des premiers primaires $\lambda, \pi$, sous la forme
+$$\chi_\pi(\lambda) = \chi_\lambda(\pi)(-1)^{\frac{\n(\lambda)-1}{4} \frac{\n(\pi)-1}{4}}.$$
+Rappelons qu'un premier $\pi = a + bi$ est primaire si et seulement si $a\equiv 1, b \equiv 0$, ou $a \equiv 3, b \equiv 2 \pmod 4$. Ceci équivaut à $a$ impair, $b$ pair et $\frac{a-1}{2} \equiv \frac{b}{2} \pmod 2$.
+
+Si on note $\pi = 2m+1 + 2ni$, alors $m = \frac{a-1}{2}$ et $n = \frac{b}{2}$ sont de même parité, donc
+$$\frac{\n(\pi) - 1}{4} = \frac{(2m+1)^2 + (2n)^2 - 1}{4} = m^2+m+n^2\equiv m = \frac{a-1}{2} \pmod 2.$$
+La loi de réciprocité biquadratique peut donc s'écrire, pour $\pi = a +bi, \lambda = c+di$, sous la forme
+$$\chi_\pi(\lambda) = \chi_\lambda(\pi)(-1)^{\frac{a-1}{2} \frac{c-1}{2}}.$$
+Autrement dit $\chi_\pi(\lambda) = \chi_\lambda(\pi)$ si $\pi$ ou $\lambda$ est congru à 1 modulo 4, et $\chi_\pi(\lambda) = -\chi_\lambda(\pi)$ si $\pi$ et $\lambda$ sont tous deux congrus à $ 3 + 2i$ modulo 4.
+
+Considérons un premier primaire $\pi$ tel que $\n(\pi) = p \equiv 1 \pmod 4$, et soit $\chi_\pi$ le caractère quartique associé. Dans ce cas le corps $ D/\pi D$ est isomorphe à $\F_p$, et les éléments $\{0,1,\ldots,{p-1}\}$ de $D$ forment un système complet de représentants des classes de $D/\pi D$. 
+
+Nous noterons maintenant $\F_p$ ce corps à $p$ éléments, ensemble des classes de $0,\cdots,{p-1}$ dans $D/\pi D$. Ceci donne un sens aux sommes de Gauss $$g(\chi_\pi) = \sum_{j\in \F_p} \chi_\pi(j) \zeta^j = \sum_{j = 0}^{p-1} \chi_\pi(j) \zeta^j.$$
+
+Comme $\chi_\pi$ est un caractère d'ordre 4 dans le groupe des caractères sur $F$, $\psi = \chi_\pi^2$ est un caractère d'ordre 2. Puisqu'il n'existe qu'un seul caractère d'ordre 2 dans le groupe des caractères, $\psi$ est le caractère de Legendre, donné par $\psi(j) = \legendre{j}{p}$.
+
+\begin{prop}\label{prop115}
+ Les caractères $\chi_\pi$ et $\psi$ étant définis comme ci-dessus,
+$$J(\chi_\pi,\chi_\pi) =\chi_\pi(-1) J(\chi_\pi,\psi).$$
+\end{prop}
+\begin{proof}
+La proposition \ref{lien_Jacobi_Gauss} du chapitre ``Sommes de Gauss et sommes de Jacobi'' montre que $$J(\chi_\pi,\chi_\pi) = \frac{g(\chi_\pi)^2}{g(\psi)}.$$
+ La proposition \ref{conjugue} de ce même chapitre (et la remarque qui suit cette proposition) donne $$g(\psi)^2 = \psi(-1)p = (-1)^{\frac{p-1}{2}} p = p.$$
+ De plus, la proposition \ref{generalisation} du chapitre précité, appliquée au caractère $\chi_\pi$ d'ordre 4, donne
+ $$g(\chi_\pi)^4 = \chi_\pi(-1)p J(\chi_\pi,\chi_\pi) J(\chi,\psi).$$
+ Ainsi
+$$J(\chi_\pi,\chi_\pi)^2 = \frac{g(\chi_\pi)^4}{g(\psi)^2} =\chi_\pi(-1)  J(\chi_\pi,\chi_\pi) J(\chi,\psi),$$
+ce qui donne le résultat puisque $J(\chi_\pi,\chi_\pi)$, de module $\sqrt{p}$, est non nul.
+\end{proof}
+
+\begin{prop}\label{prop116}
+$$g(\chi_\pi)^4 = pJ(\chi_\pi,\chi_\pi)^2.$$
+\end{prop}
+\begin{proof}
+La démonstration précédente donne $J(\chi_\pi,\chi_\pi)^2 = \frac{g(\chi_\pi)^4}{g(\psi)^2}$ et $g(\psi)^2 = p$, donc
+$g(\chi_\pi)^4 = pJ(\chi_\pi,\chi_\pi)^2.$
+\end{proof}
+
+\begin{prop}\label{prop117}
+L'élément  $-\chi_\pi(-1)J(\chi_\pi,\chi_\pi)$  est primaire.
+\end{prop}
+\begin{proof}
+La permutation de $\F_p$ donnée par $t \mapsto 1-t$ a pour unique point fixe la classe de $\frac{p+1}{2}$, et laisse fixe le produit $\chi_\pi(t)\chi_\pi(1-t)$.
+Puisque $ \chi_\pi(t)\chi_\pi(1-t)  = 0$ pour $t = 0$ et $t=1$,
+\begin{align*}
+J(\chi_\pi,\chi_\pi) &= \sum_{t=0}^{p-1} \chi_\pi(t)\chi_\pi(1-t)\\
+&= \sum_{t=2}^{p-1} \chi_\pi(t)\chi_\pi(1-t)\\
+&=  \sum_{t=2}^{\frac{p-1}{2}} \chi_\pi(t)\chi_\pi(1-t) + \chi_\pi\left(\frac{p+1}{2}\right)^2 + \sum_{t=\frac{p+3}{2}}^{p-1} \chi_\pi(t)\chi_\pi(1-t).\\
+\end{align*}
+ Le changement d'indice $s = 1-t \ (= p+1 -t)$ donne 
+$$ \sum_{t=\frac{p+3}{2}}^{p-1} \chi_\pi(t)\chi_\pi(1-t) = \sum_{s=2}^{\frac{p-1}{2}} \chi_\pi(1-s)\chi_\pi(s) =\sum_{t=2}^{\frac{p-1}{2}} \chi_\pi(t)\chi_\pi(1-t) .$$
+Par conséquent,
+\begin{align*}
+J(\chi_\pi,\chi_\pi) &=2  \sum_{t=2}^{\frac{p-1}{2}} \chi_\pi(t)\chi_\pi(1-t) +  \chi_\pi\left(\frac{p+1}{2}\right)^2.\\
+\end{align*}
+Puisque $\chi_\pi$ est d'ordre 4,
+\begin{align*}
+\chi_\pi\left(\frac{p+1}{2}\right)^2 &= (\chi_\pi(2^{-1}))^2 = \chi_\pi(2)^{-2} = \chi_\pi(2)^2 \\
+&= \chi_\pi(-i(1+i)^2)^2 = (\chi_\pi(-i))^2 \chi_\pi^4(1+i)\\
+ &= \chi_\pi((-i)^2) = \chi_\pi(-1).
+\end{align*}
+
+
+Réduisons $J(\chi_\pi,\chi_\pi)$ modulo $2 + 2i$.
+Puisque $1 + i \mid 2$ et que $1-i = -i(1+i)$, les 4 unités de $\Z[i]$ sont congrues à 1 modulo $1+i$. Par conséquent, 
+$$2 \chi_\pi(t) \chi_\pi(1-t) \equiv 2 \pmod {2+2i},$$
+et ainsi
+$$J(\chi_\pi,\chi_\pi) \equiv 2\, \frac{p-3}{2} + \chi_\pi(-1)  \pmod {2+2i}.$$
+De plus, puisque $p\equiv 1 \pmod 4$, a fortiori $p\equiv 1 \pmod {2+2i}$, donc
+$$J(\chi_\pi,\chi_\pi) \equiv -2 + \chi_\pi(-1)  \pmod {2+2i}.$$
+Enfin
+\begin{align*}
+-\chi_\pi(-1) J(\chi_\pi,\chi_\pi) &\equiv 2\chi_\pi(-1)- \chi_\pi(-1)^2\\
+&\equiv 2\chi_\pi(-1)-1 \pmod {2+2i}
+\end{align*}
+Or $\chi_\pi(-1) = \pm 1$. Si $\chi_\pi(-1) = 1$, alors $2\chi_\pi(-1)-1 = 1$, et si $\chi_\pi(-1) = -1$, alors $2\chi_\pi(-1) - 1 = -3 \equiv 1 \pmod {2+2i}$. Nous avons prouvé que
+$$-\chi_\pi(-1) J(\chi_\pi,\chi_\pi) \equiv 1 \pmod {2+2i},$$
+et ainsi $-\chi_\pi(-1) J(\chi_\pi,\chi_\pi)$ est primaire.
+\end{proof}
+
+Rappelons ce lemme utile :
+
+{\bf Lemme.}
+{\it
+$1^k + 2^k + . . . + (p-1)^k \equiv
+\left\{
+\begin{array}{ll}
+ 0 \pmod p& \text{si } p-1 \nmid k,\\
+ -1 \pmod p& \text{si } p-1 \mid k.
+\end{array}
+\right.
+$
+}
+
+
+\begin{proof}
+Posons $S(k) = 1^k+2^k+\cdots+(p-1)^k$.
+
+Soit $g$ un élément primitif modulo $p$. Autrement dit $\overline{g}$ est un générateur du groupe $\F_p^*$.
+
+Comme $(\overline{1},\overline{g},\overline{g}^{2}, \ldots, \overline{g}^{p-2}) $ est une permutation de $ (\overline{1},\overline{2}, \ldots,\overline{p-1})$,
+\begin{align*}
+\overline{S(k)} &= \overline{1}^k + \overline{2}^k+\cdots+ \overline{p-1}^k\\
+&= \sum_{i=0}^{p-2} \overline{g}^{ki} =
+\left\{
+\begin{array}{ccc}
+\overline{ p-1} = -\overline{1} &  \mathrm{si} &  p-1 \mid k , \\
+ \frac{ \overline{g}^{(p-1)k} -1}{ \overline{g}^k -1} = \overline{0}&  \mathrm{si}  &   p-1 \nmid k,
+\end{array}
+\right.
+\end{align*}
+puisque  $p-1 \mid k \iff \overline{g}^k = \overline{1}$.
+
+\end{proof}
+
+\begin{prop}\label{prop118}
+ Si $\pi$ est un premier primaire tel que $\n(\pi) = p \equiv 1 \pmod 4$, alors
+$$-\chi_\pi(-1) J(\chi_\pi,\chi_\pi) = \pi.$$
+\end{prop}
+\begin{proof}
+Comme il n'existe qu'un seul associé primaire de $\pi$ (proposition \ref{prop106}), il suffit d'après la proposition précédente de prouver que $\pi$ et $J(\chi_\pi,\chi_\pi)$ sont associés.
+
+Par définition de $\chi_\pi$, pour tout $t \in \Z$, $\chi_\pi(t) \equiv t^{\frac{p-1}{4}} \pmod \pi$, et donc
+$$J(\chi_\pi,\chi_\pi) \equiv \sum_{t=1}^{p-1} t^{\frac{p-1}{4}} (1-t)^{\frac{p-1}{4}} \pmod \pi.$$
+De plus,
+\begin{align*}
+\sum_{t=1}^{p-1} t^{\frac{p-1}{4}} (1-t)^{\frac{p-1}{4}}&=\sum_{t=1}^{p-1} t^{\frac{p-1}{4}} \sum_{j=0}^{\frac{p-1}{4}} \binom{\frac{p-1}{4}}{j}(-1)^j t^j\\
+&=\sum_{j=0}^{\frac{p-1}{4}} (-1)^j \binom{\frac{p-1}{4}}{j} \sum_{t=1}^{p-1} t^{j + \frac{p-1}{4}}\\
+&=\sum_{j=0}^{\frac{p-1}{4}} (-1)^j \binom{\frac{p-1}{4}}{j} S \left(j + \frac{p-1}{4}\right),
+\end{align*}
+où, comme dans le lemme, $S(k) = 1^k+2^k+\cdots+(p-1)^k$.
+
+Pour les indices $j$ tels que $0\leq j \leq \frac{p-1}{4}$, alors  $1 \leq j + \frac{p-1}{4} < p-1$, donc $S \left(j + \frac{p-1}{4}\right) \equiv 0 \pmod p$, a fortiori $S \left(j + \frac{p-1}{4}\right) \equiv 0 \pmod \pi$. Ainsi
+$$J(\chi_\pi,\chi_\pi) \equiv 0 \pmod \pi.$$
+La proposition 19 du chapitre "Sommes de Gauss et sommes de Jacobi" montre que $\n(J(\chi_\pi,\chi_\pi)) = p$, donc $J(\chi_\pi,\chi_\pi)$, comme $\pi$, est un élément premier de $D$, et puisque que $\pi \mid J(\chi_\pi,\chi_\pi)$, ils sont associés, ce qui prouve la proposition.
+\end{proof}
+
+\begin{prop}\label{prop119}
+Si $\pi$ est un premier primaire tel que $\n(\pi) = p \equiv 1 \pmod 4$, alors
+$$g(\chi_\pi)^4 = \pi^3 \overline{\pi}.$$
+\end{prop}
+
+\begin{proof}
+Puisque $\chi_\pi(-1) = \pm 1$, les propositions \ref{prop116} et \ref{prop118} montrent que
+\begin{align*}
+g(\chi_\pi)^4 &= p J(\chi_\pi,\chi_\pi)^2\\
+&= p \pi^2\\
+&=\pi^3 \overline{\pi}.
+\end{align*}
+\end{proof}
+Nous allons maintenant examiner deux cas particuliers de la loi de réciprocité biquadratique.
+
+
+\begin{prop}\label{prop120}
+Soit $\pi$ un premier primaire tel que $\n(\pi) = p \equiv 1 \pmod 4$, et soit $q \equiv 3 \pmod 4,\ q>0,$ un premier rationnel, premier dans $D$. Alors
+$$\chi_\pi(-q) = \chi_q(\pi).$$
+\end{prop}
+Notons que $-q$ est un premier primaire, avec $q = 4k-1,\ k\in \Z$.
+
+De plus $\frac{\n(-q)-1}{4} = \frac{q^2 - 1}{4} = \frac{(4k-1)^2 -1}{4} = 4k^2 -2k$ est pair. Comme $\chi_q(\pi) = \chi_{-q}(\pi)$, cette proposition s'écrit
+$$\chi_\pi(-q) = \chi_{-q}(\pi)(-1)^{\frac{\n(-q)-1}{4} \frac{\n(\pi)-1}{4}}.$$
+C'est bien un cas particulier de la loi de réciprocité biquadratique.
+
+\begin{proof}
+Comme $q\equiv 3 \pmod 4$,
+\begin{align*}
+g(\chi_\pi)^q &\equiv \sum_{j\in \F_p} \chi_\pi(j)^q \zeta^{qj}\\
+&\equiv \sum_{j\in \F_p} \chi_\pi^3(j) \zeta^{qj} \\
+&=\sum_{k\in \F_p} \chi_\pi^3(q^{-1} k) \zeta^{k}\qquad (k = qj)\\
+&= \chi_\pi^{-1}(q^{-1}) \sum_{k\in \F_p} \overline{\chi_\pi} ( k) \zeta^{k}\\
+&\equiv \chi_\pi(q) g(\overline{\chi_\pi}) \pmod q
+\end{align*}
+Ainsi 
+$$ g(\chi_\pi)^{q+1} \equiv \chi_\pi(q)g(\chi_\pi)g(\overline{\chi_\pi}) \pmod q.$$
+La proposition \ref{conjugue} du chapitre ``Sommes de Gauss et sommes de Jacobi'' montre que $g(\overline{\chi_\pi}) = \chi_\pi(-1) \overline{g(\chi_\pi)}$, et $|g(\chi_\pi)|^2 = p$, donc
+$$g(\chi_\pi)^{q+1} \equiv \chi_\pi(-q) p \pmod q.$$
+Notons que
+$$\pi^q = (a+bi)^q \equiv a^q+ b^q i^q  \equiv a +bi^3 = a -bi = \overline{\pi} \pmod q,$$
+et donc $p = \pi \overline{\pi} \equiv \pi^{q+1}  \pmod q$. Ainsi
+$$g(\chi_\pi)^{q+1} \equiv \chi_\pi(-q) \pi^{q+1} \pmod q.$$
+La proposition \ref{prop119} permet d'utiliser $g(\chi_\pi)^4 = \pi^3 \overline{\pi} \equiv \pi^{q+3}\pmod q$, donc
+$$ \pi^{\frac{(q+3)(q+1)}{4}} \equiv  \chi_\pi(-q) \pi^{q+1} \pmod q,$$
+ce qui donne après simplification, puisque $q$ est premier avec $\pi$,
+$$\pi^{\frac{q^2-1}{4}} \equiv \chi_\pi(-q) \pmod q.$$
+Mais, par définition de $\chi_q$,
+$$\chi_q(\pi) \equiv \pi^{\frac{q^2-1}{4}} \pmod q,$$
+donc
+$$\chi_q(\pi) \equiv \chi_\pi(-q) \pmod q.$$
+Comme les classes des quatre unités $1,i,i^2,i^3$ sont distinctes dans $D/ qD$, ceci montre que
+$$\chi_q(\pi) =\chi_\pi(-q).$$ 
+\end{proof}
+
+\begin{prop}\label{prop121}
+Soit $\pi$  un premier primaire tel que $\n(\pi) = p \equiv 1 \pmod 4$, et
+soit $q \ne p$ un premier rationnel, $q\equiv 1 \pmod 4, q>0$. Alors $\chi_\pi(q) = \chi_q(\pi)$.
+\end{prop}
+(Ici $q$ n'est pas premier dans $D$, et $\chi_q$ est un caractère biquadratique généralisé.)
+\begin{proof}
+Puisque $q \equiv 1 \pmod 4$,
+\begin{align*}
+g(\chi_\pi)^q &\equiv \sum_{j \in \F_p} \chi_\pi(j)^q \zeta^{qj}\\
+&\equiv \sum_{j \in \F_p} \chi_\pi(j) \zeta^{qj}\\
+&\equiv \sum_{k \in \F_p} \chi_\pi(q^{-1}k) \zeta^{k}\qquad (k = qj)\\
+&\equiv \overline{\chi_\pi}(q) g(\chi_\pi) \pmod q.
+\end{align*}
+Par conséquent,
+$$g(\chi_\pi)^{q+3} \equiv \overline{\chi_{\pi}}(q) g^4(\chi_\pi) \pmod q.$$
+En utilisant la valeur de $g(\chi_\pi)^4$ donnée par la proposition \ref{prop116}, nous obtenons
+$$(\pi^3 \overline{\pi})^{\frac{q+3}{4}} \equiv  \overline{\chi_{\pi}}(q)\pi^3 \overline{\pi} \pmod q.$$
+Puisque $q \wedge p = 1$, alors $q\wedge \pi =1$ et $q\wedge \overline{\pi} = 1$, et nous pouvons simplifier, pour obtenir
+$$(\pi^3)^\frac{q-1}{4} (\overline{\pi})^{\frac{q-1}{4}} \equiv \overline{\chi_\pi}(q) \pmod q.$$
+Décomposons $q$ sous la forme $q = \lambda \overline{\lambda}$, où $\lambda$ est premier dans $D$. Comme $\n(\lambda) = q$, l'égalité précédente implique
+$$\chi_\lambda(\pi^3) \chi_\lambda(\overline{\pi}) \equiv  \overline{\chi_\pi}(q) \pmod \lambda.$$
+Ces deux unités étant congrues modulo $\lambda$ dans $D$, elles sont égales (proposition \ref{prop100}). Ainsi
+$$\chi_\lambda(\pi^3) \chi_\lambda(\overline{\pi}) =  \overline{\chi_\pi}(q).$$
+Comme $\chi_\lambda^3 = \chi_\lambda^{-1} = \overline{\chi_\lambda}$,
+$$\overline{\chi_\lambda(\pi)} \chi_\lambda(\overline{\pi}) =  \overline{\chi_\pi}(q).$$
+La proposition \ref{prop103} donne alors
+$$\chi_{\overline{\lambda}}(\overline{\pi}) \chi_{\lambda}(\overline{\pi})=  \overline{\chi_\pi}(q).$$
+Par définition du caractère généralisé $\chi_q$, 
+$$\chi_q(\overline{\pi})  = \overline{\chi_\pi}(q).$$
+En prenant les conjugués, et en utilisant à nouveau la proposition \ref{prop103},
+
+$$\chi_q(\pi) = \chi_\pi(q).$$
+\end{proof}
+
+\begin{prop}\label{prop122}
+Soit $a \in \Z$ tel que $a\equiv 1 \pmod 4, a \ne 1$ , et $\lambda$ un élément primaire de $D$ tel que $\lambda \wedge a = 1$. Alors
+$$\chi_a(\lambda) = \chi_\lambda(a).$$
+\end{prop}
+\begin{proof}
+La proposition \ref{prop109} permet de décomposer le primaire $\lambda$ en produit de premiers primaires $\lambda = \lambda_1\cdots \lambda_t,$ et par définition,
+$$\chi_\lambda(a) = \chi_{\lambda_1}(a) \cdots \chi_{\lambda_t}(a).$$
+Comme $a \equiv 1 \pmod 4$, $a$ se décompose, quel que soit son signe, sous la forme
+$$a = \prod_{i=1}^r p_i \prod_{j=1}^s(-q_j),$$
+où les $p_i, q_j$ vérifient $p_i \equiv 1 \pmod 4,\ q_j \equiv 3 \pmod 4,\ p_i>0,\ q_j>0$.
+
+Alors
+$$\chi_\lambda(a) = \prod_{k=1}^t \left(\prod_{i=1}^r \chi_{\lambda_k} (p_i) \prod_{j=1}^s\chi_{\lambda_k}(-q_j)\right).$$
+La remarque suivant cette proposition \ref{prop109} montre que chaque premier primaire $\lambda_k$ est de la forme $\lambda_k= -q$, où $q \equiv 3 \pmod 4$ est un premier rationnel positif, ou bien égal à un premier $\pi$ tel que $\n(\pi) = \pi \overline{\pi} = p \equiv 1 \pmod 4$.
+\be
+\item[$\bullet$] Si $\lambda_k = -q, q \equiv 3 \pmod 4$, alors la proposition \ref{prop104} montre que
+\begin{align*} \chi_{\lambda_k}(-q_j) &= \chi_{-q}(-q_j) =\chi_q(-q_j) = 1, \text {et}\\
+                      \chi_{-q_j}(\lambda_k) &= \chi_{-q_j}(-q) = \chi_{q_j}(-q) = 1,
+\end{align*}
+puisque $\lambda \wedge a = 1$, et donc $q \wedge q_j = \lambda_k \wedge q_j = 1$. Par conséquent,
+$$\chi_{\lambda_k}(-q_j )= \chi_{-q_j}(\lambda_k).$$
+De plus, si on écrit $p_i = \pi_i \overline{\pi_i}$, alors
+$$\chi_{\lambda_k}(p_i) = \chi_q(p_i) = \chi_{q}(\pi_i) \chi_{q}(\overline{\pi_i}).$$
+Puisque $\pi_i \equiv 1 \pmod 4$, et $p_i \ne q$ est un premier rationnel, la proposition \ref{prop120} montre que
+\begin{align*}
+\chi_q(\pi_i) &= \chi_{\pi_i}(-q) = \chi_{\pi_i}(\lambda_k),\\
+\chi_q(\overline{\pi_i}) &= \chi_{\overline{\pi_i}}(-q) = \chi_{\overline{\pi_i}}(\lambda_k),
+\end{align*}
+par conséquent
+$$\chi_{\lambda_k}(p_i) = \chi_{\pi_i}(\lambda_k)\chi_{\overline{\pi_i}}(\lambda_k) = \chi_{p_i}(\lambda_k).$$
+\item[$\bullet$] Si $\lambda_k = \pi$, où $\n(\pi) = \pi \overline{\pi} = p \equiv 1 \pmod 4$, alors, puisque $q_j \equiv 3 \pmod 4$ est un premier rationnel, la proposition \ref{prop120} donne
+$$\chi_{\lambda_k}(-q_j) = \chi_{\pi}(-q_j) = \chi_{-q_j}(\pi) = \chi_{-q_j}(\lambda_k).$$
+De plus, puisque $p_i \equiv 1 \pmod 4$ est un premier rationnel, la proposition \ref{prop121} donne
+$$\chi_{\lambda_k}(p_i) = \chi_\pi(p_i) = \chi_{p_i}(\pi) = \chi_{p_i}(\lambda_k).$$
+Pour conclure,
+\begin{align*}
+\chi_\lambda(a) &= \prod_{k=1}^t \left(\prod_{i=1}^r \chi_{\lambda_k} (p_i) \prod_{j=1}^s\chi_{\lambda_k}(-q_j)\right)\\
+&=\prod_{k=1}^t\left( \prod_{i=1}^r \chi_{p_i} (\lambda_k) \prod_{j=1}^s\chi_{-q_j}(\lambda_k)\right)\\
+&=\prod_{k=1}^t  \chi_{a}(\lambda_k)\\
+&=\chi_a(\lambda).
+\end{align*}
+\ee
+\end{proof}
+
+La restriction $a\ne 1$ conduit à considérer de nombreux cas inutiles dans la démonstration de la réciprocité biquadratique. Pour éviter cet écueil, définissons $\chi_\pi$ dans la cas où $\pi$ est une unité par $\chi_\pi = \varepsilon$, le caractère trivial. Ainsi
+$$\chi_1 = \chi_{-1} = \chi_i = \chi_{-i}=\varepsilon,$$
+et $\chi_{\pi}$ a un sens pour tout $\pi$ tel que $1+i \nmid \pi$. Ceci permet de lever l'exception de la proposition \ref{prop122}.
+
+\begin{prop}\label{prop123}
+Soit $a \in \Z$ tel que $a\equiv 1 \pmod 4$, et $\lambda$ un élément primaire de $D$ tel que $\lambda \wedge a = 1$. Alors
+$$\chi_a(\lambda) = \chi_\lambda(a).$$
+\end{prop}
+
+\begin{proof}
+Il ne reste à vérifier que la cas $a=1$. Alors, puisque $\chi_1 = \varepsilon$,  $\chi_1(\lambda) = 1 = \chi_\lambda(1)$.
+\end{proof}
+Définissons, pour un entier impair $n$, $$\varepsilon(n) = (-1)^{\frac{n-1}{2}}.$$
+{\bf Lemme.}
+{\it Soient $n,m$ deux entiers impairs. Alors
+\be
+\item[(a)] Si $n\equiv m \pmod 4$, alors $\varepsilon(n) = \varepsilon(m)$.
+\item[(b)] $\varepsilon(nm) = \varepsilon(n) \varepsilon(m).$
+\item[(c)] $\varepsilon(n) n \equiv 1 \pmod 4.$
+\ee
+}
+\begin{proof}
+ Ici $n,m$ sont des entiers impairs.
+\be
+\item[(a)] Si $n\equiv m \pmod 4$, alors $m = n+ 4k,\ k\in \Z$, donc $$\varepsilon(m) = (-1)^{\frac{n+4k-1}{2}} =  (-1)^{\frac{n-1}{2}} (-1)^{2k}= (-1)^{\frac{n-1}{2}} = \varepsilon(n).$$
+\item[(b)]Si on note $n = 2k + 1, m = 2l+1$, alors
+$$\frac{nm-1}{2} = 2kl + k + l \equiv k+l \equiv \frac{n-1}{2} + \frac{m-1}{2} \pmod 2,$$
+donc $(-1)^{\frac{nm-1}{2}} = (-1)^{\frac{n-1}{2}} (-1)^{\frac{m-1}{2}}$. 
+\item[(c)] Comme $\varepsilon(n) = 1$ si $n\equiv 1 \pmod 4$, et $\varepsilon(n) = -1$ si $n\equiv -1 \pmod 4$, nous avons pour tout $n$ impair
+$$\varepsilon(n) n \equiv 1 \pmod 4.$$
+
+\ee
+\end{proof}
+
+
+\begin{prop}\label{prop124}
+Soient $\pi = a + bi$ et $\lambda = c+di$ des éléments de $D$ primaires et premiers entre eux.
+Si $a\wedge b = 1$ et $c\wedge d = 1$, alors
+$$ \chi_\lambda(\pi) = \chi_\pi(\lambda)(-1)^{\frac{a-1}{2} \frac{c-1}{2}}.$$
+\end{prop}
+Notons qu'on ne suppose pas que $\n(\pi) \ne \n(\lambda)$, ni que $\lambda, \pi$ sont premiers dans $D$.
+\begin{proof}
+Les hypothèses impliquent que $a\wedge \pi = b \wedge \pi = c \wedge \lambda = d \wedge \lambda = 1$.
+Comme $c\pi \wedge \lambda = 1$, la congruence
+\begin{align*}
+c\pi &=ac + bci\\
+&= ac + bd +bi(c +id)\\
+&\equiv ac + bd \pmod \lambda,
+\end{align*}
+montre que $(ac + bd) \wedge \lambda = 1$, et symétriquement $(ac + bd) \wedge \pi = 1$.
+
+Notons que $a\wedge \pi = 1$ entraîne l'existence de $u,v \in D$ tels que $ua + v\pi = 1$, donc $\overline{u}\, a + \overline{v}\, \overline{\pi} = 1$, ce qui prouve $a \wedge \overline{\pi} = 1$. Le même raisonnement donne  $a \wedge \overline{\pi} = b \wedge  \overline{\pi} = c \wedge \overline{\lambda} = d \wedge \overline{\lambda} = 1$, et $(ac + bd) \wedge \overline{\lambda} = (ac + bd) \wedge \overline{\pi} = 1$.
+
+La congruence $c \pi \equiv ac + bd \pmod \lambda$, et la proposition \ref{prop110}(a), montrent que
+\begin{align}\label{eq4.1}
+\chi_\lambda(c) \chi_\lambda(\pi) =\chi_\lambda(ac + bd).
+\end{align}
+
+Symétriquement, comme $a\lambda =ac+bd +id\pi \equiv ac  + bd \pmod \pi$,
+\begin{align}\label{eq4.2}
+\chi_\pi(a) \chi_\pi(\lambda) = \chi_\pi(ac + bd).
+\end{align}
+Puisque $a$ et $ac + bd$ sont réels, le passage au conjugué dans l'égalité (\ref{eq4.2}) donne, grâce à la proposition \ref{prop103},
+\begin{align}\label{eq4.3}
+\chi_{\overline{\pi}}(a)\overline{\chi_\pi(\lambda)} = \chi_{\overline{\pi}}(ac +bd).
+\end{align}
+Le produit de (\ref{eq4.1}) et (\ref{eq4.3}) s'écrit, grâce à la proposition \ref{prop110}(c),
+$$\chi_\lambda(c) \chi_{\overline{\pi}}(a)  \chi_\lambda(\pi) \overline{\chi_\pi(\lambda)} = \chi_{\lambda\overline{\pi}}(ac + bd).$$
+En utilisant à nouveau la proposition \ref{prop103},
+$$(\chi_\lambda(c) \chi_{\overline{\pi}}(a) )^{-1} = \overline{\chi_\lambda(c) \chi_{\overline{\pi}}(a)} = \chi_\pi(a)  \chi_{\overline{\lambda}}(c).$$
+Nous avons donc prouvé
+\begin{align}\label{eq4.4}
+\chi_\lambda(\pi) \overline{\chi_\pi(\lambda)} =  \chi_\pi(a) \chi_{\overline{\lambda}}(c)  \chi_{\lambda\overline{\pi}}(ac + bd).
+\end{align}
+
+ Calculons  le membre de droite de l'égalité (\ref{eq4.4}).
+
+Pour chaque facteur du membre de droite de l'égalité (\ref{eq4.4}), utilisons l'égalité suivante, vraie pour tout entier impair $x$, puisque $\varepsilon(x)^2 = 1$,
+$$\chi_\alpha(x) = \chi_\alpha(\varepsilon(x)) \chi_\alpha(\varepsilon(x) x) \qquad (x \in \{a,c,ac+bd\}).$$
+
+En appliquant cette méthode, puisque $\varepsilon(a)a \equiv 1 \pmod 4$, et  $\pi \wedge a = 1$,  la proposition \ref{prop123} montre que (même si $a$ est une unité)
+\begin{align*}
+\chi_{\pi}(a) &= \chi_{\pi}(\varepsilon(a)) \chi_{\pi}(\varepsilon(a)a)\\
+&=  \chi_{\pi}(\varepsilon(a)) \chi_{\varepsilon(a) a}(\pi)\\
+&= \chi_{\pi}(\varepsilon(a)) \chi_{a}(\pi),
+\end{align*}
+la dernière égalité vient du fait que $a$ et $\varepsilon(a) a$ étant associés, ils définissent le même caractère.
+
+Dans le cas où $\varepsilon(a) = -1$, la proposition \ref{prop112} donne 
+$$\chi_{\pi}(\varepsilon(a)) = \chi_\pi(-1) = (-1)^{\frac{a-1}{2}} = \varepsilon(a)^{\frac{a-1}{2}},$$
+et l'égalité  $\chi_{\pi}(\varepsilon(a)) = \varepsilon(a)^{\frac{a-1}{2}}$ est trivialement vraie si $\varepsilon(a) = 1$. Par conséquent,
+$$\chi_{\pi}(a) =  \varepsilon(a)^{\frac{a-1}{2}}  \chi_{a}(\pi).$$
+
+En procédant de même pour les trois facteurs du membre de droite de l'égalité (\ref{eq4.4}), puisque $\overline{\lambda} \wedge c = 1$, et $\lambda\overline{\pi} \wedge (ac + bd) = 1$, nous obtenons les trois égalités
+\begin{align}
+\chi_\pi(a) &= \varepsilon(a)^{\frac{a-1}{2}}  \chi_a(\pi),\\
+\chi_{\overline{\lambda}}(c) &= \varepsilon(c)^{\frac{c-1}{2}} \chi_{c}(\overline{\lambda})\\
+\chi_{\lambda\overline{\pi}}(ac + bd) &= \varepsilon(ac+bd)^{\frac{ac +bd-1}{2}} \chi_{ac+bd}(\lambda\overline{\pi}).
+\end{align}
+Le produit de ces trois égalités donne
+$$\chi_\lambda(\pi) \overline{\chi_\pi(\lambda)} = P\  \chi_a(\pi) \chi_{c}(\overline{\lambda}) \chi_{ac+bd}(\lambda\overline{\pi}),$$
+où
+$$P =  \varepsilon(a)^{\frac{a-1}{2}} \varepsilon(c)^{\frac{c-1}{2}}\varepsilon(ac+bd)^{\frac{ac +bd-1}{2}}.$$
+Puisque $ac + bd \equiv ac \pmod 4$, le lemme donne
+\begin{align*}
+P &=  \varepsilon(a)^{\frac{a-1}{2}} \varepsilon(c)^{\frac{c-1}{2}} \varepsilon(ac)^{\frac{ac - 1}{2}}\\ 
+&=\varepsilon(a)^{\frac{a-1}{2}} \varepsilon(c)^{\frac{c-1}{2}} \varepsilon(ac)^{\frac{a- 1}{2}}  \varepsilon(ac)^{\frac{c- 1}{2}}\\ 
+&=\varepsilon(a)^{\frac{a-1}{2}} \varepsilon(c)^{\frac{c-1}{2}}\varepsilon(a)^{\frac{a- 1}{2}}\varepsilon(c)^{\frac{a- 1}{2}}\varepsilon(a)^{\frac{c- 1}{2}}\varepsilon(c)^{\frac{c- 1}{2}}\\
+&=\varepsilon(c)^{\frac{a- 1}{2}}\varepsilon(a)^{\frac{c- 1}{2}}\\
+&=(-1)^{\frac{c-1}{2} \frac{a-1}{2}}(-1)^{\frac{a-1}{2} \frac{c-1}{2}}\\
+&= 1.
+\end{align*}
+
+
+ Ainsi
+$$\chi_\lambda(\pi) \overline{\chi_\pi(\lambda)} =  \chi_a(\pi) \chi_{c}(\overline{\lambda})\chi_{ac+bd}(\lambda\overline{\pi}).$$
+Justifions les égalités suivantes, donnant les trois facteurs du membre de droite. 
+\begin{subequations}
+\begin{align}
+\chi_a(\pi) &= \chi_a(a+bi) = \chi_a(bi) = \chi_a(i),\label{eq4.8}\\ 
+\chi_c(\overline{\lambda}) &= \chi_c(c-di) = \chi_c(-di) = \chi_c(i),\label{eq4.9}\\ 
+\chi_{ac+bd}(\lambda\overline{\pi}) &= \chi_{ac+bd}(ac + bd + (ad-bc)i) = \chi_{ac+bd}((ad - bc)i) = \chi_{ac+bd}(i). \label{eq4.10}
+\end{align}
+\end{subequations}
+
+ En effet, si $a, c$ et $ac + bd$ ne sont pas des unités, ce sont des entiers impairs, vérifiant $a\wedge b = 1, c \wedge d = 1$ : la proposition \ref{prop113} montre qu'alors $\chi_c(-d) = \chi_a(b)  = 1$. Ceci reste vrai si $a$ est une unité, puisqu'alors $\chi_a = \varepsilon$, ou si $c$ est une unité.
+ 
+ Il reste à vérifier que $(ad-bc) \wedge (ac + bd) = 1$. Si un premier $\mu$ de $D$ vérifie $\mu \mid ad-bc$ et $\mu \mid ac +bd$, alors $\mu \mid \lambda \overline{\pi} = ac + bd + (ad-bc)i$, donc $\mu$ divise $\lambda$ ou $\overline{\pi}$. Ceci est impossible, car nous avons prouvé au début de cette démonstration que $(ac + bd)\wedge \lambda = (ac + bd) \wedge \overline{\pi} = 1$. Ainsi $ad-bc$ et $ac + bd$ sont premiers entre eux dans $D$, donc aussi dans $\Z$. Par conséquent, la proposition \ref{prop113} montre que $ \chi_{ac+bd}(ad-bc) = 1$ (même si $ac + bd$ est une unité), et les égalités (\ref{eq4.8}),(\ref{eq4.9}),(\ref{eq4.10}) sont justifiées. 
+ 
+ En multipliant ces trois égalités (\ref{eq4.8}),(\ref{eq4.9}),(\ref{eq4.10}), nous obtenons
+\begin{align}
+\chi_\lambda(\pi) \overline{\chi_\pi(\lambda)} &= \chi_{(ac+bd)ac}(i)
+\end{align}
+Comme $a,c$ sont impairs, et $b,d$ pairs, $(ac+bd)ac \equiv (ac)^2 \equiv 1 \pmod 4$. La proposition \ref{prop114} donne alors (même si $(ac+bd)ac = 1$)
+\begin{align*}
+\chi_\lambda(\pi) \overline{\chi_\pi(\lambda)} &= (-1)^{\frac{(ac+bd)ac-1}{4}}.
+\end{align*}
+Comme vu au début du paragraphe 5, $\pi$ et $\lambda$ étant primaires, la proposition \ref{prop105} montre qu'il existe des entiers $m,n,s,t$ tels que
+$$a = 2m+1, b = 2n, \qquad c = 2s+1, d=2t,
+$$
+tels que $m = \frac{a-1}{2}, n = \frac{b}{2}$ ont même parité, et $s =\frac{s-1}{2}, t = \frac{d}{2}$ ont même parité.
+
+La réduction modulo 8 de $(ac+bd)ac -1$ donne
+\begin{align*}
+(ac + bd)ac -1 &= [(2m+1)(2s+1) + 4nt](2m+1)(2s+1) - 1\\
+&=(4ms+4nt +2m + 2s +1)(4ms + 2m + 2s +1) - 1\\
+&\equiv 4ms + (4m^2 + 4ms + 2m) + (4ms + 4s^2 + 2s) + (4ms + 4nt + 2m+2s)\\
+&\equiv 4m^2+4m + 4s^2 + 4m +4s + 4 nt \pmod 8,
+\end{align*}
+donc la réduction modulo 2 de l'exposant donne
+\begin{align*}
+\frac{(ac+bd)ac - 1}{4} &\equiv m(m+1) + s(s+1) + nt \\
+&\equiv nt\\
+&\equiv ms \pmod 2,\\
+\end{align*}
+puisque $m,n$ d'une part, $t,s$ d'autre part, ont même parité. Ainsi
+$$(-1)^{\frac{(ac+bd)ac - 1}{4}} = (-1)^{\frac{a-1}{2} \frac{c-1}{2}},$$
+et nous avons prouvé dans ce cas que
+$$\chi_\lambda(\pi) \overline{\chi_\pi(\lambda)} = (-1)^{\frac{a-1}{2} \frac{c-1}{2}}.$$
+ce qui est équivalent à la formule de l'énoncé, puisque $ \overline{\chi_\pi(\lambda)}  = \chi_\pi(\lambda)^{-1}$.
+
+\end{proof}
+
+Nous pouvons maintenant prouver la loi de réciprocité biquadratique.
+
+\begin{prop}\label{prop125}{\bf Loi de Réciprocité Biquadratique.}
+
+Si $\lambda, \pi$ sont des éléments primaires de $\Z[i]$, alors
+$$\chi_\pi(\lambda) = \chi_\lambda(\pi)(-1)^{\frac{\n(\lambda)-1}{4} \frac{\n(\pi)-1}{4}}.$$
+\end{prop}
+\begin{proof}
+
+Si $\lambda$ et $\pi$ ne sont pas premiers entre eux, alors $\chi_\pi(\lambda) = \chi_\lambda(\pi) = 0$. Nous pouvons donc supposer $\lambda \wedge \pi = 1$.
+
+En factorisant par le pgcd des parties réelles et imaginaires de $\pi,\lambda$, on peut écrire
+$$\pi = m(a+bi), \lambda = n (c+di), \text{ où } a\wedge b = 1, c \wedge d = 1.$$
+Puisque les élément primaires $\pi, \lambda$ ne sont pas divisibles par 2, $m,n$ sont impairs. Quitte à remplacer $m$ par $-m$( et $a+bi$ par $-a-bi$), on peut supposer $m\equiv 1 \pmod 4$, et aussi $n \equiv 1 \pmod 4$.
+
+Nous savons que $n \equiv 1 \pmod 4$, et aussi que $a+bi \wedge n = 1$, puisque $\pi \wedge \lambda = 1$. La proposition \ref{prop122} montre alors que 
+$\chi_{a+bi}(n) = \chi_n(a+bi)$, et symétriquement, $\chi_{c+di}(m) = \chi_m(c+di)$. De plus, la proposition \ref{prop113} montre que $\chi_m(n) = \chi_n(m) = 1$, et ceci reste vrai si $m=1$, ou si $n=1$, puisque $\chi_1 = \varepsilon$.
+
+Comme $\pi \equiv 1\pmod{(1+i)^3}$, et $m \equiv 1 \pmod {(1+i)^3}$ (puisque $(1+i)^3 = -2(1+i)$ divise 4), l'égalité $\pi = m(a+bi)$ montre que $a+bi \equiv 1 \pmod{ (1+i)^3}$, donc $a+bi$ est primaire, et de même $c+di$ est primaire. Alors, en utilisant les propositions \ref{prop123} et \ref{prop124},
+\begin{align*}
+\chi_\lambda(\pi) &= \chi_\lambda(m) \chi_\lambda(a+bi)\\
+&=\chi_m(\lambda) \chi_n(a+bi) \chi_{c+di}(a+bi)\\
+&=\chi_m(\lambda) \chi_{a+bi}(n) \chi_{a+bi}(c+di)(-1)^{\frac{a-1}{2}\frac{c-1}{2}}\\
+&= \chi_m(\lambda) \chi_{a+bi}(\lambda)(-1)^{\frac{a-1}{2}\frac{c-1}{2}}\\
+&= \chi_\pi(\lambda)(-1)^{\frac{a-1}{2}\frac{c-1}{2}}.\\
+\end{align*}
+Notons le primaire $a+bi$ sous la forme $a + bi= 2k+1 + 2l i$, où $k =\frac{a-1}{2} \equiv l = \frac{b}{2} \pmod 2$.
+
+Puisque $m\equiv 1 \pmod 4$, $m^2 \equiv 1 \pmod 8$.
+\begin{align*}
+\n(\pi) - 1  &= m^2[(2k+1)^2 + 4 l^2 )-1\\
+&=m^2(4k^2+4k+4l^2+1) - 1\\\
+&\equiv 4(k^2+k+l^2) \pmod 8,
+\end{align*}
+et puisque $k \equiv l \equiv \frac{a-1}{2} \pmod 2$,
+\begin{align*}
+\frac{\n(\pi) - 1}{4} &\equiv k^2 + k  + l^2 \\
+&\equiv \frac{a-1}{2} \pmod 2,
+\end{align*}
+si bien que
+$$\chi_\pi(\lambda) = \chi_\lambda(\pi)(-1)^{\frac{\n(\lambda)-1}{4} \frac{\n(\pi)-1}{4}}.$$
+
+\end{proof}
+
+
+
+
+\section{Résidus biquadratiques entiers.}
+Si $p\equiv 3 \pmod 4$,  la proposition \ref{nbsols} du chapitre ``Sommes de Gauss et sommes de Jacobi" montre que pour tout $\alpha \in \F_p^*$ qui est un carré de $\F_p$, l'équation $x^4 =\alpha$ admet deux solutions dans $\F_p$, puisque $d = (p-1)\wedge 4 = 2$.
+
+Par exemple, pour $p= 19$, l'équation  $x^4 = 5$ équivaut à $x^2 = 9$ ou $x^2 = -9$. La première équation a deux solutions $3$ et $-3$, mais la deuxième n'en a pas, puisque $\legendre{-9}{19} = \legendre{-1}{19} \legendre{9}{19} =  \legendre{-1}{19} = -1$.
+
+Supposons maintenant que $p\equiv 1 \pmod 4$. Alors $d = 4 \wedge (p-1) = 4$, et cette même proposition prouve que $x^4 = \alpha$ admet une solution dans $\F_p$ si et seulement si $\alpha^{\frac{p-1}{4}} = 1$, et dans ce cas, elle en admet quatre.
+
+Comme $p \equiv 1 \pmod 4$, $p = \pi \overline{\pi}$, où $\pi$ est premier dans $D$.
+
+Soit $a \in \Z$. Supposons que la congruence $x^4 \equiv a \pmod p$ admet une solution dans $\Z$. Alors $x^4 \equiv a \pmod \pi$, et la proposition \ref{prop102} montre que $\chi_\pi(\alpha) = 1$.
+
+Réciproquement, si $\chi_\pi(\alpha) = 1$, alors cette même proposition montre l'existence de $\alpha \in D$ tel que $\alpha^4 \equiv a \pmod \pi$. De plus, $D/\pi D \simeq \F_p$, et il existe un représentant $x \in\{0,1,\cdots,p-1\}$ de $\alpha$ modulo $\pi$. Ainsi $x^4 \equiv a \pmod \pi$, où $x \in \Z$.
+
+Comme $\pi \mid x^4 -a$, alors $p = \n(\pi) \mid (x^4 -a)^2$, et $p$ est un premier rationnel, donc $p \mid x^4 - a$, soit $x^4 \equiv a \pmod p$.
+
+ Nous avons ainsi prouvé cette proposition :
+
+\begin{prop}\label{prop126}
+Soit $a \in \Z$, et $p \equiv 1 \pmod 4$ est un premier rationnel. Alors $p = \n(\pi)$, où $\pi$ est premier dans $D$, et
+$$\exists x \in \Z, \ x^4 \equiv a \pmod p \iff \chi_\pi(a) = 1 \iff \exists \alpha \in D,\ \alpha^4 \equiv a \pmod \pi.$$
+\end{prop}
+
+
+
+
+\section{Loi supplémentaire à la loi de réciprocité biquadratique.}
+Chaque élément premier de $\Z[i]$ qui n'est pas divisible par $1+i$ est associé à un premier primaire $\lambda$, et la loi de réciprocité biquadratique permet d'évaluer $\chi_\pi(\lambda)$. Il reste à connaître le caractère biquadratique des unités, et de $1+i$. 
+
+Pour les unités, la définition donne
+
+$\chi_\pi(i) = i^{\frac{p-1}{4}}$ si $\n(\pi) = p$ est un premier rationnel congru à 1 modulo 4.
+
+$\chi_{-q}(i)  = \chi_{q}(i) = i^{\frac{q^2-1}{4}}$ si $q>0$ est un premier rationnel congru à 3 modulo 4.
+
+Nous pouvons donner une formule commune simple, qui fera partie de la loi supplémentaire.
+\begin{prop}\label{prop127}
+Si $\pi = a + bi$ est un premier primaire, alors
+$$\chi_\pi(i) = i^{\frac{-a+1}{2}}.$$
+\end{prop}
+\begin{proof}
+Soit $\pi = a +bi$ un premier primaire de $\Z[i]$.
+\be
+\item[$\bullet$] Si $\pi = -q$, où $q \equiv 3 \pmod 4, q>0,$ est un premier rationnel, alors $a= -q, b=0$.
+
+Notons $-q = a = 4k+1,\ k \in \Z$. Alors
+\begin{align*}
+\frac{q^2-1}{4} &= 4k^2 + 2k\\
+&\equiv 2k  =\frac{a-1}{2}\pmod 4.
+\end{align*}
+Donc $$\chi_{-q}(i)  = \chi_{q}(i) = i^{\frac{q^2-1}{4}} = i^\frac{a-1}{2} = \left(\frac{1}{i}\right)^\frac{-a+1}{2}= (-i)^\frac{-a+1}{2} =  (-1)^\frac{-a+1}{2} i ^\frac{-a+1}{2} = i ^\frac{-a+1}{2},$$
+puisque $(-1)^\frac{-a+1}{2} = (-1)^{-2k} = 1$.
+
+\item[$\bullet$] Supposons maintenant que $\n(\pi) = p$, où $p\equiv 1 \pmod 4$ est un premier rationnel. $\pi = a + bi$ étant primaire, alors $a$ est impair, et $b$ pair, et
+$$\pi = 2m+1 +2n i, \qquad \text{où } m = \frac{a-1}{2} \equiv n = \frac{b}{2} \pmod 2.$$
+Comme $m \equiv n \pmod 2$, $m^2 \equiv n^2 \pmod 4$.
+Alors $p = \pi \overline{\pi} = (2m+1)^2 + (2n)^2$, donc 
+$$\frac{p-1}{4} = m^2+n^2+m \equiv 2m^2 +m =4 \frac{m(m+1)}{2} - m \equiv -m \pmod 4.$$
+Par conséquent
+$$\chi_\pi(i) = i^{\frac{\n(\pi) - 1}{4}} = i ^\frac{p-1}{4} = i^{-m} = i^{\frac{-a+1}{2}}.$$
+
+L'égalité $\chi_\pi(i) =  i^{\frac{-a+1}{2}}.$ a donc été vérifiée pour tous les premiers primaires $\pi$.
+\ee
+\end{proof}
+
+
+Nous aurons besoin de la valeur de $\chi_a(i)$ pour un entier impair $a$. En généralisant la proposition \ref{prop114}, nous obtenons
+\begin{prop}\label{prop128}
+Si $a$ est un entier impair, alors
+$$\chi_a(i) = (-1)^{\frac{a^2-1}{8}}.$$
+\end{prop}
+\begin{proof}
+Si $a\equiv 1 \pmod 4$, la proposition \ref{prop114} donne $\chi_a(i) = (-1)^\frac{a-1}{4}$. Notons $a = 4A + 1,\ A\in \Z$. Alors
+ $$(-1)^{\frac{a^2-1}{8}} = (-1)^{2A^2+A} = (-1)^A = (-1)^{\frac{a-1}{4}}= \chi_a(i).$$
+ 
+Si $a \equiv -1 \pmod 4$, alors $\chi_a(i) = \chi_{-a}(i) = (-1)^{\frac{-a-1}{4}}$ par la même proposition. Notons $a = 4A-1,\ A \in \Z$. Alors
+ $$(-1)^{\frac{a^2-1}{8}} = (-1)^{2A^2 - A} =(-1)^{-A} = (-1)^{\frac{-a-1}{4}}= \chi_a(i).$$
+Dans les deux cas, $$\chi_a(i) = i^{\frac{a^2-1}{8}}.$$
+
+Si $a =\pm 1$ est une unité, alors $ (-1)^{\frac{a^2-1}{8}} = (-1)^0 = 1 =\chi_a(i)$.
+\end{proof}
+
+
+Il reste le calcul de $\chi_\pi(1+i)$. Commençons par le calcul de $\chi_q(1+i)$. 
+\begin{prop}\label{prop129}
+Si $q \equiv 3 \pmod 4,\ q>0,$ est un premier rationnel, alors
+$$\chi_q(1+i) = i^{\frac{-q-1}{4}}.$$
+\end{prop}
+\begin{proof}
+Notons $q = 4k + 3, k \in \N$.
+
+Comme $(1+i)^2 = 2i$, alors $(1+i)^{q-1} =  (2i)^{\frac{q-1}{2}}$. De plus,
+$$2^{\frac{q-1}{2}} \equiv \legendre{2}{q} =  (-1)^{\frac{q^2-1}{8}} = (-1)^\frac{(4k+3)^2 - 1}{8} =  (-1)^{2k^2+3k+1} = (-1)^{k+1} \pmod q,$$
+et $i^{\frac{q-1}{2} }= i^{2k+1} = (-1)^k i$, si bien que
+$$ (1+i)^{q-1} \equiv -i \pmod q.$$
+Comme $\n(q) = q^2$, 
+ $$\chi_q(1+i) \equiv (1+i)^{\frac{q^2-1}{4} }= [(1+i)^{q-1}]^{\frac{q+1}{4}} \equiv (-i)^{\frac{q+1}{4}} \pmod q,$$
+et ainsi
+$$\chi_q(1+i) =(-i)^{\frac{q+1}{4}} = i^{\frac{-q-1}{4}}.$$
+\end{proof}
+
+
+\begin{prop}\label{prop130}
+Soit $p$ un premier rationnel , $p \equiv 1 \pmod 4$ . Alors
+$$\chi_p(1+i) = i^{\frac{p-1}{4}}.$$
+\end{prop}
+\begin{proof}
+Soit $p = \pi \overline{\pi}, \pi \in \Z[i]$ une décomposition de $p$. Alors
+\begin{align*}
+\chi_p(1+i) &= \chi_\pi(1+i) \chi_{\bar{\pi}}(1+i) \\
+&= \chi_\pi(1+i) \overline{\chi_\pi(1-i)} \qquad ( \text{proposition } \ref{prop111})\\
+& =\frac{\chi_\pi(1+i)}{\chi_\pi(1-i) }= \chi_\pi(i) \qquad (\mathrm{puisque}\  (1-i)i = 1+i)\\
+&=i^{\frac{p-1}{4}}.
+\end{align*}
+\end{proof}
+
+Généralisons les propositions \ref{prop129} et \ref{prop130} à un entier quelconque.
+\begin{prop}\label{prop131}
+Soit $n \in \Z$ un entier, $n \equiv 1 \pmod 4$. Alors
+$$\chi_n(1+i) = i^{\frac{n-1}{4}}.$$
+\end{prop}
+\begin{proof}
+Soit  $n \in \mathbb{Z}, n\equiv 1 \pmod 4$.
+
+Si $n=1$, alors $\chi_1(1+i) = 1 = i^{\frac{n-1}{4}}$. Supposons maintenant que $n \ne 1$.
+
+Si $n>0$, $n = q_1q_2\cdots q_kp_1p_2\cdots p_l$, 
+où les $p_i,q_i$ sont des premiers rationnels positifs vérifiant $q_i \equiv -1 \pmod 4, p_i \equiv 1 \pmod 4$, avec $k$ pair, puisque $n\equiv 1 \pmod 4$.
+
+Si $n<0$, $n = -q_1q_2\cdots q_kp_1p_2\cdots p_l$, avec $k$ impair.
+
+Dans les deux cas, 
+$$n = (-q_1)(-q_2)\cdots(-q_k)p_1p_2\cdots p_l,$$
+si bien que nous pouvons écrire
+$$n = s_1s_2\cdots s_m, \qquad \mathrm{where}\ s_i = -q_i, 1\leq i \leq k, s_i = p_{i-k}, \ k+1 \leq i \leq k+l = m,$$
+où $s_i \equiv 1 \pmod 4$ pour $1\leq i \leq N$. Alors
+\begin{align*}
+\chi_n(1+i)&=  \chi_{-q_1}(1+i)\cdots\chi_{-q_k}(1+i)\chi_{p_1}(1+i)\cdots\chi_{p_l}(1+i)\\
+&=i^{\frac{-q_1-1}{4}}\cdots i^{\frac{-q_k-1}{4}}  i^{\frac{p_1-1}{4}} \cdots i^{\frac{p_l-1}{4}} \\
+&=i^{\frac{s_1-1}{4}}\cdots  i^{\frac{s_m-1}{4}} \\
+&=i^{\sum_{i=1}^m \frac{s_i-1}{4}}\\
+&=i^{\frac{n-1}{4}},
+\end{align*}
+où la dernière égalité résulte du lemme précédant la proposition \ref{prop114}.
+
+Ainsi $\chi_n(1+i) = i^{\frac{n-1}{4}}.$
+
+\end{proof}
+
+
+\begin{prop}\label{prop132}
+Soit $\pi = a + bi$ un premier primaire de $\Z[i]$, tel que $\n(\pi) = p \equiv 1 \pmod 4$, où $p$ est un premier rationnel. Alors 
+\be
+\item[(a)] $a \equiv (-1)^{\frac{p-1}{4}} \pmod 4$,
+\item[(b)] $b \equiv (-1)^{\frac{p-1}{4}} - 1 \pmod 4$.
+\ee
+\end{prop}
+
+\begin{proof}
+\item[(a)]
+L'hypothèse faite sur $\pi$ s'écrit
+$$p = \pi \bar{\pi}=a^2+b^2\equiv 1 \pmod 4.$$
+Comme dans la preuve de la proposition \ref{prop127}, écrivons $\pi$ sous la forme
+$$\pi = 2m+1 +2n i, \qquad \text{où } m = \frac{a-1}{2} \equiv n = \frac{b}{2} \pmod 2.$$
+Comme $m \equiv n \pmod 2$, $m^2 \equiv n^2 \pmod 4$.
+Alors $p = \pi \overline{\pi} = (2m+1)^2 + (2n)^2$, donc 
+$$\frac{p-1}{4} = m^2+n^2+m \equiv 2m^2 +m =4 \frac{m(m+1)}{2} - m \equiv -m \pmod 4.$$
+Ainsi $(-1)^{\frac{p-1}{4}} = (-1)^m$.
+
+Si $m$ est pair, alors $a \equiv 1 = (-1)^m \pmod 4$, et si $m$ est impair, alors $a \equiv -1 = (-1)^m \pmod 4$.
+Dans les deux cas, 
+	$$ a \equiv (-1)^{\frac{p-1}{4}}  \pmod 4.$$
+\item[(b)] Dans chacun de ces cas, $b \equiv a-1 \pmod 4$, donc
+$$ b \equiv(-1)^{\frac{p-1}{4}} -1 \pmod 4.$$
+
+
+\end{proof}
+
+En d'autres termes, pour tous les premiers primaires $\pi = a + bi$ tels que $\n(\pi) = p$,
+\begin{align*}
+p \equiv 1\pmod 8 &\iff \pi  \equiv 1 \pmod 4,\\
+p \equiv 5 \pmod 8 &\iff \pi  \equiv 3 + 2i \pmod 4.
+\end{align*}
+
+
+
+
+\begin{prop}\label{prop133}
+Soit $\pi = a + bi$ un premier primaire de $\Z[i]$, tel que $\n(\pi) = p \equiv 1 \pmod 4$, où $p$ est un premier rationnel. Alors
+$$\chi_\pi(a(-1)^{\frac{p-1}{4}}) = (-1)^{\frac{a^2-1}{8}}.$$
+\end{prop}
+\begin{proof}
+La proposition \ref{prop132}(a) montre que $a \equiv (-1)^{\frac{p-1}{4}}\pmod 4$, donc $a  (-1)^{\frac{p-1}{4}} \equiv 1\pmod 4$. Par conséquent $a  (-1)^{\frac{p-1}{4}}$ est soit une unité, soit un élément primaire.
+
+Si $a $ est une unité, $a = \pm 1$, alors $a  (-1)^{\frac{p-1}{4}} = 1$ et dans ce cas $\chi_\pi(a  (-1)^{\frac{p-1}{4}}) = 1 = (-1)^{\frac{a^2-1}{8}}$, et la conclusion est vérifiée. Nous pouvons supposer maintenant que $a$ n'est pas une unité.
+
+Comme $a  (-1)^{\frac{p-1}{4}} \equiv 1 \pmod 4$, la loi de réciprocité biquadratique (proposition \ref{prop125}) donne
+\begin{align*}
+\chi_\pi(a(-1)^{\frac{p-1}{4}}) &= \chi_{a  (-1)^{\frac{p-1}{4}}}(\pi) \\
+&= \chi_a(\pi) \qquad (a \text{ et } a  (-1)^{\frac{p-1}{4}} \text{ sont associés })\\
+&=\chi_a(a+bi)\\
+&=\chi_a(bi)\\
+&=\chi_a(b) \chi_a(i).
+\end{align*}
+
+Comme $a \wedge b=1$ (puisque $p = a^2+b^2$), $\chi_a(b) = 1$ (proposition \ref{prop113}), et la proposition \ref{prop128} donne $\chi_a(i) = (-1)^{\frac{a^2-1}{8}}$. Ainsi
+  $$\chi_\pi(a (-1)^{\frac{p-1}{4}}) =  (-1)^{\frac{a^2-1}{8}}.$$
+\end{proof}
+
+
+\begin{prop}\label{prop134}
+Soit $\pi = a + bi$ un premier primaire de $\Z[i]$, tel que $\n(\pi) = p \equiv 1 \pmod 4$, où $p$ est un premier rationnel. Alors
+\be
+\item[(a)] Si $\pi \equiv 1 \pmod 4$, alors $\chi_\pi(a) = i^{\frac{a-1}{2}}$.
+\item[(b)] Si $\pi \equiv 3 + 2i \pmod 4$, alors $\chi_\pi(a) = -i^{\frac{-a-1}{2}}$.
+\ee
+\end{prop}
+
+\begin{proof}
+
+Comme $p = \n(\pi) = a^2+b^2$, ici $a\wedge b = 1$.
+La proposition \ref{prop133} donne
+ $$\chi_\pi(a (-1)^{\frac{p-1}{4}}) =  (-1)^{\frac{a^2-1}{8}}.$$
+Comme $\chi_\pi(-1) = (-1)^{(a-1)/2}$ (proposition \ref{prop112}), 
+$$\chi_\pi(a) = (-1)^{\frac{a-1}{2} \frac{p-1}{4}}(-1)^{\frac{a^2-1}{8}},$$
+où $p = \n(\pi) = a^2+b^2$.
+\be
+\item[(a)] Supposons que  $\pi \equiv 1 \pmod 4$. Ici $a\equiv 1\pmod 4, b\equiv 0 \pmod 4$, soit $a = 4A+1,b=4B,\ A,B \in \mathbb{Z}$.
+Alors
+$$ (-1)^{\frac{p-1}{4}} = (-1)^{\frac{a^2-1}{4}+\frac{b^2}{4}} = (-1)^{4A^2+2A+4B^2}=1,$$
+et ainsi $(-1)^{\frac{a-1}{2} \frac{p-1}{4}}=1$.
+$$\chi_\pi(a) = (-1)^{\frac{a^2-1}{8}} = (-1)^{2A^2+A} = (-1)^A = (-1)^{\frac{a-1}{4}} = i^{\frac{a-1}{2}}.$$
+Conclusion : si $\pi \equiv 1 \pmod 4$, $\chi_\pi(a) =  i^{\frac{a-1}{2}}$.
+\item[(b)] Supposons maintenant que $\pi \equiv 3 + 2i \pmod 4$.
+
+Alors $a\equiv 3 \pmod 4, b \equiv 2\pmod 4,a = 4A+3,b=4B+2,\ A,B\in\mathbb{Z}$. 
+
+Comme dans la partie (a),
+$$\chi_\pi(a) = (-1)^{\frac{a-1}{2} \frac{p-1}{4}}(-1)^{\frac{a^2-1}{8}},$$
+où $$p-1 = a^2+b^2-1 = 16 A^2+24A+16B^2+16B+12 \equiv 4 \pmod 8,$$ si bien que $\frac{p-1}{4} \equiv 1 \pmod 2$, et ainsi $(-1)^{\frac{p-1}{4}}= -1$.
+
+$$ (-1)^{\frac{a-1}{2} \frac{p-1}{4}} = (-1)^{\frac{a-1}{2}} = (-1)^{2A+1} = -1,$$
+
+$$\frac{a^2-1}{8} = 2A^2+3A+1,$$
+$$ (-1)^\frac{a^2-1}{8} = (-1)^{3A+1} = (-1)^{A+1}=(-1)^\frac{a+1}{4}.$$
+Par conséquent,
+$$\chi_\pi(a)= -(-1)^\frac{a+1}{4} = -i^\frac{a+1}{2}.$$
+
+De plus,  $$\frac{a+1}{2} \equiv \frac{-a-1}{2} \ [4] \iff a+1 \equiv -a-1\ [8] \iff 2a\equiv -2 \ [8] \iff a\equiv 3 \ [4],$$
+par conséquent $i^{\frac{a+1}{2}}= i ^{\frac{-a-1}{2}}$.
+
+Conclusion : si $\pi \equiv 3+2i \pmod 4$, $\chi_\pi(a) = - i ^{\frac{-a-1}{2}}$.
+\ee
+\end{proof}
+
+\begin{prop}\label{prop135}
+Soit $\pi = a + bi$ un premier primaire de $\Z[i]$, tel que $\n(\pi) = p \equiv 1 \pmod 4$, où $p$ est un premier rationnel. Alors
+$$\chi_\pi(a)\chi_\pi(1+i) = i^{\frac{3(a+b-1)}{4}}.$$
+\end{prop}
+
+\begin{proof}
+Soit $\pi = a+bi$ un premier primaire. Comme $a(1+i) = a+b + i(a+bi)$, $a(1+i) \equiv a+b \mod \pi$, si bien que
+$$\chi_{\pi}(a) \chi_{\pi}(1+i) = \chi_{\pi}(a+b).$$
+Puisque $\pi =a +bi$ est primaire, $a+b \equiv 1 \pmod 4$.
+
+Si $a+b = 1$, alors $\chi_{\pi}(a) \chi_{\pi}(1+i) = \chi_{\pi}(a+b)=1 = i^{3(a+b-1)/4}$. 
+
+Sinon, la loi de réciprocité biquadratique (proposition \ref{prop125}) donne
+$$\chi_\pi(a+b) = \chi_{a+b}(\pi).$$
+De plus, $b \equiv -a\pmod{a+b}$, donc $\pi =  a + bi \equiv a(1-i) \equiv -i a (1+i) \pmod{a+b}$. 
+
+Par conséquent,
+$$\chi_{a+b}(\pi) = \chi_{a+b}(-1) \chi_{a+b}(i) \chi_{a+b}(a) \chi_{a+b}(1+i).$$
+Comme $a+b \equiv 1 \pmod 4$ est primaire, la proposition \ref{prop112} donne $\chi_{a+b}(-1) = (-1)^{\frac{a+b-1}{2}} = 1$, et la proposition \ref{prop114} donne $\chi_{a+b}(i) = (-1)^{\frac{a+b-1}{4}}$.
+
+De plus $a\wedge b = 1$, puisque $p = a^2+b^2$. Donc $(a+b) \wedge a = 1$, et par conséquent $\chi_{a+b}(a) = 1$ (proposition \ref{prop113}).
+
+La proposition \ref{prop131} donne $\chi_{a+b}(1+i) = i^{\frac{a+b-1}{4}}$, si bien que
+\begin{align*}
+ \chi_{a+b}(\pi) &= \chi_{a+b}(-1) \chi_{a+b}(i) \chi_{a+b}(a) \chi_{a+b}(1+i)\\
+ &=(-1)^{\frac{a+b-1}{4}} i ^{\frac{a+b-1}{4}}\\
+ &=i^{\frac{a+b-1}{2}} i ^{\frac{a+b-1}{4}}\\
+ &=i^{\frac{3(a+b-1)}{4}}.
+ \end{align*}
+ Dans tous les cas, 
+$$\chi_\pi(a)\chi_\pi(1+i) = i^{\frac{3(a+b-1)}{4}}.$$
+\end{proof}
+
+
+Nous pouvons maintenant donner le caractère biquadratique de $1+i$.
+
+
+\begin{prop}\label{prop136}{\bf Supplément à la loi de réciprocité biquadratique.}
+
+Si $\pi = a+bi$ est un premier primaire de $\Z[i]$, alors
+\be
+\item[(a)] $\chi_\pi(i) =  i^{\frac{-a+1}{2}}.$
+\item[(b)] $\chi_\pi(1+i) = i^{\frac{a-b-b^2-1}{4}}.$
+\ee
+\end{prop}
+\begin{proof}
+Soit $\pi = a + ib$ un premier primaire de $\Z[i]$. La partie (a) est l'objet de la proposition \ref{prop127}. Passons à la partie (b).
+\be
+\item[$\bullet$] Si $b = 0$, alors $\pi = a \in \Z$.
+Comme $\pi$ est primaire, $\pi = -q, q\equiv 3 \pmod 4$, où $q$ est un premier rationnel positif, donc $a=-q, b = 0$.
+
+La proposition \ref{prop129} donne alors,
+ $$\chi_\pi(1+i) = \chi_{-q}(1+i) = i^\frac{-q-1}{4} = i^{\frac{a-b-b^2-1}{4}}.$$
+ 
+Si $b \ne  0$, alors $\pi$ n'est pas associé à un premier rationnel $q \equiv 3 \pmod 4$ (puisque le seul associé primaire de $q$ est $-q$). La classification des premiers de $\Z[i]$ montre que $\pi$ vérifie $\n(\pi) = p$, où $p\equiv 1 \pmod 4$ est un premier rationnel. La proposition \ref{prop135} donne alors
+ 
+  $$\chi_\pi(a) \chi_\pi(1+i) = i^\frac{3(a+b-1)}{4}.$$
+
+
+  \item[$\bullet$]  Si $\pi \equiv 1\pmod 4$, alors $a \equiv 1\pmod 4, b \equiv 0 \pmod 4$, donc $$a=4A+1,b=4B,\ A,B\in \mathbb{Z}.$$
+	
+En appliquant la proposition \ref{prop134}(a),
+$$\chi_\pi(a) = i^{\frac{a-1}{2}}, \qquad \chi_\pi(a)^{-1} = (-i)^{\frac{a-1}{2}} = i^{\frac{a-1}{2}}.$$
+Par conséquent,
+\begin{align*}
+\chi_{\pi}(1+i) &= i^{3 \frac{a+b-1}{4} - 2 \frac{a-1}{4}}\\
+&=i^{\frac{a+3b-1}{4}}\\
+&=i^{\frac{a-b-b^2-1}{4}},
+\end{align*}
+puisque $\left( \frac{a+3b-1}{4} \right)- \left( \frac{a-b-b^2-1}{4}\right) = b + \frac{b^2}{4} = 4B+4B^2 \equiv 0 \pmod 4$.
+
+\bigskip
+
+ \item[$\bullet$] Si $\pi \equiv 3+2i \pmod 4$, alors $a \equiv 3 \pmod 4, b \equiv 2 \pmod 4$, soit $$a=4A-1,b=4B+2,\ A,B\in\mathbb{Z}.$$
+	
+Dans ce cas, la proposition \ref{prop134}(b) donne
+$$\chi_\pi(a) =- i^{\frac{-a-1}{2}},\qquad  \chi_\pi(a)^{-1} = -i^{\frac{a+1}{2}} = i^{\frac{a-3}{2}},$$
+donc
+$$\chi_\pi(1+i) = i^{\frac{3a+3b-3+2a-6}{4}} = i^{\frac{5a+3b-9}{4}}.$$
+
+De plus,  
+\begin{align*}
+\frac{1}{4}[(a-b-b^2-1) - (5a+3b-9)] &= \frac{1}{4}(-4a-4b-b^2+8)\\
+ &= -a-b+2 -\frac{b^2}{4}\\
+ &= -4A+1-4B-2+2 -(2B+1)^2\\
+  &\equiv 0 \pmod 4,
+\end{align*}
+donc $\chi_\pi(1+i) = i^{\frac{a-b-b^2-1}{4}}$.
+\ee
+
+Dans tous les cas
+
+$$\chi_\pi(1+i) = i^{\frac{a-b-b^2-1}{4}}.$$
+
+\end{proof}
+
+\section{Caractère biquadratique de 2.}
+
+\begin{prop}\label{prop137}
+Si $\pi = a + bi$ est un premier primaire de $\Z[i]$, alors
+$$\chi_\pi(2) = i^{\frac{ab}{2}}.$$
+\end{prop}
+
+\begin{proof}
+Puisque $2 = i^3(1+i)^2$, le supplément à la loi de réciprocité biquadratique (proposition \ref{prop136}) donne
+\begin{align*}
+\chi_\pi(2) &= \chi_\pi(i)^3 \chi_\pi(1+i)^2\\
+&=i^\frac{3(-a+1)}{2} i ^\frac{a-b-b^2-1}{2}\\
+&=i^{1-a -(b+1)\frac{b}{2}}
+\end{align*}
+Comme $\pi$ est primaire, $a\equiv b+1 \equiv -b+1\pmod 4$, donc
+\begin{align*}
+1-a -(b+1)\frac{b}{2} &\equiv - b -(b+1)\frac{b}{2}\\
+&\equiv \frac{b}{2}(-b-3)\\
+&\equiv \frac{b}{2}(-b+1)\\
+&\equiv \frac{ab}{2} \qquad \pmod 4,
+\end{align*}
+donc $\chi_\pi(2) = i^\frac{ab}{2} $.
+\end{proof}
+
+Notons que, puisque $a$ est impair, $i^{a} = \pm i$, donc $\chi_\pi(2) = (\pm i)^\frac{b}{2}$, si bien que $\chi_\pi(2) = 1$ équivaut à $8 \mid b$. Ceci donne l'idée de la proposition suivante.
+
+
+\begin{prop}
+Si $p$ est un nombre premier, $p$ se décompose sous la forme $p = A^2 + 64 B^2$ si et seulement si $p\equiv 1 \pmod 4$ et si la congruence $x^4 \equiv 2 \pmod p$ admet une solution dans $\Z$.
+ $$\exists (A,B) \in \Z^2,\ p = A^2+64B^2 \iff (p\equiv 1 \pmod 4 \text{ et }\ \exists x \in \Z, \ x^4 \equiv 2 \pmod p).$$
+\end{prop}
+\begin{proof}
+($\Rightarrow$)  Si $p = A^2 + 64 b^2 = A^2 + (8B)^2$, alors le nombre premier $p$ est somme de deux carrés, et $p\ne 2$, donc $p\equiv 1 \pmod 4$.
+Comme  $p = A^2 + 64 b^2$, $A$ est impair. Posons $b = 8B$. Si $A\equiv 1 \pmod 4$, posons $a = A$, et si $A\equiv -1 \pmod 4$, posons $a = -A$. Alors $\pi = a + bi$ vérifie $\n(\pi) = a^2 + b^2 =p$, et $a \equiv 1 \pmod 4, b \equiv 0 \pmod 4$, donc $\pi$ est un premier primaire.
+
+Le caractère biquadratique de 2 (proposition \ref{prop137}) donne
+$$\chi_\pi(2) = i^{\frac{ab}{2}} = i^{4aB} = 1.$$
+Par conséquent, il existe $x\in \Z$ tel que $x^4 \equiv 2 \pmod p$ (proposition \ref{prop125}).
+
+\bigskip
+
+($\Leftarrow$) Réciproquement, supposons que $p\equiv 1 \pmod 4$ et que 2 est un résidu biquadratique modulo $p$. Comme $p\equiv 1 \pmod 4$, $p$ se décompose sous la forme $p = \pi \overline{\pi}$, où $\pi$ est un premier primaire. Puisque $2 \equiv x^4 \pmod p$, alors $2 \equiv x^4 \pmod \pi$, et donc $\chi_\pi(2) = 1$. La proposition \ref{prop137} montre que
+$$1 =\chi_\pi(2)  =  i^\frac{ab}{2}.$$
+Puisque $a$ est impair, ceci montre que $b$ est un multiple de $8$, donc $p =A^2 + 64B^2$, où $A = a, B = b/8$.
+\end{proof}
+
+
