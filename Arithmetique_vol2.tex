@@ -57,7 +57,6 @@
 				 \newtheorem{cor}[thr]{corollaire}
 \theoremstyle{plain} \newtheorem{dfn}{D\'efinition}
 
-%\includeonly{Groupe_des_classes}
 
 \pagestyle{headings}
 \title{ARITHM\'ETIQUE. \\Volume 2.}
@@ -72,14 +71,14 @@
 \maketitle
 \tableofcontents
 
-\part{EQUATIONS SUR LES CORPS FINIS.}
+\part{\'EQUATIONS SUR LES CORPS FINIS.}
 
 
 \chapter{D\'ecomposition en somme de carr\'es.}
 
 Nous commençons par donner les premiers exemples d'anneaux d'entiers de corps quadratiques, \`a savoir $\Z[i],\Z[i\sqrt{2}]$, et $\Z[\omega]$ (o\`u $\omega = e^{\frac{2i\pi}{3}}$). Nous \'etudierons dans les chapitres suivants des anneaux d'entiers plus g\'en\'eraux.
 
-Ce traitement \`a part est dû au fait que ces anneaux sont euclidiens pour la norme usuelle des nombres complexes, et donc principaux et factoriels. Ils permettront de donner les premiers r\'esultats sur la d\'ecomposition des nombres premiers sous la forme $x^2 +y^2, x^2 + 2 y^2$ ou $x^2 + 3 y^2$. Les  anneaux $\Z[i], \Z[\omega]$ seront indispensables \`a la th\'eorie de la r\'eciprocit\'e cubique, et biquadratique. 
+Ce traitement \`a part est d\^u au fait que ces anneaux sont euclidiens pour la norme usuelle des nombres complexes, et donc principaux et factoriels. Ils permettront de donner les premiers r\'esultats sur la d\'ecomposition des nombres premiers sous la forme $x^2 +y^2, x^2 + 2 y^2$ ou $x^2 + 3 y^2$. Les  anneaux $\Z[i], \Z[\omega]$ seront indispensables \`a la th\'eorie de la r\'eciprocit\'e cubique, et biquadratique. 
 
 \section{Les anneaux $\Z[i], \Z[i\sqrt{2}]$.}\label{section_gauss}
 $\Z[i]$ est l'ensemble des nombres complexes de la forme $a +b i$, o\`u $a,b$ sont des entiers de $\Z$ :
@@ -174,7 +173,7 @@ Avant de donner la liste des \'el\'ements premiers dans $\Z[i]$, on peut utilise
  \begin{proof}
  Notons $\F_p$ le corps $\Z/p\Z$ \`a $p$ \'el\'ements. Pour tout $\alpha \in\F_p^*,$
   $$ 0 = \alpha^{p-1} - 1 =  (\alpha^{\frac{p-1}{2}}- 1)(\alpha^{\frac{p-1}{2}}+1).$$
-  Comme le polynôme $x^{\frac{p-1}{2}}- 1 \in \F_p[x]$ admet au plus $\frac{p-1}{2}$ racines dans $\F_p^*$, et que le cardinal de $\F_p^*$ est $p-1$, il existe au moins un $\beta \in \F_p$ tel  que $\beta^{\frac{p-1}{2}}+1 = 0$, soit $ \left(\beta^{\frac{p-1}{4}}\right)^2+1 = 0$, o\`u l'exposant $(p-1)/4$ est entier, puisque $p\equiv 1 \pmod 4$.
+  Comme le polyn\^ome $x^{\frac{p-1}{2}}- 1 \in \F_p[x]$ admet au plus $\frac{p-1}{2}$ racines dans $\F_p^*$, et que le cardinal de $\F_p^*$ est $p-1$, il existe au moins un $\beta \in \F_p$ tel  que $\beta^{\frac{p-1}{2}}+1 = 0$, soit $ \left(\beta^{\frac{p-1}{4}}\right)^2+1 = 0$, o\`u l'exposant $(p-1)/4$ est entier, puisque $p\equiv 1 \pmod 4$.
   
   Posons  $\gamma = \beta^{\frac{p-1}{4}}$. Alors $\gamma^2 + 1 = 0$.
   
@@ -369,7 +368,7 @@ De plus, tout diviseur premier $\lambda \in \Z[i]$ de $p$ v\'erifie $\lambda \mi
  
  La d\'emonstration se fait traditionnellement, depuis Euler, en deux \'etapes, nomm\'ees r\'eciprocit\'e et descente. La proposition \ref{prop5} montre que $p \mid a^2 +1$ pour un certain entier $a \in \Z$. L'\'etape ``r\'eciprocit\'e'' est le fait que $p$ divise une somme de deux carr\'es $x^2 + y^2$, o\`u $x,y$ sont premiers entre eux : il suffit de poser $x = a, y = 1$.
   
-Poursuivons maintenant avec l'\'etape ``descente'', en commençant par le lemme suivant, dû \`a Euler.
+Poursuivons maintenant avec l'\'etape ``descente'', en commençant par le lemme suivant, d\^u \`a Euler.
 
 \begin{prop}
 Soit $n$ un entier positif, et $q$ un diviseur premier de $n$.
@@ -819,17 +818,15 @@ p = x^2 + 3 y^2, \ x,y \in \Z  \iff p \equiv 1 \pmod 3 &\iff \legendre{-3}{p} = 
 p = x^2 + 4 y^2, \ x,y \in \Z  \iff p \equiv 1 \pmod 4 &\iff \legendre{-4}{p} = 1
 \end{align*}
 
-Si on voulait g\'en\'eraliser, on peut bien sûr affirmer que
+Si on voulait g\'en\'eraliser, on peut bien s\^ur affirmer que
 $$p = x^2 + n y^2 \Rightarrow \legendre{-n}{p} = 1,$$
 mais l'\'equivalence est fausse d\`es $n=5$.
 En effet $\legendre{-5} p = 1 \iff p\equiv 1,3, 7,9 \pmod {20}$, mais, comme l'ont remarqu\'e Fermat et Euler, $p = x^2 + 5 y^2,\ x,y \in \Z$ \'equivaut \`a $p=1,9 \pmod {20}$, et $2p = x^2 + 5y^2$ \'equivaut \`a $p\equiv 3,7 \pmod {20}$. Par exemple $23$ ne s'\'ecrit pas sous la forme $x^2 + 5 y^2$, mais $2 \times 23 = 46 = 1^2 + 5 \times 3^2$.
 
 Les d\'emonstrations pr\'ec\'edentes ne peuvent se g\'en\'eraliser, car $\Z[\sqrt{-5}]$ n'est pas principal. Si $\omega = i\sqrt{5}$, alors $6 = 2 \times 3 = (1 + \omega)(1-\omega)$. On v\'erifie au chapitre ``Entiers d'un corps quadratique'', que $2,3 = 1 + \omega, 1- \omega$ sont des \'el\'ements premiers non associ\'es. Cette \'egalit\'e montre donc que $\Z[\sqrt{-5}]$ n'est pas factoriel, et a fortiori il n'est pas principal. Les chapitres suivants nous permettrons de traiter ce cas.
 
-
+\newpage
 \begin{subappendices}
-
-\bigskip
 APPENDICE AU CHAPITRE 1.
 
 \section{R\'ecr\'eation informatique.}
@@ -851,6 +848,12 @@ La fonction {\bf isprime} est un test de primalit\'e probaliliste, avec une cert
 La fonction {\bf ifactors} est naïve. Elle ne peut fonctionner que pour des petits nombres. Il sera pr\'ef\'erable de la remplacer par l'ordre {\bf factor} de Sage pour les grands nombres.
 
 \begin{verbatim}
+# -*- coding: utf-8 -*-
+"""
+    Created on Sat Aug 31 19:21:15 2013
+    @author: Richard Ganaye
+"""
+
 from random import randint
 
 def powermod(a,n,p):
@@ -859,11 +862,12 @@ def powermod(a,n,p):
     """
     resu=1
     while n!= 0:
-        if n%2 != 0:
-            resu = (a*resu) % p
-        a = (a*a) % p
+        if n % 2 != 0:
+            resu = (a * resu) % p
+        a = (a * a) % p
         n=n//2
     return resu
+
     
 def expomod(a,n,p):
     """retourne a^n mod p (exponentiation rapide )
@@ -872,28 +876,28 @@ def expomod(a,n,p):
     resu=1
     while n!= 0:
         if n%2 != 0:
-            resu = (a*resu) % p
-        a = (a*a) % p
-        n=n//2
-    if resu>p//2:
-        resu -=p
+            resu = (a * resu) % p
+        a = (a * a) % p
+        n = n // 2
+    if resu > p//2:
+        resu -= p
     return resu
 
 def legendre(a,p):
     """retourne le symbole de Legendre (a/p) si p premier"""
-    return expomod(a,(p-1)//2,p)
+    return expomod(a, (p-1) // 2, p)
 
 def jacobi2(n):
     """retourne jacobi(n,2)"""
     r = n%8
-    if r==1 or r==7:
+    if r == 1 or r == 7:
         return 1
     else:
         return -1
 
-def jacobi(n,m):
-    """retourne le symbole de Jacobi (n/m)"""
-    if n==0: return 0
+def jacobi_pos(n,m):
+    """retourne le symbole de Jacobi (n/m) pour n>=0, m>0"""
+    if n == 0: return 0
     prod = 1
     while m>1:
         k = 0
@@ -901,7 +905,7 @@ def jacobi(n,m):
             k += 1
             n = n//2
         if k%2 == 1:
-            prod = prod*jacobi2(m)
+            prod = prod * jacobi2(m)
         if (n%4 == 3 and m%4 == 3):
             prod = -prod
         num = m%n
@@ -909,6 +913,13 @@ def jacobi(n,m):
         n = num
     return prod
 
+def jacobi(n,m):
+    """retourne le symbole de Jacobi (n/m), m>0"""
+    j = jacobi_pos(abs(n),m)
+    if n<0 and m % 4 == 3:
+        j = -j
+    return j
+        
 def pgcd(a,b):
     a , b = abs(a), abs(b)
     while b != 0:
@@ -921,8 +932,8 @@ def isprime(p,k=30):
     if p <= 1: return False
     if p <= 3: return True
     test = True
-    while k>0:
-        k-=1
+    while k > 0:
+        k -= 1
         b = randint(2,p-2)
         if pgcd(b,p) !=1:
             test = False
@@ -932,7 +943,7 @@ def isprime(p,k=30):
     return test
 
 def nextprime(n):
-    q=n+1
+    q = n + 1
     while not isprime(q):
         q += 1
     return q
@@ -943,18 +954,18 @@ def plusPetitFacteur(n):
         return n
     else:
         d = 2
-        while n%d != 0:
+        while n % d != 0:
             d += 1
         return d
 
 def ifactors(n):
     """decomposition en facteurs d'un entier n>1"""
     l=[]
-    while n!=1:
-        p=plusPetitFacteur(n)
+    while n != 1:
+        p = plusPetitFacteur(n)
         alpha = 0
-        while n%p == 0:
-            n //=p
+        while n % p == 0:
+            n //= p
             alpha += 1
         l.append([p,alpha])
     return l
@@ -970,7 +981,7 @@ def factorielle(n):
 def lucas(p):
     """ retourne True ssi 2**p-1 est premier """
     def S(n,p):
-        Mp=2**p-1
+        Mp = 2**p - 1
         s=4
         i=1
         while i<n:
@@ -1024,16 +1035,24 @@ def carre(A):
     """ input : entier naturel A
         output: True ssi A est un carr\'e
     """
-    a=racineEntiere(A)
-    if a*a==A:
+    a = racineEntiere(A)
+    if a * a==A:
         return True
     else:
         return False
 
+def squarefree(n):
+    l = ifactors(n)
+    sqf = True
+    for p,a in l:
+        if a > 1:
+            sqf = False
+    return sqf
+    
 def convert(n,base=10):
     l=[]
     while n!=0:
-        r=n%base
+        r=n % base
         l.append(r)
         n = n//base
     return l
@@ -1049,7 +1068,7 @@ def primroot(p):
         test = True
         while k<len(l) and test:
             q = l[k][0]
-            if expomod(g,(p-1)//q, p) == 1:
+            if expomod(g,(p-1) // q, p) == 1:
                 test = False
             k += 1
         if test: pas_trouve = False
@@ -1348,6 +1367,7 @@ Un autre algorithme de d\'ecomposition en sommes de deux carr\'es, tr\`es diff\'
 \end{subappendices}
 
 
+
 \chapter{Sommes de Gauss et sommes de Jacobi.}
 Les r\'esultats de ce chapitre sont adapt\'es de [Ireland,Rosen].
 \section{Caract\'erisation des puissances $n$-i\`emes dans un corps fini.}
@@ -1450,10 +1470,10 @@ Pour tout $\alpha \in K$, $\mathrm{F}^s(\alpha) = \alpha^{q^s} =\alpha$, donc $\
 
 La proposition suivante montre que l'extension $F \subset K$ entre deux corps finis est galoisienne.
 \begin{prop}\label{prop26}
-Soient $F, K$ deux corps finis tels que $F \subset K$, et soit $\alpha \in K$. Notons $p(x) = \Pi_{\alpha,F} \in F[x]$ le polynôme minimal de $\alpha$ sur $F$, o\`u $r = \deg(p) = [F[\alpha] : F]$. Alors
+Soient $F, K$ deux corps finis tels que $F \subset K$, et soit $\alpha \in K$. Notons $p(x) = \Pi_{\alpha,F} \in F[x]$ le polyn\^ome minimal de $\alpha$ sur $F$, o\`u $r = \deg(p) = [F[\alpha] : F]$. Alors
 \be
-\item[(i)] Le polynôme $p$ est scind\'e dans $K$, i.e. $p$ est produit de facteurs lin\'eaires $x - \beta$, o\`u $\beta \in K$.
-\item[(ii)] Toutes les racines du polynôme $p$ sont simples.
+\item[(i)] Le polyn\^ome $p$ est scind\'e dans $K$, i.e. $p$ est produit de facteurs lin\'eaires $x - \beta$, o\`u $\beta \in K$.
+\item[(ii)] Toutes les racines du polyn\^ome $p$ sont simples.
 \ee
 Ainsi $p(x) = \prod_{\beta \in S}( x- \beta) = (x- \beta_1)\ldots(x- \beta_r)$, o\`u $S = \{\beta_1,\ldots,\beta_r\} \subset K$, et les $\beta_i,\ i= 1,\ldots,r,$ sont distincts.
 \end{prop}
@@ -1462,9 +1482,9 @@ Ainsi $p(x) = \prod_{\beta \in S}( x- \beta) = (x- \beta_1)\ldots(x- \beta_r)$, 
 
 Comme $F \subset K$, et $\alpha \in K$, alors $F \subset L \subset K$. Alors $L$ est un corps \`a $q^r$ \'el\'ements, o\`u $r = [L : F] = \deg(p)$, et $r \mid s$.
 
-Par cons\'equent tout \'el\'ement $\gamma \in L$ v\'erifie $\gamma^{q^r} = \gamma$. Puisque $\alpha \in L$, $\alpha$ est racine du polynôme $x^{q^r} - x \in F[x]$, donc son polynôme minimal $p(x)$ divise $x^{q^r} - x = \prod\limits_{ \beta \in L} (x - \beta)$.
+Par cons\'equent tout \'el\'ement $\gamma \in L$ v\'erifie $\gamma^{q^r} = \gamma$. Puisque $\alpha \in L$, $\alpha$ est racine du polyn\^ome $x^{q^r} - x \in F[x]$, donc son polyn\^ome minimal $p(x)$ divise $x^{q^r} - x = \prod\limits_{ \beta \in L} (x - \beta)$.
 
-Le polynôme $x^{q^r} - x$ ayant $q^r$ racines distincts dans $L \subset K$, il en va de m\^eme de son diviseur $p(x)$. Ainsi $p(x) = \prod\limits_{x \in S} (x- \beta)$, o\`u $S \subset L \subset K$, ce qui montre (i) et (ii).
+Le polyn\^ome $x^{q^r} - x$ ayant $q^r$ racines distincts dans $L \subset K$, il en va de m\^eme de son diviseur $p(x)$. Ainsi $p(x) = \prod\limits_{x \in S} (x- \beta)$, o\`u $S \subset L \subset K$, ce qui montre (i) et (ii).
 \end{proof}
 
 Nous pouvons pr\'eciser les racines de $p(x)$.
@@ -1473,7 +1493,7 @@ Nous pouvons pr\'eciser les racines de $p(x)$.
 $$p(x) = \Pi_{\alpha,F}(x) = \prod_{i = 0}^{r-1} (x - \mathrm{F}^i(\alpha)) = \prod_{i = 0}^{r-1} (x - \alpha^{q^i}).$$
 \end{prop}
 
-\begin{proof}Si $q  = \sum_{i=0}^d a_i x^i\in K[x]$, notons $\mathrm{F}\cdot q =  \sum_{i=0}^d \mathrm{F}(a_i) x^i$. Si $q,r \in K[x]$, $\mathrm{F} \cdot (q +r) = (\mathrm{F}\cdot q) + (\mathrm{F}\cdot r)$ et $\mathrm{F} \cdot (q r) = (\mathrm{F}\cdot q)(\mathrm{F}\cdot r)$. Alors, en appliquant $\mathrm{F}$ au polynôme $ s = \prod_{i = 0}^{r-1} (x - \mathrm{F}^i(\alpha)) $, nous obtenons, en utilisant $\alpha^{q^r} = \alpha$, soit $\mathrm{F}^r(\alpha) = \alpha$,
+\begin{proof}Si $q  = \sum_{i=0}^d a_i x^i\in K[x]$, notons $\mathrm{F}\cdot q =  \sum_{i=0}^d \mathrm{F}(a_i) x^i$. Si $q,r \in K[x]$, $\mathrm{F} \cdot (q +r) = (\mathrm{F}\cdot q) + (\mathrm{F}\cdot r)$ et $\mathrm{F} \cdot (q r) = (\mathrm{F}\cdot q)(\mathrm{F}\cdot r)$. Alors, en appliquant $\mathrm{F}$ au polyn\^ome $ s = \prod_{i = 0}^{r-1} (x - \mathrm{F}^i(\alpha)) $, nous obtenons, en utilisant $\alpha^{q^r} = \alpha$, soit $\mathrm{F}^r(\alpha) = \alpha$,
 \begin{align*}
 \mathrm{F} \cdot s &= \mathrm{F} \left( \prod_{i = 0}^{r-1} \left(x - \mathrm{F}^i(\alpha)\right)\right)\\
  &=   \prod_{i = 0}^{r-1} \mathrm{F}\cdot (x - \mathrm{F}^i(\alpha))\\
@@ -1484,7 +1504,7 @@ $$p(x) = \Pi_{\alpha,F}(x) = \prod_{i = 0}^{r-1} (x - \mathrm{F}^i(\alpha)) = \p
 &=\prod_{j = 0}^{r-1} (x - \mathrm{F}^j(\alpha))\\
 &= s
 \end{align*}
-L'\'egalit\'e $\mathrm{F} \cdot s = s$ montre que tous les coefficients de $s$ sont dans $F$, soit $s \in F[x]$. Puisque $s(\alpha) = 0$, le polynôme minimal $p$ divise $s$. Mais $p$ et $R$  sont de m\^eme degr\'e $r$, et sont normalis\'es, donc $p = r$, ce qui prouve
+L'\'egalit\'e $\mathrm{F} \cdot s = s$ montre que tous les coefficients de $s$ sont dans $F$, soit $s \in F[x]$. Puisque $s(\alpha) = 0$, le polyn\^ome minimal $p$ divise $s$. Mais $p$ et $R$  sont de m\^eme degr\'e $r$, et sont normalis\'es, donc $p = r$, ce qui prouve
 $$p(x) = \Pi_{\alpha,F}(x) = \prod_{i = 0}^{r-1} (x - \mathrm{F}^i(\alpha)) = \prod_{i = 0}^{r-1} (x - \alpha^{q^i}).$$
 
 \end{proof}
@@ -1507,7 +1527,7 @@ $$
 Alors $m_\alpha$ est un endomorphisme du $F$-espace vectoriel $K$.
 
 \begin{dfn}
- $\chi_{\alpha,K/F} \in F[x]$ est le polynôme caract\'eristique de $m_\alpha$ : 
+ $\chi_{\alpha,K/F} \in F[x]$ est le polyn\^ome caract\'eristique de $m_\alpha$ : 
 
 $$\chi_{\alpha,K/F}(x)= \det(x\, \mathrm{Id}_L - m_\alpha),$$
 et la trace et la norme de $\alpha$ sont d\'efinis par
@@ -1559,7 +1579,7 @@ En utilisant $m_{a\alpha} = a m_\alpha$ si $a \in F$,
 \ee
 \end{proof}
 
-Si $\alpha \in K$, la relation entre le polynôme minimal $\Pi_{\alpha,F}$ et le polynôme caract\'eristique $\chi_{\alpha,K/F}$ est donn\'ee dans la proposition suivante.
+Si $\alpha \in K$, la relation entre le polyn\^ome minimal $\Pi_{\alpha,F}$ et le polyn\^ome caract\'eristique $\chi_{\alpha,K/F}$ est donn\'ee dans la proposition suivante.
 
 \begin{prop}\label{prop29} \label{trace_corps_finis2}
 Si $\alpha \in K$, alors $\chi_{\alpha,K/F} = \Pi_{\alpha,F}^r$, o\`u $r = [K:F(\alpha)]$.
@@ -1598,7 +1618,7 @@ A & 0  & \cdots & 0\\
 \end{pmatrix}.
 $$
 
-Rappelons le calcul du polynôme caract\'eristique de la matrice compagnon $A$ :
+Rappelons le calcul du polyn\^ome caract\'eristique de la matrice compagnon $A$ :
  $$\chi_A(x) = \det (x I_n - A) = 
 \begin{vmatrix}
 x  & 0 &\cdots       & 0  & a_0\\
@@ -1638,7 +1658,7 @@ Soit $F\subset K$ une extension de corps finis, avec $|F| = q, |K| = q^s$, et so
 
 \begin{proof}
 \be
-\item[(i)] Partons de la factorisation dans $K[x]$ du polynôme minimal de $\alpha$ sur $F$:
+\item[(i)] Partons de la factorisation dans $K[x]$ du polyn\^ome minimal de $\alpha$ sur $F$:
 $$\Pi_{\alpha,F}(x) = \prod_{i = 0}^{r-1}(x - \alpha^{q^i})   =  \prod_{i = 0}^{r-1}(x - \mathrm{F}^i(\alpha))\qquad ( r = [F[\alpha] : F],\  r \mid s).$$
 Posons $e = [K : F[\alpha]]$, si bien que $s = er$. Tout entier $k \in \gcro 0, s\gcro$ s'\'ecrit, par la division euclidienne de $k$ par $r$, sous la forme $k = jr + i, \ 0 \leq i < r, \ 0 \leq j < e$. Ceci justifie les \'egalit\'es suivantes :
 \begin{align*}
@@ -1679,7 +1699,7 @@ est surjective.
 \end{prop}
 \begin{proof}
 \be 
-\item[(i)]Le polynôme $p (x) = x + x^q + \cdots + x^{q^{s-1}}$, de degr\'e $q^{s-1}$, a au plus $q^{s-1}$ racines. Comme $|K| = q^s$, il existe un \'el\'ement $\alpha \in K$ tel que $p(\alpha) \ne 0$. Alors $c = \mathrm{Tr}(\alpha) = p(\alpha) \ne 0$. Si $b \in F$, alors $\mathrm{Tr}(c^{-1} b \alpha) = c^{-1} b \mathrm{Tr}(\alpha) = b$, ce qui prouve la surjectivit\'e de $\mathrm{Tr}_{K/F} : K \to F$.
+\item[(i)]Le polyn\^ome $p (x) = x + x^q + \cdots + x^{q^{s-1}}$, de degr\'e $q^{s-1}$, a au plus $q^{s-1}$ racines. Comme $|K| = q^s$, il existe un \'el\'ement $\alpha \in K$ tel que $p(\alpha) \ne 0$. Alors $c = \mathrm{Tr}(\alpha) = p(\alpha) \ne 0$. Si $b \in F$, alors $\mathrm{Tr}(c^{-1} b \alpha) = c^{-1} b \mathrm{Tr}(\alpha) = b$, ce qui prouve la surjectivit\'e de $\mathrm{Tr}_{K/F} : K \to F$.
 
 \item[(ii)] Notons d'abord que $\alpha \ne 0$ entra\^ine $\mathrm{N}_{K/F}(\alpha)  = \alpha \cdot \alpha^q \cdot \  \cdots\   \cdot \alpha^{q^{s-1}} \ne 0$, ce qui montre que $\varphi$ est correctement d\'efini.
 
@@ -1721,20 +1741,20 @@ Nous avons utilis\'e le fait que tout entier $k \in \gcro 0,n \gcro$ s'\'ecrit d
 En remplaçant les sommes par des produits, nous obtenons la m\^eme d\'emonstration pour les normes.
 \end{proof}
 
-La connaissance du polynôme minimal de $\alpha \in K$ suffit pour calculer sa trace et sa norme sur $F$. Pr\'ecisons.
+La connaissance du polyn\^ome minimal de $\alpha \in K$ suffit pour calculer sa trace et sa norme sur $F$. Pr\'ecisons.
 
 
 \begin{prop}
 Soit $F \subset K$ une extension de corps finis, et soit $\alpha \in K$, et $E = F[\alpha]$. Notons $n = [K : F], d = [E:F]$, et
 $$f(x) = x^d -c_1 x^{d-1}+ \cdots + (-1)^d c_d$$
-le polynôme minimal de $\alpha$ sur $F$. Alors
+le polyn\^ome minimal de $\alpha$ sur $F$. Alors
 \be
 \item[(i)] $\mathrm{Tr}_{K/F}(\alpha) = \frac{n}{d} c_1,$
 \item[(ii)] $\mathrm{N}_{K/F}(\alpha) = c_d ^{n/d}.$
 \ee
 
 \end{prop}
-\begin{proof} Notons $e = n/d$. La proposition \ref{prop29} donne $\chi_{\alpha,K/F}(x) = f(x)^e$, o\`u $\chi_{\alpha,K/F}(x) $ est le polynôme caract\'eristique de $\alpha \in K$ sur $F$.
+\begin{proof} Notons $e = n/d$. La proposition \ref{prop29} donne $\chi_{\alpha,K/F}(x) = f(x)^e$, o\`u $\chi_{\alpha,K/F}(x) $ est le polyn\^ome caract\'eristique de $\alpha \in K$ sur $F$.
 Alors
 \begin{align*}
 \chi_{\alpha,K/F}(x) &=(x^d -c_1 x^{d-1}+ \cdots + (-1)^d c_d)^e\\
@@ -2483,7 +2503,7 @@ En soustrayant ces deux congruences, nous obtenons $b(\omega- \overline{\omega})
 Comme $b \equiv 0 \pmod 3$ et $a + b \omega \equiv -1 \pmod 3$, nous obtenons $a\equiv -1 \pmod 3$.
 \end{proof}
 
-Nous pouvons maintenant prouver le beau r\'esultat dû \`a Gauss.
+Nous pouvons maintenant prouver le beau r\'esultat d\^u \`a Gauss.
 \begin{prop}
 %\be
 \item[(a)] Soit $p \equiv 1 \pmod 3$ un nombre premier. Alors il existe un et un seul couple d'entiers $(A,B)$ tel que $4p = A^2 + 27 B^2,\ A \equiv 1 \pmod 3, B>0$. 
@@ -3327,7 +3347,7 @@ Par d\'efinition,
 J(\chi_\pi, \chi_\pi) &= \sum_{x =0}^{p-1} \chi_{\pi}(x) \chi_{\pi}(1-x)\\
 &\equiv \sum_{x = 0}^{p-1} x^{\frac{p-1}{3}} (1-x)^{\frac{p-1}{3}} \pmod \pi.
 \end{align*}
-Le polynôme $X^{\frac{p-1}{3}} (1-X)^{\frac{p-1}{3}} = \sum_{k=0}^d a_k X^k$ est de degr\'e $d = \frac{2}{3}(p-1) < p-1$, et son coefficient constant $a_0$ est nul. 
+Le polyn\^ome $X^{\frac{p-1}{3}} (1-X)^{\frac{p-1}{3}} = \sum_{k=0}^d a_k X^k$ est de degr\'e $d = \frac{2}{3}(p-1) < p-1$, et son coefficient constant $a_0$ est nul. 
 
 Si $1\leq k \leq d < p-1$,  posons $S_k = 1^k+ 2^k+\cdots+(p-1)^k$. Comme $p-1 \nmid k$, il existe un \'el\'ement $a \in \F_p^*$ tel que $a^k \ne 1$ (on peut prendre par exemple pour $a$ un g\'en\'erateur de $\F_p^*$). Puisque $i \mapsto j = a i$ est une bijection de $\F_p^*$, le changement d'indice $j = ai$ donne
 $$a^k S_k \equiv  \sum_{i = 0}^{p-1} (ai)^k \equiv  \sum_{j=0}^{p-1}j^k = S_k \pmod p.$$
@@ -4017,6 +4037,7 @@ Dans chacun des cas, $\chi_\pi(\lambda) = \omega^{2m}$.
 
 
 
+
 \chapter{R\'eciprocit\'e biquadratique.}
 Nous noterons dans ce chapitre $D = \Z[i]$ l'anneau des entiers de Gauss.
 
@@ -4089,7 +4110,7 @@ Supposons que $\pi$ est un premier de $D$ tel que $\n(\pi) \ne 2$. Soit $\alpha 
 $$\alpha^{\frac{\n(\pi)-1}{4}} \equiv i^m \pmod \pi.$$
 \end{prop}
 \begin{proof}
-Posons $S = \{[1],[i],[i]^2,[i]^3\}$. La d\'emonstration pr\'ec\'edente montre que $|S| = 4$, et $S$ est inclus dans l'ensemble des racines du polynôme $x^4 - 1 \in K[x]$, o\`u $K$ est le corps $D/\pi D$. Puisqu'un polynôme de degr\'e 4 sur un corps commutatif ne peut admettre plus de 4 racines, $S$ est donc l'ensemble des racines de ce polynôme. Comme $\gamma = [\alpha]^{\frac{\n(\pi)-1}{4}} \in D/\pi D$ v\'erifie $\gamma^4 -1=0$, alors $\gamma \in S$, soit
+Posons $S = \{[1],[i],[i]^2,[i]^3\}$. La d\'emonstration pr\'ec\'edente montre que $|S| = 4$, et $S$ est inclus dans l'ensemble des racines du polyn\^ome $x^4 - 1 \in K[x]$, o\`u $K$ est le corps $D/\pi D$. Puisqu'un polyn\^ome de degr\'e 4 sur un corps commutatif ne peut admettre plus de 4 racines, $S$ est donc l'ensemble des racines de ce polyn\^ome. Comme $\gamma = [\alpha]^{\frac{\n(\pi)-1}{4}} \in D/\pi D$ v\'erifie $\gamma^4 -1=0$, alors $\gamma \in S$, soit
 $ [\alpha]^{\frac{\n(\pi)-1}{4}} = [i]^m,\ 0 \leq m <4$. Par cons\'equent
 $$\alpha^{\frac{\n(\pi)-1}{4}} \equiv i^m \pmod \pi.$$
 Un tel $m$ est unique puisque les classes $[i]^m,\ m\in\{0,1,2,3\}$ sont distinctes.
@@ -4318,7 +4339,7 @@ $$\chi_{\gamma \rho}(\alpha) = (\chi_{\rho_1}\cdots \chi_{\rho_l} \chi_{\gamma_1
 \ee
 \end{proof}
 
-La proposition \ref{prop103} se g\'en\'eralise aussitôt.
+La proposition \ref{prop103} se g\'en\'eralise aussit\^ot.
 \begin{prop}\label{prop111}
 Si $\alpha \in D$, et $\pi \in D$ tel que $1+ i\nmid \pi$ (en particulier si $\pi$ est primaire), alors
 $$\overline{\chi_\pi(\alpha)}= \chi_{\overline{\pi}}(\overline{\alpha}).$$
@@ -5298,7 +5319,6 @@ Puisque $a$ est impair, ceci montre que $b$ est un multiple de $8$, donc $p =A^2
 
 
 
-
 \part{FORMES QUADRATIQUES, CORPS QUADRATIQUES.}
 
 
@@ -5316,7 +5336,7 @@ http://gaetan.chenevier.perso.math.cnrs.fr/TAN_chenevier.pdf
 \section{Repr\'esentation d'un entier par une forme quadratique.}\label{section5.1}
 
 \begin{dfn}
-Une forme quadratique binaire enti\`ere est un polynôme homog\`ene $f \in \Z[X,Y]$ \`a coefficients dans $\mathbb{Z}$ :
+Une forme quadratique binaire enti\`ere est un polyn\^ome homog\`ene $f \in \Z[X,Y]$ \`a coefficients dans $\mathbb{Z}$ :
 $$f(X,Y) = aX^2+bXY+cY^2.$$
 \end{dfn}
 
@@ -5580,7 +5600,7 @@ $$\varphi'
 \end{array}
 \right.
 $$
-En inversant les rôles de $f$ et $g$, on construit de m\^eme 
+En inversant les r\^oles de $f$ et $g$, on construit de m\^eme 
 $$\psi'
 \left\{
 \begin{array}{lll}
@@ -5687,7 +5707,7 @@ Si $d \in \Z$ divise les entiers $a',b',c'$, alors d divise $a,b,c$, donc $d \mi
 Nous prouverons dans ce chapitre que les ensembles $\mathrm{Cl}(D)$ et $\mathrm{P}(D)$ sont finis pour tout discriminant $D$.
  
 
- \section{Equivalence et \'equivalence propre.}
+  \section{Equivalence et \'equivalence propre.}\label {section5.3}
   Nous pr\'ecisons dans ce paragraphe les liens entre \'equivalence et \'equivalence propre.
 
 
@@ -5700,13 +5720,13 @@ $$(q')^{\mathrm{opp}} = (q\cdot g) \cdot g_0= (q\cdot g_0) \cdot (g_0^{-1} g g_0
 
 Comme $\mathrm{SL}_2(\Z)$ est distingu\'e dans $\mathrm{GL}_2(\Z)$, $g_0^{-1} g g_0 \in \mathrm{SL}_2(\Z)$, donc $q^{\mathrm{opp}} \overset{+}{\sim} (q')^{\mathrm{opp}}$.
 
-Si $C$ est une classe d'\'equivalence propre, d\'efinissons $C^{\mathrm{opp}} = \{q^{\mathrm{opp}}, q \in C\}$. Alors $C^{\mathrm{opp}}$ est une classe d'\'equivalence propre. En effet,  fixons $q_0$ dans la classe (non vide) $C$. Alors, d'apr\`es l'implication pr\'ec\'edente,
+Si $\mathscr{C}$ est une classe d'\'equivalence propre, d\'efinissons $\mathscr{C}^{\mathrm{opp}} = \{q^{\mathrm{opp}}, q \in \mathscr{C}\}$. Alors $\mathscr{C}^{\mathrm{opp}}$ est une classe d'\'equivalence propre. En effet,  fixons $q_0$ dans la classe (non vide) $\mathscr{C}$. Alors, d'apr\`es l'implication pr\'ec\'edente,
 \begin{align*}
-q'\in C^{\mathrm{opp}} \iff &\ q' = q^{\mathrm{opp}},\  q \in C\\
+q'\in \mathscr{C}^{\mathrm{opp}} \iff &\ q' = q^{\mathrm{opp}},\  q \in \mathscr{C}\\
 \iff &\ q' = q^{\mathrm{opp}},\ q \overset{+}{\sim} q_0\\
 \Rightarrow &\ q' \overset{+}{\sim} q_0^{\mathrm{opp}}
 \end{align*}
-R\'eciproquement, si $q' \overset{+}{\sim} q_0^{\mathrm{opp}}$, comme $q_0 \in C$, $q' \in C^{\mathrm{opp}}$ par d\'efinition de $C^{\mathrm{opp}}$. Par cons\'equent $C^{\mathrm{opp}}$ est la classe de $q_0^{\mathrm{opp}}$ pour la relation $\overset{+}{\sim} $ : c'est une classe d'\'equivalence propre.
+R\'eciproquement, si $q' \overset{+}{\sim} q_0^{\mathrm{opp}}$, comme $q_0 \in \mathscr{C}$, $q' \in \mathscr{C}^{\mathrm{opp}}$ par d\'efinition de $\mathscr{C}^{\mathrm{opp}}$. Par cons\'equent $\mathscr{C}^{\mathrm{opp}}$ est la classe de $q_0^{\mathrm{opp}}$ pour la relation $\overset{+}{\sim} $ : c'est une classe d'\'equivalence propre.
 
 \begin{prop} \label{involution}
 Soit $f$ l'application d\'efinie par
@@ -5715,31 +5735,31 @@ f
 \left\{
 \begin{array}{ccl}
 \mathrm{Cl}(D)&\to &\mathrm{Cl}(D)\\
-C &\mapsto &C^{\mathrm{opp}}\\
+\mathscr{C} &\mapsto &\mathscr{C}^{\mathrm{opp}}\\
 \end{array}
 \right.
 $$
- Alors $f$ est une involution, et l'ensemble $\{ C \cup f(C) \mid C \in \mathrm{Cl}(D)\}$ est l'ensemble des classes d'\'equivalence de formes de discriminant $D$.
+ Alors $f$ est une involution, et l'ensemble $\{ \mathscr{C} \cup f(\mathscr{C}) \mid \mathscr{C} \in \mathrm{Cl}(D)\}$ est l'ensemble des classes d'\'equivalence de formes de discriminant $D$.
 \end{prop}
 
 \begin{proof}
-Soit $C \in \mathrm{Cl}(D)$, et $q_0$ une forme fix\'ee dans $C$. Alors $q_0^{\mathrm{opp}} \in C^{\mathrm{opp}}$, donc $q_0 = (q_0^{\mathrm{opp}})^{\mathrm{opp}} \in (C^{\mathrm{opp}})^{\mathrm{opp}}$. Les deux classes $C$ et $(C^{\mathrm{opp}})^{\mathrm{opp}}$ ne sont pas disjointes, elles sont donc \'egales : $C = (C^{\mathrm{opp}})^{\mathrm{opp}}$.
+Soit $\mathscr{C} \in \mathrm{Cl}(D)$, et $q_0$ une forme fix\'ee dans $\mathscr{C}$. Alors $q_0^{\mathrm{opp}} \in \mathscr{C}^{\mathrm{opp}}$, donc $q_0 = (q_0^{\mathrm{opp}})^{\mathrm{opp}} \in (\mathscr{C}^{\mathrm{opp}})^{\mathrm{opp}}$. Les deux classes $\mathscr{C}$ et $(\mathscr{C}^{\mathrm{opp}})^{\mathrm{opp}}$ ne sont pas disjointes, elles sont donc \'egales : $\mathscr{C} = (\mathscr{C}^{\mathrm{opp}})^{\mathrm{opp}}$.
 
 Le sous-groupe $\mathrm{SL}_2(\Z)$ est d'indice 2 dans le groupe $\mathrm{GL}_2(\Z)$, et $g_0 = \begin{pmatrix}1 &0\\0 & -1\end{pmatrix} \in \mathrm{GL}_2(\Z) \setminus \mathrm{SL}_2(\Z)$, donc
 $$\mathrm{GL}_2(\Z) = \mathrm{SL}_2(\Z) \cup \begin{pmatrix}1 &0\\0 & -1\end{pmatrix} \mathrm{SL}_2(\Z),$$
 la r\'eunion \'etant disjointe.
 
-Soit $q$ une forme de discriminant $D$ quelconque, et $C$ sa classe d'\'equivalence propre. D'apr\`es la remarque pr\'ec\'edente, pour tout \'el\'ement $g \in \mathrm{GL}_2(\Z)$, il existe $h \in \mathrm{SL}_2(\Z)$ tel que $g = h$, ou bien $g = g_0h$. Par cons\'equent, pour toute forme $q'$ de discriminant $D$,
+Soit $q$ une forme de discriminant $D$ quelconque, et $\mathscr{C}$ sa classe d'\'equivalence propre. D'apr\`es la remarque pr\'ec\'edente, pour tout \'el\'ement $g \in \mathrm{GL}_2(\Z)$, il existe $h \in \mathrm{SL}_2(\Z)$ tel que $g = h$, ou bien $g = g_0h$. Par cons\'equent, pour toute forme $q'$ de discriminant $D$,
 \begin{align*}
 q' \sim q &\iff \exists g \in \mathrm{GL}_2(\Z),\ q' = q\cdot g\\
 &\iff \exists h \in \mathrm{SL}_2(\Z),\ q' = q\cdot h \ \mathrm{ou} \ \exists h \in \mathrm{SL}_2(\Z),\ q' = q\cdot g_0h\\
 &\iff q' \overset{+}{\sim} q  \ \mathrm{ou} \ q' \overset{+}{\sim} q\cdot g_0= q^{\mathrm{opp}}\\
-&\iff q' \in C \cup C^{\mathrm{opp}}
+&\iff q' \in \mathscr{C} \cup \mathscr{C}^{\mathrm{opp}}
 \end{align*}
 
-Ainsi, si $C$ est la classe d'\'equivalence propre d'une forme $q$, $C \cup C^{\mathrm{opp}}$ est sa classe d'\'equivalence de formes, et $\{ C \cup C^{\mathrm{opp}} \mid C \in \mathrm{Cl}(D)\}$ est bien l'ensemble des classes d'\'equivalence de formes de discriminant $D$.
+Ainsi, si $\mathscr{C}$ est la classe d'\'equivalence propre d'une forme $q$, $\mathscr{C} \cup \mathscr{C}^{\mathrm{opp}}$ est sa classe d'\'equivalence de formes, et $\{ \mathscr{C} \cup \mathscr{C}^{\mathrm{opp}} \mid \mathscr{C} \in \mathrm{Cl}(D)\}$ est bien l'ensemble des classes d'\'equivalence de formes de discriminant $D$.
 \end{proof}
- Notons que $C$ et $C^{\mathrm{opp}}$ peuvent \^etre \'egales : c'est le cas des classes ambigües qui seront \'etudi\'ees dans un chapitre ult\'erieur.
+ Notons que $\mathscr{C}$ et $\mathscr{C}^{\mathrm{opp}}$ peuvent \^etre \'egales : c'est le cas des classes ambigües qui seront \'etudi\'ees dans un chapitre ult\'erieur.
 
 
 
@@ -5808,7 +5828,7 @@ Si $n\neq 0$, il existe $k \in \mathbb{Z}$ tel que $-\vert n \vert < b'-2nk\leq 
  \end{prop}
  
  \begin{proof}
- \item[(i)] $\Rightarrow$ (ii) : d\'ej\`a prouv\'e (proposition \ref{completion}).
+ \item[(i)] $\Rightarrow$ (ii) : d\'ej\`a prouv\'e (proposition \ref{representation}).
  
  \item[(ii)] $ \Rightarrow$ (i) : soit $f$ une forme de discriminant $D$ qui repr\'esente primitivement $n$. D'apr\`es la proposition \ref{clef}, $f \overset{+}{\sim} (n,b,c)$ pour des entiers $b,c\in \mathbb{Z}$, donc $\mathrm{disc}(f) = b^2 - 4nc$ est un carr\'e modulo $4n$.
  \end{proof}
@@ -5834,7 +5854,18 @@ Si $n\neq 0$, il existe $k \in \mathbb{Z}$ tel que $-\vert n \vert < b'-2nk\leq 
  Si deux formes $f,g$ de discriminant $D$ repr\'esentent $p$, elles sont donc \'equivalentes.
   \end{proof}
   
+  Concluons ce paragraphe par une condition n\'ecessaire et suffisante pour qu'un entier $m$ soit repr\'esent\'e par une forme de discriminant $D$.
   
+  \begin{prop}\label{lemme_cox}
+  Soit $D \equiv 0,1 \pmod 4$ un discriminant, et $n$ un entier impair premier avec $D$. Alors $n$ est proprement repr\'esent\'e par une forme primitive de discriminant $D$ si et seulement si $D$ est un r\'esidu quadratique modulo $n$.   
+  \end{prop}
+  
+  \begin{proof}
+  Si $f$ repr\'esente primitivement $n$, alors la proposition \ref{clef} (lemme clef) montre qu'il existe des entiers $b,c$ tels que $f \overset{+}{\sim} (n,b,c)$, donc $D = b^2 - 4nc \equiv b^2 \pmod n$, $D$ est un r\'esidu quadratique modulo $n$.
+
+R\'eciproquement, supposons que $D \equiv b^2 \pmod n$. Comme $n$ est impair, en remplaçant $b$ par $b+n$ si n\'ecessaire, on peut supposer que $D$ et $b$ ont m\^eme parit\'e. Alors $D \equiv b^2 \pmod 4$, et $D\equiv b^2 \pmod n$, o\`u $4 \wedge n = 1$, donc $D \equiv b^2 \pmod 4n$. Comme dans la proposition \ref{representation}, il existe un entier $c$ tel que $D = b^2 - 4nc$. Alors $f =(n,b,c)$ repr\'esente primitivement $n = f(1,0)$. Les coefficients de $f = (n,b,c)$ v\'erifient $n\wedge b \wedge c = 1$, puisque $n \wedge D = 1$, ce qui montre que la forme $f$ est primitive.
+
+  \end{proof}
   
  \section{Formes r\'eduites.}
  Si $D=b^2-4ac$ est le discriminant d'une forme $f=(a,b,c)$, alors $D\equiv b^2\ [4]$, donc $D\equiv 0,1 \ [4]$.
@@ -6182,7 +6213,6 @@ R\'eciproquement, notons que si $p$ ou $2p$ est repr\'esent\'e par la forme $x^2
  
  \end{prop}
  
- 
 \begin{subappendices}
 
 \section{R\'ecr\'eation informatique.}
@@ -6367,8 +6397,8 @@ Sources : [Cox2] (chapitre 1),[ Flath] (chapitre 5).
 Donnons une premi\`ere pr\'esentation de la composition des classes de formes quadratiques, th\'eoris\'ee par Gauss, en suivant les sources pr\'ecit\'ees. Une autre approche sera d\'evelopp\'ee dans le chapitre ``Formes quadratiques et id\'eaux''.
 
 \section{Composition des formes.}\label{composition}
-\begin{dfn}
-Soient $q$ et $q'$ deux formes positives primitives de discriminant $D$. Une compos\'ee de $q$ et $q'$ est une forme primitive $q''$ de discriminant $D$ telle qu'il existe deux applications $f,g : \Z^2 \times \Z^2 \to \Z$ satisfaisant l'\'egalit\'e entre polynômes formels
+\begin{dfn}\label{def18}
+Soient $q$ et $q'$ deux formes positives primitives de discriminant $D$. Une compos\'ee de $q$ et $q'$ est une forme primitive $q''$ de discriminant $D$ telle qu'il existe deux applications $f,g : \Z^2 \times \Z^2 \to \Z$ satisfaisant l'\'egalit\'e entre polyn\^omes formels
 $$q(x,y) q'(x',y') = q''(f((x,y),(x',y')), g((x,y),(x',y'))),$$
 o\`u $f,g$ sont $\Z$-bilin\'eaires, i.e.
 \begin{align*}
@@ -6390,7 +6420,7 @@ Y&= &g((x,y),(x',y'))&= xy' + 2yx' + yy'.
 \right.
 $$
 
-\begin{prop}
+\begin{prop}\label{equivalence_composition}
 \item[(i)] Si $q''$ est une compos\'ee de $q$ et $q'$, alors toute forme \'equivalente \`a $q''$ est aussi une compos\'ee de $q,q'$.
 
 \item[(ii)] $q''$ est une compos\'ee de toute forme \'equivalente \`a $q$ et de toute forme \'equivalente \`a $q'$. 
@@ -6499,26 +6529,16 @@ h(X,Y) = bXY + cY^2 &= Y(bX + cY)\\
 Par sym\'etrie, l' \'egalit\'e \ref{eq7.1} est vraie si $a' = 0$. Elle est donc vraie dans tous les cas.
 \end{proof}
 
-Remarque : l'\'egalit\'e \ref{eq7.1} est en fait une identit\'e dans $\Q[a,a',b,c,x,y,x',y']$, comme on le v\'erifie avec les instructions Sage suivantes.
-\begin{verbatim}
-R.<a,b,c,a1,b1,x,y,x1,y1> = QQ[]
-A = (a*x^2 + b*x*y + a1*c*y^2)*(a1*x1^2 + b*x1*y1 + a*c* y1^2)
-X,Y = x*x1 - c*y*y1, a*x*y1 + a1*y*x1 + b*y*y1
-B = a*a1*X^2 + b*X*Y + c*Y^2; B
-\end{verbatim}
+Remarque : l'\'egalit\'e \ref{eq7.1} est en fait une identit\'e dans $\Q[a,a',b,c,x,y,x',y']$, comme on le v\'erifie en d\'eveloppant les deux membres. Nous obtenons
+
 $$a a_{1} c^{2} y^{2} y_{1}^{2} + a_{1}^{2} c y^{2} x_{1}^{2} + a_{1} b c
 y^{2} x_{1} y_{1} + a^{2} c x^{2} y_{1}^{2} + a b c x y y_{1}^{2} + a
 a_{1} x^{2} x_{1}^{2} + a_{1} b x y x_{1}^{2} + a b x^{2} x_{1} y_{1} +
 b^{2} x y x_{1} y_{1}$$
-\begin{verbatim}
-A==B
-\end{verbatim}
-\begin{center}
-True
-\end{center}
+
 Le calcul donn\'e dans la d\'emonstration de la proposition \ref{basic_identity} montre comment on parvient \`a mettre en \'evidence une telle identit\'e.
 
-\section{Formes concordantes.}
+\section{Formes concordantes.}\label{section6.3}
 Nous nous int\'eressons dans la suite aux formes quadratiques enti\`eres de m\^eme discriminant $D$. Si $f = (a,b,c)$ est une telle forme v\'erifiant $a\ne 0$, alors $c$ est d\'etermin\'e par $a,b$, puisque $c = \frac{b^2-D}{4a}$. Nous noterons alors $f = (a,b,*)$.
 \begin{dfn}
 Deux formes $f_1=(a_1,b_1,c_1)$ et $f_2 = (a_2,b_2,c_2)$ de discriminant $D$ sont dites concordantes si les trois conditions suivantes sont v\'erifi\'ees.
@@ -6573,7 +6593,7 @@ Cette contradiction montre que $f_1*f_2$ est primitive.
 \section{Structure de groupe sur $P(D)$.}
 Rappelons que selon la d\'efinition \ref{def16}, on d\'esigne par $\mathrm{P}(D)$ l'ensemble des classes d'\'equivalence propre de formes primitives (ces formes \'etant positives si $D<0$).
 
- Le lemme suivant est dû \`a une remarque de Gauss.
+ Le lemme suivant est d\^u \`a une remarque de Gauss.
  
  \begin{prop}\label{prop180}
  Soit $M\geq 1$ un entier, et $f(x,y)$ une forme primitive. Alors $f$ repr\'esente primitivement au moins un entier non nul premier \`a $M$.
@@ -6794,6 +6814,325 @@ Si $\mathscr{C'}$ est la classe d'\'equivalence propre de $g$, alors $\mathscr{C
 $(P(D),\cdot)$ est un groupe ab\'elien.
 \end{proof}
 
+La loi de $P(D)$ est bien une composition de formes.
+
+\begin{prop}\label{composee_directe}
+Si  $[h]= [f*g]$ est la compos\'ee directe de deux classes de formes quadratiques, alors  $h$ est une compos\'ee des formes $f,g$ au sens de la d\'efinition \ref{def18}.
+\end{prop}
+
+\begin{proof}
+ Par d\'efinition de la loi $*$,  $f\overset{+}{\sim} f_1,\ g \overset{+}{\sim}  f_2, h \overset{+}{\sim} h_1$, o\`u $f_1,f_2$ sont concordantes, et $h_1 = f_1 * f_2$.
+ 
+ L'identit\'e de base et la section \ref{section6.3} montrent que
+ $$f_1(x,y) f_2(x',y') = (f_1*f_2)(X,Y),$$
+ o\`u
+ $$
+\left\{
+\begin{array}{rl}
+X &= xx' -c yy',\\
+Y &= axy' +a' yx' + b yy'.
+\end{array}
+\right.
+$$
+Ainsi $f_1 * f_2$ est une compos\'ee de $f_1,f_2$ au sens de la d\'efinition \ref{def18}. La proposition \ref{equivalence_composition} montre alors que $h$ est bien une compos\'ee de $f$ et $g$.
+\end{proof}
+
+Si un entier $n \in \Z$ est repr\'esent\'e par une forme quadratique, alors il est repr\'esent\'e par tout forme de la classe $\mathscr{C}$ de $f$. Nous dirons alors que la classe $\mathscr{C}$ repr\'esente l'entier $n$.
+La proposition pr\'ec\'edente admet le corollaire imm\'ediat suivant.
+
+\begin{prop}\label{representation_produit}
+Si $\mathscr{C}$ repr\'esente l'entier $m$, et $\mathscr{C}'$ l'entier $n$, alors $\mathscr{C}\mathscr{C}'$ repr\'esente l'entier $mn$.
+\end{prop}
+
+\begin{proof}
+Notons $f$ une forme quadratique de $\mathscr{C}$ et $g$ une forme quadratique de $\mathscr{\C}'$. Alors $m= f(x,y)$ et $n = g(x',y')$, o\`u $x,y,x',y' \in \Z$. 
+La proposition \ref{composee_directe} montre que 
+$$mn = f(x,y) g(x',y') = (f*g)(X,Y),\qquad (X,Y) \in \Z^2,$$
+donc $mn$ est repr\'esent\'e par $\mathscr{C} \mathscr{C}'$.
+\end{proof}
+
+Donnons \`a titre d'exemple la composition de la forme principale $f_0$ avec elle m\^eme. Nous savons que $\mathscr{C}_0\mathscr{C}_0= [f_0 * f_0] =[f_0] = \mathscr{C}_0$.
+
+Nous obtenons explicitement
+\begin{prop}\label{brahmagupta}
+\item[(i)] Si $D = - 4n \equiv 0  \pmod 4$,
+ $$(x^2+ny^2)(x'^2+ny'^2) = (xx'-nyy')^2 + n(xy'+yx')^2$$
+ (formule dite de Brahmagupta).
+ \item[(ii)] Si $D \equiv 1 \pmod 4$,
+  $$\left(x^2 + xy +\left(\frac{1-D}{4}\right) y^2\right)\left(x'^2 + x'y' +\left(\frac{1-D}{4}\right) y'^2\right) = X^2 + XY +\left(\frac{1-D}{4}\right) Y^2,$$
+ o\`u 
+$$
+\left\{
+\begin{array}{ccl}
+X &= &xx'  - \frac{1-D}{4} yy',\\
+Y &= &xy' + yx'+ yy'.
+\end{array}
+\right.
+$$
+\end{prop}
+\begin{proof}
+Appliquer l'identit\'e de base \ref{eq7.1} avec
+\item[(i)] $a=a' =1, b = 0, c = n$,
+\item[(ii)] $a=a'=b=1$, $c =(1-D)/4$.
+\end{proof}
+
+\section{Classes ambigües de discriminant n\'egatif.}
+Soit $D<0$ un discriminant.
+
+Rappelons les d\'efinitions de formes et classes ambigües du paragraphe \ref{section5.3}.
+\begin{dfn}
+Une forme $f$ positive primitive de discriminant $D$ est dite ambigüe si elle est proprement \'equivalente \`a son oppos\'ee. Une classe $\mathscr{C} \in \mathrm{Cl}(D)$ est dite ambigüe si $\mathscr{C} ^{-1} = \mathscr{C} $.
+\end{dfn}
+
+ Les classes ambigües de $\mathrm{P}(D)$ sont les classes d'ordre 1 ou 2 dans le groupe $\mathrm{P}(D)$.
+
+La d\'emonstration de la proposition \ref{groupe} montre que si $q$ est une forme positive primitive de discriminant $D$, $[q] \in \mathrm{P}(D)$ a pour inverse $[q]^{-1} = [q^{\mathrm{opp}}]$ dans le groupe $\mathrm{P}(D)$. Ainsi $q$ est ambigüe si et seulement si sa classe $[q]$ est ambigüe.
+
+\begin{prop}\label{ambigue}
+Une forme r\'eduite au sens de Gauss $q=(a,b,c)$ de discriminant $D<0$ est ambigüe si et seulement si $b=0, b=a$ ou $c=a$.
+\end{prop}
+
+\begin{proof}
+Soit $q = (a,b,c)$ une forme r\'eduite ambigüe, donc proprement \'equivalente \`a son oppos\'ee $(a,-b,c)$. Si $c>a$ et $b\ne a$, $(a,-b,c)$ est encore une forme r\'eduite. L'unicit\'e de la forme r\'eduite d'une classe (proposition \ref{unicite_reduite}) montre que $b = -b$, donc $b=0$. Par cons\'equent, ou bien $b=0$, ou bien $b=a$ ou bien $c=a$.
+
+R\'eciproquement, $(a,0,c)$, \'egale \`a son oppos\'ee, est ambigüe. Puisque $(a,b,c) \overset{+}{\sim} (a,b-2a,c-b+a)$ par \'equivalence \'el\'ementaire, $(a,a,c) \overset{+}{\sim} (a, a-2a, c - a +a) = (a,-a,c)$, donc $(a,a,c)$ est ambigüe. Enfin, puisque $(a,b,c) \overset{+}{\sim} (c,-b,a)$ par \'equivalence \'el\'ementaire,  $(a,b,a) \overset{+}{\sim} (a,-b,a)$, et $(a,b,a)$ est ambigüe.
+\end{proof}
+
+
+La proposition\ref{involution} du chapitre "Formes quadratiques" montre que pour d\'eterminer les classes d'\'equivalence de forme primitives de discriminant $D$, il suffit de d\'eterminer les classes d'\'equivalence propre de discriminant $D$, et de regrouper chacune de ces classes avec son oppos\'ee. Si on d\'esigne par $a(D)$ le nombre de classes ambiguës de $\mathrm{P}(D)$, alors le nombre de classes d'\'equivalence de formes primitives de discriminant $D$ est donn\'e par
+$$\frac{h(D) - a(D)}{2} + a(D) = \frac{h(D) + a(D)}{2}.$$
+
+D\'eterminons ici $a(D)$ pour $D<0$, ce qui pourra nous donner de informations sur la structure du groupe $\mathrm{P}(D)$.
+
+\begin{prop}\label{ambigues}
+
+(Gauss) Soit $D<0$ un discriminant.
+ Notons $r$ le nombre de diviseurs premiers impairs distincts de $D$. D\'efinissons l'entier $\mu$ de la façon suivante : 
+ \be
+\item[$\bullet$] si $D \equiv 1 \pmod 4$, 
+ 	$$\mu = r,$$
+\item[$\bullet$] si $D \equiv 0 \pmod 4$, alors $D = -4n, n>0$, et $\mu$ est d\'etermin\'e par la table suivante
+$$
+\begin{array}{r|c}
+n & \mu\\
+\hline
+n\equiv 3 \pmod 4 & r\\
+n \equiv 1,2 \pmod 4 & r+1\\
+n \equiv 4 \pmod 8 & r+1\\
+n \equiv 0 \pmod 8 & r+2.
+\end{array}
+$$
+\ee
+Alors le groupe des classes $P(D)$ contient exactement $2^{\mu-1}$ classes ambigües, i.e. $2^{\mu-1}$ \'el\'ements d'ordre $d\leq 2$.
+ \end{prop}
+
+\begin{proof}
+ Toute classe ambigüe contient une seule forme r\'eduite, et cette forme r\'eduite est ambigüe. Il suffit donc de d\'enombrer les formes d\'ecrites dans la proposition pr\'ec\'edente. 
+
+    Traitons \`a part les cas $D =-4$ (avec $n=1$) et $D = -3$. Il n'existe qu'une forme r\'eduite $x^2 + y^2$ de discriminant $-4$, et elle est ambigüe. Alors $r=0, \mu =1$, $2^{\mu - 1} = 1$, et le th\'eor\`eme est v\'erifi\'e dans ce cas particulier.  De m\^eme, il n'existe qu'une forme r\'eduite $x^2 + xy + y^2$ de discriminant $-3$, et elle est ambigüe. Dans ce cas $\mu = r = 1$, $2^{\mu - 1} = 1$ est bien le nombre de classes ambigües. Nous pouvons maintenant supposer que $D <-4$.
+    
+ Rappelons qu'une forme  $f = (a,b,c)$, positive primitive de discriminant $D$,  v\'erifiant donc les conditions 
+ $$D<0,\quad  a>0,\quad c>0, \quad a \wedge b \wedge c = 1,$$
+ est r\'eduite (au sens de Gauss) si et seulement si
+ \begin{align*}
+ -a <&b \leq a < c,\\
+& \text{ ou }\\
+ 0 \leq &b \leq a = c,
+ \end{align*}
+ et que les formes r\'eduites ambigües sont celles qui v\'erifient (proposition  \ref{ambigue})
+ $$b = 0,  \text{ ou } a = b, \text{ ou } a=c.$$
+ 
+ L'ensemble $\mathrm{Amb}$ des formes ambigües de discriminant $D<-4$ est donc la r\'eunion 
+ $$\mathrm{Amb}= S \cup T_1 \cup T_2,$$
+ o\`u
+ \begin{align*}
+ S &= \{(a,0,c)\in {\cal Q}(\Z^2)\mid 0 < a < c,\ a \wedge c = 1,\ \mathrm{disc}(a,0,c) = D\},\\
+ T_1 &= \{(b,b,c)\in {\cal Q}(\Z^2)\,  \mid 0 < b < c,\ b \wedge c = 1,\ \mathrm{disc}(b,b,c) = D\},\\
+ T_2 &=\{(c,b,c)\in {\cal Q}(\Z^2)\, \mid 0 < b < c,\  b \wedge c = 1,\ \mathrm{disc}(c,b,c) = D\}.
+ \end{align*}
+ Notons que les in\'egalit\'es sont strictes dans ces d\'efinitions : en effet si $a =c$ dans la forme $f = (a,0,c)$, avec $a\wedge c = 1$, alors $f = (1,0,1)$ est de discriminant $-4$, alors qu'ici $D<-4$.  Si $b =c$ dans la d\'efinition de $T_1$ ou $T_2$, alors $(b,b,c)$, ou $(c,b,c)$, avec $b\wedge c = 1$, est la forme $(1,1,1)$ de discriminant $-3$, ce qui est exclu. Enfin $b>0$ dans la d\'efinition de $T_2$ sinon $(c,b,c) = (c,0,c) = (1,0,1)$ de discriminant $-4$.
+  \medskip
+  
+  Les ensembles $S,T_1,T_2$ sont disjoints : si $(a,b,c) \in S \cap T_1$, alors $b = 0$ et $a =b$, donc $a=0$, ce qui contredit  $a>0$. Si $f = (a,b,c) \in S \cap T_2$, alors $f=(c,0,c)$, et $f$ est primitive, donc $f = (1,0,1)$, de discriminant $-4$, ce qui est exclu. Enfin si $f  = (a,b,c) \in T_1 \cap T_2$, alors $a=b=c$, donc $f = (1,1,1)$, de discriminant $-3$, alors que $D<-4$.
+  
+ Comptabilisons ensemble $T_1$ et $T_2$. Montrons que l'ensemble $T = T_1 \cup T_2$ peut \^etre mis en bijection avec l'ensemble
+ $$T'= \{(b,b,c),\ 0 < b < 2c, b\wedge c = 1, \mathrm{disc}(b,b,c) = D\}.$$ 
+En effet, on obtient par des \'equivalences \'el\'ementaires
+$$(b,b,c) \overset{+}{\sim} (c, -b,b) \overset{+}{\sim} (c, -b + 2c, c - b +b) = (c,2c-b,c),$$
+et le cheminement inverse donne
+$$(c,b,c) \overset{+}{\sim} (c, b-2c, 2c -b) \overset{+}{\sim} (2c-b,2c-b,c).$$
+Ceci permet de construire les applications $\varphi, \psi$, d\'efinies par
+$$
+\varphi\ 
+\left\{
+\begin{array}{ccl}
+T' &\to &T = T_1 \cup T_2 \\
+(b,b,c) & \mapsto & 
+    \left\{
+    \begin{array}{ll}
+    (b,b,c) & \text{si } 0<b\leq c\\
+    (c,2c-b,c) & \text{si } c<b<2c
+    \end{array}
+    \right.
+\end{array}
+\right.
+$$
+  
+$$
+\psi\ 
+\left\{
+\begin{array}{ccl}
+T = T_1 \cup T_2&\to &T'  \\
+(a,b,c) & \mapsto & 
+    \left\{
+    \begin{array}{ll}
+    (a,b,c) & \text{si } (a,b,c) \in T_1\ (\text{soit }a=b)\\
+    (2c-b,2c-b,c) & \text{si } (a,b,c)\in T_2\  (\text{soit }a=c)
+    \end{array}
+    \right.
+\end{array}
+\right.
+$$
+ V\'erifions que $\varphi$ et $\psi$ sont correctement d\'efinies, et qu'elles sont r\'eciproques l'une de l'autre.
+ 
+ Soit $(b,b,c) \in T'$. Alors $0<b<2c$. Si $0<b\leq c$, alors, puisque le cas $b = c$ est impossible,  $\varphi(b,b,c) = (b,b,c) \in T_1$, et si $c < b < 2c$, alors $\varphi(b,b,c) = (c,2c - b,c)$ est une forme proprement \'equivalente \`a $(a,b,c)$, donc de discriminant $D$. De plus $0< 2c - b < c$, et $(2c - b) \wedge c = 1$, donc $\varphi(b,b,c) \in T_2$.
+ 
+ Si $f = (a,b,c) \in T_1$, alors $a=b$, et $0<b<c$, donc $\psi(f) = f \in T'$. Si $f \in T_2$, alors $a=c, 0 < b < c$, et $(B,B,C) = \psi(a,b,c) = (2c-b,2c-b,c)$ v\'erifie $0< B = 2c - b < 2c = 2C$. De plus $B \wedge C = (2c-b) \wedge c = 1$, et puisque $(c,b,c)$ et $(B,B,C)$ dont proprement \'equivalentes, elles ont m\^eme dicriminant $D$. Ainsi $\psi(a,b,c) = (B,B,C) \in T'$.
+ 
+ Soit $f = (b,b,c) \in T'$. 
+ 
+ Si $0<b\leq c$, alors, le cas $b=c$ \'etant impossible, $\varphi(f) = (b,b,c) \in T_1$, donc $(\psi \circ \varphi)(b,b,c) = \psi(b,b,c) = (b,b,c) = f$.
+ 
+ Si $c < b < 2c$, alors $\varphi(b,b,c) = (c,2c-b,c) \in T_2$, et donc $(\psi \circ \varphi)(b,b,c) = \psi(c,2c-b,c) = (2c -(2c-b), 2c -(2c-b), c) = (b,b,c) = f$.
+ 
+ Nous avons donc prouv\'e que $$\psi \circ \varphi = \mathrm{id}_{T'}.$$
+ 
+ Soit $f = (a,b,c) \in T$. 
+ 
+ Si $(a,b,c) \in T_1$, alors $a=b$, $\psi(f) = (b,b,c)$ v\'erifie $b<c$, donc $(\varphi \circ \psi)(f) = \varphi(b,b,c) = (b,b,c) = f$.
+ 
+ Si $(a,b,c) \in T_2$, alors $a=c$ et $b<c$, $\psi(f) = (2c-b,2c-b,c)$ v\'erifie $c < 2c -b < 2c$, donc $(\varphi \circ \psi)(f) = \varphi(2c-b,2c-b,c) = (c, 2c - (2c -b),c) = (c,b,c) = f$. Ainsi
+ $$\varphi \circ \psi = \mathrm{id}_{T}.$$
+ Ceci prouve que $\varphi$ est une bijection, et donc $|\mathrm{Amb}| = |S| + |T_1 \cup T_2| = |S| + |T'|$.
+ 
+\medskip
+ 
+    Calculons d'abord $|S|$, le cardinal de l'ensemble $S$ des formes r\'eduites $f = (a,b,c)$ de discriminant $D$ v\'erifiant $b = 0$. Si $D\equiv 1 \pmod 4$, alors  $|S| =0$, et si $D \equiv 0 \pmod 4$, alors $ D= -4n$, et $f(x,y) = ax^2 + c y^2$, o\`u $ac = n$, $0 < a < c$ et $a\wedge c = 1$. 
+    
+    Soit $U$ l'ensemble des couples $(a,c) \in \N^2$ v\'erifiant $ac= n, a \wedge c = 1$ et $a<c$ :
+     $$ U= \{(a,c) \in \N^2\mid  ac = n, a\wedge c = 1, a < c\},$$
+    et soit $V$ l'ensemble des couples $(a,c) \in \N^2$ v\'erifiant $ac= n, a \wedge c = 1$, sans la condition $a<c$ :
+    $$V = \{(a,c) \in \N^2 \mid ac = n, a\wedge c = 1\}.$$
+    
+    Alors $(a,c) \mapsto (a,0,c)$ est une bijection de $U$ dans $S$. Si $(a,c) \in V$, alors $a\ne c$, et donc l'application de $V$ dans $U$ qui envoie $(a,c)$ sur $(\min(a,c), \max(a,c))$ est telle que tout \'el\'ement $(u,v)\in U$ a exactement deux ant\'ec\'edents $(u,v)$ et $(v,u)$ dans $V$, et donc $|S| = |U| = |V|/2$.
+    
+    Notons $t$ le nombre de facteurs premiers distincts de $n$. Comme $n$ se d\'ecompose sous la forme $n = p_1^{a_1}\cdots p_t^{a_t}$, alors $|V| = 2^{t}$. En effet, si $n = ac, a \wedge c = 1$, chaque puissance $p_i^{a_i}$ doit figurer dans la d\'ecomposition de $a$, ou dans celle de $c$, mais pas dans les deux. Ainsi l'application
+    $$
+    \begin{array}{ccl}
+     \{0,1\}^t &\to &V\\
+     (\varepsilon_1,\cdots,\varepsilon_t) & \mapsto &(p_1^{\varepsilon_1 a_1}\cdots p_t^{\varepsilon_t a_t}, p_1^{(1-\varepsilon_1) a_1}\cdots p_t^{(1-\varepsilon_t)a_t})
+    \end{array}
+    $$
+    est une bijection, ce qui justifie $|V| = 2^t$. 
+    
+    En r\'esum\'e, si $t$ est le nombre de facteurs premiers de $n$,
+    $$
+    \left\{
+    \begin{array}{ll}
+    |S| = 0 &\text{si } D \equiv 1 \pmod 4,\\
+    |S| = 2^{t-1}& \text{si } D \equiv 0 \pmod 4.
+    \end{array}
+    \right.
+    $$
+
+Enfin, calculons $|T'|$, le cardinal de l'ensemble $T'$ des formes primitives $f(x,y) = bx^2 + bxy + cy^2$ v\'erifiant $0<b<2c$, de discriminant $D$. Alors $D = b^2 - 4bc = b(b-4c)$, et $-D = b(4c -b)$, o\`u $-D >0, b>0, 4c -b >0$.
+
+$\bullet$ Si $D \equiv 1 \pmod 4$, alors $D$ est impair, ainsi que tous les diviseurs de $D$. Posons $k =4c -b$. Alors $- D = bk$, et $b,k$ sont premiers entre eux : si $\delta >0$ divise $b$ et $k = 4c -b$, alors $\delta$ est impair, $\delta$ divise $b$ et $4c$, donc $\delta$ divise $b$ et $c$, $\delta = 1$. De plus $ k = 4c - b >b$. 
+
+Inversement,  donnons nous un couple d'entiers $b,k$ tels que $b\wedge k = 1, -D = bk, k> b$. Comme $b$ et $k$ sont impairs, donc congrus \`a $\pm 1$ modulo 4, et que $-D = bk \equiv -1 \pmod 4$, ou bien $b \equiv 1, k \equiv -1 \pmod 4$, ou bien $b\equiv -1, k \equiv 1 \pmod 4$. Dans les deux cas, $b+k \equiv 0 \pmod 4$, donc $c = \frac{b+k}{4} \in \Z$. Alors la forme enti\`ere $f(x,y) = bx^2+bxy + cy^2$ a pour discriminant $D$, $b \wedge \frac{b+k}{2} = 1$, et $0<b< \frac{b+k}{2} = 2c$, ce qui montre que $f \in T'$. 
+
+Notons
+$$n = |D|,\qquad U =  \{(b,k) \in \N^2, bk = n, b\wedge k = 1, b < k\}.$$
+Alors l'application
+$$
+\left\{
+\begin{array}{ccl}
+T' &\to &U\\
+(b,b,c) &\mapsto &(b,4c-b)
+\end{array}
+\right.
+$$
+est bijective, d'application r\'eciproque
+$$
+\left\{
+\begin{array}{ccl}
+U&\to &T'\\
+(b,k) &\mapsto& (b,b, \frac{b+k}{4}).
+\end{array}
+\right.
+$$
+Dans ce cas, $|\mathrm{Amb}| = |S| +|T'| = |T'| =|U| = 2^{t-1}$, o\`u $t = r = \mu$ est le nombre de diviseurs premiers impairs de $D$. Le th\'eor\`eme est prouv\'e si $D \equiv 1 \pmod 4$.
+
+\medskip 
+
+$\bullet$ Si $D\equiv 0 \pmod 4$, alors $D = -4n, n>0$, et une forme $(a,b,c)$ de discriminant $D$ v\'erifie que $b = 2b'$ est pair. Toute forme $f$ de $T'$ s'\'ecrit sous la forme
+$$f(x,y) = 2b' x^2 + 2b'xy +cy^2,$$
+o\`u $c$ est impair, $b'\wedge c = 1, 0 < b' < c, n = b'(2c -b')$.
+
+\medskip 
+
+ $*$ Si $n\equiv 1 \pmod 4$, alors $n$ et tous ses diviseurs sont impairs. Alors $k = 2c -b'$ et $b'$ sont premiers entre eux, et $k>b'$. Inversement, si $b',k$ v\'erifient $b' k = n, b'\wedge k = 1, b'<k$, alors $b' k \equiv 1 \pmod 4$ donc $ b' \equiv k \equiv \pm 1 \pmod 4$, ce qui montre que $c =\frac{b'+k}{2}$ est un entier impair, et que $c\wedge 2b' = 1$. Par cons\'equent $(2b',2b',\frac{b'+k}{2}) \in T'$.
+ 
+ Ainsi les deux applications
+ $$
+ \left\{
+\begin{array}{ccl}
+T' &\to &U\\
+(2b',2b',c) &\mapsto &(b',2c-b')
+\end{array}
+\right.
+, \qquad
+\left\{
+\begin{array}{ccl}
+U &\to &T'\\
+(b',k)&\mapsto &(2b',2b', \frac{b'+k}{2})
+\end{array}
+\right.
+ $$
+ sont bijectives r\'eciproques l'une de l'autre, et donc $|T'| = 2^{r-1}$, o\`u $r$ est le nombre de diviseurs premiers impairs de $D$, donc le nombre de diviseurs premiers $t$ de $n$ impair. Comme par d\'efinition de $\mu$, $\mu = r+1$, donc
+ $$|\mathrm{Amb}| = |S| + |T'| = 2^{r-1} + 2^{r-1} = 2^r = 2^{\mu-1},$$
+ et le th\'eor\`eme est v\'erifi\'e dans ce cas.
+ 
+ \medskip 
+ 
+ $*$ Si $n\equiv 3 \pmod 4$, $n = 2b'c - b'^2 \equiv -1 \pmod 4$, donc $2b'c \equiv 0 \pmod 4$, o\`u $b'$ est impair, donc $c$ est pair, ce qui montre que la forme $(2b',2b',c)$ n'est pas primitive. Ainsi $T' =\varnothing$, et puisque par d\'efinition $\mu = r$ dans ce cas,
+$$|\mathrm{Amb}| = |S|+|T'| =|S| = 2^{r-1} = 2^{\mu-1}.$$
+ 
+  \medskip 
+ 
+ $*$ Si $n\equiv 2 \pmod 4$, alors toute forme $f = (2b',2b',c) \in T'$ est telle que $n = b'(2c - b')$ est pair, donc $b' = 2b''$ est pair, et donc
+ $$n = 2b'' (2c - 2b'') \equiv 0 \pmod 4,$$
+ et ainsi $T' =\varnothing$. Ici $ \mu = r+1$, et le nombre de diviseurs premiers impairs de $D$ est $r = t-1$, o\`u $t$ est le nombre de diviseurs premiers de $n$, donc
+ $$|\mathrm{Amb}| =|S| = 2^{t-1} = 2^r = 2^{\mu-1}.$$
+ 
+   \medskip 
+ 
+ $*$ Si $n\equiv 4 \pmod 8$, alors toute forme $(2b', 2b',c)$ de $T'$ est telle que $b' = 2b''$ est pair, et
+ $$n = 4b''(c - b'').$$
+ Comme $n/4$ est impair, $b''$ et impair, ainsi que $c$, donc $c-b''$ est pair, et ainsi $n \equiv 0 \pmod 8$, ce qui est une contradiction, donc $T' = \varnothing$.
+ Ici $|S| = 2^{t-1}$, o\`u $t$ est le nombre de facteurs de $n$, \'egal \`a $r+1$. Comme ici $\mu = r+1$,
+ $$|\mathrm{Amb}| = |S| = 2^{r} = 2^{\mu - 1}.$$
+ 
+    \medskip 
+ 
+ $*$ Si $n\equiv 0 \pmod 8$, alors comme pr\'ec\'edemment, toute forme $(2b', 2b',c)$ de $T'$ est telle que $b' = 2b''$ est pair, et
+ $$\frac{n}{4} = b''(c - b'').$$
+ Si on pose $k = c - b''$, alors  $b'' \wedge k = 1, b'' < c- b'' = k$. Inversement, \`a chaque couple $(b'', k)$ tel que $\frac{n}{4} = b'' k, b'' \wedge k = 1, b'' < k$ , on peut associer la forme $f = (4 b'', 4b'', b'' + k) $. Comme $\frac{n}{4}$ est pair, l'un des entiers $b'',k$ est pair, mais pas les deux puisque $b''\wedge k = 1$ et donc $b'' + k $ est impair, premier avec $4b''$, donc $f \in T'$. Ainsi $T'$ est mis en bijection avec $U_{n/4}$, de cardinal $2^r$. Puisqu'ici $\mu = r+2$,
+ $$|\mathrm{Amb}| = |S| + |T'| = 2^r + 2^r = 2^{r+1} = 2^{\mu - 1},$$
+ ce qui ach\`eve la preuve.
+
+ \end{proof}
+
 
 \begin{subappendices}
 \section{R\'ecr\'eation informatique.}
@@ -6889,7 +7228,8 @@ Ainsi $P(-68) \simeq \Z/4\Z$ est engendr\'e par la classe d'\'equivalence propre
 \end{subappendices}
 
 
-\chapter{Th\'eorie du genre.}
+
+\chapter{Th\'eorie des genres.}
 
 Source : David A.Cox, Primes of the Form $x^2+ny^2$.
 
@@ -7117,7 +7457,7 @@ p & \equiv &2 \pmod 5
 \iff& p\equiv 1, 9, 3,7 \pmod{20}.
 \end{align*} 
 Le but est de caract\'eriser, pour un entier $n\ne 0$, la liste des $\alpha, \beta,\gamma,\ldots  \in \Z$ tels que $$\legendre{-n}{p} = 1 \iff p \equiv \alpha, \beta,\gamma,\ldots \pmod {4n}.$$
-Le caract\`ere d\'efini dans la proposition \ref{prop176} suivante joue un rôle crucial. Ceci n\'ecessite un lemme pr\'ealable (proposition \ref{prop175}).
+Le caract\`ere d\'efini dans la proposition \ref{prop176} suivante joue un r\^ole crucial. Ceci n\'ecessite un lemme pr\'ealable (proposition \ref{prop175}).
 
 
 Montrons, dans le cas o\`u $D$ est un discriminant, le pendant de la proposition \ref{prop167}.
@@ -7185,17 +7525,9 @@ Notons que ce r\'esultat ne s'\'etend pas \`a des valeurs de $D$ qui ne sont pas
 $$1 = \legendre{7}{3} \ne \legendre{7}{17} = -1.$$
 
 \begin{prop}\label{prop176}
-Soit $D\ne 0$ un discriminant, i.e. un nombre $D \equiv 0,1 \pmod 4$. Alors il existe un unique homomorphisme $\chi : (\Z/D\Z)^{\times} \to \{-1,1\}$ tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$. De plus
-$$
-\chi([-1]) = 
-\left\{
-\begin{array}{cc}
-1 & \text{ si } D>0,\\
--1 &\text{ si } D<0.
-\end{array}
-\right.
-$$
+Soit $D\ne 0$ un discriminant, i.e. un nombre $D \equiv 0,1 \pmod 4$. Alors il existe un unique homomorphisme $\chi : (\Z/D\Z)^{\times} \to \{-1,1\}$ tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$.
 \end{prop}
+
 \begin{proof}
 Soit $x = [u] \in (\Z/D\Z)^{\times}$ la classe d'un entier $u \in \Z$. V\'erifions qu'il existe un entier $m>0$, $m$ impair tel que $x = [m]$.
 
@@ -7209,6 +7541,36 @@ Comme le symbole de Jacobi prolonge le symbole de Legendre, $\chi([p]) = \legend
 
 L'application $\chi$ est bien un homomorphisme de groupes : si  $x,y$ sont des classes de $(\Z/D\Z)^{\times}$, et $m,n$ des repr\'esentants  positifs impairs de ces classes, alors $mn$ est un repr\'esentant positif impair de la classe $xy$, donc,  en utilisant la proposition \ref{prop168},
 $$\chi(x) \chi(y) = \chi([m]) \chi([n]) = \legendre{D}{m} \legendre{D}{n} = \legendre{D}{mn} = \chi([mn]) = \chi(xy).$$
+
+Il n'existe qu'un seul homomorphisme de groupes $(\Z/D\Z)^{\times} \to \{-1,1\}$ tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$. En effet, nous avons vu que toute classe $x \in (\Z/D\Z)^{\times} $ contient un entier impair positif, qui est produit de nombres premiers impairs premiers avec $D$. La connaissance de $\chi([p])$ pour ces valeurs de $p$ d\'etermine donc $\chi$.
+\end{proof}
+
+\begin{prop} \label{valeurs_de_chi}
+Soit $\chi : (\Z/D \Z)^{\times} \to \{-1,1\}$  l'unique homomorphisme tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$. 
+
+\item[(i)]
+$$
+\chi([-1]) = 
+\left\{
+\begin{array}{cc}
+1 & \text{ si } D>0,\\
+-1 &\text{ si } D<0.
+\end{array}
+\right.
+$$
+\item[(ii)] Supposons que  $D \equiv 1 \pmod 4$ (alors $2 \wedge D = 1$, et donc $[2] \in (\Z/D\Z)^{\times}$). 
+$$
+\chi([2]) = 
+\left\{
+\begin{array}{cc}
+1 & \text{ si } D\equiv 1 \pmod 8,\\
+-1 &\text{ si } D \equiv 5 \pmod 8.
+\end{array}
+\right.
+$$
+\end{prop}
+\begin{proof}
+\item[(i)]
 Calculons $\chi([-1])$.
 
 \item[$\bullet$] Si $D>0, D \equiv 1 \pmod 4$,
@@ -7299,11 +7661,7 @@ $$
 \right.
 $$
 
-Il n'existe qu'un seul homomorphisme de groupes $(\Z/D\Z)^{\times} \to \{-1,1\}$ tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$. En effet, nous avons vu que toute classe $x \in (\Z/D\Z)^{\times} $ contient un entier impair positif, qui est produit de nombres premiers impairs premiers avec $D$. La connaissance de $\chi([p])$ pour ces valeurs de $p$ d\'etermine donc $\chi$.
-\end{proof}
-
-Remarque : on peut calculer $\chi([2])$ dans le cas o\`u $D \equiv 1 \pmod 4$ (alors $2 \wedge D = 1$, et donc $[2] \in (\Z/D\Z)^{\times}$). 
-
+\item[(ii)]
 Si $D>0$,
 \begin{align*}
 \chi([2]) &= \chi([D+2])\\
@@ -7333,6 +7691,7 @@ $$
 \end{array}
 \right.
 $$
+\end{proof}
 
 La proposition \ref{prop176} permet de trouver les diviseurs premiers de la forme $x^2 + n y^2$.
 
@@ -7379,12 +7738,19 @@ x^2 + 14y^2, \ 2x^2+7y^2 & \text{repr\'esentent} &1,9,15,23,25,39 & \text{dans }
 $$
 Comme ces r\'esultats sont purement calculatoires, nous les confions au programme {\bf genre1} donn\'e dans l'annexe informatique du chapitre.
 
-Pour g\'en\'eraliser, donnons la d\'efinition suivante.
+Pour g\'en\'eraliser, d\'efinissons le genre d'une forme quadratique.
+
+Si $D \ne 0$, notons $\mathscr{P}(D)$ l'ensemble des formes primitives $f, g$ de discriminant $D$, et d\'efinies positives si $D<0$.
+
+Consid\'erons la relation {\bf eq} d\'efinie entre deux formes primitives $f, g \in \mathscr{P}(D)$  par $f\  \mathrm{eq}\  g$ si et seulement si $f, g$ repr\'esentent les m\^emes valeurs dans $(\Z/D\Z)^\times$. Explicitement
+\begin{align*}
+f \ \mathrm{eq}\  g \iff  \{u\in (\Z/D\Z)^{\times} \ | \ \exists x_0,y_0 \in \Z, \ u = [f(x_0,y_0)]\} \\=  \{u\in (\Z/D\Z)^{\times} \ | \ \exists x_0,y_0 \in \Z, \ u = [g(x_0,y_0)]\}.
+\end{align*}
+Le relation {\bf eq} est une relation d'\'equivalence. Un genre est par d\'efinition une classe d'\'equivalence pour cette relation. Le genre d'une forme $f$ est la classe d'\'equivalence (pour la relation {\bf eq}) de $f$. L'ensemble $G_D$ des genres est l'ensemble quotient $\mathscr{P}(D)/ \mathrm{eq}$.  R\'esumons : 
 \begin{dfn}
-Deux formes primitives d\'efinies positives de discriminant $D$ appartiennent au m\^eme genre si elle repr\'esentent les m\^eme valeurs dans $(\Z/D\Z)^{\times}$.
+Deux formes de $\mathscr{P}(D)$ appartiennent au m\^eme genre si elle repr\'esentent les m\^eme valeurs dans $(\Z/D\Z)^{\times}$.
 \end{dfn}
 
-Ceci revient \`a d\'efinir le genre d'une forme (primitive, d\'efinie positive) de discriminant $D$, comme l'ensemble des formes de discriminant $D$ qui repr\'esentent les m\^emes \'el\'ements de $(\Z/D\Z)^{\times}$.
 
 Deux formes \'equivalentes repr\'esentent les m\^emes entiers, donc sont dans le m\^eme genre. Ainsi chaque genre est une r\'eunion finie de classes de formes. Dans les exemples pr\'ec\'edents, pour $D = -20$, il existe deux genres, chacun ne contenant qu'une classe de formes, et pour $D = -56$, il existe aussi deux genres, mais contenant chacun deux classes. 
 
@@ -7403,14 +7769,14 @@ $$
 
 Dans les exemples pr\'ec\'edents, les valeurs de $(\Z/DZ)^{\times}$ repr\'esent\'ees par une forme de discriminant $D$ sont dans $\ker(\chi)$. Ceci est g\'en\'eral :
 
-\begin{prop}\label{prop178}
+\begin{prop}\label{prop185}
 Soit $f$ une forme binaire de discriminant $D$. Soit $H$ l'ensemble des valeurs de $(\Z/D\Z)^{\times}$ repr\'esent\'ees par $f$. Alors $$H \subset \ker(\chi),$$ o\`u $\chi : (\Z/D \Z)^{\times} \to \{-1,1\}$ est l'unique homomorphisme tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$.
 \end{prop}
 
 \begin{proof}
 Ici $f = (a,b,c)$ et une forme de discriminant $D$, et $H$ est l'ensemble des valeurs de $(\Z/D\Z)^{\times}$ repr\'esent\'ees par $f$. 
 
-Soit $u \in H$ . Alors $u = [m] \in (\Z/D\Z)^{\times}$, o\`u $m$ est repr\'esent\'e par $f$. 
+Soit $u \in H$. Alors $u = [m] \in (\Z/D\Z)^{\times}$, o\`u $m$ est repr\'esent\'e par $f$ et v\'erifie ${m>0},\ {m \wedge D = 1}$. 
 
  Alors 
  $m = ax^2 + bxy +cy^2$, o\`u $x,y \in \Z$, et $m$ est premier avec $D$. Si $d= x\wedge y$, $x = d x', y =dy',\ x',y' \in \Z,\ x'\wedge y'=1$, et $m= d^2 m'$, o\`u $m' =f(x',y')$ est primitivement repr\'esent\'e par $f$. Alors $\chi([m]) = \chi([d^2 m']) = \chi([d])^2 \chi([m']) = \chi([m'])$, et ainsi $m\in \ker(\chi) \iff m'\in \ker(\chi)$. On peut donc supposer que $m$ est primitivement repr\'esent\'e par $f(x,y)$. La proposition \ref{lagrange} du chapitre ``Formes quadratiques'' montre alors que $D$ est un carr\'e modulo $4m$. Il existe donc $b,c \in \Z$ tels que $D = b^2 - 4m c$.
@@ -7420,94 +7786,66 @@ Cas 1 : $m$ est impair. Puisque $m \wedge D = 1$, $m$ est aussi premier avec $b$
  
 Cas 2 :  $m$ est pair. Comme $m\wedge D = 1$, ceci ne peut se produire que si $D \equiv 1 \pmod 4$. Comme $D = b^2 - 4mc$, $D \equiv b^2 \pmod 8$. Ici $b$ est impair, par cons\'equent $b^2 = (2k+1)^2 = 8 \frac{k(k+1)}{2} + 1 \equiv 1 \pmod 8$, et donc
 $$D \equiv 1 \pmod 8.$$
-Le calcul de $\chi([2])$ qui suit la proposition \ref{prop176} montre qu'alors $\chi([2]) = 1$. 
+Le calcul de $\chi([2])$ donn\'e dans la proposition \ref{valeurs_de_chi} montre alors que $\chi([2]) = 1$. 
 
 Ecrivons $m$ sous la forme $m = 2^k l$, o\`u $l$ est un entier impair positif. Comme $m \wedge b = 1$, $l$ est premier avec $b$, donc $\legendre{b}{l}\ne 0$, et ainsi
 $$\chi([m]) = \chi([2])^k \chi(l) = \legendre{D}{l} =\legendre{b^2 - 4\times2^k l c}{l} = \legendre{b^2}{l} = \legendre{b}{l}^2 = 1.$$
 Ainsi $H \subset \ker(\chi)$.
  \end{proof}
  
- Donnons une formule qui compl\`ete la formule classique, dite de Brahmagupta,
- $$(x^2+ny^2)(x'^2+ny'^2) = (xx'-nyy')^2 + n(xy'+yx')^2$$
-  pour les formes principales de discriminants impairs.
- \begin{prop}\label{prop179}
- Si $D<0,D\equiv 1 \pmod 4$, alors
- $$\left(x^2 + xy +\left(\frac{1-D}{4}\right) y^2\right)\left(x'^2 + x'y' +\left(\frac{1-D}{4}\right) y'^2\right) = X^2 + XY +\left(\frac{1-D}{4}\right) Y^2,$$
- o\`u 
-$$
-\left\{
-\begin{array}{ccl}
-X &= &xx'  - \frac{1-D}{4} yy',\\
-Y &= &xy' + yx'+ yy'.
-\end{array}
-\right.
-$$
- \end{prop}
- \begin{proof}
-Notons $\alpha = \frac{1+\sqrt{D}}{2} =  \frac{1+i\sqrt{|D|}}{2} $, et $\mathrm{N}(z) = |z|^2$ la norme d'un nombre complexe $z$.
-Alors
-\begin{align*}
- \mathrm{N}(x + y \alpha)
-&=\left(x + \frac{y}{2} + \frac{\sqrt{D}}{2} y\right)\left(x + \frac{y}{2} - \frac{\sqrt{D}}{2} y\right)\\
-&=\left(x + \frac{y}{2}\right)^2 - \frac{D}{4} y^2\\
-&= x^2 + xy +\left(\frac{1-D}{4}\right) y^2
-\end{align*}
-Soit $P = \left(x^2 + xy +\left(\frac{1-D}{4}\right) y^2\right)\left(x'^2 + x'y' +\left(\frac{1-D}{4}\right) y'^2\right)$. Comme $\alpha^2 = \alpha +\frac{D-1}{4}$,
-\begin{align*}
-P&=\mathrm{N}(x + \alpha y) \mathrm{N}(x'+ \alpha y')\\
-&=\mathrm{N}[(x+ \alpha y)(x'+\alpha y')]\\
-&=\mathrm{N}\left[xx' +\alpha(xy'+yx') + \left(\alpha +\frac{D-1}{4}\right)yy'\right]\\
-&=\mathrm{N}\left[ xx' +\frac{D-1}{4} yy' + (xy'+yx' +yy') \alpha \right]\\
-&=X^2 + XY +\left(\frac{1-D}{4}\right) Y^2,
-\end{align*}
-o\`u 
-$$
-\left\{
-\begin{array}{ccl}
-X &= &xx'  - \frac{1-D}{4} yy',\\
-Y &= &xy' + yx'+ yy'.
-\end{array}
-\right.
-$$
+ Caract\'erisons l'ensemble des \'el\'ements de $(\Z/D\Z)^{\times}$ repr\'esent\'es par la forme principale de discriminant $D$.
+ 
+ \begin{prop}\label{caracterisation_H}
+Soit $D<0$, $D \equiv 0,1 \pmod 4$ un discriminant. Soit $H$ l'ensemble des \'el\'ements de $(\Z/D\Z)^{\times}$ repr\'esent\'es par la forme principale de discriminant $D$, not\'ee $f_0$. 
+\be
+\item[(i)] Si $D \equiv 1 \pmod 4$, alors 
+$$H =   \{ u \in (\Z/D\Z)^{\times}\ | \ \exists v \in \Z/D\Z, \ u = v^2 \}.$$
+(Donc $H$ est le groupe des carr\'es de $(\Z/D\Z)^{\times}.$)
+\item[(ii)]
+Si $D \equiv 0 \pmod 4$, alors 
+$$H =   \{ u \in (\Z/D\Z)^{\times}\ | \ \exists v \in \Z/D\Z, \ u = v^2 \text{ ou } u = v^2 +n\}.$$
+\ee
+\end{prop}
 
-\end{proof} 
+\begin{proof}
 
+\item[(i)] Si $D \equiv 1 \pmod 4$, pour tous les entiers $x,y$, alors la forme principale est donn\'ee par $f(x,y) = x^2+ xy + \frac{1-D}{4} y^2$. Alors, pour tous les entiers $x,y$,
+\begin{align*}
+4 f_0(x,y) &= 4 x^2 + 4xy +(1-D) y^2\\
+&= (2x + y)^2 - D y^2\\
+&\equiv (2x +y)^2 \pmod D
+\end{align*}
+Ici $D$ est impair, donc $[2]$ est inversible dans $\Z/D\Z$. Si $[m] \in (\Z/D\Z)^{\times}$ est repr\'esent\'e par $f_0$ , alors $[m] = [f_0(x,y)]$, o\`u $ x,y\in \Z$, donc $[m] = ([x] + [2]^{-1}[y])^2$ est le carr\'e d'un \'el\'ement $[m'] \in \Z/D\Z$.  Comme $m \equiv m'^2 \pmod D$, $m'$ est premier avec $D$, donc $[m]$ est un carr\'e du groupe $(\Z/D\Z)^{\times}$. R\'eciproquement, si $[m] = [a]^2 \in (\Z/D\Z)^{\times}$ est un carr\'e, alors $[m] = [f(a,0)]$ est repr\'esent\'e par $f_0$. $H$ est donc dans ce cas le groupe des carr\'es de $(\Z/D\Z)^{\times}$.
+
+\item[(ii)] Si $D = -4n \equiv 0 \pmod 4$, alors la forme principale est $f(x,y) = x^2 + ny^2$. Si $[\alpha] \in H$, alors $\alpha  \equiv \beta^2 + n \gamma^2 \pmod{D}$, o\`u $\beta, \gamma \in \Z$. Si $\gamma = 2 \delta$ est pair, alors $\alpha \equiv \beta^2 + 4 n \delta^2 \equiv \beta^2 \pmod D$, et si $\gamma = 2 \delta + 1$ est impair, $\beta^2 + n\gamma^2 = \beta^2 + (2\delta +1)^2 n  \equiv \beta^2 +n \pmod D$. R\'eciproquement, tout nombre $\alpha$ congru modulo $D$ \`a  $\beta^2$ ou $\beta^2 +n$ v\'erifie $\alpha \equiv f(\beta,0) \pmod D$, ou $\alpha \equiv f(\beta,1) \pmod D$, donc $[\alpha] \in H$. Ainsi 
+\begin{align*}
+H =& \{ u \in (\Z/D\Z)^{\times}\ | \ \exists v \in \Z/D\Z, \ u = v^2 \text{ ou } u = v^2 +n\}\\
+\end{align*}
+\end{proof}
   
  
  
  
- \begin{prop}\label{prop181}
-Soit $D$ un entier n\'egatif, $D \equiv 0,1 \pmod 4$, et soit $\chi : (\Z/D \Z)^{\times} \to \{-1,1\}$ l'unique homomorphisme tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$. Si $f(x,y)$ est une forme de discriminant $D$, alors
+ \begin{prop}\label{prop187}
+Soit $D$ un entier n\'egatif, $D \equiv 0,1 \pmod 4$, et soit $\chi : (\Z/D \Z)^{\times} \to \{-1,1\}$ l'unique homomorphisme tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair qui ne divise pas $D$. Si $f(x,y)$ est une forme primitive de discriminant $D$, alors
 \be
 \item[(i)] Les \'el\'ements de $(\Z/D\Z)^{\times}$ repr\'esent\'es par la forme principale de discriminant $D$ forment un sous-groupe $H \subset \ker(\chi)$.
 \item[(ii)] Les \'el\'ements de $(\Z/D\Z)^{\times}$ repr\'esent\'es par la forme $f(x,y)$ forment une classe de $\ker(\varphi)$ modulo $H$.
 \ee
 \end{prop}
 \begin{proof}
-\item[(i)] Nous savons par la proposition \ref{prop178} que $H \subset \ker(\chi)$.
+\item[(i)] 
 
-Si $D \equiv 0 \pmod 4$, alors $D = -4n$, et la forme principale $f_D$ de discriminant $D$ s'\'ecrit
-$$f_D(x,y) = x^2 + n y^2.$$
-Si $u, v \in (\Z/D\Z)^{\times}$ sont repr\'esent\'es par $f$, alors $u = x^2+ny^2, v = z^2 + n w^2$, o\`u $x,y,n,w \in \Z/D\Z$.
-L'identit\'e de Brahmagupta dans $\Z/D\Z$ s'\'ecrit ici
-$$(x^2 + ny^2)(z^2 + n w^2) = (xz-nyw)^2 + n (xw +yz)^2.$$
-Ainsi $uv$ est repr\'esent\'e par la forme $x^2+ny^2$, et $uv \in (\Z/D\Z)^{\times}$, donc $uv \in H$.
 
-Ainsi $H$ contient $[1] = [1]^2 + [n] [0]^2$,  $H$ est stable pour le produit, et $H$ est fini, donc $H$ est un sous-groupe de $\ker(\chi)$.
+Nous savons par la proposition \ref{prop185} que $H \subset \ker(\chi)$.
 
-Supposons maintenant que $D \equiv 1 \pmod 4$. Si $u,v$ sont repr\'esent\'es par la forme principale de discriminant $D$
-$$f_D(x,y) = x^2 + xy + \left(\frac{1-D}{4} \right) y^2,$$
-alors la proposition 14 montre que le produit $uv$ l'est aussi. Comme dans le premier cas, ceci montre que $H$ est un sous-groupe de $\ker(\chi)$.
+Si $u ,v\in (Z/D\Z)^\times$ sont des \'el\'ements de $H$, alors il existe des entiers $m,n$ v\'erifiant $u =[m], v = [n]$ tels que $m,n$ sont repr\'esent\'es par la forme principale $f_0$ de discriminant $D$. Ainsi $m,n$ sont repr\'esent\'es par la classe principale $\mathscr{C}_0 = [f_0]$.
+ Comme $\mathscr{C}_0^2 = \mathscr{C}_0$, $nm$ est repr\'esent\'e par $\mathscr{C}_0$ (proposition \ref{representation_produit}), donc par $f_0$. Alors $uv = [mn]$ est repr\'esent\'e par $f_0$, donc $uv \in H$.
 
-Remarque : 
-\begin{align*}
-4 f_D(x,y) &= 4 x^2 + 4xy +(1-D) y^2\\
-&= (2x + y)^2 - D y^2\\
-&\equiv (2x +y)^2 \pmod D
-\end{align*}
-Ici $D$ est impair, donc $[2]$ est inversible dans $\Z/D\Z$. Si $[m] \in (\Z/D\Z)^{\times}$ est repr\'esent\'e par $f_D$ , alors $[m] = [f_D(x,y)],\ x,y\in \Z$, donc $[m] = ([x] + [2]^{-1}[y])^2$ est le carr\'e d'un \'el\'ement $[m'] \in \Z/D\Z$.  Comme $m \equiv m'^2 \pmod D$, $m'$ est premier avec $D$, donc $[m]$ est un carr\'e du groupe $(\Z/D\Z)^{\times}$. R\'eciproquement, si $[m] = [a]^2 \in (\Z/D\Z)^{\times}$ est un carr\'e, alors $[m] = [f(a,0)]$ est repr\'esent\'e par $f_D$. $H$ est donc ici le groupe des carr\'es de $(\Z/D\Z)^{\times}$, ce qui prouve \`a nouveau, sans l'aide de la proposition \ref{prop179}, que $H$ est un sous-groupe.
+Comme $1$ est repr\'esent\'e par la forme principale, $H$ contient $[1]$. De plus, $H$ est stable pour le produit, et $H$ est fini, donc $H$ est un sous-groupe de $\ker(\chi)$.
 
-\item[(ii)] Supposons que $D \equiv 0 \pmod 4$, soit $D = -4n$. Appliquons la proposition \ref{prop180} au nombre $M = 4n$ : il existe un entier $a\in \Z$, premier avec $4n$, et repr\'esent\'e primitivement par $f$. D'apr\`es la proposition \ref{clef} du chapitre ``Formes quadratiques binaires'', il existe $b,c\in \Z$ tels que $f \overset{+}{\sim} g = (a,b,c)$, o\`u $a$ est premier avec $4n$. Comme les formes $f$ et $g$ repr\'esentent les m\^emes valeurs enti\`eres, elles ont m\^eme discriminant $D = -4n$, et elles repr\'esentent les m\^emes valeurs dans $(\Z/D\Z)^{\times}$. Si on note $L$ l'ensemble des valeurs de  $(\Z/D\Z)^{\times}$ repr\'esent\'ees par $f$, alors 
+
+\item[(ii)] Supposons d'abord que $D = -4n \equiv 0 \pmod 4$. Appliquons la proposition \ref{prop180} au nombre $M = 4n$ : il existe un entier $a\in \Z$, premier avec $4n$, et repr\'esent\'e primitivement par $f$. D'apr\`es la proposition \ref{clef} du chapitre ``Formes quadratiques binaires'', il existe $b,c\in \Z$ tels que $f \overset{+}{\sim} g = (a,b,c)$, o\`u $a$ est premier avec $4n$. Comme les formes $f$ et $g$ repr\'esentent les m\^emes valeurs enti\`eres, elles ont m\^eme discriminant $D = -4n$, et elles repr\'esentent les m\^emes valeurs dans $(\Z/D\Z)^{\times}$. Si on note $L$ l'ensemble des valeurs de  $(\Z/D\Z)^{\times}$ repr\'esent\'ees par $f$, alors 
 \begin{align*}
 L &=  \{u\in (\Z/D\Z)^{\times} \ | \ \exists (x_0,y_0) \in \Z^2, \ u = [g(x_0,y_0)]\}\\
 \end{align*}
@@ -7518,9 +7856,9 @@ Montrons que $L = [a]^{-1}H$.
 
 Si $[u] \in L$, alors il existe $x_0,y_0 \in \Z$ tels que $ [u]  = [g(x_0,y_0)]$.
 
-Alors  ${[a][u]= [(a x_0 + b'y_0)^2 + ny_0^2]}$, ce qui montre que $[a] [u]$ est repr\'esent\'e par la forme principale de discriminant $D$, et ainsi que $[a][u] \in H$, soit encore $[u] \in [a]^{-1} H$.
+Alors  ${[a][u]= [(a x_0 + b'y_0)^2 + ny_0^2]}$, ce qui montre que $[a] [u] \in (\Z/D\Z)^\times$ est repr\'esent\'e par la forme principale de discriminant $D$, et ainsi que $[a][u] \in H$, soit encore $[u] \in [a]^{-1} H$.
 
-R\'eciproquement, si $[u] \in [a]^{-1} H$, alors $au \equiv z^2 + nw^2 \pmod{4n}$ pour certains entiers $z,w$. Comme $a$ est inversible modulo $4n$, d'inverse $a'$ (i.e. $aa' \equiv 1 \pmod {4n}$), le syt\`eme d'inconnues $x_0,y_0$ modulo $p$
+R\'eciproquement, si $[u] \in [a]^{-1} H$, alors  $u (\Z/D\Z)^\times$, et $au \equiv z^2 + nw^2 \pmod{4n}$ pour certains entiers $z,w$. Comme $a$ est inversible modulo $4n$, d'inverse $a'$ (i.e. $aa' \equiv 1 \pmod {4n}$), le syt\`eme d'inconnues $x_0,y_0$ modulo $p$
 $$
 \left\{
 \begin{array}{ccrl}
@@ -7539,21 +7877,23 @@ Alors $g(x,y) = ax^2 + bxy +cy^2$, donc $4ag(x,y) = (2ax +b)^2 - D y^2$. Comme $
 $$[a][g(x,y)] = ([a][x] + [2]^{-1}[b])^2.$$
 Montrons que l'ensemble des valeurs $L$ repr\'esent\'ees par $g$ (ou $f$) dans $(\Z/D\Z)^{\times}$ est $[a]^{-1} H$.
 
-La remarque de la partie (i) montre que $H$ est le sous-groupe des carr\'es dans $(\Z/D\Z)^{\times}$.
+La proposition \ref{caracterisation_H}(i) montre que $H$ est le sous-groupe des carr\'es dans $(\Z/D\Z)^{\times}$.
 
-Si $[u] \in L$, alors $u = [g(x_0,y_0)],\ x_0,y_0 \in \Z$, donc $$[u] =[a]^{-1} ([a][x_0] + [2]^{-1}[b])^2 \in [a]^{-1}H.$$
+Si $[u] \in L$, alors $u = [g(x_0,y_0)]$, o\`u  $x_0,y_0 \in \Z$, donc $$[u] =[a]^{-1} ([a][x_0] + [2]^{-1}[b])^2 \in [a]^{-1}H.$$
 
-R\'eciproquement, si $[u] \in [a]^{-1} H$, alors $[u] = [a]^{-1} [z]^2$ pour un entier $z$. Comme $[a]$ est inversible, l'\'equation en $[x_0]$
-$$[z] = [a][x_0] + [2]^{-1} [b]$$
-admet une solution unique $[x_0]$ (i.e. $[x_0] = [a]^{-1}([z] -[2]^{-1}[b]$), dont on choisit un repr\'esentant $x_0$, qui v\'erifie
+R\'eciproquement, si $[u] \in [a]^{-1} H$, alors $[u] = [a]^{-1} [z]^2$ pour un entier $z$. Comme $[a]$ est inversible, l'\'equation, dont $t \in \Z/D\Z$ est l'inconnue,
+$$[z] = [a]t+ [2]^{-1} [b]$$
+admet une solution unique $t$ (i.e. $t = [a]^{-1}([z] -[2]^{-1}[b]$). Soit  $x_0 \in \Z$ un entier choisi arbitrairement dans la classe $t\in \Z/D\Z$. Alors $[u] =[a]^{-1} ([a][x_0] + [2]^{-1}[b])^2$, donc $[4au] = (2[a][x_0] + [b])^2$, et ainsi
 $$4au \equiv (2ax_0 + b)^2 = 4ag(x_0,0) \pmod D.$$
-Comme $2$ et $a$ sont inversibles modulo $D$, $u \equiv g(x_0,0) \pmod D$, donc $[u] \in L$. Ainsi $L = [a]^{-1} H$ est une classe relative \`a $H$ dans le groupe $\ker(\chi)$.
+Comme $2$ et $a$ sont inversibles modulo $D$, $u \equiv g(x_0,0) \pmod D$, o\`u $u\in (\Z/D\Z)^\times$, donc $[u] \in L$. Ainsi $L = [a]^{-1} H$ est une classe relative \`a $H$ dans le groupe $\ker(\chi)$.
 \end{proof}
 
-Ainsi un genre est l'ensemble des formes (primitives, d\'efinies positives) qui repr\'esentent les valeurs d'une classe $H'$.
+Ainsi un genre est l'ensemble des formes (primitives, d\'efinies positives) qui repr\'esentent les valeurs d'une classe $H'$ relative \`a $H$. Nous d\'efinissons alors le genre d'une classe $H'$ relative \`a $H$ comme l'ensemble des formes de discriminant $D$ qui repr\'esentent les valeurs de $H'$ modulo $D$. En particulier, le genre de $H$, qui contient la forme principale, s'appelle le genre principal. 
 
-On sait d\'ej\`a (proposition \ref{repr_premier} du chapitre "Formes quadratiques binaires") que tout nombre premier impair $p$ tel que $[p] \in \ker(\chi)$ est repr\'esent\'e par une des $h(D)$ formes r\'eduites primitives de discriminant $D$. On peut maintenant pr\'eciser
-\begin{prop}
+\bigskip
+On sait d\'ej\`a (proposition \ref{repr_premier} du chapitre "Formes quadratiques binaires") que tout nombre premier impair $p$ tel que $[p] \in \ker(\chi)$,v\'erifiant donc $\legendre{D}{p} = 1$, est repr\'esent\'e par une forme de discriminant $D$, unique \`a \'equivalence pr\`es. Le nombre premier $p$ est donc repr\'esent\'e par au moins une des $h(D)$ formes r\'eduites primitives de discriminant $D$. Nous pouvons maintenant pr\'eciser quelles formes sont susceptibles de repr\'esenter $p$.
+
+\begin{prop}\label{prop188}
 Supposons que $D \equiv 0,1 \pmod 4, D<0$, et soit $H$ le sous-groupe de $\ker(\chi)$ des \'el\'ements de $(\Z/D\Z)^{\times}$ repr\'esent\'es par la forme principale de discriminant $D$. Si $H'$ est une classe relative \`a $H$ dans $\ker(\chi)$ et si $p$ est un nombre premier impair qui ne divise pas $D$, alors $[p]\in H'$ si et seulement si $p$ est repr\'esent\'e par une forme r\'eduite de discriminant $D$ dans le genre associ\'e \`a $H'$.
 \end{prop}
 \begin{proof}
@@ -7562,12 +7902,9 @@ Si $[p] \in H'$, alors $[p] \in \ker(\chi)$, donc $p$ est repr\'esent\'e par une
 Inversement, si $p$ est repr\'esent\'e par une forme r\'eduite $f$ de discriminant $D$ dans le genre associ\'e \`a $H'$, alors $H'$ est l'ensemble des valeurs repr\'esent\'ees par $f$ dans $(\Z/D\Z)^{\times}$. Puisque $[p] \in  (\Z/D\Z)^{\times}$ est repr\'esent\'e par $f$, nous concluons que $[p] \in H'$.
 \end{proof}
 
-Le genre de la forme principale s'appelle le genre principal. La classe associ\'ee $H$ est le groupe des carr\'es de $(\Z/D\Z)^{\times}$ si $D \equiv 1 \pmod 4$. Caract\'erisons $H$ si $D = -4n \equiv 0 \pmod 4$. La forme principale est $f(x,y) = x^2 + ny^2$. Si $[\alpha] \in H$, alors $\alpha  \equiv \beta^2 + n \gamma^2 \mod{D}$, o\`u $\beta, \gamma \in \Z$. Si $\gamma = 2 \delta$ est pair, alors $\alpha \equiv \beta^2 + 4 n \delta^2 \equiv \beta^2 \pmod D$, et si $\gamma = 2 \delta + 1$ est impair, $\beta^2 + n\alpha^2 = \beta^2 + (2\delta +1)^2 n  \equiv \beta^2 +n \pmod D$. R\'eciproquement, tout nombre $\alpha$ congru modulo $D$ \`a  $\beta^2$ ou $\beta^2 +n$ v\'erifie $\alpha \equiv f(\beta,0) \pmod D$, ou $\alpha \equiv f(\beta,1) \pmod D$, donc $[\alpha] \in H$. Ainsi 
-\begin{align*}
-H =& \{ u \in (\Z/D\Z)^{\times}\ | \ \exists v \in \Z/D\Z, \ u = v^2 \text{ ou } u = v^2 +n\}\\
-&= \{ [\gamma] \in (\Z/D\Z)^{\times}\ | \ \exists \beta \in \Z, \gamma \equiv \beta^2 \text{ or } \gamma \equiv \beta^2 +n \pmod D\}
-\end{align*}
-On obtient donc
+
+La proposition suivante est une cons\'equence imm\'ediate des propositions \ref{caracterisation_H} et \ref{prop188}.
+
 \begin{prop}
 Soit $D<0$, $D \equiv 0,1 \pmod 4$ un discriminant et $p$ un nombre premier impair qui ne divise pas $D$. 
 \be
@@ -7575,12 +7912,632 @@ Soit $D<0$, $D \equiv 0,1 \pmod 4$ un discriminant et $p$ un nombre premier impa
 $$p \equiv \beta^2 \pmod D.$$
 
 \item[(ii)]
-Si $D \equiv 0 \pmod 4$, alors $p$ est repr\'esent\'e par une forme de discriminant $D = -4n$ du genre principal si et seulement si pour un certain entier $\beta \in \Z$,
-$$p \equiv \beta^2, \beta^2 +n \pmod {D}.$$
+Si $D = -4n\equiv 0 \pmod 4$, alors $p$ est repr\'esent\'e par une forme de discriminant $D = -4n$ du genre principal si et seulement si pour un certain entier $\beta \in \Z$,
+$$p \equiv \beta^2,\ \beta^2 +n \pmod {D}.$$
 \ee
 \end{prop}
 
+\begin{proof}
+Soit $p$ un nombre premier impair $p$ qui ne divise pas $D$, et soit $H$ le sous-groupe de $\ker(\chi)$ des \'el\'ements de $(\Z/D\Z)^{\times}$ repr\'esent\'es par la forme principale de discriminant $D$. 
 
+La proposition \ref{prop188} appliqu\'ee \`a la classe $H' = [1]H = H$ montre que $p$ est repr\'esent\'e par une forme du genre principal si et seulement si $[p]\in H$.
+\item[$\bullet$] Si $D \equiv 1 \pmod 4$, la condition $[p] \in H$ \'equivaut \`a l'existence d'un entier $\beta$ tel que $ p \equiv \beta^2 \pmod D$ (proposition  \ref{caracterisation_H} (i))
+
+\item[$\bullet$] Si $D = -4n \equiv 0 \pmod 4$, la condition $[p] \in H$ \'equivaut \`a l'existence d'un entier $\beta$ tel que $p \equiv \beta^2$ ou $p = \beta^2 + n$ modulo $D$ (proposition  \ref{caracterisation_H} (ii)).
+\end{proof}
+
+\section{Le groupe des genres.}
+
+Dans ce paragraphe, $D$ est un discriminant non nul, $ \mathscr{P}(D)$ est l'ensemble des formes primitives de discriminant $D$, d\'efinies positives si $D<0$, $P(D)$ est le groupe des classes, et $\chi$ d\'esigne toujours l'unique homomorphisme $(\Z/D\Z)^\times$ tel que $\chi([p]) = \legendre{D}{p}$ pour tout nombre premier impair premier avec $D$. 
+
+Commençons par l'\'etude des propri\'et\'es de $\ker(\chi)$.
+
+\begin{prop}\label{prop191}
+Pour tout $u \in (\Z/D\Z)^\times$,
+$$u \in \ker(\chi) \iff u\text{ est repr\'esent\'e par une classe } \mathscr{C} \in P(D).$$
+\end{prop}
+\begin{proof}
+\item{$(\Leftarrow)$} Si $u \in (\Z/D\Z)^\times$ est repr\'esent\'e par la classe $\mathscr{C} = [f]$, la proposition \ref{prop185} montre que $u \in \ker(\chi).$
+\item{$(\Rightarrow)$} Si $u  = [a] \in (\Z/D\Z)^\times$, alors $a \wedge D = 1$, et le th\'eor\`eme de Dirichlet montre qu'il existe un nombre premier impair $p = a + kD$, pour un entier $k \in \Z$, et alors $u =[p]$, donc $\chi(u) = \legendre{D}{p}$.
+Si $u \in \ker(\chi)$, alors $\legendre{D}{p} = 1$, $D$ est un carr\'e modulo $p$. La proposition \ref{lemme_cox} montre que $p$ est repr\'esent\'e par une forme primitive $f$ de discriminant $D$ (positive si $D<0$, puisque $p>0$), donc $u$ est repr\'esent\'e par la classe $\mathscr{C} \in P(D)$ de $f$.
+\end{proof}
+
+La proposition suivante construit un homomorphisme du groupe des classes $P(D)$ dans le groupe $\ker(\chi)/H$.
+
+\begin{prop}\label{prop192}
+Soit $\Phi$ l'application
+$$\Phi : P(D) \to \ker(\chi)/H$$
+qui applique chaque classe de $P(D)$ sur la classe $H' \in \ker(\chi)/H$ des valeurs repr\'esent\'ees par cette classe dans $(\Z/D\Z)^\times$. 
+
+Alors $\Phi$ est un homomorphisme de groupes. De plus, $\Phi$ est surjectif.
+\end{prop}
+
+\begin{proof}
+L'application $\Phi$ est bien d\'efinie, puisque deux formes proprement \'equivalentes repr\'esentent les m\^emes valeurs dans $(\Z/D\Z)^\times$.
+
+Soient $\mathscr{C}_1, \mathscr{C}_2$ deux classes de formes de $P(D)$. Notons $H_1$ l'ensemble des valeurs de $(\Z/D\Z)^\times$  repr\'esent\'ees par $\mathscr{C}_1$,  et $H_2$ l'ensemble des valeurs repr\'esent\'ees par $\mathscr{C}_2$, si bien que $\Phi(\mathscr{C}_1) = H_1, \Phi(\mathscr{C}_2 )= H_2$. 
+
+Soient $u_1 \in H_1$ et $u_2 \in H_2$. Alors il existe des entiers $n_1,n_2$ tels que $u_1 = [n_1], u_2 = [n_2]$, et $\mathscr{C}_1$ repr\'esente $n_1$, $\mathscr{C}_2$ repr\'esente $n_2$.   La proposition \ref{representation_produit} du chapitre ``Groupe des classes'' montre que $\mathscr{C}_1\mathscr{C}_2$ repr\'esente l'entier $n_1n_2$. Soit $K =\Phi(\mathscr{C}_1\mathscr{C}_2)$ la classe des \'el\'ements de $(\Z/D\Z)^\times$ repr\'esent\'es par la compos\'ee $\mathscr{C}_1 \mathscr{C}_2$. Alors $K$ contient $[n_1n_2] = [n_1][n_2] = u_1 u_2$.  Ainsi $u_1 u_2 \in K$, pour tous les $u_1 \in H_1, u_2 \in H_2$, autrement dit $K$ contient la classe $H_1H_2$. Comme les classes sont disjointes ou confondues, alors $K = H_1H_2$. Ainsi $\Phi(\mathscr{C}_1) \Phi(\mathscr{C}_2) = H_1H_2 = K = \Phi(\mathscr{C}_1\mathscr{C}_2)$, et $\Phi$ est bien un homomorphisme de groupes.
+
+Montrons maintenant que $\Phi$ est surjectif.
+
+Soit $H' \in \ker(\chi)/H$. Consid\'erons un \'el\'ement $u \in H'$. Alors $u \in \ker(\chi)$, et la proposition \ref{prop191} montre que $u$ est repr\'esent\'e par une classe $\mathscr{C} \in P(D)$. Alors la classe $K = \Phi(\mathscr{C})$ contient $u$. Comme deux classes relatives \`a $H$ sont disjointes ou confondues, $K = H'$, soit $\Phi(\mathscr{C}) = H'$. Ceci montre que $\Phi$ est surjective.
+\end{proof}
+
+Cette proposition a pour corollaire les propri\'et\'es suivantes.
+
+\begin{prop}
+Soit $D<0$ un discriminant. Alors
+\item[(i)] Tous les genres de formes de discriminant $D$ contiennent le m\^eme nombre de classes de formes.
+
+\item[(ii)] Le nombre de genre de formes de discriminant $D$ est une puissance de $2$.
+\end{prop}
+
+\begin{proof}
+\item[(i)] Comme $\Phi$ est un homomorphisme de groupes, toutes les fibres $\Phi^{-1}(H')$, o\`u $H' \in \ker(\chi)/H$, ont m\^eme cardinal. Ce cardinal est le nombre de classes de $P(D)$ qui repr\'esentent $H'$, donc le nombre des classes dont la r\'eunion constitue le genre associ\'e \`a $H'$.
+\item[(ii)] Nous savons par la proposition \ref{caracterisation_H} que $H$ contient les carr\'es de $(\Z/D\Z)^*$, ce qu'on peut aussi prouver directement. En effet, si $x^2 = [n]^2$ est un carr\'e dans $(\Z/D\Z)^*$, alors $n^2 = f_0(n,0)$, o\`u $f_0$ est la forme principale, donc $u = [n]^2$ est repr\'esent\'e par la forme principale, si bien que $x^2 \in H$ pour tout $x \in (\Z/D\Z)^*$. Les classes $[x]= x + H$, o\`u $x \in \ker(\chi)$ v\'erifient alors $[x]^2 = H$, o\`u $H$ est le neutre de $\ker(\chi)/H$. Ainsi tout \'el\'ement de $\ker(\chi)/H$ est d'ordre $1$ ou $2$.
+
+	Le th\'eor\`eme de structure d'un groupe ab\'elien montre que $\ker(\chi)/H$ est produit direct de groupes cycliques, isomorphes \`a $\Z/p^\alpha\Z$. Mais si $p>2$, ou si $p = 2$ et $\alpha>1$, alors le groupe contient des \'el\'ements d'ordre sup\'erieur \`a $2$. Par cons\'equent, $\ker(\chi)/H \simeq \{-1,1\}^k, k\in \N$. La surjectivit\'e de $\phi$ montre qu'\`a chaque classe $H'$ correspond un et un seul genre, le genre des formes repr\'esentant les \'el\'ements de $H'$. Le nombre de genres est donc \'egal \`a $2^k$.
+\end{proof}
+
+Consid\'erons l'application 
+$$
+\varphi
+\left\{
+\begin{array}{ccl}
+G_D = \mathscr{P}(D)/\mathrm{eq} & \to & \ker(\chi)/H\\
+{[}f{]}_{\mathrm{eq}} & \mapsto &\{{[}f(x,y){]}_D \mid (x,y) \in \Z^2\}.
+\end{array}
+\right.
+$$
+
+Si deux formes $f,g$ de $\mathscr{P}(D)$ repr\'esentant les m\^emes valeurs dans $(\Z/D\Z)^\times$, alors elles sont dans le m\^eme genre, autrement dit $f \ \mathrm{eq}\  g$, donc leur classes d'\'equivalence pour la relation {\bf eq} sont \'egales : ${[}f{]}_{\mathrm{eq}} = {[}g{]}_{\mathrm{eq}}$. Ainsi $\varphi$ est injective.
+
+Si $H'$ est une classe de $\ker(\chi)/H$, alors la surjectivit\'e de $\Phi$ montre qu'il existe une forme $f \in \mathscr{P}(D)$ qui repr\'esente les \'el\'ements de $H'$. Alors $\varphi([f]_{\mathrm{eq}}) = H'$, ce qui prouve que $\varphi$ est bijective.
+
+
+   Ainsi l'ensemble $G_D$ des genres de formes de discriminant $D$ est en bijection avec $\ker(\chi)/H$, qui est un groupe ab\'elien, et qui munit ainsi $G$ d'une structure de groupe par transport de structure. Alors $G_D \simeq \ker(\chi)/H$. $G_D$ muni de cette loi est le groupe des genres, ce qui permet d'identifier $G_D$ et $\ker(\chi)/H$, si bien que $\ker(\chi)/H$ repr\'esente le groupe des genres. 
+   
+   Le groupe des genres est aussi repr\'esent\'e par $P(D)/\ker(\Phi)$, puisque $\Phi$ est surjective. Pour conclure,
+   $$G_D \simeq \ker(\chi)/H \simeq P(D)/\ker(\Phi).$$
+   
+   Pour repr\'esenter concr\`etement le groupe des genres, on choisit une forme $f_i$ repr\'esentant chaque genre. La compos\'ee $f_i * f_j$ de ces deux formes repr\'esente une classe $H'$ relative \`a $H$, correspondant \`a un unique $f_k$, ce qui permet de construire la table du groupe.
+
+Il reste \`a d\'eterminer le nombre de genres. Nous allons dans ce but utiliser les caract\`eres modulo $D$.
+
+
+\section{Caract\`eres d'ordre $2$ modulo $D$.}\label{section7.5}
+Le lemme suivant nous sera utile dans les deux paragraphes suivants.
+
+\begin{prop} \label{lemme_Hensel}
+Soit $x, x_1 \in \Z$.
+\item[(i)]
+ Soit $p$ un nombre premier impair.
+Si $x \equiv x_1^2 \pmod p$, o\`u $x$ est premier avec $p$, alors pour tout $k \in \N$, il existe $x_k \in \Z$ tel que $x \equiv x_k^2 \pmod{p^k}$.
+
+\item[(ii)] Si $x \equiv x_1^2 \pmod{2^3}$, o\`u $x$ est  impair, alors pour tout $k \in \N$ il existe $x_k$ tel que $x \equiv x_k^2 \pmod {2^{k+2}}$.
+\end{prop}
+\begin{proof}
+\item[(i)]
+
+Si  $x \equiv x_1^2 \pmod p$, alors il existe $k_1$ tel que $x  = x_1^2 + k_1p, \ k_1 \in \Z$.
+
+En raisonnant par r\'ecurrence sur $n$, supposons qu'il existe pour $n\geq 1$ des entiers $x_n, k_n$ tel que $x = x_n^2 + k_n p^n$.
+
+Cherchons $x_{n+1}$ sous la forme $x_{n+1} = x_n + \lambda p^n$, o\`u $\lambda \in \Z$ reste \`a d\'eterminer.
+\begin{align*}
+x \equiv x_{n+1}^2 \pmod {p^{n+1}} & \iff x \equiv (x_n + \lambda p^n)^2 \pmod {p^{n+1}}\\
+&\iff  x_n^2 + k_n p^n \equiv x_n^2 + 2 \lambda p^n x_n + \lambda^2 p^{2n} \pmod {p^{n+1}}\\
+&\iff k_n \equiv 2 \lambda x_n \pmod p.
+\end{align*}
+Comme $p$ est impair, et premier avec $x_n$ (puisque $p \wedge x = 1$), alors $p$ est premier avec $2x_n$, donc il existe un $\lambda \in \Z$ v\'erifiant la congruence $k_n \equiv 2 \lambda x_n \pmod p$. Pour un tel $\lambda$, 
+$$x \equiv x_{n+1}^2,\qquad \text{o\`u } x_{n+1} = x_n + \lambda p^n,$$
+et ainsi, il existe des entiers $x_{n+1}, k_{n+1}$ tels que $x = x_{n+1}^2 + k_{n+1} p^{n+1}$, ce qui ach\`eve la r\'ecurrence.
+\item[(ii)]
+Supposons que $x \equiv x_1^2 \pmod 8$. 
+
+En raisonnant par r\'ecurrence supposons qu'il existe pour $k \geq 21$ un entier $x _k \in \Z$ tel que $x \equiv x_k^2 \pmod 2^{k+2}$. Il existe alors $r \in \Z$ tel que $x = x_k^2 + r 2^{k+2}$.
+
+Cherchons $x_{k+1}$ sous la forme $x_{k+1} = x_k + s 2^{k+1}$, o\`u $s \in \Z$ reste \`a pr\'eciser. Alors
+\begin{align*}
+x \equiv x_{k+1}^2 \pmod{2^{k+3}} & \iff  x_k^2 + r 2^{k+2} \equiv (x_k + s 2^{k+1})^2 \pmod {2^{k+3}})\\
+&\iff r 2^{k+2} \equiv s x_k 2^{k+2}  \pmod {2^{k+3}}\\
+&\iff r \equiv s x_k \pmod 2.
+\end{align*}
+Comme $x_k$ est impair, la congruence $r \equiv s x_k \pmod 2$ admet une solution $s$. Pour un tel $s$, l'entier $x_{k+1} = x_k + s 2^{k+1}$ v\'erifie $x \equiv x_{k+1}^2 \pmod{2^{k+3}}$, ce qui ach\`eve la r\'ecurrence.
+\end{proof}
+
+Remarques : la partie (i) montre que si $\legendre{x}{p} = 1$, alors $[x]$ est un carr\'e de $(\Z/p\Z)^\times$.
+
+L'hypoth\`ese de (ii) \'equivaut \`a $x \equiv 1 \pmod 8$. Alors $[x]$ est un carr\'e de $(\Z/2^k\Z)^\times$ pour tout $k \geq 3$
+
+\bigskip
+Les caract\`eres sur $(\Z/p\Z)^*$ ont \'et\'e \'etudi\'es dans la premi\`ere partie. L'unique caract\`ere d'ordre 2 sur $(\Z/p\Z)^*$ est le caract\`ere de Legendre $(\cdot/p)$.
+
+Dressons maintenant une liste compl\`ete des caract\`eres d'ordre 1 ou 2 d\'efinis sur le groupe $(\Z/D\Z)^\times$, o\`u $D$ est un discriminant. Un tel caract\`ere $\chi$ est alors \`a valeurs dans $\{-1,1\}$, puisque pour tout $x \in (\Z/D\Z)^\times$, $\chi(x)^2 = 1$, o\`u $\chi(x) \in \C$, donc $\chi(x) = \pm 1$.
+
+Si $D = \pm 2^k p_1^{m_1}\cdotp_r^{m_r}$, o\`u $p_1,\ldots,p_r$ sont des nombres premiers impairs, le lemme chinois montre que
+\begin{align}\label{eq7.0}
+\varphi 
+\left\{
+\begin{array}{ccl}
+(\Z/D\Z)^\times & \to & (\Z/2^k\Z)^\times \times (\Z/p_1^{m_1}\Z)^\times \times \cdots \times (\Z/p_r^{m_r}\Z)^\times\\
+{[}x {]}_D& \mapsto & ({[}x{]}_{2^k}, {[}x{]}_{p_1^{m_1}},\ldots,{[}x{]}_{p_r^{m_r}})
+\end{array}
+\right.
+\end{align}
+est un isomorphisme de groupes. 
+
+Tout homomorphisme $\chi : (\Z/D\Z)^\times \to \{-1,1\}$ est de la forme $\chi = \chi' \circ \varphi$, o\`u $\chi' : (\Z/2^k\Z)^\times \times (\Z/p_1^{m_1}\Z)^\times \times \cdots \times (\Z/p_r^{m_r}\Z)^\times \to \{-1,1\}$ est un homomorphisme. Il suffit donc de trouver tous les caract\`eres d'ordre $2$ sur $(\Z/p^{m}\Z)^*$, o\`u $p$ est premier.
+
+\bigskip
+$\bullet$  Si $p$ est un nombre premier impair, le symbole de Legendre $(./p)$ induit un homomorphisme
+$$
+\chi_{p,m}
+\left\{
+\begin{array}{ccl}
+(\Z/p^m\Z)^\times & \to & \{-1,1\}\\
+{[}x{]}_{p^m} & \mapsto & \legendre{x}{p}.
+\end{array}
+\right.
+$$
+Cette application est bien d\'efinie : si $x \equiv y \pmod {p^m}$, alors $x \equiv y \pmod p$, donc $\legendre{x}{p} = \legendre{y}{p}$. De plus les propri\'et\'es du symbole de Legendre montrent que $\chi_{p,m}$ est un homomorphisme.
+
+Nous savons qu'une moiti\'e des entiers $x$ tels que $1\leq x \leq p-1$ v\'erifie $\legendre{x}{p} = 1$, et que l'autre moiti\'e de ces \'el\'ements v\'erifie $\legendre{x}{p} = -1$. Ceci montre que $\chi_{p,m}$ est surjectif.
+
+Le noyau de cet homomorphisme est constitu\'e des \'el\'ements $[x]_{p^m} \in (\Z/p^m\Z)^\times$ tels que $\legendre{x}{p} = 1$. Montrons qu'il s'agit du groupe des carr\'es de $(\Z/p^m\Z)^\times$ :
+$$\ker(\chi_{p,m}) = \{[x]_{p^m} \in (\Z/p^m\Z)^\times \mid (x/p)= 1\} = \{c^2 \mid c \in (\Z/p^m\Z)^\times\}.$$
+
+Si $u = c^2$, o\`u $c =[x]_{p^m}$ est un carr\'e de $(\Z/p^m\Z)^\times$, alors  $\chi_{p,m}(u) =\legendre{x^2}{p} = \legendre{x}{p}^2= 1$, donc $u \in \ker(\chi_{p,m})$.
+
+R\'eciproquement, si $u = [x]_{p^m}$ v\'erifie $\legendre{x}{p} = 1$, alors $x$ est un carr\'e modulo $p$. La proposition \ref{lemme_Hensel} montre que $x$ est un carr\'e modulo $p^m$. Ainsi $u$ est un carr\'e du groupe $(\Z/p^m \Z)^\times$.
+
+ Nous avons vu ci-dessus que $\chi_{p,m}$, d\'efini par $\chi_{p,m}([x]) = (x/p)$ est un homomorphisme d'ordre $2$. C'est le seul, car $(\Z/p^m\Z)^\times$ est cyclique (voir [Ireland,Rosen], paragraphe 4.1, ou Aritm\'etique, vol. 1). Si $g$ est un g\'en\'erateur de $(\Z/p^m\Z)^\times$, et $\chi : (\Z/p^m\Z)^\times \to \{-1,1\}$ un homomorphisme, alors $\chi$ est d\'etermin\'e par $\chi(g)$. Comme $\chi(g) = \pm 1$, il n'existe que deux caract\`eres sur $(\Z/p^m\Z)^\times$, \`a valeurs dans $\{-1,1\}$, le caract\`ere trivial $\varepsilon$ et $\chi_{p,m}$.
+
+\bigskip
+$\bullet$ Si $D = -4n \equiv 0 \pmod 4$, alors $D = \pm 2^{a+2} p_1^{m_1}\cdots p_r^{m_r}$, o\`u $a\geq 0$. De plus,
+\begin{align}\label{eq7.2}
+(\Z/D\Z)^\times \simeq (\Z/2^{a+2} \Z)^\times \times  (\Z/p_1^{m_1}\Z)^\times \times \cdots \times  (\Z/p_r^{m_r}\Z)^\times.
+\end{align}
+Il reste \`a d\'eterminer les caract\`eres d'ordre $1$ ou $2$ d\'efinis sur $(\Z/2^{a+2} \Z)^\times$. Les propri\'et\'es du symbole de Jacobi permettent de mettre en \'evidence deux tels caract\`eres.
+
+Le premier est d\'efini pour tout $a\geq 0$. Il est induit par $(-1/\cdot)$ : 
+\begin{align}\label{eq7.3}
+\delta 
+\left\{
+\begin{array}{ccl}
+(\Z/2^{a+2} \Z)^\times & \to & \{-1,1\}\\
+{[}m{]} & \mapsto & \legendre{-1}{m} = (-1)^{\frac{m-1}{2}},\qquad ( m>0, m \text{ impair}).
+\end{array}
+\right.
+\end{align}
+L'application $\delta$ est bien d\'efinie, puisque 
+$$m \equiv m' \pmod {2^{a+2}} \Rightarrow m \equiv m' \pmod 4 \Rightarrow \legendre{-1}{m} 
+= (-1)^{\frac{m-1}{2}} = (-1)^{\frac{m'-1}{2}} = \legendre{-1}{m'}.$$
+Il s'agit bien d'un homomorphisme. En effet, la proposition \ref{prop168} donne pour $m_1,m_2$ entiers impairs positifs,
+$$ \delta([m_1]) \delta([m_2]) = \legendre{-1}{m_1}\legendre{-1}{m_2} = \legendre{-1}{m_1m_2} = \delta([m_1][m_2]).$$
+
+Le second est d\'efini pour tout $a\geq 1$. Il est induit par $(2/\cdot)$ :
+\begin{align}\label{eq7.4}
+\nu 
+\left\{
+\begin{array}{ccl}
+(\Z/2^{a+2} \Z)^\times & \to & \{-1,1\}\\
+{[}m{]} & \mapsto & \legendre{2}{m} = (-1)^{\frac{m^2-1}{8}}, \qquad ( m>0, m \text{ impair}).
+\end{array}
+\right.
+\end{align}
+L'application $\nu$ est bien d\'efinie, puisque 
+$$m \equiv m' \pmod {2^{a+2}} \Rightarrow m \equiv m' \pmod 8 \Rightarrow \legendre{2}{m} 
+= (-1)^{\frac{m^2-1}{8}} = (-1)^{\frac{m'^2-1}{8}} = \legendre{2}{m'}.$$
+C'est un homomorphisme pour la m\^eme raison que pr\'ec\'edemment.
+
+Dans le cas $a\geq 1$, nous connaissons alors $4$ caract\`eres d'ordre $1$ ou $2$ sur $\Z/2^{a+2}\Z$. Ce sont $\varepsilon, \delta, \nu, \delta \nu$ (o\`u $(\delta \nu)[m]) = \legendre{-2}{m}$). V\'erifions que ces quatre caract\`eres sont distincts pour $a\geq 1$.
+
+Comme $a\geq 1$, le groupe $(\Z/2^{a+2} \Z)^\times$ est isomorphe au produit direct de $2$ groupes cycliques $C_2 \times C_{a+1}$. Il est engendr\'e par $[-1]$ et $[5]$ (voir [Ireland,Rosen], paragraphe 4.1, ou Aritm\'etique, vol. 1). Calculons les images de  $[-1]$ et $[5]$  par ces quatre homomorphismes.
+\begin{align*}
+\delta([-1] &= \legendre{-1}{2^{a+2}-1} = (-1)^{2^{a+1} - 1} = -1,\\
+\delta([5]) &= \legendre{-1}{5} = 1,\\
+\nu([-1)] &= \legendre{2}{2^{a+2} - 1} = (-1)^\frac{(2^{a+2} -1)^2 -1}{8} = (-1)^{2^{a}(2^{a+1} -1)} = 1,\\
+\nu([5]) & = \legendre{2}{5} = -1.
+\end{align*}
+ 
+Nous obtenons ainsi le tableau de valeurs suivantes :
+$$
+\begin{array}{c|cc}
+& -1 &  \phantom{-}5\\
+\hline
+\varepsilon & \phantom{-}1 &\phantom{-} 1\\
+\delta &-1 & \phantom{-}1\\
+\nu & \phantom{-}1 & -1\\
+\delta \nu & -1 & -1
+\end{array}
+$$
+Ceci montre que ces quatre caract\`eres sont distincts si $a\geq 1$. Ils forment un groupe \`a $4$ \'el\'ements, isomorphe au groupe de Klein $C_2 \times C_2$.
+
+\bigskip
+Montons que cette liste de caract\`eres d'ordre $2$ sur $(\Z/2^{a+2}\Z)^\times$ est compl\`ete. 
+
+Supposons d'abord $a\geq 1$. Soit $\chi : (\Z/2^{a+2}\Z)^\times \to \{-1,1\}$ un homomorphisme. Puisque $(\Z/2^{a+2}\Z)^\times$ est engendr\'e par $[-1],[5]$, $\chi$ est caract\'eris\'e par les valeurs $\chi([-1]), \chi([5])$. La table de valeurs pr\'ec\'edente montre que $\chi \in \{\varepsilon, \delta, \nu, \delta \nu\}$.
+
+Si $a = 0$, alors $(\Z/4\Z)^\times = \{1,3\}$. Les seuls caract\`eres d'ordre $1$ ou $2$ sont $\varepsilon ,\delta$.
+
+D\'eterminons les noyaux de ces homomorphismes.
+
+Si $a = 0$, alors $\ker(\delta) = \{[1]\}$.
+
+Si $a \geq 1$, soit $[m] \in (\Z/2^{a+2}\Z)$, o\`u $0 < m < 2^{a+2}$ est impair. Alors 
+
+\begin{align*}
+[m] \in \ker(\delta) &\iff (-1)^{m-1}{2} = 1 \iff m \equiv 1 \pmod 4,\\
+[m] \in \ker(\nu) &\iff (-1)^\frac{m^2 - 1}{8} = 1 \iff m \equiv 1, 7 \pmod 8,\\
+[m] \in \ker(\delta \nu) &\iff \legendre{-2}{m} = 1 \iff (-1)^\frac{m^2-1}{8} = (-1)^\frac{m-1}{2} \iff  m\equiv 1,3 \pmod 8.
+\end{align*}
+
+Ainsi, pour $a \geq 1$,
+\begin{subequations}
+\begin{align}
+\ker(\delta) &= \{[m] \in (\Z/2^{a+2}\Z)^\times \mid m\equiv 1, 5 \pmod 8\}, \label{eq7.5a}\\
+\ker(\nu) &= \{[m] \in (\Z/2^{a+2}\Z)^\times \mid m \equiv 1,7 \pmod 8\},\label{eq7.5b}\\
+\ker(\delta \nu) &= \{[m] \in (\Z/2^{a+2}\Z)^\times \mid m \equiv 1,3 \pmod 8\}. \label{eq7.5c}
+\end{align}
+\end{subequations} 
+
+Concluons cette \'etude par cette proposition, d\'ej\`a prouv\'ee.
+\begin{prop} \label{prop196}
+\item[(i)] Les caract\`eres modulo $p^m$ d'ordre $1$ ou $2$, o\`u $p$ est un nombre premier impair, et $m \in \N^*$, sont le caract\`ere trivial $\varepsilon$, et
+$$
+\chi_{p,m}
+\left\{
+\begin{array}{ccl}
+(\Z/p^m\Z)^\times & \to & \{-1,1\}\\
+{[}x{]}_{p^m} & \mapsto & \legendre{x}{p}.
+\end{array}
+\right.
+$$
+$\chi_{p,m}$ est surjectif, et son noyau est le groupe des carr\'es de $(\Z/p^m\Z)^\times$.
+
+L'ensemble $A$ des caract\`eres  d'ordre  $1$ ou $2$ modulo $2^{a+2}$, o\`u $a \in \N$, est donn\'e par
+\be
+\item[$\bullet$] $A = \{\varepsilon, \delta, \nu, \delta \nu\}$ si $a\geq 1$, o\`u $\delta, \nu$ sont d\'efinis par (\ref{eq7.3}), (\ref{eq7.4}). 
+\item[$\bullet$] $A = \{\varepsilon, \delta\}$ si $a=0$
+\ee
+
+Les homomorphismes $\delta, \nu, \delta \nu$ sont surjectifs, de noyaux donn\'es par (\ref{eq7.5a}),(\ref{eq7.5b}),(\ref{eq7.5c}).
+\item[(ii)] Soit $D \equiv 0,1 \pmod 4$ un discriminant, o\`u $D =\pm  2^k p_1^{m_1}\cdots p_r^{m_r}$, o\`u les $p_i$ sont des premiers impairs.
+
+Si $D \equiv 1 \pmod 4$ (alors $k = 0$), il existe $2^r$ caract\`eres sur $(\Z/D\Z)^*$ d'ordre 1 ou 2.
+
+Si $D \equiv 0 \pmod 4$ (alors $k =a+2,\ a\geq 0$), il existe $2^{r+2}$ caract\`eres d'ordre $1$ ou $2$ si $a\geq 1$, et $2^{r+1}$ si $a = 0$.
+\end{prop}
+
+
+
+
+
+
+\section{Nombre de genres.}
+Il nous reste \`a compter le nombre de genres. Le r\'esultat est que le nombre de genres de formes quadratiques de discriminant $D<0$ est $2^{\mu-1}$, o\`u $\mu$ est d\'efini dans la proposition \ref{ambigues}. Ceci revient \`a prouver qu'il y a autant de genres que de formes ambigües de discriminant $D$.
+
+Commençons par le cas $D \equiv 1 \pmod 4\ (D<0)$, qui est le cas le plus simple.
+
+
+Si $D \equiv 1 \pmod 4\ (D<0)$, alors $D =  - p_1^{m_1}\cdots p_r^{m_r}$, o\`u les $p_i$ sont des nombres premiers impairs. Dans ce cas, $\mu = r$ par d\'efinition de $\mu$. Notons $\chi_i$ le caract\`ere $\chi_{p_i,m_i}$ pour $1 \leq i \leq r$. Nous obtenons alors un homomorphisme
+\begin{align}\label{eq7.1}
+\Psi : (\Z/D\Z)^\times  \to  \{-1,1\}^r,
+\end{align}
+d\'efini pour tout $u = [x]_D \in (\Z/D\Z)^\times$ par $\Psi(u) = (\chi_1([x]_{p^{m_1}}), \ldots,\chi_r([x]_{p^{m_r}}))$. Il s'agit bien d'un homomorphisme puisque chaque $\chi_i$ est un homomorphisme, et que les projections $[x]_D \mapsto [x]_{p^{m_i}}$ sont aussi des homomorphismes.
+
+Le lemme suivant fera sera une partie de la proposition \`a venir.
+
+\medskip
+{\bf Lemme.}  {\it Supposons $D \equiv 1 \pmod 4\ (D<0)$. L'homomorphisme $\Psi : (\Z/D\Z)^\times  \to  \{-1,1\}^r$ d\'efini en \ref{eq7.1} est surjectif, et son noyau est le sous-groupe $H$ des valeurs repr\'esent\'ees par la forme principale. Il induit un isomorphisme
+$$(\Z/D\Z)^*/H \simeq \{-1,1\}^r.$$
+}
+
+\begin{proof}
+Dans ce contexte, l'isomorphisme $\varphi$ donn\'e par le lemme chinois s'\'ecrit
+\begin{align}
+\varphi 
+\left \{
+\begin{array}{ccl} 
+(\Z/D\Z)^* &\overset{\sim}{\longrightarrow}& \prod_{i=1}^r (\Z/p_i^{m_i})^\times,\\
+{[}x_D{]} & \mapsto & ({[}x{]}_{p_1^{m_1}},\ldots,{[}x{]}_{p_r^{m_r}})
+\end{array}
+\right.
+\end{align}
+Alors $\Psi =\Psi' \circ \varphi$, o\`u
+$$\Psi' : \prod_{i=1}^r (\Z/p_i^{m_i})^\times \to \{-1,1\}^r$$
+est d\'efini par $\Psi'([a_1], \ldots, [a_r]) = (\chi_1([a_1]),\ldots,\chi_r([a_r]))$ (o\`u on note ici $[a_i] = [a_i]_{p_i^{m_i}}$).
+
+Le noyau de chaque $\chi_i$ \'etant le groupe des carr\'es de $(\Z/p_i^{m_i}\Z)^\times $, le noyau de $\Psi'$ est l'ensemble des $(c_1^2,\ldots,c_r^2)$, o\`u $c_i \in (\Z/p_i^{m_i}\Z)^\times$, ce qui est le groupe des carr\'es du groupe $\prod_{i=1}^r (\Z/p_i^{m_i})^\times$. Comme $\varphi$ est un isomorphisme, le noyau de $\Psi$ est donc le groupe des carr\'es de $(\Z/D\Z)^\times$. Nous avons vu (proposition \ref{caracterisation_H}) que le sous-groupe $H$ des valeurs repr\'esent\'ees par la forme principale est le groupe des carr\'es de $(\Z/D\Z)^\times$, donc $\ker(\Psi) = H$. Le premier th\'eor\`eme d'isomorphisme de groupes donne alors l'isomorphisme
+$$(\Z/D\Z)^\times/H \simeq \{-1,1\}^r.$$
+\end{proof}
+
+Nous pouvons alors compter les genres dans ce cas ($D \equiv 1 \pmod 4, D<0$).
+
+Comme l'homomorphisme $\chi : (\Z/D\Z)^\times \to \{-1,1\}$ est surjectif, $\ker(\chi)$ est d'indice 2 dans $ (\Z/D\Z)^\times$, et contient le sous-groupe $H$. Alors le deuxi\`eme th\'eor\`eme d'isomorphisme de groupes montre que
+$$(\Z/D\Z)^*/\ker(\chi) \simeq ((\Z/D\Z)^*/ H)/(\ker(\chi)/H),$$
+et l'\'egalit\'e des cardinaux donne alors $|\ker(\chi)/H|  = 2^{r-1}$. Le groupe des genres a donc $2^{r-1} = 2^{\mu-1}$ \'el\'ements dans ce cas.
+
+G\'en\'eralisons aux autres cas. Dans le cas $D \equiv 0 \pmod 4$, o\`u $D = -2^{a+2} p_1^{m_1}\cdots p_r^{m_r}$, le facteur $2$ apporte quelques complications et n\'ecessite les caract\`eres introduits au paragraphe \ref{section7.5}. 
+
+Pour suivre la m\^eme strat\'egie, nous cherchons \`a construire un homomorphisme surjectif $\psi : (\Z/D\Z)^\times \to \{-1,1\}^\mu$ dont le noyau soit $H$, o\`u $H$ est le groupe des \'el\'ements de $(\Z/D\Z)^\times$ repr\'esent\'es par la forme $x^2 + n y^2$. Dans ce cas, $H$ n'est plus le groupe des carr\'es de $(\Z/D\Z)^\times$, mais sa caract\'erisation est donn\'ee dans la proposition \ref{caracterisation_H}.
+
+La d\'efinition de l'isomorphisme \ref{eq7.0}
+\begin{align}\label{eq7.0}
+\varphi 
+\left\{
+\begin{array}{ccl}
+(\Z/D\Z)^\times & \to & (\Z/2^{a+2}\Z)^\times \times (\Z/p_1^{m_1}\Z)^\times \times \cdots \times (\Z/p_r^{m_r}\Z)^\times\\
+{[}x {]}_D& \mapsto & ({[}x{]}_{2^k}, {[}x{]}_{p_1^{m_1}},\ldots,{[}x{]}_{p_r^{m_r}})
+\end{array}
+\right.
+\end{align}
+montre que l'image de $H$ par $\varphi$ est le $n$-uplet $(H_0,H_1,\ldots H_r)$, o\`u $H_0$ est un sous-groupe de $(\Z/2^{a+2}\Z)^\times$, et $H_i$ un sous-groupe de $(\Z/p_i^{m_i}\Z)^\times$ pour $1\leq i \leq r$ (ce sont bien des sous-groupes, puisqu'ils sont les images de $H$ par les homomorphismes de projection $[x]_D \mapsto [x]_{2^{a+2}}$ et $[x]_D \mapsto [x]_{p^i}$).
+
+De plus, puisque $H = \{[x^2 + n y^2]_D \in (\Z/D\Z)^\times \mid (x,y) \in \Z^2\}$, alors $$H_i=\{ [x^2 +n y^2]_{p_i^{m_i}} \in (\Z/p_i^{m_i})^\times \mid (x,y) \in \Z^2 \}$$ est le sous-groupe de $(\Z/p_i^{m_i}\Z)^\times$ des \'el\'ements repr\'esent\'es par $x^2 + ny^2$ pour $1\leq i \leq r$, et il en va de m\^eme pour $H_0 = \{ [x^2 +n y^2]_{2^{a+2}} \in (\Z/2^{a+2}\Z)^\times  \mid (x,y) \in \Z^2 \}$.
+
+Comme $n \equiv 0 \pmod{p_i^{m_i}}$, alors $H_i =\{ [x]_{p_i^{m_i}}^2  \in (\Z/p_i^{m_i} \Z)^\times \mid x \in \Z \}$ est le groupe des carr\'es de $(\Z/p_i^{m_i}\Z)^\times$. La proposition \ref{prop196} montre que $H_i = \ker(\chi_{p_i,m_i})$.
+
+Montrons que $H_0$ est lui aussi le noyau d'un homomorphisme qui d\'epend des valeurs de $n$ modulo $8$.
+
+\be
+\item[$\bullet$] Cas 1 : $n \equiv 6 \pmod 8$ .
+
+ Alors $a \geq 1$. Montrons alors que $H_0 = \ker(\nu)$, o\`u $\nu$ d\'efini par \ref{eq7.4} est induit par $(2/\cdot)$.
+ La proposition \ref{prop196} et l'\'egalit\'e \ref{eq7.5b} montrent que
+$$\ker(\nu) = \{[m] \in (\Z/D\Z)^\times \mid m \equiv 1,7 \pmod 8\}.$$
+
+Si $u \in H_0$, alors $u = [m]_{2^{a+2}}$ o\`u $m$ positif impair v\'erifie $m = x^2 + n y^2$ pour des entiers $x,y$. Comme $n$ est pair, $x$ est impair, donc $x^2 \equiv 1 \pmod 8$.
+
+Si $y$ est impair, alors $y^2 \equiv 1 \pmod 8$, donc
+$$m = x^2 + n y^2 \equiv 1 + n \equiv 7 \pmod 8,$$
+et ainsi $\nu(u) = \legendre{2}{m} = 1$.
+
+Si $y$ est pair, $ n y^2 \equiv 0 \pmod 8$, donc $m = x^2 + ny^2 \equiv 1  \pmod 8$. Ainsi $\nu(u) = \legendre{2}{m} = 1$.
+
+Dans les deux cas, $u \in \ker(\nu)$. Nous avons prouv\'e $H_0 \subset \ker(\nu)$.
+
+Dans l'autre sens, consid\'erons $u = [m] \in \ker(\nu)$. Alors $m\equiv 1, 7 \pmod 8$. 
+
+Si $m \equiv 1 \pmod 8$, alors la proposition \ref{lemme_Hensel} montre que $m$ est un carr\'e modulo $2^{a+2}$. Alors $m \equiv x^2 \pmod {2^{a+2}}$, donc $u = [m] \in H_0$.
+
+Si $m\equiv 7 \pmod 8$, alors $m-n \equiv 1 \pmod 8$, donc $m-n$ est un carr\'e modulo $2^{a+2}$ (proposition \ref{lemme_Hensel}). Ainsi pour un certain $x \in \Z$, $m \equiv x^2 + n \, 1^2 \pmod {2^{a+2}}$, et donc $u = [m] \in H_0$. L'inclusion r\'eciproque $\ker(\nu) \subset H_0$ est prouv\'ee, et donc
+$$\ker(\nu) = H_0.$$
+
+\medskip
+\item[$\bullet$] Cas 2 : $n \equiv 4 \pmod 8$.
+
+Montrons plus bri\`evement que $H_0= \ker(\delta)$, o\`u $\delta$ d\'efini par \ref{eq7.3} est induit par $(-1/\cdot)$.
+La proposition \ref{prop196} et l'\'egalit\'e  \ref{eq7.5a} montrent que 
+$$\ker(\delta) = \{[m] \in (\Z/2^{a+2}\Z)^\times \mid m\equiv 1, 5 \pmod 8\}.$$
+Si $u = [m]$,o\`u $m =x^2 + n y^2$, alors $m = \equiv 1,5 \pmod 8$, et donc $u \in \ker(\delta)$.
+
+R\'eciproquement, si $u = [m] \in \ker(\delta)$, alors $ m\equiv 1,5 \pmod 8$. Alors $m$ ou $m-n$ est un carr\'e modulo $2^{a+2}$, et donc $u \in H_0$. Ceci prouve $$H_0 = \ker(\delta).$$
+
+\medskip
+\item[$\bullet$] Cas 3 : $n \equiv 2 \pmod 8$.
+
+Nous savons que $$\ker(\delta \nu) = \{[m] \in (\Z/2^{a+2}\Z)^\times \mid m \equiv 1,3 \pmod 8\}.$$
+
+Si $ u = [m] \in \ker(\delta \nu)$, o\`u $m = x^2 + n y^2$, alors $m \equiv 1, 5 \pmod 8$, donc $u \in \ker(\delta \nu)$.
+
+R\'eciproquement, si $u = [m] \in \ker(\delta \nu)$, alors $ m \equiv 1, 3 \pmod 8$.  Alors $m$ ou $m-n$ est un carr\'e modulo $2^{a+2}$, et donc $u \in H_0$. Ceci prouve $$H_0 = \ker(\delta \nu)$$.
+
+
+\medskip
+\item[$\bullet$] Cas 4 : $n \equiv 0 \pmod 8$.
+Alors $a \geq 2$.
+
+Ici $H_0 = \{ [x^2 +ny^2] \in (\Z/{2^{a+2}} \Z)^\times \mid (x,y) \in \Z^2\}$.
+
+Soit $ u= [m] \in H_0$, o\`u $m = x^2 + ny^2, \ x,y \in \Z$.
+Puisque $m$ est impair, et $n$ pair, $x$ est impair, donc $x^2 \equiv 1 \pmod 8$. De plus $n \equiv 0 \pmod 8$, donc $m \equiv 1 \pmod 8$, ce qui montre  (proposition \ref{lemme_Hensel}) que $[m]$ est un carr\'e de $(\Z/{2^{a+2}} \Z)^\times$. R\'eciproquement, tout carr\'e est repr\'esent\'e par $x^2 + ny^2$. Par cons\'equent
+$$H_0 = \{[m] \in (\Z/{2^{a+2}} \Z)^\times \mid m \equiv 1 \pmod 8\},$$
+et ainsi $H_0$ est le groupe des carr\'es de $(\Z/{2^{a+2}} \Z)^\times$.
+
+
+Consid\'erons l'homomorphisme 
+$$\eta
+\left\{
+\begin{array}{ccl}
+(\Z/{2^{a+2}} \Z)^\times & \to &\{-1,1\}^2\\
+m & \mapsto &(\delta(m), \nu(m)).
+\end{array}
+\right.
+$$
+Pour tout $u =[m] \in (\Z/{2^{a+2}} \Z)^\times$, 
+ \begin{align*}
+ u \in \ker(\varphi) &\iff \delta(m) = 1 \text{ et } \varepsilon(m) = 1\\
+ &\iff (m \equiv 1 \text{ ou } m \equiv 5) \text{ et } (m \equiv 1 \text{ ou } m \equiv 7) \pmod 8\\
+ &\iff m \equiv 1 \pmod 8.
+\end{align*}
+Ainsi $$\ker(\eta) = \{[m] \in (\Z/2^{a+2} \Z)^\times \mid m \equiv 1 \pmod 8 \}.$$
+Ceci montre que $$H_0 = \ker(\eta).$$
+
+\medskip
+\item[$\bullet$] Cas 5 : $n \equiv 1,5 \pmod 8$ \qquad (soit $ n \equiv 1 \pmod 4$).
+
+Alors $a = 0$, et $H_0 = \{[x^2 + ny^2 \in (\Z/4\Z)^\times \mid (x,y) \in \Z^2\}$, o\`u $(\Z/4\Z)^\times = \{1,3\}$.
+
+Soit $u = [m] \in H_0$, o\`u $m = x^2 + ny^2 \equiv x^2 + y^2 \mod 4$. Comme $x^2 \equiv 0, 1 \pmod 4$, et $y^2 \equiv 0,1 \pmod 4$, $x^2 + y^2 \equiv 0,1,2 \pmod 4$, et $m = x^2 + y^2$ est impair, donc $u = [m] = [1]$. Ainsi $H_0 = \{1\}$
+
+Ici $\delta$ induit par $(-1,\cdot)$ est d\'efini par $\delta([1] = 1, \delta([3]) = -1$, donc 
+$$H_0 = \{1\} =\ker(\delta).$$
+
+
+\medskip
+\item[$\bullet$] Cas 6 : $n \equiv 3,7 \pmod 8$ \qquad (soit $ n \equiv 3 \pmod 4$).
+
+Alors $a = 0$, et $H_0 = \{[x^2 + ny^2 \in (\Z/4\Z)^\times \mid (x,y) \in \Z^2\}$, o\`u $(\Z/4\Z)^\times = \{1,3\}$.
+
+Ici $ 1 = 1^2 + 3\cdot 0^2, 3 \equiv 0^2 + 3 \cdot 1^2$, donc $[1]$ et $[3]$ sont repr\'esent\'es par $x^2 + n y^2$. Ainsi $H_0$ est le groupe $(\Z/4\Z)^\times$ tout entier.
+$$H_0 =  (\Z/4\Z)^\times = \ker(\varepsilon).$$
+\ee
+
+D\'efinissons le $\mu$-uplet $(\varepsilon_1,\ldots, \varepsilon_{\mu})$ des caract\`eres assign\'es \`a $D$ par $\chi_1, \chi_2, \ldots, \chi_r$ si $D \equiv 1 \pmod  4$, o\`u $\mu = r$,  
+soit
+$$\begin{array}{c|c|c}
+D & \text{caract\`eres assign\'es} & \mu\\
+\hline
+D \equiv 1 \pmod 4 & \chi_1, \chi_2, \ldots, \chi_r& r
+\end{array}
+$$
+et par le tableau suivant si $D = -4n \equiv 0 \pmod 4$ :
+\begin{align}\label{assignes}
+\begin{array}{c|c|c}
+ n & \text{caract\`eres assign\'es} & \mu\\
+ \hline
+ n \equiv 3,7 \mod 8 & \chi_1,\ldots,\chi_r & r\\
+ n \equiv 1,5 \mod 8 & \delta, \chi_1,\ldots,\chi_r&r+1\\
+ n \equiv 2 \mod 8 & \delta \nu,\chi_1,\ldots,\chi_r&r+1\\
+ n \equiv 6 \mod 8 & \nu,\chi_1,\ldots,\chi_r&r+1\\
+ n \equiv 4 \mod 8 & \delta,\chi_1,\ldots,\chi_r&r+1\\
+ n \equiv 0 \mod 8 & \delta, \nu ,\chi_1,\ldots,\chi_r&r+2
+ \end{array}
+\end{align}
+Nous retrouvons bien le m\^eme nombre $\mu$ que celui d\'efini dans la proposition \ref{ambigues} pour d\'eterminer le nombre de classes ambigües :
+\begin{align}\label{eq7.9}
+\begin{array}{r|c}
+ & \mu\\
+\hline
+D \equiv 1 \pmod 4 & r\\
+\hline
+D = -4n \equiv 0 \pmod 4&\\
+\hline
+n\equiv 3 \pmod 4 & r\\
+n \equiv 1,2 \pmod 4 & r+1\\
+n \equiv 4 \pmod 8 & r+1\\
+n \equiv 0 \pmod 8 & r+2
+\end{array}
+\end{align}
+o\`u $D = -4n$ dans les quatre derniers cas.
+
+Quand $D = -4n <0$, l'application
+$$
+\Psi' : (\Z/2^{a+2}\Z)^\times \times (\Z/p_1^{m_1}\Z)^\times \times \cdots \times (\Z/p_r^{m_r}\Z)^\times  \to  \{-1,1\}^\mu
+$$
+est d\'efinie dans le cas $mu = r+2$ par 
+\begin{align*}
+\Psi'(u_0, u_1,\ldots, u_{r}) &=(\delta(u_0),\nu(u_0),\chi_1(u_1),\ldots, \chi_r(u_{r}),
+\end{align*}
+et de façon analogue dans les autres cas. Comme $\Psi = \Psi' \circ \varphi$, nous obtenons, pour tout $m$ premier avec $D$,
+\begin{align}\label{eq7.11}
+\psi([m]_D) = (\varepsilon_1([m]_{2^{a+2}}),\ldots,\varepsilon_\mu([m]_{p_r^{m_r}})).
+\end{align}
+L'homomorphisme $\Psi'$ est surjectif, puisque chaque homomorphisme $\delta, \nu, \chi_1,\ldots, \chi_r$ est surjectif.
+L'\'etude par cas pr\'ec\'edente montre que
+$$\ker(\Psi') = (H_0,H_1,\ldots,H_r).$$
+Comme $\Psi = \Psi' \circ \varphi$, et $\varphi(H) = (H_0,H_1,\ldots,H_r)$, o\`u $\varphi$ est un isomorphisme, alors
+$$\ker(\Psi) = H,$$
+et $\psi$ est surjective.
+
+Nous obtenons donc la proposition suivante
+\begin{prop} \label{prop198}
+Si $D$ est un discriminant n\'egatif,
+L'application $\Psi : (\Z/D\Z)^\times \to \{-1,1\}^\mu$ induit un isomorphisme
+$$ (\Z/D\Z)^\times/H \simeq \{-1,1\}^\mu.$$
+\end{prop}
+
+Nous obtenons donc le nombre de genres.
+\begin{prop} \label{nombre_de_genres}
+Soit $D <0$ un discriminant.
+
+L'ordre du groupe $G_D$ des genres de formes quadratiques de discriminant $D$ est $2^{\mu-1}$, o\`u $\mu$ est donn\'e par le tableau \ref{eq7.9}. Il est \'egal au nombre de classes ambigües de discriminant $D$.
+Ainsi $G_D \simeq \ker(\chi) / H \simeq \{-1,1\}^{\mu-1}$.
+\end{prop}
+\begin{proof}
+Comme l'homomorphisme $\chi : (\Z/D\Z)^\times \to \{-1,1\}$ est surjectif, $\ker(\chi)$ est d'indice 2 dans $ (\Z/D\Z)^\times$, et contient le sous-groupe $H$. Alors le deuxi\`eme th\'eor\`eme d'isomorphisme de groupes montre que
+$$(\Z/D\Z)^*/\ker(\chi) \simeq ((\Z/D\Z)^*/ H)/(\ker(\chi)/H),$$
+et l'\'egalit\'e des cardinaux donne alors $|\ker(\chi)/H|  = 2^{\mu - 1}$. Le groupe des genres $G_D$, isomorphe \`a $\ker(\chi)/H$ a donc $2^{\mu-1}$ \'el\'ements.
+
+C'est aussi le nombre de classes ambigües d'apr\`es la proposition \ref{ambigues}, autrement dit l'ordre du groupe des \'el\'ements d'ordre 1 o\`u 2 dans le groupe des classes.
+\end{proof}
+
+
+Nous pouvons pr\'eciser la nature des \'el\'ements du genre principal.
+
+\begin{prop}
+Le genre principal est la r\'eunion des classes de $P(D)^2$, le sous-groupe des carr\'es du groupe des classes $\mathrm{P}(D)$. Ainsi tout forme $f$ du genre principal est proprement \'equivalente \`a un carr\'e $g * g$.
+\end{prop}
+
+\begin{proof}
+Notons ici $C$ le groupe des classes $\mathrm{P}(D)$. La proposition \ref{prop192} montre que $\Phi : C \to \ker(\chi)/H$ est un homomorphisme, et la proposition \ref{nombre_de_genres} que $\ker(\chi)/H \simeq \{-1,1\}^{\mu-1}$. La compos\'ee
+$$\xi : C \to \ker(\chi)/H \overset{\sim}{\longrightarrow} \{-1,1\}^{\mu-1}$$
+est un homomorphisme, et $\ker(\Phi) = \ker(\xi)$.
+
+Si $\mathscr{C} \in C^2$, i.e. si $\mathscr{C}  = \mathscr{C}'^2$, o\`u $\mathscr{C}' \in C$, alors $\xi(\mathscr{C} ) = \xi( \mathscr{C}')^2 = (1,\ldots,1)$, donc $C^2 \subset \ker(\Phi)$.
+
+L'application induite par $\xi$,
+\begin{align}\label{eq7.10}
+\overline{\xi}
+\left\{
+\begin{array}{ccl}
+C/C^2 & \to&\{-1,1\}^{\mu-1}\\
+\mathscr{C} \cdot C^2 & \mapsto & \xi(\mathscr{C})
+\end{array}
+\right.,
+\end{align}
+est bien d\'efinie, puisque $\mathscr{C}_1\cdot C^2 = \mathscr{C}_2 \cdot C^2$ entra\^ine $\mathscr{C}_1\mathscr{C}_2^{-1} \in C^2 \subset \ker(\xi)$, donc $\xi(\mathscr{C}_1) = \xi(\mathscr{C}_2)$. De plus $\overline{\xi}$ est un homomorphisme, et il est surjectif puisque $\Phi$ est surjectif. (proposition \ref{prop192}).
+
+Soit $\lambda : C \to C^2$ l'homomorphisme d\'efini par $\lambda(\mathscr{C}) = \mathscr{C}^2$. Son noyau $C_0 = \ker(\lambda)$ est le groupe des classes dont l'ordre est $1$ ou $2$ dans le groupe $C$, autrement dit le groupe des classes ambigües. Nous obtenons ainsi la suite exacte courte
+$$1 \to C_0 \to C \overset{\lambda}{\longrightarrow} C^2 \to 1.$$
+Par cons\'equent, $C/C^2 \simeq C_0$, et donc l'indice de $C_0$ dans $C$ est 
+$$(C:C^2) = |C_0| = 2^{\mu-1},$$
+d'apr\`es la proposition \ref{ambigues}.
+Ainsi l'homomorphisme $\overline{\xi}$ d\'efini en (\ref{eq7.10}) est surjectif, et $|C/C^2| = |\{-1,1\}^{\mu - 1}| = 2^{\mu-1}$, donc $\overline{\xi}$ est un isomorphisme.
+
+Par cons\'equent, $C/C^2 \simeq C/\ker(\xi)$, o\`u $C^2 \subset \ker(\xi)$, donc $C^2 = \ker(\xi) = \ker(\Phi)$. Comme $\ker(\chi)$ est la r\'eunion des classes du genre principal, le genre principal est bien la r\'eunion des classes de $P(D)^2$.
+\end{proof}
+
+Le genre genre d'une forme quadratique est d\'efini chez Gauss et d'autres auteurs de façon diff\'erente.
+
+Etant donn\'e une forme $f$ de discriminant $D$, choisissons un nombre $a$ premier avec $D$. Si $(\varepsilon_1, \ldots, \varepsilon_\mu)$ est le $\mu$-uplet des caract\`eres assign\'es \`a $D$, d\'efinis dans le tableau \ref{assignes}, alors le caract\`ere complet de $f$ est le $\mu$-uplet  $(\varepsilon_1([a]), \ldots ,\varepsilon_\mu([a]))$. Deux formes sont dans le m\^eme genre s'ils ont le m\^eme caract\`ere complet. Le lien avec la d\'efinition du genre donn\'e dans ce chapitre est donn\'e par la proposition suivante.
+
+\begin{prop}
+Le caract\`ere complet d\'epend seulement de la forme $f$, et pas du choix de $a$ premier avec $D$. Deux formes de discriminant $D$ sont dans le m\^eme genre si et seulement s'ils ont le m\^eme caract\`ere complet.
+\end{prop}
+
+\begin{proof}
+Supposons que $f(x,y)$ repr\'esente $a$, o\`u $a\wedge D = 1$. Alors le caract\`ere complet n'est autre que $\Psi([a]) = (\varepsilon_1([a]), \ldots ,\varepsilon_\mu([a]))$, d\'efini en \ref{eq7.11}. D'apr\`es la proposition \ref{prop187}, les valeurs possibles de $[a]_D$ sont dans une classe $H'$ relative au sous-groupe $H$ de $\ker(\chi)$, et cette classe d\'etermine le genre de $f(x,y)$. La proposition \ref{prop198} montre que  $\Psi(\Z/D\Z)^\times \to \{-1,1\}^\mu$ a pour noyau $H$, donc $[a] H = [b] H$, o\`u $a,b$ sont premiers avec $D$, entraine $\Psi([a]) = \Psi([b])$. Le caract\`ere complet ne d\'epend donc pas du choix de $a$ premier avec $D$.
+
+Soit maintenant $f_1, f_2$ deux formes, et $H_i$ l 'ensemble des \'el\'ements de $(\Z/D\Z)^\times$ repr\'esent\'es par $f_i$ pour $i = 1,2$. Comme $H_i$ est un classe associ\'ee \`a $H$, $H_i = [a_i] H$, o\`u $a_i$ premier avec $D$ est repr\'esent\'e par $f_i$. L'\'egalit\'e $H = \ker(\Psi)$ montre que
+\begin{align*}
+f_1 \text{ eq } f_2&\iff H_1 = H_2\\
+&\iff [a_1] H = [a_2] H\\
+&\iff [a_1] [a_2]^{-1} \in H\\
+&\iff  [a_1] [a_2]^{-1} \in \ker(\Psi)\\
+&\iff \Psi(a_1) = \Psi(a_2).
+\end{align*}
+Ceci montre que deux formes sont dans le m\^eme genre ($f_1$ eq $f_2$) si et seulement s'ils ont le m\^eme caract\`ere complet.
+\end{proof}
+Cette proposition donne un algorithme pour d\'eterminer si deux formes sont dans le m\^eme genre (voir appendice informatique).
+
+\section{Nombres idoines d'Euler.}
+Chaque genre est r\'eunion du m\^eme nombre de classes de formes. Un cas int\'eressant est le cas o\`u chaque genre contient une seule classe de formes.
+
+\begin{dfn}
+L'entier $n \in \N^*$ est un nombre idoine si chaque genre de formes de discriminant $D = -4n$ contient exactement une classe de $\mathrm{P}(D)$.
+\end{dfn}
+
+Pour que $n$ soit idoine, il faut et il suffit que le genre principal ne contienne que la classe de la forme $x^2 + ny^2$. Alors un nombre premier $p$ est repr\'esent\'e par une forme du genre principal si et seulement si il est repr\'esent\'e par la forme principale. L'ensemble des entiers repr\'esent\'es par une forme du genre principale est le sous-groupe $H$ de $(\Z/D\Z)^\times$ d\'ecrit dans la proposition \ref{caracterisation_H}. 
+
+Les entiers $n \in \N^*$ tels que $h(D) = h(-4n) = 1$ sont donc idoines.
+
+Les programme {\bf genre1} de l'appendice informatique permet de v\'erifier que $6,10,13,15,\cdots$ sont des nombres idoines (v\'erifiant de plus  $h(-4n) >1$), et de calculer le groupe $H$ correspondant.
+
+Dans ce cas, le probl\`eme de la repr\'esentation d'un nombre premier $p$ par $x^2 + ny^2$ est compl\`etement r\'esolu. Ainsi
+\begin{align*}
+p = x^2 + \phantom{1}6y^2, \ x,y \in \Z &\iff p  \equiv 1,7 \pmod {24},\\
+p = x^2 + 10 y^2, \ x,y \in \Z  & \iff p \equiv 1,9,11,19 \pmod {40},\\
+p = x^2 + 13 y^2, \ x,y \in \Z  & \iff p \equiv 1,9,17,25,29,49 \pmod {52},\\
+p = x^2 + 15y^2, \ x,y \in \Z   & \iff p \equiv 1,19,31,49 \pmod {60},
+\cdots
+\end{align*}
+et d'autre exemples suivront dans l'appendice.
+
+\newpage
 \begin{subappendices}
 \section{R\'ecr\'eation informatique.}
 \subsection{Genre d'une forme quadratique.}
@@ -7663,14 +8620,6 @@ def appartient_genre_principal(f):
     else:
         return(False)
 
-def squarefree(n):
-    l = ifactors(n)
-    sqf = True
-    for p,a in l:
-        if a > 1:
-            sqf = False
-    return sqf
-
 if __name__ == "__main__":
     D = -7559
     l = []
@@ -7679,6 +8628,55 @@ if __name__ == "__main__":
             l.append(f)
     print(l)            
 \end{verbatim}
+
+L'appel de la fonction {\bf representants} donne les entiers repr\'esent\'es par une forme $f$ modulo $D$. Elle permet de mettre en \'evidence les genres de formes quadratiques.
+\begin{verbatim}
+In [1]: from nombreDeClasses import h, formes_reduites
+
+In [2]: from genre1 import representants
+
+In [3]: D = -4 * 5; h(D)
+Out[3]: 2
+
+In [4]: for q in formes_reduites(D):
+   ...:     print(q,'=>',representants(q))
+   ...:     
+(1, 0, 5) => [1, 9]
+(2, 2, 3) => [3, 7]
+\end{verbatim}
+
+Ces r\'esultats signifient qu'il existe deux classes de formes de discriminant $-20$, les formes $x^2 + 5 y^2$ et $2x^2 + 2 xy + 3y^2$, et deux genres.
+
+Ainsi
+$$\begin{array} {rcl}
+p =x^2+5y^2,\ x,y\in \Z & \iff & p\equiv 1,9 \pmod{20},\\
+p = 2x^2 + 2xy + 3y^2,\ x,y\in \Z &\iff & p \equiv 3,7 \pmod{20}.
+\end{array}
+$$
+
+Prenons maintenant l'exemple $D = -4 \times 14 = - 56$.
+
+\begin{verbatim}
+In [5]: D = -4 * 14
+
+In [6]: for q in formes_reduites(D):
+   ...:     print(q,'\t=>',representants(q))
+   ...:     
+(3, -2, 5) 	=> [3, 5, 13, 19, 27, 45]
+(1, 0, 14) 	=> [1, 9, 15, 23, 25, 39]
+(2, 0, 7) 	 => [1, 9, 15, 23, 25, 39]
+(3, 2, 5) 	 => [3, 5, 13, 19, 27, 45]
+
+\end{verbatim}
+
+Il existe donc quatre classes de discriminant $-56$, r\'eparties en deux genres. De plus
+$$\begin{array} {rcl}
+p =x^2+14y^2 \text{ ou } p = 2x^2+7y^2,\ x,y\in \Z & \iff & p\equiv 1,9,15,23,25,39 \pmod{56},\\
+p = 3x^2 \pm 2xy + 5y^2,\ x,y\in \Z &\iff & p \equiv 3,5,13,19,27,45 \pmod{56}.
+\end{array}
+$$
+
+
 \end{subappendices}
 
 \part{TH\'EORIE ALG\'EBRIQUE DES NOMBRES.}
@@ -7933,6 +8931,7 @@ alors $P$ est un $\Z$-module libre de rang $n$.
 Comme $P \subset N$, la proposition $\ref{M141}$ montre que $P$ est un $\Z$-module libre de rang $s \leq n$. Alors l'inclusion $M \subset P$ montre que $n \leq s$, donc $s = n$.
 \end{proof}
 
+
 \chapter{Anneau des entiers d'un corps de nombres.}
 Nous avons d\'etermin\'e l'anneau ${\cal O}_K$ des entiers alg\'ebriques d'un corps $K$ dans le cas des extensions quadratiques. Nous g\'en\'eralisons cette \'etude dans ce chapitre.
 
@@ -7952,7 +8951,7 @@ Comme la dimension $[K:\Q]$ est finie, tout \'el\'ement de $K$ est alg\'ebrique 
 
 Rappelons ici une preuve du th\'eor\`eme de l'\'el\'ement primitif, dans le cas particulier des corps de nombres.
 \begin{prop}\label{separabilite}
-Soit $K$ un sous-corps de $\C$, et $\alpha \in \C$ un nombre alg\'ebrique sur $K$. Alors les racines dans $\C$ du polynôme minimal $p(x) = \Pi_{\alpha,K}(x)$ de $\alpha$ sur $K$ sont des racines simples. 
+Soit $K$ un sous-corps de $\C$, et $\alpha \in \C$ un nombre alg\'ebrique sur $K$. Alors les racines dans $\C$ du polyn\^ome minimal $p(x) = \Pi_{\alpha,K}(x)$ de $\alpha$ sur $K$ sont des racines simples. 
 \end{prop}
 
 \begin{proof}
@@ -7960,7 +8959,7 @@ Supposons que $p(x) = x^n+a_{n-1}x^{n-1}+ \cdots+a_0$, o\`u $n = [K(\alpha):K]$,
 $$p(x) = (x - \beta)^2 q(x),\qquad q(x) \in K[x].$$
 La d\'erivation formelle de $p(x)$ est alors
 $$p'(x) = (x-\beta)^2 q'(x) + 2 (x-\beta) q(x),$$
-et donc $\beta$ est une racine de $p'(x)$. Puisque $p(x)$ est irr\'eductible sur $K$, c'est le polynôme minimal de $\beta$, et $p'(\beta) = 0$, donc $p$ divise $p'$. Mais $\deg(p'(x)) < \deg(p(x))$, donc $p'(x) = 0$. Mais $p'(x) = nx^{n-1} + r(x)$, o\`u $\deg(r(x))<n-1$ et $n = [K(\alpha) : K] \ne 0$, donc $p'(x) \ne 0$. Cette contradiction montre que $p(x)$ n'a que des racines simples dans $\C$.
+et donc $\beta$ est une racine de $p'(x)$. Puisque $p(x)$ est irr\'eductible sur $K$, c'est le polyn\^ome minimal de $\beta$, et $p'(\beta) = 0$, donc $p$ divise $p'$. Mais $\deg(p'(x)) < \deg(p(x))$, donc $p'(x) = 0$. Mais $p'(x) = nx^{n-1} + r(x)$, o\`u $\deg(r(x))<n-1$ et $n = [K(\alpha) : K] \ne 0$, donc $p'(x) \ne 0$. Cette contradiction montre que $p(x)$ n'a que des racines simples dans $\C$.
 
 
 \end{proof}
@@ -7970,7 +8969,7 @@ Alors il existe $\gamma \in \C$, alg\'ebrique sur $K$, tel que
 $$K(\alpha,\beta) = K(\gamma).$$
 \end{prop}
 \begin{proof}
-Soient $p(x),q(x)$ les polynômes minimaux de $\alpha, \beta$ sur $K$.
+Soient $p(x),q(x)$ les polyn\^omes minimaux de $\alpha, \beta$ sur $K$.
 Alors $p(x)$ se factorise dans $\C$ sous la forme
 \begin{align*}
 p(x) &= (x-\alpha_1)\cdots(x- \alpha_m),\\
@@ -8003,7 +9002,7 @@ Cette \'egalit\'e contredit le choix de $c$. Cette contradiction montre que $p_1
 Si $\zeta \in \C$ est une racine de $\delta$, alors $x -\zeta$ divise $p_1(x)$ et $q(x)$, donc $\zeta = \beta$. Si $\deg(\delta(x))>1$, $\delta(x) = (x - \beta)^k$, o\`u $k>1$. Mais alors $(x - \beta)^k$ divise $q(x)$, ce qui contredit la proposition \ref{separabilite}. Ainsi
 $$\delta(x) = \mathrm{pgcd}(p_1(x), q(x)) = x - \beta.$$
 
-Comme $p_1(x)$ et $q(x)$ sont des polynômes de $K(\gamma)[x]$, le th\'eor\`eme de B\'ezout montre que $x- \beta = \delta(x) = a(x) p_1(x) + b(x) q(x)$ pour certains $a(x), b(x) \in K(\gamma)[x]$. Ainsi $x - \beta \in K(\gamma)[x]$, et donc $\beta \in K(\gamma)$, et aussi  $ \alpha = \gamma - c \beta \in K(\gamma)$.
+Comme $p_1(x)$ et $q(x)$ sont des polyn\^omes de $K(\gamma)[x]$, le th\'eor\`eme de B\'ezout montre que $x- \beta = \delta(x) = a(x) p_1(x) + b(x) q(x)$ pour certains $a(x), b(x) \in K(\gamma)[x]$. Ainsi $x - \beta \in K(\gamma)[x]$, et donc $\beta \in K(\gamma)$, et aussi  $ \alpha = \gamma - c \beta \in K(\gamma)$.
 
 Ceci montre que $K(\alpha,\beta) \subset K(\gamma)$. De plus, puisque $\gamma = \alpha + c \beta$, o\`u $c \in \Q$, $\gamma \in K(\alpha,\beta)$, donc $K(\gamma) \subset  K(\alpha,\beta)$. Nous avons prouv\'e
 $$K(\alpha, \beta) = K(\gamma).$$
@@ -8038,7 +9037,7 @@ $$K = \Q(\alpha_1,\ldots,\alpha_n) = \Q(\alpha).$$
 
 \section{Plongements complexes}
 
-Si $\alpha \in \overline{\Q}$, nous noterons $I_{\alpha,K} = \{P \in K[x] \mid  P(\alpha) = 0\}$. C'est un id\'eal de $K[x]$, non nul puisque $\alpha$ est alg\'ebrique. Il est engendr\'e par un unique polynôme unitaire, appel\'e polynôme minimal de $\alpha$ sur $K$, not\'e $\Pi_{\alpha,K}$, et $\Pi_{\alpha,K}$ est irr\'eductible dans $K[x]$. Ainsi
+Si $\alpha \in \overline{\Q}$, nous noterons $I_{\alpha,K} = \{P \in K[x] \mid  P(\alpha) = 0\}$. C'est un id\'eal de $K[x]$, non nul puisque $\alpha$ est alg\'ebrique. Il est engendr\'e par un unique polyn\^ome unitaire, appel\'e polyn\^ome minimal de $\alpha$ sur $K$, not\'e $\Pi_{\alpha,K}$, et $\Pi_{\alpha,K}$ est irr\'eductible dans $K[x]$. Ainsi
 $$I_{\alpha,K} = \{P \in K[x] \mid  P(\alpha) = 0\} = (\Pi_{\alpha,K}) = \Pi_{\alpha,K}\cdot K[x].$$
 
 Soit 
@@ -8068,7 +9067,7 @@ Les plongements de $\Sigma(L/K)$ sont des plongements complexes $K$-lin\'eaires.
 \end{dfn}
 
 
-Soit $\sigma \in \Sigma(K)$, et $P  = \sum_{i=0}^m a_i x^i \in K[x]$. Par d\'efinition, nous noterons $P^\sigma$ le polynôme d\'efini par $P^{\sigma} = \sum_{i=0}^m \sigma(a_i) x^i \in \sigma(K)[x]$. Si $P,Q \in K[x]$, alors $(PQ)^\sigma = P^\sigma Q^\sigma$. L'application $P \mapsto P^\sigma$ d\'efinit un isomorphisme d'anneaux.
+Soit $\sigma \in \Sigma(K)$, et $P  = \sum_{i=0}^m a_i x^i \in K[x]$. Par d\'efinition, nous noterons $P^\sigma$ le polyn\^ome d\'efini par $P^{\sigma} = \sum_{i=0}^m \sigma(a_i) x^i \in \sigma(K)[x]$. Si $P,Q \in K[x]$, alors $(PQ)^\sigma = P^\sigma Q^\sigma$. L'application $P \mapsto P^\sigma$ d\'efinit un isomorphisme d'anneaux.
 
 \begin{prop}(Lemme de prolongement)
 Soit $K \subset L$ une extension de corps de nombres. L'application de restriction
@@ -8099,7 +9098,7 @@ T&\to &\C\\
 $$
 Alors $\chi$ est injective : supposons que $\sigma_1(\alpha) = \sigma_2(\alpha) = \beta$, o\`u $\sigma_1, \sigma_2 \in T$. Puisque $m = [K(\alpha):K] $ est fini, tout \'el\'ement $\gamma \in L=K(\alpha)$ s'\'ecrit sous la forme $\gamma = a_{m-1} \alpha^{m-1} + \cdots + a_0$, avec $a_0,\ldots,a_{m-1} \in K$, alors $\sigma_1(\gamma) = a_{m-1} \beta^{m-1} + \cdots + a_0 = \sigma_2(\gamma)$, donc $\sigma_1 = \sigma_2$.
 
-D\'eterminons maintenant l'image de $\chi$. Si $\beta \in \C$ est dans l'image de $\chi$, alors $\beta = \sigma(\alpha)$, o\`u $\sigma \in \Sigma(L)$ v\'erifie $\sigma|_K = \tau$. Notons $\Pi_{\alpha,K}(x) =x^m+ c_{m-1} x^{m-1} + \cdots +c_0 \in K[x]$ le polynôme minimal de $\alpha$ sur $K$. En appliquant $\sigma$ \`a l'\'egalit\'e $0 = \Pi_{\alpha,K}(\alpha)$, on obtient, en utilisant $\sigma|_K = \tau$,
+D\'eterminons maintenant l'image de $\chi$. Si $\beta \in \C$ est dans l'image de $\chi$, alors $\beta = \sigma(\alpha)$, o\`u $\sigma \in \Sigma(L)$ v\'erifie $\sigma|_K = \tau$. Notons $\Pi_{\alpha,K}(x) =x^m+ c_{m-1} x^{m-1} + \cdots +c_0 \in K[x]$ le polyn\^ome minimal de $\alpha$ sur $K$. En appliquant $\sigma$ \`a l'\'egalit\'e $0 = \Pi_{\alpha,K}(\alpha)$, on obtient, en utilisant $\sigma|_K = \tau$,
 \begin{align*}
 0 &= \sigma(\alpha)^m + \sigma(c_{m-1}) \sigma(\alpha)^{m-1} + \cdots + \sigma(c_0)
  =  \beta^m+ \tau(c_{m-1}) \beta^{m-1} + \cdots + \tau(c_0) = \Pi_{\alpha,K}^\tau(\beta).
@@ -8128,7 +9127,7 @@ Si $Q \equiv Q_1 \pmod {\Pi_{\alpha,K}}$, alors $Q_1 = Q + S \, \Pi_{\alpha,K}, 
 $$\overline{\tau'}(Q + (\Pi_{\alpha,K})) = Q^\tau +(\Pi^\tau_{\alpha,K}), \qquad (Q \in K[X]).$$
 L'application $\overline{\tau'}$ est un morphisme. De plus, si  $Q + (\Pi_{\alpha,K}) \in \ker(\overline{\tau'})$, alors $Q^{\tau} \in (\Pi^\tau_{\alpha,K})$, donc $Q^\tau = U \Pi^\tau_{\alpha,K}, U \in K^\tau[X]$, donc $Q = U^{\tau^{-1}} \Pi_{\alpha,K} \in (\Pi_{\alpha,K})$, ainsi la classe de $Q$ est nulle, le noyau de $\overline{\tau'}$ est r\'eduit \`a $\{0\}$, et $\overline{\tau'}$ est injective. De plus, tout $R + (\Pi^\tau_{\alpha,K})$ est l'image de $R^{\tau^{-1}} + (\Pi_{\alpha,K})$, donc $\overline{\tau'}$ est surjective. Ainsi $\overline{\tau'}$ est un isomorphisme d'anneaux (entre deux corps). Notons que cet isomorphisme envoie la classe de $x$ sur la classe de $x$ :
 $$\overline{\tau'} ( x + (\Pi_{\alpha,K})) = x + (\Pi^\tau_{\alpha,K}).$$
-Puisque $\beta$ est par hypoth\`ese racine du polynôme $\Pi_{\alpha,K}^\tau$ irr\'eductible sur $K^\tau$, ce polynôme est le polynôme minimal de $\beta$ :
+Puisque $\beta$ est par hypoth\`ese racine du polyn\^ome $\Pi_{\alpha,K}^\tau$ irr\'eductible sur $K^\tau$, ce polyn\^ome est le polyn\^ome minimal de $\beta$ :
 $$ \Pi_{\beta, K^\tau} = \Pi^\tau_{\alpha,K}.$$
 Ceci entra\^ine l'existence d'un isomorphisme 
 $$\overline{\psi} : K^\tau[X]/(\Pi^\tau_{\alpha,K})  = K^\tau[X] /(\Pi_{\beta, K^\tau} )\to K^\tau(\beta),$$
@@ -8232,7 +9231,7 @@ $$
 Alors $m_\alpha$ est un endomorphisme du $K$-espace vectoriel $L$.
 
 \begin{dfn}
- $\chi_{\alpha,L/K} \in F[x]$ est le polynôme caract\'eristique de $m_\alpha$ : 
+ $\chi_{\alpha,L/K} \in F[x]$ est le polyn\^ome caract\'eristique de $m_\alpha$ : 
 
 $$\chi_{\alpha,L/K}(x)= \det(x\, \mathrm{id}_L - m_\alpha),$$
 et la trace et la norme de $\alpha$ sont d\'efinis par
@@ -8270,7 +9269,7 @@ La multiplicativit\'e de la norme s'exprime par la formule classique
 $$(u^2 - d v^2)(r^2 - d s^2) = (ur +vsd)^2 - d (us+vr)^2.$$
 
 \bigskip
-Si $\alpha \in L$, la relation entre le polynôme minimal $\Pi_{\alpha,K}$ et le polynôme caract\'eristique $\chi_{\alpha,L/K}$ est donn\'ee dans la proposition suivante.
+Si $\alpha \in L$, la relation entre le polyn\^ome minimal $\Pi_{\alpha,K}$ et le polyn\^ome caract\'eristique $\chi_{\alpha,L/K}$ est donn\'ee dans la proposition suivante.
 
 \begin{prop}\label{puissance}
 Si $\alpha \in L$, alors $\chi_{\alpha,L/K} = \Pi_{\alpha,K}^r$, o\`u $r = [L:K(\alpha)]$.
@@ -8294,7 +9293,7 @@ Soit $K\subset L$ une extension de corps de nombres, et $\alpha \in L$. Alors
 
 \begin{proof}
 \be
-\item[(i)] Partons de la factorisation dans $\C$ du polynôme minimal de $\alpha$ sur $K$:
+\item[(i)] Partons de la factorisation dans $\C$ du polyn\^ome minimal de $\alpha$ sur $K$:
 $$\Pi_{\alpha,K}(x) = \prod_{\gamma \in S}(x - \gamma).$$
 o\`u $S$ est l'ensemble des $d$ racines de $\Pi_{\alpha,K}$, et $d = [K(\alpha):K] = \deg(\Pi_{\alpha,K})$, ces racines \'etant distinctes (proposition \ref{separabilite}).
 La proposition \ref{corollaire_plongements} montre que l'application
@@ -8459,7 +9458,7 @@ $$
 \ee
 (d\'eterminant de Vandermonde).
 
-Rappelons que le discriminant d'un polynôme $P =(x-\alpha_1)\cdots(x-\alpha_n)$ est d\'efini par $\mathrm{disc}(P) = \prod\limits_{1\leq i < j \leq n}^n (\alpha_i-\alpha_j)^2$, ce qui donne
+Rappelons que le discriminant d'un polyn\^ome $P =(x-\alpha_1)\cdots(x-\alpha_n)$ est d\'efini par $\mathrm{disc}(P) = \prod\limits_{1\leq i < j \leq n}^n (\alpha_i-\alpha_j)^2$, ce qui donne
 $$
 \mathrm{discr}_{K(\alpha)/K}(1,\alpha,\alpha^2,\ldots,\alpha^{n-1})  = \mathrm{discr}(\Pi_{\alpha,K}).
 $$
@@ -8481,9 +9480,9 @@ Pour tout $\alpha \in K$, il existe un entier non nul $m\in \Z$ tel que $m\alpha
 \end{prop}
 
 \begin{proof}
-Soit $\alpha \in K$ et $n =[\Q(\alpha):\Q]$. Alors $\alpha$ est racine d'un polynôme unitaire \`a coefficients rationnels de degr\'e $n$. En multipliant par un multiple commun des d\'enominateurs de ces coefficients, on obtient des entiers $a_0,\ldots,a_n \in \Z$ tels que $a_n\alpha^n+\cdots+a_0 = 0$. Alors, en multipliant par $a_0^{n-1}$, on obtient l'\'egalit\'e
+Soit $\alpha \in K$ et $n =[\Q(\alpha):\Q]$. Alors $\alpha$ est racine d'un polyn\^ome unitaire \`a coefficients rationnels de degr\'e $n$. En multipliant par un multiple commun des d\'enominateurs de ces coefficients, on obtient des entiers $a_0,\ldots,a_n \in \Z$ tels que $a_n\alpha^n+\cdots+a_0 = 0$. Alors, en multipliant par $a_0^{n-1}$, on obtient l'\'egalit\'e
 $$(a_n\alpha)^n + \sum_{i=0}^{n-1} a_i a_n^{n-i} (a_n\alpha)^i = 0.$$
-Ainsi $a_n\alpha$ est racine du polynôme $x^n+ \sum_{i=0}^{n-1} a_i a_n^{n-i} x^i \in \Z[x]$. C'est donc un entier alg\'ebrique, et il appartient \`a $K$, donc $m = a_n$ convient.
+Ainsi $a_n\alpha$ est racine du polyn\^ome $x^n+ \sum_{i=0}^{n-1} a_i a_n^{n-i} x^i \in \Z[x]$. C'est donc un entier alg\'ebrique, et il appartient \`a $K$, donc $m = a_n$ convient.
 \end{proof}
 
 Les deux propositions suivantes sont des corollaires de ce r\'esultat.
@@ -8523,7 +9522,7 @@ Ceci entra\^ine que tout $\alpha \in {\cal O}_K$ v\'erifie $\mathrm{Tr}_{K/\Q}(\
 
 \item[(ii) $\Rightarrow$ (iii).] Si $\Pi_{\alpha,\Q} \in \Z[x]$, alors $\chi_{\alpha,K/\Q} =\Pi_{\alpha,\Q}^{[K:\Q(\alpha)]}  \in \Z[x]$.
 
-\item[(iii) $\Rightarrow$ (i).] L'\'el\'ement $\alpha$ est racine du polynôme unitaire $\chi_{\alpha,K/\Q} \in \Z[x]$, donc $\alpha$ est un entier alg\'ebrique de $K$, et ainsi $\alpha \in {\cal O}_K$.
+\item[(iii) $\Rightarrow$ (i).] L'\'el\'ement $\alpha$ est racine du polyn\^ome unitaire $\chi_{\alpha,K/\Q} \in \Z[x]$, donc $\alpha$ est un entier alg\'ebrique de $K$, et ainsi $\alpha \in {\cal O}_K$.
 
 \item[(i) $\Rightarrow$ (ii).] Soit $ \alpha \in {\cal O}_K$. Alors, par d\'efinition, il existe des entiers $a_0,\cdots,a_{n-1}\in \Z$ tels que $\alpha^n+ a_{n-1}\alpha^{n-1} + \cdots + a_0$. Si $\sigma \in \Sigma(K)$, alors $\sigma(\alpha)^n + a_{n-1}\sigma(\alpha)^{n-1}+ \cdots + a_0$, donc $\sigma(\alpha) \in \overline{\Z}$ pour tout $\sigma \in \Sigma(K)$.
 
@@ -8547,7 +9546,7 @@ Soit $\alpha \in K$ (qui est le corps des fractions de ${\cal O}_K$), et $P \in 
 
 Soit $Q = \prod\limits_{\sigma \in \Sigma(K)} P^\sigma$. Comme chaque $\sigma \in \Sigma(K)$ envoie les entiers alg\'ebriques de $K$ sur des entiers alg\'ebriques, alors $P^\sigma \in \overline{\Z}[x]$, donc $Q\in \overline{\Z}[x]$.
 
-De plus, pour tout $t\in \Q$, $Q(t) = \mathrm{N}_{K/\Q}(P(t)) \in \Q$ (car $P(t) \in K$, et la norme d'un \'el\'ement de $K$ est dans $\Q$). Ceci prouve que le polynôme formel $Q = \sum_{i=0}^d a_i x^i$ est dans $\Q[x]$ : en effet $(a_0,\ldots,a_n)$ est la solution du syst\`eme de Cramer
+De plus, pour tout $t\in \Q$, $Q(t) = \mathrm{N}_{K/\Q}(P(t)) \in \Q$ (car $P(t) \in K$, et la norme d'un \'el\'ement de $K$ est dans $\Q$). Ceci prouve que le polyn\^ome formel $Q = \sum_{i=0}^d a_i x^i$ est dans $\Q[x]$ : en effet $(a_0,\ldots,a_n)$ est la solution du syst\`eme de Cramer
 $$
 \begin{pmatrix}
 1 & 1 & 1 &\cdots & 1\\
@@ -8597,11 +9596,11 @@ L'application $\varphi$ est surjective par d\'efinition de $\Z[\alpha]$, et son 
 $$I = \{P \in \Z[x]\mid P(\alpha) = 0\}.$$
 Comme $\alpha$ est un entier alg\'ebrique du corps de nombre $K = \Q(\alpha)$, $\alpha \in {\cal O}_K$, et la proposition \ref{integralite} montre que $\Pi_{\alpha,\Q} \in \Z[x]$, donc $\Pi_{\alpha,\Q} \in I$ et $(\Pi_{\alpha,\Q}) \subset I$.
 
-R\'eciproquement, si $P \in I$, alors la propri\'et\'e du polynôme minimal montre l'existence de $Q \in \Q[x]$ tel que $P = \Pi_{\alpha,\Q}\, Q$. Le polynôme $\Pi_{\alpha,\Q}$ \'etant unitaire, la division euclidienne dans $\Q[x]$ de $P$ par $\Pi_{\alpha,\Q}$ est possible, et donne un quotient $Q_0 \in  \Z[x]$ et un reste $R \in \Z[x]$ tels que $P = \Pi_{\alpha,\Q}\, Q_0 + R, \deg(R) < n$. L'unicit\'e du quotient et du reste de la division euclidienne dans $\Q[x]$ montre que $R = 0$ et $Q = Q_0 \in \Z[x]$. Par cons\'equent $P \in (\Pi_{\alpha,\Q})$, et en conclusion $I = (\Pi_{\alpha,\Q})$. 
+R\'eciproquement, si $P \in I$, alors la propri\'et\'e du polyn\^ome minimal montre l'existence de $Q \in \Q[x]$ tel que $P = \Pi_{\alpha,\Q}\, Q$. Le polyn\^ome $\Pi_{\alpha,\Q}$ \'etant unitaire, la division euclidienne dans $\Q[x]$ de $P$ par $\Pi_{\alpha,\Q}$ est possible, et donne un quotient $Q_0 \in  \Z[x]$ et un reste $R \in \Z[x]$ tels que $P = \Pi_{\alpha,\Q}\, Q_0 + R, \deg(R) < n$. L'unicit\'e du quotient et du reste de la division euclidienne dans $\Q[x]$ montre que $R = 0$ et $Q = Q_0 \in \Z[x]$. Par cons\'equent $P \in (\Pi_{\alpha,\Q})$, et en conclusion $I = (\Pi_{\alpha,\Q})$. 
 
 Ainsi l'application $\overline{\varphi}$, d\'efinie par $\overline{\varphi}(P  +  I) = \varphi(\alpha) = P(\alpha)$ est un isomorphisme d'anneaux de $\Z[x]/I = \Z[x]/(\Pi_{\alpha,\Q})$ dans $\Z[\alpha]$.
 
-Tout polynôme de $\Z[x]$ est congru modulo $\Pi_{\alpha,\Q}$ \`a un unique polynôme de degr\'e inf\'erieur \`a $n$. Ainsi $(1+I,x + I, \ldots,x^{n-1} + I)$ est une $\Z\,$-base de $\Z[x]/I$, et son image par $\overline{\varphi}$ est $(1,\alpha,\ldots,\alpha^{n-1})$, qui est donc une $\Z\,$-base de $\Z[\alpha]$. Ainsi $\Z[\alpha]$ est un $\Z$-module libre de rang $n$, isomorphe \`a $\Z^n$.
+Tout polyn\^ome de $\Z[x]$ est congru modulo $\Pi_{\alpha,\Q}$ \`a un unique polyn\^ome de degr\'e inf\'erieur \`a $n$. Ainsi $(1+I,x + I, \ldots,x^{n-1} + I)$ est une $\Z\,$-base de $\Z[x]/I$, et son image par $\overline{\varphi}$ est $(1,\alpha,\ldots,\alpha^{n-1})$, qui est donc une $\Z\,$-base de $\Z[\alpha]$. Ainsi $\Z[\alpha]$ est un $\Z$-module libre de rang $n$, isomorphe \`a $\Z^n$.
 
 \end{proof}
 
@@ -8645,7 +9644,7 @@ Ceci donne une m\'ethode pour calculer ${\cal O}_K$. Partant d'un $\alpha\in \ov
 $${\cal O}_K/\Z[\alpha] \subset \left(\frac{1}{d}\, \Z[\alpha] \right) / \Z[\alpha] \simeq (\Z/d\Z)^n,$$
 si bien que ${\cal O}_K/\Z[\alpha]$ est groupe ab\'elien fini, qu'on cherche \`a d\'eterminer.
 
-Pour chacun des $d^n$ repr\'esentants $z$ du groupe quotient $\left(\frac{1}{d}\, \Z[\alpha] \right) / \Z[\alpha]$, on d\'etermine si $z \in {\cal O}_K$ en v\'erifiant que son polynôme caract\'eristique est dans $\Z[x]$. Alors ${\cal O}_K$ est le groupe ab\'elien engendr\'e par $\Z[\alpha]$ et l'ensemble des repr\'esentants de $\left(\frac{1}{d}\, \Z[\alpha] \right) / \Z[\alpha]$ qui sont des \'el\'ements de ${\cal O}_K$.
+Pour chacun des $d^n$ repr\'esentants $z$ du groupe quotient $\left(\frac{1}{d}\, \Z[\alpha] \right) / \Z[\alpha]$, on d\'etermine si $z \in {\cal O}_K$ en v\'erifiant que son polyn\^ome caract\'eristique est dans $\Z[x]$. Alors ${\cal O}_K$ est le groupe ab\'elien engendr\'e par $\Z[\alpha]$ et l'ensemble des repr\'esentants de $\left(\frac{1}{d}\, \Z[\alpha] \right) / \Z[\alpha]$ qui sont des \'el\'ements de ${\cal O}_K$.
 
 Une famille d'\'el\'ements $(e_1,\ldots,e_n)$ qui est une $\Z\,$-base de ${\cal O}_K$ sera appel\'ee une base enti\`ere de $K$.
 
@@ -8705,6 +9704,8 @@ D &=
 &= d.
 \end{align*}
 Dans chacun de ces deux cas, on retrouve bien le discriminant $D$ de la forme $\mathrm{N}(x + y \alpha)$ qui nous avait servi de d\'efinition provisoire.
+
+
 
 
 
