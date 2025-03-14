@@ -848,13 +848,12 @@ La fonction {\bf isprime} est un test de primalit\'e probaliliste, avec une cert
 La fonction {\bf ifactors} est na•ve. Elle ne peut fonctionner que pour des petits nombres. Il sera pr\'ef\'erable de la remplacer par l'ordre {\bf factor} de Sage pour les grands nombres.
 
 \begin{verbatim}
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-    Created on Sat Aug 31 19:21:15 2013
-    @author: Richard Ganaye
-"""
+
 
 from random import randint
+
 
 def powermod(a,n,p):
     """retourne a^n mod p (exponentiation rapide )
@@ -868,7 +867,8 @@ def powermod(a,n,p):
         n=n//2
     return resu
 
-    
+
+   
 def expomod(a,n,p):
     """retourne a^n mod p (exponentiation rapide )
        resultat entre -p/2 et p/2
@@ -883,51 +883,21 @@ def expomod(a,n,p):
         resu -= p
     return resu
 
+
 def legendre(a,p):
     """retourne le symbole de Legendre (a/p) si p premier"""
-    return expomod(a, (p-1) // 2, p)
-
-def jacobi2(n):
-    """retourne jacobi(n,2)"""
-    r = n%8
-    if r == 1 or r == 7:
-        return 1
-    else:
-        return -1
-
-def jacobi_pos(n,m):
-    """retourne le symbole de Jacobi (n/m) pour n>=0, m>0"""
-    if n == 0: return 0
-    prod = 1
-    while m>1:
-        k = 0
-        while n%2 == 0:
-            k += 1
-            n = n//2
-        if k%2 == 1:
-            prod = prod * jacobi2(m)
-        if (n%4 == 3 and m%4 == 3):
-            prod = -prod
-        num = m%n
-        m = n
-        n = num
-    return prod
-
-def jacobi(n,m):
-    """retourne le symbole de Jacobi (n/m), m>0"""
-    j = jacobi_pos(abs(n),m)
-    if n<0 and m % 4 == 3:
-        j = -j
-    return j
-        
+    return expomod(a,(p-1)//2,p)
+     
 def pgcd(a,b):
     a , b = abs(a), abs(b)
     while b != 0:
         a, b = b, a%b
     return a
 
-
-def isprime(p,k=30):
+def ppcm(a,b):
+	return abs((a*b) // pgcd(a,b))
+	
+def isprime(p, k = 50):
     """ test de primalite, proba d'erreur < 2^(-k)"""
     if p <= 1: return False
     if p <= 3: return True
@@ -938,7 +908,7 @@ def isprime(p,k=30):
         if pgcd(b,p) !=1:
             test = False
         else:
-            if legendre(b,p) != jacobi(b,p):
+            if legendre(b,p) != kronecker(b,p):
                 test = False
     return test
 
@@ -1022,7 +992,7 @@ def inverse(a,modulo):
 
 def racineEntiere(n):
     """input  : entier n positif ou nul
-        output : partie enti\`ere de la racine de n
+        output : partie entire de la racine de n
     """
     a=n
     b=(n+1)//2
@@ -1033,7 +1003,7 @@ def racineEntiere(n):
 
 def carre(A):
     """ input : entier naturel A
-        output: True ssi A est un carr\'e
+        output: True ssi A est un carrŽ
     """
     a = racineEntiere(A)
     if a * a==A:
@@ -1096,10 +1066,45 @@ def chinoiserie(liste,modules):
             prod *= nombre
         z = chinoiserie(liste,modulos)
         return chinois(z,a2,prod,n2)
+
+def kronecker(m,n):
+	if n == 0:
+		return 0 if m!=1 and m != -1 else 1 
+	else:
+		if n % 2 == 0 and m % 2 == 0:
+			return 0
+		j = 1
+		if n < 0:
+			if m < 0: 
+				j = -j
+			n = -n
+		r = m % 8
+		epsilon = 1 if r == 1 or r == 7 else -1
+		while n % 2 == 0:
+			j = j * epsilon
+			n = n // 2
+		m = m % n
+		while m != 0:
+			s = n % 8
+			epsilon2 = 1 if s == 1 or s == 7 else -1
+			while m % 2 == 0:
+				j = j * epsilon2
+				m = m // 2
+			if m % 4 == 3 and n % 4 == 3:
+				j = -j
+			m, n = n, m
+			m = m % n
+		if n == 1:
+			return j
+		else:
+			return 0
     
+jacobi = kronecker
+gcd = pgcd
+	
 if __name__ == '__main__':
-    print(inverse(217,11213))
-    
+	print(jacobi(217,11213))
+	
 \end{verbatim}
 \subsection{M\'ethode d'Euler.}
 Mettons d'abord en oeuvre l'algorithme correspondant \`a la descente d'Euler propos\'e au la section \ref{section1_4} ``Sommes de deux carr\'es : la m\'ethode d'Euler''. Ce n'est pas la plus efficace puisqu'elle n\'ecessite une factorisation.
